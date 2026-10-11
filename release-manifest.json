@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "releaseStatus": "local_preparation_not_published",
+  "releaseStatus": "source_published_quantized_release_pending",
   "platform": "Windows x64",
   "assets": [
     {
@@ -12,7 +12,93 @@
       "type": "quantized-model",
       "family": "blackwell",
       "vision": false,
-      "verification": "runtime_revalidation_pending"
+      "verification": "RTX5080_2048_context_text_and_tool_loop_pass",
+      "parts": [
+        {
+          "name": "xiaoman-v6-sd.ninfer.part001",
+          "bytes": 1073741824,
+          "sha256": "35ea1492218cd1ff2b6dfc3b8c146a5459aa98552526a2847fff76492309df35",
+          "url": null
+        },
+        {
+          "name": "xiaoman-v6-sd.ninfer.part002",
+          "bytes": 1073741824,
+          "sha256": "092aeac5bc99692fa6baf9a930076a9d55fad026472f5b6fb262395c346f1385",
+          "url": null
+        },
+        {
+          "name": "xiaoman-v6-sd.ninfer.part003",
+          "bytes": 1073741824,
+          "sha256": "2cc00e37c60907f8b9d85a1f6b37a92b02d9ce2c856160a49d9c568d15e9a869",
+          "url": null
+        },
+        {
+          "name": "xiaoman-v6-sd.ninfer.part004",
+          "bytes": 1073741824,
+          "sha256": "5df002619457e2585e579f336475deadd3ee6fb14f6916bb99c9df765853a3b8",
+          "url": null
+        },
+        {
+          "name": "xiaoman-v6-sd.ninfer.part005",
+          "bytes": 1073741824,
+          "sha256": "6bdf766399ee33ece0475517b39cea3397c41022fc5cc33a3b026a033972916f",
+          "url": null
+        },
+        {
+          "name": "xiaoman-v6-sd.ninfer.part006",
+          "bytes": 1073741824,
+          "sha256": "9d2544773460317acffed15ae4a0ef71b5e3ddafeaa132de67c5229a07448286",
+          "url": null
+        },
+        {
+          "name": "xiaoman-v6-sd.ninfer.part007",
+          "bytes": 1073741824,
+          "sha256": "4f652b04caf1edc33cbc921659200f5e65480f4f31e246cdf079f3182a2f068c",
+          "url": null
+        },
+        {
+          "name": "xiaoman-v6-sd.ninfer.part008",
+          "bytes": 1073741824,
+          "sha256": "a95cba7f0ac54759bdcf11d1f92faf7e6b767ec9e338b74b7ccbd4060c6f5467",
+          "url": null
+        },
+        {
+          "name": "xiaoman-v6-sd.ninfer.part009",
+          "bytes": 1073741824,
+          "sha256": "84be0cfc466033e1155166a0135033d36f540a8e757673e380de3de41d6e62f2",
+          "url": null
+        },
+        {
+          "name": "xiaoman-v6-sd.ninfer.part010",
+          "bytes": 1073741824,
+          "sha256": "8fbd98e4f7387ca188b8f6415412c68415b65807f20c825e8ad6dc67e5fafe2f",
+          "url": null
+        },
+        {
+          "name": "xiaoman-v6-sd.ninfer.part011",
+          "bytes": 1073741824,
+          "sha256": "c960ddc28310f2047c44e3b320a44797009fe64d904c26d291a2b0a2a46cf477",
+          "url": null
+        },
+        {
+          "name": "xiaoman-v6-sd.ninfer.part012",
+          "bytes": 1073741824,
+          "sha256": "11648f6e78f6022e2dace460e353ad509167ed727fd10b4bdf0e08f8a16fb370",
+          "url": null
+        },
+        {
+          "name": "xiaoman-v6-sd.ninfer.part013",
+          "bytes": 1073741824,
+          "sha256": "f8b9efc87aed70f7e1297183ed1689db316d5412faa86c99c452cf0f2c5f6ff4",
+          "url": null
+        },
+        {
+          "name": "xiaoman-v6-sd.ninfer.part014",
+          "bytes": 806934016,
+          "sha256": "666dc465e0432e353a5e67eb9be9b31861ae0e4f42bf6fdff58ff9a5686f037f",
+          "url": null
+        }
+      ]
     },
     {
       "id": "xiaoman-v6-sd-vis",
@@ -23,7 +109,99 @@
       "type": "quantized-model",
       "family": "blackwell",
       "vision": true,
-      "verification": "runtime_revalidation_pending"
+      "verification": "RTX5080_2048_context_text_and_single_image_color_smoke_pass",
+      "parts": [
+        {
+          "name": "xiaoman-v6-sd-vis.ninfer.part001",
+          "bytes": 1073741824,
+          "sha256": "a2ccab7afe5364c25ed178c698131f19846972638b428b98c727c01dec83da3c",
+          "url": null
+        },
+        {
+          "name": "xiaoman-v6-sd-vis.ninfer.part002",
+          "bytes": 1073741824,
+          "sha256": "32d752b584a7099547f4172b6db744e0520f9f99265082c4650591346163e605",
+          "url": null
+        },
+        {
+          "name": "xiaoman-v6-sd-vis.ninfer.part003",
+          "bytes": 1073741824,
+          "sha256": "4c907fb3f13ada6fe16fbf0d2954204e5a11ea23c11c0ebec861b414d20715e5",
+          "url": null
+        },
+        {
+          "name": "xiaoman-v6-sd-vis.ninfer.part004",
+          "bytes": 1073741824,
+          "sha256": "66c2855f2fd866198b26c2aab314145aa16cc0b862925142594f49cb4d629242",
+          "url": null
+        },
+        {
+          "name": "xiaoman-v6-sd-vis.ninfer.part005",
+          "bytes": 1073741824,
+          "sha256": "cdcd2e5d30e8c313ea6d1c22560731ddc34f8027307fa42c70e1d959027f85f4",
+          "url": null
+        },
+        {
+          "name": "xiaoman-v6-sd-vis.ninfer.part006",
+          "bytes": 1073741824,
+          "sha256": "ef7def0c3fbc007b8d3230747f866922bc9f9282611d07a44335152d6c49b7e6",
+          "url": null
+        },
+        {
+          "name": "xiaoman-v6-sd-vis.ninfer.part007",
+          "bytes": 1073741824,
+          "sha256": "a84b02f38092141804a187504b979ad6f8f9a04561eeb3b3a5039d66d39c77ca",
+          "url": null
+        },
+        {
+          "name": "xiaoman-v6-sd-vis.ninfer.part008",
+          "bytes": 1073741824,
+          "sha256": "143e0f56f6d399e2a1bc9cdba2d6d251b82bda4ad783eabb472f4798017f5562",
+          "url": null
+        },
+        {
+          "name": "xiaoman-v6-sd-vis.ninfer.part009",
+          "bytes": 1073741824,
+          "sha256": "5cf93a5838ab1b2f3b9c9e282ad86203950e7c1dfcf904613bd61c82a895a1b5",
+          "url": null
+        },
+        {
+          "name": "xiaoman-v6-sd-vis.ninfer.part010",
+          "bytes": 1073741824,
+          "sha256": "bc321e9dab208fd9f5b0a6a77c75dad701fe6e37a123d7a35ad43a50370a0167",
+          "url": null
+        },
+        {
+          "name": "xiaoman-v6-sd-vis.ninfer.part011",
+          "bytes": 1073741824,
+          "sha256": "ec52684d0e8a9c484e9deee98e20b0769c7ae223d00debf42f6461ddec07280a",
+          "url": null
+        },
+        {
+          "name": "xiaoman-v6-sd-vis.ninfer.part012",
+          "bytes": 1073741824,
+          "sha256": "47f177eb610a6849df3e96d2a4f31393ee67349bdf07f37bc40fd03d4bdf97a5",
+          "url": null
+        },
+        {
+          "name": "xiaoman-v6-sd-vis.ninfer.part013",
+          "bytes": 1073741824,
+          "sha256": "92f02423d41f79874dcd078b36ce86ee5670c5e19c9050405f4ae774db6a08e8",
+          "url": null
+        },
+        {
+          "name": "xiaoman-v6-sd-vis.ninfer.part014",
+          "bytes": 1073741824,
+          "sha256": "0a94feef1a50768db4c04386382b8a5af1c72a403292620b12348b021d84e460",
+          "url": null
+        },
+        {
+          "name": "xiaoman-v6-sd-vis.ninfer.part015",
+          "bytes": 29010688,
+          "sha256": "ac6d544d04b86de58fc0262a34b6996588afeae905c4ab0858a7f3c8d54f28b7",
+          "url": null
+        }
+      ]
     },
     {
       "id": "xiaoman-v6-fixed",

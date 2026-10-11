@@ -1,0 +1,44 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import os from 'node:os';
+import {createHash} from 'node:crypto';
+import {acquireAsset,splitAsset} from '../tools/asset-transfer.mjs';
+const dir=await fs.mkdtemp(path.join(os.tmpdir(),'xiaoman-assets-'));
+const digest=b=>createHash('sha256').update(b).digest('hex');
+try{
+  const data=Buffer.from('中文权重分片验证\0abcdefghijklmnopqrstuvwxyz');
+  await fs.writeFile(path.join(dir,'model.ninfer'),data);
+  const a={id:'fixture',path:'model.ninfer',bytes:data.length,sha256:digest(data),url:null};
+  const parts=await splitAsset(a,dir,path.join(dir,'parts'),{partBytes:9});
+  assert.equal(parts.parts.length,Math.ceil(data.length/9));
+  await fs.unlink(path.join(dir,a.path));
+  await acquireAsset(parts,dir,{partsDir:path.join(dir,'parts')});
+  assert.deepEqual(await fs.readFile(path.join(dir,a.path)),data);
+  await fs.unlink(path.join(dir,a.path));
+  const urls=parts.parts.map(p=>({...p,url:'https://example.test/'+p.name}));
+  let requested=[],failure=true;
+  const fakeFetch=async url=>{
+    requested.push(url);const index=urls.findIndex(p=>p.url===url);
+    if(index===1&&failure)throw new Error('network interruption');
+    return new Response(data.subarray(index*9,(index+1)*9));
+  };
+  await assert.rejects(acquireAsset({...parts,parts:urls},dir,{fetchImpl:fakeFetch}),/network interruption/);
+  failure=false;requested=[];
+  await acquireAsset({...parts,parts:urls},dir,{fetchImpl:fakeFetch});
+  assert(!requested.includes(urls[0].url),'completed part must be reused');
+  assert.deepEqual(await fs.readFile(path.join(dir,a.path)),data);
+  await fs.unlink(path.join(dir,a.path));
+  const corrupt=path.join(dir,'parts',parts.parts[1].name);
+  await fs.writeFile(corrupt,'damaged');
+  await assert.rejects(acquireAsset(parts,dir,{partsDir:path.join(dir,'parts')}),/已有分片校验失败/);
+  await assert.rejects(fs.stat(path.join(dir,a.path)),{code:'ENOENT'});
+  await assert.rejects(acquireAsset({...parts,parts:[{...parts.parts[0],name:'../escape'},...parts.parts.slice(1)]},dir),/非法或重复分片名/);
+  await assert.rejects(acquireAsset({...parts,parts:[parts.parts[0],...parts.parts]},dir),/重复分片名/);
+  await assert.rejects(acquireAsset({...a,path:'../escape'},dir),/非法资产路径/);
+  const reversed={...parts,parts:parts.parts.toReversed()};
+  await fs.writeFile(corrupt,data.subarray(9,18));
+  await assert.rejects(acquireAsset(reversed,dir,{partsDir:path.join(dir,'parts')}),/完整文件校验失败/);
+  await assert.rejects(fs.stat(path.join(dir,a.path)),{code:'ENOENT'});
+  console.log('PASS: split, merge, full hash, interrupted download reuse, corrupted part, unsafe path, duplicate part, wrong ordering');
+}finally{await fs.rm(dir,{recursive:true,force:true});}

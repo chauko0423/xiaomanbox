@@ -6,8 +6,7 @@ import os from 'node:os';
 import {fileURLToPath} from 'node:url';
 import {spawn,spawnSync} from 'node:child_process';
 import {createHash} from 'node:crypto';
-import {Readable,Transform} from 'node:stream';
-import {pipeline} from 'node:stream/promises';
+import {acquireAsset} from './tools/asset-transfer.mjs';
 const ROOT=path.dirname(fileURLToPath(import.meta.url));
 const args=process.argv.slice(2),command=args[0]||'help';
 function option(name,fallback){const i=args.indexOf('--'+name);return i>=0?args[i+1]:fallback;}
@@ -23,15 +22,7 @@ async function npm(argv,cwd){const [exe,prefix]=npmCommand();await run(exe,[...p
 function manifest(){return read(path.join(ROOT,'release-manifest.json'));}
 function asset(id){const a=manifest().assets?.find(a=>a.id===id);if(!a)throw new Error('清单中没有资产：'+id);return a;}
 async function acquire(id){
-  const a=asset(id);if(!a.sha256||!Number.isSafeInteger(a.bytes))throw new Error('尚未填写可信校验值与大小：'+id);
-  const destination=path.resolve(ROOT,a.path);if(!destination.startsWith(ROOT+path.sep))throw new Error('非法资产路径');
-  if(fs.existsSync(destination)){if((await fsp.stat(destination)).size===a.bytes&&await hash(destination)===a.sha256){console.log('校验通过：'+id);return destination;}throw new Error('已有文件校验不符，请保留并另行检查：'+destination);}
-  await fsp.mkdir(path.dirname(destination),{recursive:true});const temp=destination+'.partial';
-  const manual=option('from');
-  if(manual)await fsp.copyFile(path.resolve(manual),temp);
-  else{if(!a.url)throw new Error('尚未发布在线地址。可用 --from <手动下载的文件> 安装。');if(new URL(a.url).protocol!=='https:')throw new Error('下载地址必须为 HTTPS');const response=await fetch(a.url);if(!response.ok||!response.body)throw new Error('下载失败：'+response.status);let count=0,last=Date.now();await pipeline(Readable.fromWeb(response.body),new Transform({transform(chunk,encoding,done){count+=chunk.length;if(count>a.bytes)return done(new Error('下载超过清单大小'));if(Date.now()-last>10000){console.log(`下载 ${id}: ${(count/a.bytes*100).toFixed(1)}%`);last=Date.now();}done(null,chunk);}}),fs.createWriteStream(temp));}
-  if((await fsp.stat(temp)).size!==a.bytes||await hash(temp)!==a.sha256)throw new Error('下载文件校验失败，未替换正式文件：'+temp);
-  await fsp.rename(temp,destination);console.log('安装并校验：'+id);return destination;
+  return acquireAsset(asset(id),ROOT,{manual:option('from'),partsDir:option('parts-dir')});
 }
 function gpus(){const probe=spawnSync('nvidia-smi',['--query-gpu=name,memory.total,compute_cap','--format=csv,noheader,nounits'],{encoding:'utf8',windowsHide:true});if(probe.status!==0)return [];return probe.stdout.trim().split('\n').filter(Boolean).map(line=>{const [name,memory,cc]=line.split(',').map(s=>s.trim());return {name,vramMiB:Number(memory),computeCapability:cc};});}
 async function doctor(){const result={node:process.version,platform:process.platform,architecture:process.arch,ramGiB:Math.round(os.totalmem()/1024**3),freeRamGiB:Math.round(os.freemem()/1024**3),gpus:gpus(),desktopSupported:process.platform==='win32'&&process.arch==='x64',notes:[]};if(Number(process.versions.node.split('.')[0])<22)result.notes.push('需要 Node 22 或更新版本');if(!result.gpus.length)result.notes.push('未探测到 NVIDIA GPU：可部署桌面端、画板并连接自己的 API');for(const gpu of result.gpus){if(gpu.computeCapability==='12.0'&&gpu.vramMiB>=16000)result.notes.push(`${gpu.name} 可尝试 Blackwell 制品；实际上下文和显存仍需启动验收`);else result.notes.push(`${gpu.name} 不自动推荐现有主线量化制品；需要验证匹配的引擎/模型，或使用自备 API`);}await write(path.join(HOME,'doctor.json'),result);console.log(JSON.stringify(result,null,2));}
@@ -59,8 +50,9 @@ async function configureModel(){
   const model=await acquire(a.id),runtime=await acquire('ninfer-blackwell-windows');
   for(const dependency of manifest().assets.filter(item=>item.type==='runtime-dll'))await acquire(dependency.id);
   await acquire('chat-template');
-  const ctx=Number(option('context','8192'));if(!Number.isInteger(ctx)||ctx<1024||ctx>32768)throw new Error('context 应为 1024–32768；超过默认值需自行验收显存');
-  const argv=[model,'--host','127.0.0.1','--port','8390','--model-id','xiaoman','--max-context',String(ctx),'--kv-dtype','nvfp4','--spec','mtp','--draft-tokens','2','--prefill-chunk','256','--host-state-slots','8','--host-kv-mib','4096','--no-cuda-graph','--chat-template',path.join(ROOT,'assets/chat_template.jinja')];
+  const ctx=Number(option('context',a.vision?'2048':'8192'));if(!Number.isInteger(ctx)||ctx<1024||ctx>32768)throw new Error('context 应为 1024–32768；超过默认值需自行验收显存');
+  const engineDir=path.dirname(runtime);
+  const argv=[path.relative(engineDir,model),'--host','127.0.0.1','--port','8390','--model-id','xiaoman','--max-context',String(ctx),'--kv-dtype','nvfp4','--spec','mtp','--draft-tokens','2','--prefill-chunk','256','--host-state-slots','8','--host-kv-mib','4096','--no-cuda-graph','--chat-template',path.relative(engineDir,path.join(ROOT,'assets/chat_template.jinja'))];
   if(a.vision)argv.push('--vision');await write(path.join(HOME,'engine.json'),{executable:runtime,args:argv,baseUrl:'http://127.0.0.1:8390',asset:a.id});
   const prior=read(path.join(HOME,'agent.json'));await write(path.join(HOME,'agent.json'),{...prior,modelUrl:'http://127.0.0.1:8390/v1/chat/completions',model:'xiaoman',contextWindow:ctx});
   await configureProvider('http://127.0.0.1:8390/v1/chat/completions','xiaoman');

@@ -9,7 +9,7 @@
 3. 运行 `node deploy.mjs install`。npm ci 会按锁文件安装两套依赖，随后构建前端。检查实际退出码；失败时读日志并修复，不宣称成功。
 4. 首先可以用使用者自己的兼容 API：`node deploy.mjs api-config --url <完整URL> --model <模型ID>`。配置会同时设置 agent.json 与激活的 providers.json。API key 通过桌面“模型配置”录入，禁止写在对话日志、命令参数或公开文件。
 5. 使用量化模型时读模型卡。Blackwell 12.0、16GB+ 仅允许尝试主线候选；不代表所有模型都能装入显存。其他 GPU 不自动套用现有引擎，选择已验证匹配版本或自备 API。
-6. 下载必须通过清单校验。URL 为 null 表示作者尚未发布；不要编造链接、从私人磁盘假装下载，或擅自替换另一份权重。人工文件可用 `node deploy.mjs download --id <ID> --from <文件>` 安装；已有完整本地 assets 则直接校验。
+6. 下载必须通过清单校验。带 parts 清单时，由部署工具逐片下载、校验、合并并检查完整 SHA256；已完成分片可复用。不要将 .part 分片直接交给引擎，也不要仅按文件名顺序拼接而跳过校验。URL 为 null 表示作者尚未发布；不要编造链接、从私人磁盘假装下载，或擅自替换另一份权重。人工文件可用 `node deploy.mjs download --id <ID> --from <文件>` 安装；已有完整本地 assets 则直接校验。
 7. 配好本地模型后 `node deploy.mjs model-config --id xiaoman-v6-sd`、`node deploy.mjs model-start`。启动前检查显存、内存、磁盘和端口，不能杀掉使用者正在运行的其他服务。实际回答与工具调用通过才记录模型成功。
 8. `node deploy.mjs app`；按需 `node deploy.mjs board` 或从桌面本地画板启动。管理链接只给宿主，协作者只拿画板内生成的编辑/只读链接。
 9. `node deploy.mjs verify --desktop` 是健康检查。完整功能验证需运行 `node tests/acceptance.mjs`，并在人机 UI、另一台 LAN 机器、实际 UE 编辑器和真实模型上补验相应功能。不得把模拟 API 测试称为模型效果评测。
