@@ -1,0 +1,38 @@
+{
+  "at": "2026-10-11T13:34:27.715Z",
+  "scope": "isolated local integration; no real model/GPU or native UE execution",
+  "results": [
+    {
+      "name": "manager token required; unknown rooms and wrong keys denied",
+      "ok": true
+    },
+    {
+      "name": "editor sync and server-enforced read-only negative control",
+      "ok": true
+    },
+    {
+      "name": "room-scoped images; viewers cannot upload; SVG isolated",
+      "ok": true
+    },
+    {
+      "name": "key rotation invalidates old share links",
+      "ok": true
+    },
+    {
+      "name": "board content survives service restart",
+      "ok": true
+    },
+    {
+      "name": "account, team chat and member endpoints removed",
+      "ok": true
+    },
+    {
+      "name": "bundled UE skills available in fresh data directory",
+      "ok": true
+    },
+    {
+      "name": "configured API selected; SSE tool call writes file and returns result",
+      "ok": true
+    }
+  ]
+}

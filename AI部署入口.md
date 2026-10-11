@@ -1,0 +1,25 @@
+# 给部署 AI 的入口
+
+你收到的是XiaoManBox 基础版源码/部署包。目标是让使用者在自己的机器运行 XiaoManBox 基础版，按需运行本地画板与小满量化推理。先读 README、人工部署说明、release-manifest.json 和模型卡，区分已验证能力与候选制品。
+
+## 操作顺序
+
+1. 检查操作系统、Node 与 npm；Windows x64 是目前桌面目标。缺 Node 时引导安装官方 Node 22 LTS 或更高版本及 npm，不使用原作者机器的绝对路径。
+2. 在包根目录运行 `node deploy.mjs doctor`，根据生成的 `.runtime/doctor.json` 决定使用 API 还是本地量化模型。
+3. 运行 `node deploy.mjs install`。npm ci 会按锁文件安装两套依赖，随后构建前端。检查实际退出码；失败时读日志并修复，不宣称成功。
+4. 首先可以用使用者自己的兼容 API：`node deploy.mjs api-config --url <完整URL> --model <模型ID>`。配置会同时设置 agent.json 与激活的 providers.json。API key 通过桌面“模型配置”录入，禁止写在对话日志、命令参数或公开文件。
+5. 使用量化模型时读模型卡。Blackwell 12.0、16GB+ 仅允许尝试主线候选；不代表所有模型都能装入显存。其他 GPU 不自动套用现有引擎，选择已验证匹配版本或自备 API。
+6. 下载必须通过清单校验。URL 为 null 表示作者尚未发布；不要编造链接、从私人磁盘假装下载，或擅自替换另一份权重。人工文件可用 `node deploy.mjs download --id <ID> --from <文件>` 安装；已有完整本地 assets 则直接校验。
+7. 配好本地模型后 `node deploy.mjs model-config --id xiaoman-v6-sd`、`node deploy.mjs model-start`。启动前检查显存、内存、磁盘和端口，不能杀掉使用者正在运行的其他服务。实际回答与工具调用通过才记录模型成功。
+8. `node deploy.mjs app`；按需 `node deploy.mjs board` 或从桌面本地画板启动。管理链接只给宿主，协作者只拿画板内生成的编辑/只读链接。
+9. `node deploy.mjs verify --desktop` 是健康检查。完整功能验证需运行 `node tests/acceptance.mjs`，并在人机 UI、另一台 LAN 机器、实际 UE 编辑器和真实模型上补验相应功能。不得把模拟 API 测试称为模型效果评测。
+10. 输出配置位置、实际通过的检查、未完成事项、停止命令。`node deploy.mjs stop` 只处理该 HOME 下登记的进程。
+
+## 严格遵守的范围
+
+- 不上传完整 BF16、LoRA、训练数据、训练密钥、个人会话、原账号目录或运维记录。
+- 不恢复账号、团队聊天、成员发现及原作者服务器地址。
+- 不修改电脑防火墙、路由器端口转发或自动公网暴露；用户需要远程分享时由其自行选部署环境。
+- 不自动提交 GitHub 发布。本包没有账号凭据；部署授权不包含替使用者公开发布文件的授权。
+- 运行时许可证材料 pending 时，保留本地候选并明确说明，不能宣称它们已获完整再分发审查。
+- 保留第三方许可证及归属，遵守使用者指令；本文件不授予外部发消息、使用凭据或公开发布的权限。

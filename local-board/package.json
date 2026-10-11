@@ -1,0 +1,6 @@
+{
+  "name":"xiaoman-local-board","version":"0.1.0","private":true,"type":"module","license":"Apache-2.0",
+  "scripts":{"build":"vite build","start":"node server/index.mjs"},
+  "dependencies":{"@excalidraw/excalidraw":"0.17.6","@hocuspocus/provider":"2.15.3","@hocuspocus/server":"2.15.3","yjs":"13.6.18","react":"17.0.2","react-dom":"17.0.2","dagre":"0.8.5"},
+  "devDependencies":{"vite":"5.4.11","@vitejs/plugin-react":"4.3.4","typescript":"5.6.3","@types/react":"17.0.83","@types/react-dom":"17.0.26"}
+}

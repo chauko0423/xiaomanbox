@@ -1,0 +1,17 @@
+{
+  "at": "2026-10-11T13:34:25.675Z",
+  "results": [
+    {
+      "name": "packaged backend lifecycle smoke",
+      "ok": true,
+      "code": 0,
+      "signal": null
+    },
+    {
+      "name": "packaged smoke with closed diagnostic pipes",
+      "ok": true,
+      "code": 0,
+      "signal": null
+    }
+  ]
+}

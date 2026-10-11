@@ -1,0 +1,32 @@
+[
+  {
+    "file": "Excalidraw-0.17.6-LICENSE.txt",
+    "source": "https://raw.githubusercontent.com/excalidraw/excalidraw/v0.17.6/LICENSE",
+    "sha256": "1352d204fdb90d5e482c13139d848bc2c9300a9a7de358a0a558a23e72d0d8be",
+    "retrieved": "2026-10-11"
+  },
+  {
+    "file": "Hocuspocus-2.15.3-LICENSE.txt",
+    "source": "https://raw.githubusercontent.com/ueberdosis/hocuspocus/v2.15.3/LICENSE.md",
+    "sha256": "dce30f7f8fff923e74d41b44a620714e928dd7708064c807d94f50210a1179d7",
+    "retrieved": "2026-10-11"
+  },
+  {
+    "file": "Virgil-OFL.txt",
+    "source": "https://raw.githubusercontent.com/excalidraw/virgil/main/LICENSE.md",
+    "sha256": "a3ac9cdc65ef304ffb095d8cc877ee93bf1bffa88269693cd42ddf001650ffd0",
+    "retrieved": "2026-10-11"
+  },
+  {
+    "file": "Cascadia-OFL.txt",
+    "source": "https://raw.githubusercontent.com/microsoft/cascadia-code/main/LICENSE",
+    "sha256": "51882cd3cdba4e16f220f44ddb08a635c38c44ea6e0975db2574f4be6f958238",
+    "retrieved": "2026-10-11"
+  },
+  {
+    "file": "Assistant-OFL.txt",
+    "source": "https://raw.githubusercontent.com/google/fonts/main/ofl/assistant/OFL.txt",
+    "sha256": "7eaf6282cfab122b99ffd62a122fc27b6c3c8f2c65b56ff9b3a25badbc64887d",
+    "retrieved": "2026-10-11"
+  }
+]

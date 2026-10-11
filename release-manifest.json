@@ -1,0 +1,148 @@
+{
+  "schema": 1,
+  "releaseStatus": "local_preparation_not_published",
+  "platform": "Windows x64",
+  "assets": [
+    {
+      "id": "xiaoman-v6-sd",
+      "path": "assets/models/xiaoman-v6-sd.ninfer",
+      "bytes": 14765577728,
+      "sha256": "511046e8b813aea45ce314bfa9d56325bf83e0c197640c90bde7e65a4262d184",
+      "url": null,
+      "type": "quantized-model",
+      "family": "blackwell",
+      "vision": false,
+      "verification": "runtime_revalidation_pending"
+    },
+    {
+      "id": "xiaoman-v6-sd-vis",
+      "path": "assets/models/xiaoman-v6-sd-vis.ninfer",
+      "bytes": 15061396224,
+      "sha256": "397d87d7c4aaab211bf581610e7ce1acb4537c8eaf5e1d35dca22a37fbb67d73",
+      "url": null,
+      "type": "quantized-model",
+      "family": "blackwell",
+      "vision": true,
+      "verification": "runtime_revalidation_pending"
+    },
+    {
+      "id": "xiaoman-v6-fixed",
+      "path": "assets/models/xiaoman-v6-fixed.ninfer",
+      "bytes": 16441652736,
+      "sha256": "b2840cc19c7c5161e2ba0251a58cf9ca9001c67f4b68f92c24b306c1cbfbd2df",
+      "url": null,
+      "type": "quantized-model",
+      "family": "ada-candidate",
+      "vision": false,
+      "verification": "runtime_revalidation_pending"
+    },
+    {
+      "id": "xiaoman-v6-fixed-vis",
+      "path": "assets/models/xiaoman-v6-fixed-vis.ninfer",
+      "bytes": 17094511360,
+      "sha256": "b504fe0c4749ca4f4000bb0835cde76057b4b328e19bd1d1ece15671b4c2d1c0",
+      "url": null,
+      "type": "quantized-model",
+      "family": "ada-candidate",
+      "vision": true,
+      "verification": "runtime_revalidation_pending"
+    },
+    {
+      "id": "ninfer-blackwell-windows",
+      "path": "assets/runtime/blackwell/ninfer-serve.exe",
+      "bytes": 178712576,
+      "sha256": "5aee4add582ea724d8aa2324e84287aa0a78894e55767d608ea9a2435ed8f292",
+      "url": null,
+      "type": "runtime",
+      "family": "blackwell",
+      "redistribution": "dependency_notices_pending"
+    },
+    {
+      "id": "dll-avcodec-63",
+      "path": "assets/runtime/blackwell/avcodec-63.dll",
+      "bytes": 119277056,
+      "sha256": "10242da62d98864d99c3ad9020c8ab29d72c2807c73037fec1a163169e00af1c",
+      "url": null,
+      "type": "runtime-dll",
+      "redistribution": "dependency_notices_pending"
+    },
+    {
+      "id": "dll-avdevice-63",
+      "path": "assets/runtime/blackwell/avdevice-63.dll",
+      "bytes": 4948480,
+      "sha256": "e8aa38da4417b5dad40d6843d88273b961daecbf46a3d1f8980f8e19aeb9036e",
+      "url": null,
+      "type": "runtime-dll",
+      "redistribution": "dependency_notices_pending"
+    },
+    {
+      "id": "dll-avfilter-12",
+      "path": "assets/runtime/blackwell/avfilter-12.dll",
+      "bytes": 37087232,
+      "sha256": "5e3914e38786138991c4aff642080638fc11d443a57c5ba77e02db86dd623420",
+      "url": null,
+      "type": "runtime-dll",
+      "redistribution": "dependency_notices_pending"
+    },
+    {
+      "id": "dll-avformat-63",
+      "path": "assets/runtime/blackwell/avformat-63.dll",
+      "bytes": 23970816,
+      "sha256": "b3ca951c5fe345a61ee00ce340774e8b47a5e187edbf4b39d7f17c783c8812a9",
+      "url": null,
+      "type": "runtime-dll",
+      "redistribution": "dependency_notices_pending"
+    },
+    {
+      "id": "dll-avutil-61",
+      "path": "assets/runtime/blackwell/avutil-61.dll",
+      "bytes": 3034112,
+      "sha256": "b7b7cc09fd19c4c30a4f6bf3ecd227e1d9951cac18e496e7d5dadb735eae17d9",
+      "url": null,
+      "type": "runtime-dll",
+      "redistribution": "dependency_notices_pending"
+    },
+    {
+      "id": "dll-swresample-7",
+      "path": "assets/runtime/blackwell/swresample-7.dll",
+      "bytes": 739840,
+      "sha256": "e8ba34c4713bc0e97f3de1282b078069436e630126d39470282c9ecb2dff1e28",
+      "url": null,
+      "type": "runtime-dll",
+      "redistribution": "dependency_notices_pending"
+    },
+    {
+      "id": "dll-swscale-10",
+      "path": "assets/runtime/blackwell/swscale-10.dll",
+      "bytes": 2371072,
+      "sha256": "4a7844d512a1d9732574dac3ddba41b4629b2196fa17d6bc69dcfbb96fe9a1e1",
+      "url": null,
+      "type": "runtime-dll",
+      "redistribution": "dependency_notices_pending"
+    },
+    {
+      "id": "chat-template",
+      "path": "assets/chat_template.jinja",
+      "bytes": 7865,
+      "sha256": "be0b55e0653d09e90277b403cb49fe4b03f945b05eb928e304e15b05a31618aa",
+      "url": null,
+      "type": "chat-template"
+    },
+    {
+      "id": "xiaomanbox-basic-installer",
+      "path": "release-candidates/XiaoManBox-0.3.0-basic.1-Setup.exe",
+      "bytes": 85127273,
+      "sha256": "0986aad534407fb5f398c2da8532c954039d15821078acf46978dca27b3ed7b4",
+      "url": null,
+      "type": "desktop-installer",
+      "signature": "unsigned",
+      "verification": "packaged_lifecycle_and_pipe_failure_smoke_pass; frontend_render_pass; native_UE_and_real_model_pending"
+    }
+  ],
+  "notes": [
+    "仅量化模型；不含BF16/LoRA/训练数据",
+    "下载地址在正式发布后填写",
+    "Ada制品不自动推荐，必须匹配Ada引擎并复验",
+    "引擎再分发需要补齐对应第三方许可和来源"
+  ]
+}

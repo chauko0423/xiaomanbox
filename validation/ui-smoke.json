@@ -1,0 +1,18 @@
+{
+  "at": "2026-10-11T13:31:15.707Z",
+  "results": [
+    {
+      "name": "desktop rendered basic navigation",
+      "ok": true
+    },
+    {
+      "name": "board manager rendered created room",
+      "ok": true
+    },
+    {
+      "name": "Excalidraw canvas rendered and WebSocket connected",
+      "ok": true
+    }
+  ],
+  "consoleErrors": []
+}

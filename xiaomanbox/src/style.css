@@ -1,0 +1,458 @@
+:root {
+  color-scheme: dark;
+  /**
+   * 配色 v4（2026-10-07）—— 简约深色（参考 ChatGPT / DSH / WorkBuddy）：
+   *   工作区背景接近纯黑，表面用中性冷灰分层，去掉上一版的绿灰调
+   *   （四季反馈「灰蒙蒙、不干净」——绿灰 + 大面积相近灰度是蒙灰感的来源）。
+   *
+   * 三条铁律（照做，别破）：
+   *   ① 纸与墨是主体，强调色是「信号」——沙金只给需要被看见的那一处
+   *      （当前项图标 / 发送键 / 焦点环 / 进度），绝不铺面。
+   *   ② 圆角有层级：表面 12px > 控件 8px > 小件 6px；形状本身是圆的才用 50%。
+   *   ③ 数字等宽（tabular-nums）——表格、耗时、百分比跳动时不横向抖。
+   *
+   * 2026-10-07 去工程化：技术窄体（Saira）全线退场，标签/标题统一 UI 字体；
+   *   HUD 取景框 / 刻度基线 / /// 前缀 / [方括号] / 路径标注全部删除——
+   *   装饰应为留白与层级让路（简约风格三参考：DSH、ChatGPT、WorkBuddy）。
+   */
+  --paper: #151517;      /* 工作区底：中性深灰（2026-10-08 四季：比纯黑浅一档，参考 #151517 色块） */
+  --sidebar: #1a1b1d;    /* 侧栏底：比纯黑主区亮一档的中性灰（四季：侧栏走灰，不属于黑底） */
+  --panel-bg: #161619;   /* 面板 / 卡片：比底亮一档，靠发丝线分层 */
+  --panel-bg-2: #1d1e21; /* 沉底块 / 输入框：再亮一档 */
+  --overlay: #1b1c1f;    /* 浮层 */
+
+  --border: #26262a;        /* 细发丝线 */
+  --border-bright: #3b3c42; /* 重线（悬停边 / 可交互边） */
+  --hover: rgba(255, 255, 255, 0.05); /* 柔和悬停 */
+
+  --ink: #ededf0;   /* 正文 */
+  --dim: #9c9da5;   /* 次要 */
+  --dim-2: #7e8087; /* 三级 */
+  --ink-3: #5a5c63; /* 注脚 */
+
+  /* 信号黄：沙金 #e6d16a。纯黑底上信号感更干净，只做信号不铺面（铁律①）。 */
+  --caution: #e6d16a;    /* 沙金：柔和信号色 */
+  --caution-rgb: 230, 209, 106; /* 供 rgba(var(--caution-rgb), α) 半透明块用 */
+  --caution-deep: #cfb852;    /* 悬停 / 按下：加深一档 */
+  --caution-mid: #8a7a3c;     /* 暗色模式「亮带」压暗 */
+  --caution-hi: var(--caution-deep); /* 旧名兼容，语义 = hover 加深 */
+
+  /* 语义状态色：不参与配色切换——错误就该是红的 */
+  --err: #ff6b61;
+  --ok: #4fbf5c;
+  --warn: #ffb700;
+  --warn-rgb: 255, 183, 0; /* 供 rgba(var(--warn-rgb), α) 半透明块用 */
+
+  --font-ui: 'HarmonyOS Sans SC', 'MiSans', 'Noto Sans SC', 'Source Han Sans SC', 'PingFang SC', 'Microsoft YaHei', system-ui, sans-serif;
+  /* --font-tech 已废弃（工程窄体退场）：保留变量名兼容旧面板，值 = UI 字体。
+     新代码请直接用 --font-ui。 */
+  --font-tech: var(--font-ui);
+  --font-num: 'JetBrains Mono', 'Cascadia Mono', Consolas, monospace;
+
+  /* 圆角层级（铁律②）：形状本身是圆的才用 50% */
+  --radius: 12px;      /* 表面：面板 / 卡片 / 菜单 */
+  --radius-ctl: 8px;   /* 控件：按钮 / 输入框 / 胶囊条目 */
+  --radius-sm: 6px;    /* 小件：tag / 占位标记 / 进度条 */
+  --radius-round: 50%; /* 形状本身是圆的 */
+}
+
+* { box-sizing: border-box; }
+
+html, body, #app { height: 100%; }
+
+/* 根字号 = 1rem 基准：外观设置「字体大小」11-16px 直接驱动这里，
+   全站字号已 rem 化（13px = 1rem），调滑条即等比缩放所有文字（2026-10-08）。 */
+html { font-size: var(--font-size, 13px); }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-ui);
+  /* body 自身字号也跟随 rem 基准 */
+  font-size: 1rem;
+  line-height: 1.6;
+  font-variant-numeric: tabular-nums; /* 铁律③：数字等宽 */
+  -webkit-font-smoothing: antialiased;
+  caret-color: var(--caution); /* 输入光标 = 强调色 */
+}
+
+::selection {
+  color: #000; /* 墨色字压强调底 */
+  background: var(--caution);
+}
+
+/* 焦点环：键盘指引，2px 强调色 + 1px 偏移 */
+:focus-visible {
+  outline: 2px solid var(--caution);
+  outline-offset: 1px;
+}
+
+a {
+  color: var(--ink);
+  text-decoration: none;
+  border-bottom: 1px solid var(--border-bright);
+}
+a:hover {
+  color: var(--caution);
+  border-bottom-color: var(--caution);
+}
+
+/* 滚动条：轨道透明，滑块细线，悬停变强调色 */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-bright) transparent;
+}
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: var(--border-bright);
+  border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover { background: var(--caution); }
+
+/* 控件统一圆角（铁律②：控件 8px）；形状本身是圆的四类在下方恢复 50% */
+button, input, select, textarea,
+[class*='avatar'], [class*='spinner'], [class*='dot'], [class$='_iconButton'] {
+  border-radius: var(--radius-ctl);
+}
+/* 恢复该圆的：头像 / 加载圈 / 状态点 / 图标按钮 */
+[class*='avatar'], [class*='spinner'], [class*='dot'], [class$='_iconButton'] {
+  border-radius: var(--radius-round);
+}
+
+button, input, select, textarea {
+  font-family: var(--font-ui);
+}
+input, textarea, select {
+  background: var(--panel-bg-2);
+  border: 1px solid var(--border-bright);
+  color: var(--ink);
+  font-size: 0.962rem;
+  padding: 6px 10px;
+}
+input:focus, textarea:focus, select:focus { border-color: var(--caution); }
+
+/* ── 壳：左侧栏 + 主区 ─────────────────────────────────────── */
+.shell {
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+}
+
+.main {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.main-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 32px;
+  border-bottom: 1px solid var(--border);
+  background: var(--paper);
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+/* 干净面包屑：分组 / 页面名，普通 UI 字，无路径标注 */
+.crumb {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  min-width: 0;
+  font-size: 0.923rem;
+  color: var(--dim);
+}
+.crumb .here { color: var(--ink); font-weight: 600; }
+.crumb .sep { color: var(--ink-3); }
+.meta { display: flex; align-items: baseline; gap: 8px; font-size: 0.846rem; color: var(--dim-2); flex: none; }
+
+.content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 28px 32px 56px;
+}
+
+/* ── 专精页：一页一个功能 ──────────────────────────────────── */
+.page { max-width: 1240px; margin: 0 auto; animation: rise 0.3s ease both; }
+
+.page-head { margin-bottom: 18px; }
+
+.page-title {
+  margin: 0 0 6px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-ui);
+  font-size: 1.692rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: var(--ink);
+}
+/* 页头图标指引：柔和灰底小方块 + 线性图标 */
+.title-ico {
+  flex: none;
+  width: 38px;
+  height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--panel-bg-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-ctl);
+  color: var(--dim);
+}
+.page-desc { margin: 0 0 10px; font-size: 0.962rem; color: var(--dim); }
+
+/* 专精页画布：至少撑到一屏，面板内容随 flex 拉伸 */
+.panel.page-panel {
+  min-height: calc(100vh - 280px);
+  height: auto;
+}
+/* Agent 页脱壳（2026-10-08 四季，参考千问欢迎页）：同色大背景，
+   面板底色/边框全撤，欢迎页与对话页都直接坐在 --paper 上，无卡片分层感 */
+.panel.page-panel.hero-shell {
+  background: transparent;
+  border: none;
+}
+
+/* Agent 启动页高度链（2026-10-08 四季）：hero 的 margin:auto 之前不生效——
+   .panel-body 无显式高度，.agent 的 min-height:100% 解析为 auto，没有剩余空间可分。
+   显式 flex 链：content → page(flex:1) → page-panel(flex:1) → panel-body(flex:1) → agent(flex:1)，
+   hero 垂直居中生效；同时 .page 解除限宽，页头「小满 Agent」贴左上角。 */
+.content.agent-launch { display: flex; flex-direction: column; overflow: hidden; padding-top: 0; } /* 2026-10-09 四季：滚轮只滚对话内容；2026-10-10 四季：padding-top 归零，会话内容贴到白线下面 */
+.content.agent-launch .page { min-height: 0; } /* 2026-10-09 滚动修复：高度链每一环都要 min-height:0，否则子内容撑破容器、消息区永不溢出 → 滚轮滚不动 */
+.content.agent-launch .agent { min-height: 0; }
+.content.agent-launch .page {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  max-width: none; /* 页头贴左上（hero 自身 760px 居中不受影响） */
+  margin: 0;        /* 覆盖 .page 的 margin:0 auto——flex 列里 auto margin 会顶掉 stretch，页面缩成内容宽 */
+  position: relative; /* 2026-10-10 四季：供悬浮标题定位参照 */
+}
+.content.agent-launch .page-panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0; /* 覆盖 min-height 兜底，小窗口交给 content 滚动 */
+}
+.content.agent-launch .page-head { margin-bottom: 6px; } /* 2026-10-10 四季：Agent 页压缩页头底部留白，会话内容上提 */
+
+/* 团队交流（2026-10-11）：微信桌面式全高布局 —— 左频道列表 + 右会话区撑满剩余高度。
+   高度链同 agent-launch：content → page → page-panel → panel-body → .chat，每环 min-height:0。 */
+.content.chat-launch { display: flex; flex-direction: column; overflow: hidden; padding-top: 18px; }
+.content.chat-launch .page {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  max-width: none;
+  margin: 0;
+}
+.content.chat-launch .page-head { margin-bottom: 10px; }
+.content.chat-launch .page-panel { flex: 1; min-height: 0; display: flex; flex-direction: column; }
+.content.chat-launch .panel-body { flex: 1; min-height: 0; padding: 0; overflow: hidden; }
+
+/* 对话模式：标题+副标题悬浮在对话内容上方（脱离垂直流，不占高度），会话内容顶到白线 */
+.page-head.float {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  margin-bottom: 0;
+  pointer-events: none; /* 不拦截对话内容的点击 */
+  padding: 12px 24px 0;
+  background: linear-gradient(to bottom, var(--paper) 55%, transparent);
+}
+.page-head.float .page-title { font-size: 1.3rem; }
+/* 对话内容让开悬浮标题（顶部 52px），但整体仍远高于原来的「28px padding + 整块页头」 */
+.content.agent-launch .page-head.float + .page-panel { padding-top: 52px; }
+.content.agent-launch .panel-body { flex: 1; display: flex; flex-direction: column; padding-top: 4px; } /* 2026-10-10 四季：Agent 页压掉 16px 上内边距，会话内容贴近页头、高度上提 */
+/* relative：供面板内部绝对定位铺满（如团队画板），不影响任何布局 */
+.panel.page-panel .panel-body { flex: 1; position: relative; }
+
+.empty { color: var(--dim-2); font-size: 0.923rem; padding: 48px; text-align: center; }
+
+/* 纯 opacity 入场。⚠️ 不能在这里动 transform：
+   带 transform 的填充动画（fill-mode: both）会让 .page 成为 position:fixed
+   后代的包含块（Chromium 行为，fill 值为 none 也一样），画板全屏会被困在
+   页面区域里盖不住侧栏（2026-10-07 实测踩坑）。 */
+@keyframes rise {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .page { animation: none; }
+}
+
+/* ── 面板：发丝线 + 大圆角 + 无填充头 ──────────────────────── */
+.panel {
+  background: var(--panel-bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  min-height: 132px;
+  height: 100%;
+  transition: border-color 0.15s ease;
+}
+.panel:hover { border-color: var(--border-bright); }
+.panel-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 11px 16px;
+  border-bottom: 1px solid var(--border);
+  background: transparent;
+}
+.panel-title {
+  font-family: var(--font-ui);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  color: var(--ink);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+/* 面板标题图标：小号线性图标，淡灰不抢字 */
+.panel-ico {
+  display: inline-flex;
+  color: var(--dim);
+}
+.panel-body { padding: 16px; font-size: 0.962rem; }
+
+/* 状态 tag：中性灰底（不抢眼），沙金只留给真正的信号 */
+.tag {
+  font-size: 0.808rem;
+  color: var(--dim);
+  background: var(--panel-bg-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 1px 8px;
+  letter-spacing: 0.5px;
+}
+.tag.dim { color: var(--ink-3); border-color: var(--border); }
+
+/* ── 通用 ─────────────────────────────────────────────────── */
+.mono { font-family: var(--font-num); font-variant-numeric: tabular-nums; }
+.num { font-family: var(--font-num); font-variant-numeric: tabular-nums; }
+.dim { color: var(--dim); }
+.err { color: var(--err); }
+
+.kv {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 6px 12px;
+  margin: 0;
+  font-size: 0.962rem;
+}
+.kv dt { color: var(--dim); }
+.kv dd { margin: 0; color: var(--ink); }
+
+.kv-list { list-style: none; margin: 0; padding: 0; }
+.kv-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 4px;
+  border-bottom: 1px solid var(--border);
+}
+.kv-row:last-child { border-bottom: none; }
+/* 悬停 = 柔和灰 */
+.kv-row:hover { background: var(--hover); }
+.kv-row.active { background: rgba(var(--caution-rgb), 0.06); }
+.kv-row.active .k { color: var(--caution); }
+.kv-row .k { min-width: 88px; color: var(--ink); }
+.kv-row .v { color: var(--ink); flex: 1; }
+.kv-row .n { color: var(--dim-2); font-size: 0.846rem; }
+.kv-row .k.mono { color: var(--ink); }
+
+/* 圆的另一半：头像 / 加载圈 / 状态点 / 图标按钮 */
+[class*='avatar'],
+[class*='spinner'],
+[class*='dot'],
+[class$='_iconButton'] {
+  border-radius: 50%;
+}
+
+/* 状态点：形状本身是圆的 → 留圆；颜色用信号色 */
+.dot {
+  width: 7px;
+  height: 7px;
+  background: var(--border-bright);
+  flex: none;
+}
+.dot.on { background: var(--caution); }
+
+.foot-note { margin: 12px 0 0; font-size: 0.808rem; color: var(--ink-3); }
+
+.btn-inline {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--border-bright);
+  border-radius: var(--radius-ctl);
+  padding: 4px 14px;
+  font-family: var(--font-ui);
+  font-size: 0.923rem;
+  cursor: pointer;
+  transition: color 0.12s ease, border-color 0.12s ease;
+}
+.btn-inline:hover {
+  color: var(--caution);
+  border-color: var(--caution);
+}
+.btn-inline + .btn-inline { margin-left: 8px; }
+
+/* ── 会话卡片网格 ─────────────────────────────────────────── */
+.session-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.sess-col { border: 1px solid var(--border); background: var(--panel-bg-2); border-radius: var(--radius); overflow: hidden; }
+.sess-col-head {
+  padding: 8px 12px;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.923rem;
+  font-weight: 600;
+  color: var(--ink);
+}
+.sess-card { padding: 10px 12px; border-bottom: 1px solid var(--border); }
+.sess-card:last-child { border-bottom: none; }
+.sess-card-top { display: flex; justify-content: space-between; gap: 8px; margin-bottom: 4px; }
+.sess-id { color: var(--ink); font-family: var(--font-num); font-size: 0.885rem; }
+.sess-pin { color: var(--ink-3); font-size: 0.769rem; }
+.sess-title { color: var(--ink); font-size: 0.962rem; }
+.sess-empty { padding: 12px; color: var(--dim-2); text-align: center; }
+
+/* ── 熵面板 ───────────────────────────────────────────────── */
+.entropy { display: flex; flex-direction: column; gap: 14px; }
+.ent-head { display: flex; justify-content: space-between; margin-bottom: 4px; font-size: 0.962rem; }
+.ent-head .val { color: var(--ink); font-family: var(--font-num); }
+.bar { position: relative; height: 6px; background: var(--panel-bg-2); border: 1px solid var(--border); border-radius: 3px; overflow: hidden; }
+.bar-fill { height: 100%; background: var(--caution); } /* 进度 = 状态 → 用信号色 */
+.bar-thresh { position: absolute; top: -3px; bottom: -3px; width: 1px; background: var(--border-bright); }
+
+/* ── 驻留角色 ─────────────────────────────────────────────── */
+.resident-head { display: flex; justify-content: space-between; margin-bottom: 14px; font-size: 0.885rem; }
+.slots { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.slot {
+  width: 34px;
+  height: 34px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--dim-2);
+  font-size: 0.846rem;
+}
+.slot.on { border-color: var(--caution); color: var(--caution); }
+.slot-idx { opacity: 0.9; }
+.more { color: var(--dim-2); font-size: 0.846rem; }

@@ -1,0 +1,96 @@
+{
+  "name": "xiaoman-box",
+  "version": "0.3.0-basic.1",
+  "private": true,
+  "description": "XiaoManBox 基础版：本地 AI、工具、技能、UE 集成与本地画板",
+  "author": "XiaoManBox contributors",
+  "main": "electron/main.cjs",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "type-check": "vue-tsc --noEmit",
+    "preview": "vite preview",
+    "start": "electron .",
+    "smoke": "electron . --smoke",
+    "backend": "node backend/server.mjs",
+    "dist": "npm run build && electron-builder --win",
+    "dist:dir": "npm run build && electron-builder --win --dir"
+  },
+  "dependencies": {
+    "vue": "^3.5.13",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.2.1",
+    "electron": "^33.0.0",
+    "electron-builder": "^26.15.3",
+    "typescript": "~5.6.3",
+    "vite": "^6.0.3",
+    "vue-tsc": "^2.1.10"
+  },
+  "build": {
+    "appId": "com.xiaoman.box.basic",
+    "productName": "XiaoManBox Basic",
+    "copyright": "Copyright 2026 XiaoManBox contributors",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "dist/**/*",
+      "electron/**/*",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "backend",
+        "to": "backend",
+        "filter": [
+          "**/*.mjs"
+        ]
+      },
+      {
+        "from": "builtin-skills",
+        "to": "builtin-skills"
+      },
+      {
+        "from": "plugin/UnrealAgentLink",
+        "to": "plugin/UnrealAgentLink"
+      },
+      {
+        "from": "../local-board",
+        "to": "local-board",
+        "filter": [
+          "server/**",
+          "dist/**",
+          "node_modules/**",
+          "package.json"
+        ]
+      },
+      {
+        "from": "node_modules/ws",
+        "to": "backend/node_modules/ws"
+      }
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "XiaoManBox Basic",
+      "artifactName": "XiaoManBox-${version}-Setup.${ext}"
+    },
+    "electronDist": "node_modules/electron/dist"
+  },
+  "license": "Apache-2.0"
+}

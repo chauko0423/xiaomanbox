@@ -1,0 +1,12 @@
+{
+  "scope": "Git index boundary, size and chat template byte integrity",
+  "files": 401,
+  "totalBytes": 9003169,
+  "largestFile": "local-board/public/excalidraw-assets/vendor-677e88ca78c86bddf13d.js",
+  "largestBytes": 2963717,
+  "forbiddenAssets": 0,
+  "chatTemplateHashMatches": true,
+  "account": "chauko0423",
+  "remoteCreated": true,
+  "repository": "https://github.com/chauko0423/xiaomanbox"
+}

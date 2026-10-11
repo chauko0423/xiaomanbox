@@ -1,0 +1,115 @@
+import { addTranslations } from './index';
+
+/**
+ * 插件面板（2026-10-09 全应用双语）。
+ */
+addTranslations({
+  '配置和查看本机已安装的插件 —— Agent 的运行参数，与接入的外部能力。':
+    'Configure and inspect locally installed plugins — Agent runtime parameters and connected external capabilities.',
+  插件配置: 'Plugin config',
+  'MCP 服务器': 'MCP servers',
+  插件社区: 'Plugin community',
+
+  // 手风琴
+  'Agent 循环': 'Agent loop',
+  'Agent 如何派发工具调用。': 'How the agent dispatches tool calls.',
+  超时: 'Timeouts',
+  '模型与工具的等待上限。': 'Upper limits for model and tool waits.',
+  '上下文与 Token': 'Context & tokens',
+  '上下文窗口大小，以及输入 / 输出的 token 上限。': 'Context window size and input/output token limits.',
+
+  // 字段 label/hint
+  最大循环轮数: 'Max loop rounds',
+  '小满一次任务里最多「想→调工具」多少轮；无上限 = 模型给最终答复才停': 'Max "think → call tool" rounds per task; unlimited = stop only when the model gives a final answer',
+  温度: 'Temperature',
+  '越低越严谨，越高越发散（0~1）': 'Lower is more rigorous, higher more divergent (0~1)',
+  思考预算: 'Thinking budget',
+  '限制思考 token；无上限 = 不传参，引擎自己决定（4090 服务端默认满血思考）；0 = 禁止思考': 'Limit thinking tokens; unlimited = no parameter, engine decides; 0 = disable thinking',
+  模型超时: 'Model timeout',
+  '等模型响应多久（毫秒）': 'How long to wait for a model response (ms)',
+  工具超时: 'Tool timeout',
+  '等工具执行多久（毫秒，如编译/UE 操作）': 'How long to wait for a tool (ms, e.g. compile/UE ops)',
+  上下文窗口: 'Context window',
+  '模型上下文总窗口（token，用量面板的分母）': 'Total model context window (tokens, denominator of the usage panel)',
+  '输入 token 上限': 'Input token limit',
+  '单次请求输入上限（0 = 不限制）': 'Per-request input limit (0 = unlimited)',
+  '输出 token 上限': 'Output token limit',
+  '单次响应输出上限（0 = 不限制；>0 透传引擎 max_tokens）': 'Per-response output limit (0 = unlimited; >0 forwards engine max_tokens)',
+  无上限: 'Unlimited',
+  '保存运行配置': 'Save run config',
+  '保存中…': 'Saving…',
+
+  // MCP
+  '加载中…': 'Loading…',
+  '尚未接入 MCP 服务器 —— 团队画板等能力从这里挂进来。': 'No MCP servers yet — team board and other capabilities mount here.',
+  '+ 添加 MCP 服务器': '+ Add MCP server',
+  名称: 'Name',
+  '小写/数字/连字符，如 team-board': 'Lowercase/digits/hyphens, e.g. team-board',
+  传输: 'Transport',
+  本地子进程: 'local subprocess',
+  远程地址: 'remote URL',
+  命令: 'Command',
+  地址: 'URL',
+  添加: 'Add',
+  取消: 'Cancel',
+
+  // 插件社区
+  '两条接入路线，任选其一': 'Two integration routes, pick one',
+  依赖: 'dependency',
+  '小满自研等价工具（Node 内置模块），零外部依赖、开箱即用。': 'XiaoMan built-in equivalent tools (Node built-ins), zero dependencies, ready out of the box.',
+  外部接入: 'external integration',
+  '跑 dsh 插件原代码（独立进程），运行时已就绪：': 'Runs native dsh plugin code (separate process); runtime ready:',
+  '跑 dsh 插件原代码，需先安装 dsh 运行时（npm i -g @deepseek-ai/dsh）。': 'Runs native dsh plugin code; install the dsh runtime first (npm i -g @deepseek-ai/dsh).',
+
+  // 路线 B
+  '路线 B 试跑：起 dsh 子进程真跑任务': 'Route B trial: launch a dsh subprocess to run a task',
+  '输入任务，如：列出当前目录的文件': 'Enter a task, e.g. list files in the current directory',
+  '运行中…': 'Running…',
+  '用 dsh 跑': 'Run with dsh',
+  '路线 B 下载原生插件（npm 真下载，转发 pnpm）': 'Route B: download native plugins (real npm download, forwarded to pnpm)',
+  '输入 npm 包名，如 @deepseek-ai/dsh-tool-bash': 'Enter an npm package name, e.g. @deepseek-ai/dsh-tool-bash',
+  '下载中…': 'Downloading…',
+  下载装载: 'Download',
+  已装载: 'Installed',
+  装载: 'Install',
+  '装载中…': 'Installing…',
+  '卸载这个原生插件': 'Uninstall this native plugin',
+  '下载装载这个原生 dsh 插件': 'Download and install this native dsh plugin',
+  '已装载（dsh 启动时作为独立插件层加载）': 'Installed (loaded as an independent plugin layer when dsh starts)',
+  '暂无自定义 bundle 插件（默认只有 dsh-base + dsh-headless）。': 'No custom bundle plugins (default is dsh-base + dsh-headless).',
+  卸载: 'Uninstall',
+  '普通依赖（未声明 dsh.bundle，不会作为插件层加载）': 'Plain dependencies (no dsh.bundle declared; not loaded as a plugin layer)',
+  '提示：只有声明了': 'Note: only packages declaring',
+  '的包才会被 dsh 加载为插件层；普通组件下载后仅作依赖，不生效。': 'are loaded as a plugin layer by dsh; plain packages are installed as dependencies only and have no effect.',
+
+  // 筛选
+  '搜索插件名称 / 描述…': 'Search plugin name / description…',
+  全部分类: 'All categories',
+  全部状态: 'All states',
+  已适配: 'Adapted',
+  可映射: 'Mappable',
+  不适用: 'N/A',
+  可接入: 'Available',
+  需运行时: 'Needs runtime',
+  '点击停用（不再传给小满）': 'Click to disable (no longer passed to XiaoMan)',
+  '下载装载：启用对应的小满工具': 'Download: enable the corresponding XiaoMan tool',
+  下载: 'Download',
+  'A 路·小满等价：': 'Route A · XiaoMan equivalent:',
+  '没有匹配的插件。': 'No matching plugins.',
+  当前: 'Showing',
+  '个 · dsh 生态总计': 'of · dsh ecosystem total',
+  '个插件（内嵌快照，零外部依赖）': 'plugins (embedded snapshot, zero external dependencies)',
+
+  // 分类名（dsh-plugins.json 的 categories.name）
+  工具: 'Tools',
+  'Agent 核心': 'Agent core',
+  会话: 'Session',
+  模型接入: 'LLM',
+  存储: 'Storage',
+  '执行/沙箱': 'Shell/Sandbox',
+  '技能/编排': 'Skill/Orchestration',
+  界面: 'UI',
+  '服务/协议': 'Service/Protocol',
+  基础设施: 'Infrastructure',
+  其他: 'Misc',
+});

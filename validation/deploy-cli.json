@@ -1,0 +1,17 @@
+{
+  "at": "2026-10-11T13:31:07.868Z",
+  "checks": [
+    {
+      "name": "deploy board launch and Windows process identity",
+      "ok": true
+    },
+    {
+      "name": "deploy health verification",
+      "ok": true
+    },
+    {
+      "name": "deploy stops its own registered process",
+      "ok": true
+    }
+  ]
+}
