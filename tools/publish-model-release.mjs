@@ -66,6 +66,7 @@ try{
     if(!target||target.sha256!==a.sha256)throw new Error('主清单与分片清单不符');
     target.parts=a.parts.map(p=>({...p,url:remote.find(x=>x.name===p.name).browser_download_url}));target.url=null;
   }
+  manifest.releaseStatus='source_and_selected_quantized_assets_published_runtime_pending';
   const publishedManifest=path.join(root,'release-candidates/model-parts/release-manifest.json');
   await fsp.writeFile(publishedManifest,JSON.stringify(manifest,null,2));
   const sums=path.join(root,'release-candidates/model-parts/SHA256SUMS.txt');
