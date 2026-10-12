@@ -15,7 +15,7 @@
 
 训练材料记录基座 Qwen/Qwen3.8-27B，配置 model_type=qwen3_5；本地合并包含视觉塔与1层MTP。基座具体下载 revision、训练 checkpoint、视觉塔是否参与训练与教师/数据来源仍待补证。当前记录存在1 epoch与2 epoch不一致，未在此把任一值当作正式训练参数。
 
-模型授权文本待作者确认并补齐上游材料。根目录 Apache LICENSE 是代码整理方案，不能代替模型卡许可或所有依赖的许可。不得宣称未经记录的商业授权、成绩或能力。
+本次发布的小满量化权重采用 Apache-2.0，文本见 LICENSE-XiaoMan-Quantized.txt。上游 Qwen/Qwen3.8-27B 的官方模型卡同样标注 Apache-2.0：https://huggingface.co/Qwen/Qwen3.8-27B 。本地微调、合并和量化构成发布版本的修改；具体上游 revision 与训练来源记录仍需补齐，不把未核实的参数或成绩写成已确认事实。第三方推理引擎及 DLL 保持各自许可，模型权重许可不代替它们。
 
 ## 部署要求与限制
 

@@ -34,14 +34,19 @@ try{
     }
     selected.push({a,dir});
   }
-  let release;
-  try{release=await api('releases/tags/'+tag);}catch(e){
-    // Only create when the API explicitly reports a missing release.
-    if(!e.message.includes('404'))throw e;
+  async function findRelease(){
+    for(let page=1;;page++){
+      const items=await api(`releases?per_page=100&page=${page}`);
+      const found=items.find(item=>item.tag_name===tag);if(found)return found;
+      if(items.length<100)return null;
+    }
+  }
+  let release=await findRelease();
+  if(!release){
     const notes=path.join(root,'release-candidates/model-parts/RELEASE-NOTES.md');
     await fsp.writeFile(notes,'XiaoMan V6 主线量化权重。仅包含 .ninfer 分片；不含完整 BF16、LoRA 或训练数据。\n\n分片合并：下载源码，运行 node deploy.mjs download --id xiaoman-v6-sd（或视觉版 ID）。支持已完成分片复用，每片及完整文件均做 SHA256 校验。\n\n需要匹配 NInfer 引擎；运行时分发材料仍在整理。硬件与实测边界见仓库 xiaoman/MODEL_CARD.md。\n');
     await run(['release','create',tag,'--repo',repo,'--target','main','--draft','--prerelease','--title','XiaoMan V6 quantized candidates','--notes-file',notes]);
-    release=await api('releases/tags/'+tag);
+    release=await findRelease();if(!release)throw new Error('创建草稿后未找到 Release');
   }
   async function assets(){
     const all=[];for(let page=1;;page++){
@@ -71,11 +76,13 @@ try{
   await fsp.writeFile(publishedManifest,JSON.stringify(manifest,null,2));
   const sums=path.join(root,'release-candidates/model-parts/SHA256SUMS.txt');
   await fsp.writeFile(sums,selected.flatMap(({a})=>a.parts.map(p=>p.sha256+'  '+p.name)).join('\n')+'\n');
-  const extras=[publishedManifest,sums];
+  const extras=[publishedManifest,sums,path.join(root,'xiaoman/MODEL_CARD.md'),path.join(root,'xiaoman/LICENSE-XiaoMan-Quantized.txt')];
   for(const file of extras){
     const name=path.basename(file),sha=await sha256File(file),prior=remote.find(x=>x.name===name);
     if(prior){if(prior.digest!=='sha256:'+sha)throw new Error('远程同名说明不一致，未覆盖：'+name);}
     else await run(['release','upload',tag,file,'--repo',repo]);
+    remote=await assets();const checked=remote.find(x=>x.name===name);
+    if(!checked||checked.size!==(await fsp.stat(file)).size||checked.digest!=='sha256:'+sha||checked.state!=='uploaded')throw new Error('远程说明文件校验失败：'+name);
   }
   if(release.draft)await run(['release','edit',tag,'--repo',repo,'--draft=false']);
   release=await api('releases/tags/'+tag);if(release.draft)throw new Error('Release 仍为草稿');
