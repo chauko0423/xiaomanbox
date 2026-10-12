@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "scope": "same computer through its non-loopback private IPv4; no second device or firewall changes",
+  "checks": [
+    {
+      "name": "LAN management denied even with manager token; private room HTTP and WebSocket denied",
+      "passed": true
+    },
+    {
+      "name": "30 LAN WebSocket updates synchronize; read-only mutation rejected by server",
+      "passed": true
+    },
+    {
+      "name": "LAN editor image upload and viewer fetch work; viewer upload denied",
+      "passed": true
+    },
+    {
+      "name": "disabling sharing revokes connected clients, HTTP room and image access",
+      "passed": true
+    },
+    {
+      "name": "rotating keys revokes old edit/view HTTP links and WebSocket authentication",
+      "passed": true
+    },
+    {
+      "name": "LAN document and image survive service restart",
+      "passed": true
+    }
+  ],
+  "ownChildProcessesStopped": true
+}

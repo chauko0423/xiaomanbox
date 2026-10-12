@@ -4,11 +4,10 @@ import { HocuspocusProvider } from "@hocuspocus/provider";
 import { BoardCollab } from "./boardCollab";
 import { CommentsStore } from "./comments";
 import { getIdentity } from "./identity";
+import { destroyOwnedProvider } from "./providerLifecycle.mjs";
 
 
-// 部署友好：默认跟随当前访问的域名（同一台机器上 nginx 静态站 + 1234 端口协作服务），
-// 本地开发时 5173 端口访问 localhost，自动落到 ws://localhost:1234；
-// 如需指向别的协作服务，构建时用 VITE_COLLAB_WS_URL 覆盖（如 wss://domain/ws）。
+// HTTP 与协作连接使用同一宿主和端口。
 const WS_URL = `${location.protocol === "https:" ? "wss:" : "ws:"}//${location.host}`;
 
 export type Peer = {
@@ -22,7 +21,7 @@ export type BoardStatus = "connecting" | "connected" | "disconnected" | "denied"
 /**
  * @param key 房间分享 key（editKey / viewKey）。
  *   有 key 时 token 拼成 `<role>_<key>`，服务端 onAuthenticate 校验；
- *   没有 key 时退回旧格式裸 `edit` / `view`（只对未登记的老房间放行）。
+ *   服务端始终要求已登记房间的有效密钥。
  */
 export function useCollabBoard(
   roomId: string,
@@ -42,7 +41,7 @@ export function useCollabBoard(
   useEffect(() => {
     if (!api || !roomId) return;
 
-    // 用登录账号的真实用户名作为协作光标/批注显示名（未登录时回退随机动物名）
+    // 基础版用本机生成的匿名显示名。
     const identity = getIdentity(null);
     const doc = new Y.Doc();
     const readOnly = role === "view";
@@ -146,7 +145,7 @@ export function useCollabBoard(
       comments?.destroy();
       collaborators.current = new Map();
       peersKey.current = "";
-      provider.destroy();
+      destroyOwnedProvider(provider);
       doc.destroy();
     };
   }, [api, roomId, role, key]);

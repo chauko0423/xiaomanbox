@@ -845,13 +845,13 @@
     },
     {
       "id": "xiaomanbox-basic-installer",
-      "path": "release-candidates/XiaoManBox-0.3.0-basic.2-Setup.exe",
-      "bytes": 85127907,
-      "sha256": "68f3ceb0709e4074b819393f44dba142780a9fe2768d8c4d4489f1076f8da204",
-      "url": "https://github.com/chauko0423/xiaomanbox/releases/download/v0.3.0-basic.2/XiaoManBox-0.3.0-basic.2-Setup.exe",
+      "path": "release-candidates/XiaoManBox-0.3.0-basic.3-Setup.exe",
+      "bytes": 85127814,
+      "sha256": "1e53bc91bac427c889346e864c433e4465d0c97cfc47abf912a60a0da8f619db",
+      "url": "https://github.com/chauko0423/xiaomanbox/releases/download/v0.3.0-basic.3/XiaoManBox-0.3.0-basic.3-Setup.exe",
       "type": "desktop-installer",
       "signature": "unsigned",
-      "verification": "basic.2 packaged_lifecycle_and_pipe_failure_smoke_pass; UE5.7.4 actual compiled_plugin_actor_read_modify_headless_pass; frontend_built"
+      "verification": "basic.3 packaged_lifecycle_and_pipe_failure_smoke_pass; actual_renderer_pass; 50 board_socket_create_dispose_cycles_pass; same_host_nonloopback_IPv4_sharing_pass"
     }
   ],
   "notes": [

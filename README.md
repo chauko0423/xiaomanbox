@@ -16,12 +16,14 @@ XiaoManBox 基础版提供本地 AI 对话、文件/命令工具、技能、MCP�
 
 - 给 AI：把下载的仓库源码 ZIP（或作者另行提供的 `小满-AI部署包.zip`）交给 AI，要求先读 `AI部署入口.md`。
 - 人工部署：读 `人工部署说明.md`。源码部署需要官方 Node.js 22+（含 npm）。
-- Windows 安装包：[GitHub Release](https://github.com/chauko0423/xiaomanbox/releases/tag/v0.3.0-basic.2)。安装后配置自己的模型 API；无需小满权重。
-- AI 部署 ZIP：[XiaoMan-AI-Deployment.zip](https://github.com/chauko0423/xiaomanbox/releases/download/v0.3.0-basic.2/XiaoMan-AI-Deployment.zip)。内含主线量化权重的公开分片清单、自动下载与合并工具，以及项目和模型介绍。
+- Windows 安装包：[GitHub Release](https://github.com/chauko0423/xiaomanbox/releases/tag/v0.3.0-basic.3)。安装后配置自己的模型 API；无需小满权重。
+- AI 部署 ZIP：[XiaoMan-AI-Deployment.zip](https://github.com/chauko0423/xiaomanbox/releases/download/v0.3.0-basic.3/XiaoMan-AI-Deployment.zip)。内含主线量化权重的公开分片清单、自动下载与合并工具，以及项目和模型介绍。
 - 使用小满量化模型：读 `xiaoman/MODEL_CARD.md`；Git 源码不含权重，按 `release-manifest.json` 的分片清单下载；Ada 候选仍暂无匹配硬件实测与公开下载。
 - 本地文本推理：[Windows Blackwell 文本推理包](https://github.com/chauko0423/xiaomanbox/releases/tag/ninfer-blackwell-text-v1)。部署工具自动下载引擎与许可说明；文本默认采用已实测的2048上下文、1个host state与256MiB host KV。
 - 本地视觉推理：[Windows Blackwell 视觉推理包](https://github.com/chauko0423/xiaomanbox/releases/tag/ninfer-blackwell-vision-v1)。自动下载引擎、4份精简LGPL共享库与许可说明；已完成PNG/JPEG和短H264视频输入冒烟。
 - 复验：`node tests/acceptance.mjs`。脚本使用独立数据目录及测试端口，不加载真实模型。
+
+basic.3 修复画板组件释放后残留的 WebSocket 与重连任务。50 次连接创建/释放和本机非回环 IPv4 分享检查已通过；第二台电脑仍需按 [局域网双机验收](局域网双机验收.md) 复验。
 
 ## 快速启动（源码方式）
 
@@ -60,3 +62,6 @@ node deploy.mjs app
 ## GitHub 量化分片
 
 主线文本44片、视觉57片；已复用的4片为1 GiB，其余新增片最多256 MiB，清单含逐片和完整文件 SHA256。[主线量化分片已公开](https://github.com/chauko0423/xiaomanbox/releases/tag/xiaoman-v6-quantized)， `node deploy.mjs download --id xiaoman-v6-sd` 将自动下载、校验并合并，完成的分片可复用。手动下载全部分片后，用 `--parts-dir <分片目录>` 合并。详见 `xiaoman/GITHUB_RELEASE.md`。
+
+
+视觉引擎还通过约5分钟的间隔请求检查（20次文本、20次PNG/JPEG、4次短H264视频，以及异常图片拒绝后1次文本恢复；RTX5080、2048上下文），显存记录范围15186–15190MiB。这不是长上下文、满负载或模型质量评测。 记录见 `validation/vision-runtime-soak.json`。

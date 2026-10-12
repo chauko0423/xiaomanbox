@@ -11,7 +11,7 @@
 5. 使用量化模型时读模型卡。Blackwell 12.0、16GB+ 仅允许尝试主线候选；不代表所有模型都能装入显存。其他 GPU 不自动套用现有引擎，选择已验证匹配版本或自备 API。
 6. 下载必须通过清单校验。带 parts 清单时，由部署工具逐片下载、校验、合并并检查完整 SHA256；已完成分片可复用。不要将 .part 分片直接交给引擎，也不要仅按文件名顺序拼接而跳过校验。完整文件 URL 为 null 时先检查 parts 的逐片 URL；完整和逐片 URL 均为空才表示尚未发布。不要编造链接、从私人磁盘假装下载，或擅自替换另一份权重。人工文件可用 `node deploy.mjs download --id <ID> --from <文件>` 安装；已有完整本地 assets 则直接校验。
 7. 主线文本与视觉均使用独立发布的匹配引擎，默认采用已实测的2048上下文、1个host state与256MiB host KV；视觉引擎只下载绑定的4份LGPL共享库和许可说明。配好本地模型后 `node deploy.mjs model-config --id xiaoman-v6-sd`、`node deploy.mjs model-start`。启动前检查显存、内存、磁盘和端口，不能杀掉使用者正在运行的其他服务。实际回答与工具调用通过才记录模型成功。
-8. `node deploy.mjs app`；按需 `node deploy.mjs board` 或从桌面本地画板启动。管理链接只给宿主，协作者只拿画板内生成的编辑/只读链接。
+8. `node deploy.mjs app`；按需 `node deploy.mjs board` 或从桌面本地画板启动。管理链接只给宿主，协作者只拿画板内生成的编辑/只读链接。另一台 LAN 机器的操作与结果记录按 `局域网双机验收.md` 执行；本机网卡地址测试不能替代双机验证。
 9. `node deploy.mjs verify --desktop` 是健康检查。完整功能验证需运行 `node tests/acceptance.mjs`，并在人机 UI、另一台 LAN 机器、实际 UE 编辑器和真实模型上补验相应功能。不得把模拟 API 测试称为模型效果评测。
 10. 输出配置位置、实际通过的检查、未完成事项、停止命令。`node deploy.mjs stop` 只处理该 HOME 下登记的进程。
 

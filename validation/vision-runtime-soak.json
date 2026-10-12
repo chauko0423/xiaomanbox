@@ -1,0 +1,155 @@
+{
+  "passed": true,
+  "scope": "5-minute sequential vision runtime soak; RTX5080/2048 context, short independent requests; not a long-context, throughput or model quality benchmark",
+  "runtimeSha256": "e421aec93378535717a5d1e2209ef616a1b67340aa42701680467b33d196599f",
+  "rounds": [
+    {
+      "round": 1,
+      "textAndImagePassed": true,
+      "shortVideoPassed": true,
+      "gpuMiB": 15187,
+      "requestSeconds": 1.5
+    },
+    {
+      "round": 2,
+      "textAndImagePassed": true,
+      "shortVideoPassed": null,
+      "gpuMiB": 15186,
+      "requestSeconds": 1.141
+    },
+    {
+      "round": 3,
+      "textAndImagePassed": true,
+      "shortVideoPassed": null,
+      "gpuMiB": 15187,
+      "requestSeconds": 1.047
+    },
+    {
+      "round": 4,
+      "textAndImagePassed": true,
+      "shortVideoPassed": null,
+      "gpuMiB": 15186,
+      "requestSeconds": 1.063
+    },
+    {
+      "round": 5,
+      "textAndImagePassed": true,
+      "shortVideoPassed": null,
+      "gpuMiB": 15187,
+      "requestSeconds": 1.047
+    },
+    {
+      "round": 6,
+      "textAndImagePassed": true,
+      "shortVideoPassed": true,
+      "gpuMiB": 15186,
+      "requestSeconds": 1.5
+    },
+    {
+      "round": 7,
+      "textAndImagePassed": true,
+      "shortVideoPassed": null,
+      "gpuMiB": 15187,
+      "requestSeconds": 1.047
+    },
+    {
+      "round": 8,
+      "textAndImagePassed": true,
+      "shortVideoPassed": null,
+      "gpuMiB": 15190,
+      "requestSeconds": 1.047
+    },
+    {
+      "round": 9,
+      "textAndImagePassed": true,
+      "shortVideoPassed": null,
+      "gpuMiB": 15187,
+      "requestSeconds": 1.063
+    },
+    {
+      "round": 10,
+      "textAndImagePassed": true,
+      "shortVideoPassed": null,
+      "gpuMiB": 15190,
+      "requestSeconds": 1.047
+    },
+    {
+      "round": 11,
+      "textAndImagePassed": true,
+      "shortVideoPassed": true,
+      "gpuMiB": 15187,
+      "requestSeconds": 1.516
+    },
+    {
+      "round": 12,
+      "textAndImagePassed": true,
+      "shortVideoPassed": null,
+      "gpuMiB": 15186,
+      "requestSeconds": 1.094
+    },
+    {
+      "round": 13,
+      "textAndImagePassed": true,
+      "shortVideoPassed": null,
+      "gpuMiB": 15187,
+      "requestSeconds": 1.047
+    },
+    {
+      "round": 14,
+      "textAndImagePassed": true,
+      "shortVideoPassed": null,
+      "gpuMiB": 15190,
+      "requestSeconds": 1.032
+    },
+    {
+      "round": 15,
+      "textAndImagePassed": true,
+      "shortVideoPassed": null,
+      "gpuMiB": 15187,
+      "requestSeconds": 1.063
+    },
+    {
+      "round": 16,
+      "textAndImagePassed": true,
+      "shortVideoPassed": true,
+      "gpuMiB": 15186,
+      "requestSeconds": 1.5
+    },
+    {
+      "round": 17,
+      "textAndImagePassed": true,
+      "shortVideoPassed": null,
+      "gpuMiB": 15187,
+      "requestSeconds": 1.047
+    },
+    {
+      "round": 18,
+      "textAndImagePassed": true,
+      "shortVideoPassed": null,
+      "gpuMiB": 15190,
+      "requestSeconds": 1.016
+    },
+    {
+      "round": 19,
+      "textAndImagePassed": true,
+      "shortVideoPassed": null,
+      "gpuMiB": 15187,
+      "requestSeconds": 1.078
+    },
+    {
+      "round": 20,
+      "textAndImagePassed": true,
+      "shortVideoPassed": null,
+      "gpuMiB": 15190,
+      "requestSeconds": 1.047
+    }
+  ],
+  "gpuMinMiB": 15186,
+  "gpuMaxMiB": 15190,
+  "requestsPassed": 45,
+  "invalidImageHttpStatus": 400,
+  "recoveryReply": "持续运行正常",
+  "recoveredAfterInvalidInput": true,
+  "ownEngineStopped": true,
+  "elapsedSeconds": 308.5
+}

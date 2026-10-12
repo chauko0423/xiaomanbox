@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "scope": "50 real WebSocket provider create/dispose cycles on an isolated socket server; no browser UI or second device",
+  "cycles": 50,
+  "socketsCreated": 50,
+  "openSocketsAtEnd": 0,
+  "noReconnectAfterDispose": true
+}
