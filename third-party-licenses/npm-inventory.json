@@ -1,0 +1,5914 @@
+{
+  "scope": "installed npm package license/notice files; retained from exact locked package files",
+  "packages": [
+    {
+      "name": "@babel/code-frame",
+      "version": "7.29.7",
+      "license": "MIT",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76.txt",
+          "sha256": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@babel/compat-data",
+      "version": "7.29.7",
+      "license": "MIT",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76.txt",
+          "sha256": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@babel/core",
+      "version": "7.29.7",
+      "license": "MIT",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76.txt",
+          "sha256": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@babel/generator",
+      "version": "7.29.8",
+      "license": "MIT",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76.txt",
+          "sha256": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@babel/helper-compilation-targets",
+      "version": "7.29.7",
+      "license": "MIT",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76.txt",
+          "sha256": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@babel/helper-globals",
+      "version": "7.29.7",
+      "license": "MIT",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76.txt",
+          "sha256": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@babel/helper-module-imports",
+      "version": "7.29.7",
+      "license": "MIT",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76.txt",
+          "sha256": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@babel/helper-module-transforms",
+      "version": "7.29.7",
+      "license": "MIT",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76.txt",
+          "sha256": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@babel/helper-plugin-utils",
+      "version": "7.29.7",
+      "license": "MIT",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76.txt",
+          "sha256": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@babel/helper-string-parser",
+      "version": "7.29.7",
+      "license": "MIT",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76.txt",
+          "sha256": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@babel/helper-validator-identifier",
+      "version": "7.29.7",
+      "license": "MIT",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76.txt",
+          "sha256": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@babel/helper-validator-option",
+      "version": "7.29.7",
+      "license": "MIT",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76.txt",
+          "sha256": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@babel/helpers",
+      "version": "7.29.10",
+      "license": "MIT",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/4be9d87b56a306293223b490c0d0b245e9e94f39884147bf051a6c7b825aeb30.txt",
+          "sha256": "4be9d87b56a306293223b490c0d0b245e9e94f39884147bf051a6c7b825aeb30",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@babel/parser",
+      "version": "7.29.9",
+      "license": "MIT",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/2e97627cb278aa7556fb9e8817368302301a595b6c7582512b8d74c57b773652.txt",
+          "sha256": "2e97627cb278aa7556fb9e8817368302301a595b6c7582512b8d74c57b773652",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@babel/plugin-transform-react-jsx-self",
+      "version": "7.29.7",
+      "license": "MIT",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76.txt",
+          "sha256": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@babel/plugin-transform-react-jsx-source",
+      "version": "7.29.7",
+      "license": "MIT",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76.txt",
+          "sha256": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@babel/template",
+      "version": "7.29.7",
+      "license": "MIT",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76.txt",
+          "sha256": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@babel/traverse",
+      "version": "7.29.10",
+      "license": "MIT",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76.txt",
+          "sha256": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@babel/types",
+      "version": "7.29.8",
+      "license": "MIT",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76.txt",
+          "sha256": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@esbuild/win32-x64",
+      "version": "0.21.5",
+      "license": "MIT",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/b40ec5baec7bb34fa5b1c09521fa3cd52d5fad7adafed74932a2010d3612a681.txt",
+          "sha256": "b40ec5baec7bb34fa5b1c09521fa3cd52d5fad7adafed74932a2010d3612a681",
+          "source": "same-upstream distribution license: local-board/node_modules/esbuild/LICENSE.md"
+        }
+      ]
+    },
+    {
+      "name": "@excalidraw/excalidraw",
+      "version": "0.17.6",
+      "license": "MIT",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/1352d204fdb90d5e482c13139d848bc2c9300a9a7de358a0a558a23e72d0d8be.txt",
+          "sha256": "1352d204fdb90d5e482c13139d848bc2c9300a9a7de358a0a558a23e72d0d8be",
+          "source": "same-upstream distribution license: third-party-licenses/Excalidraw-0.17.6-LICENSE.txt"
+        }
+      ]
+    },
+    {
+      "name": "@hocuspocus/common",
+      "version": "2.15.3",
+      "license": "MIT",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/dce30f7f8fff923e74d41b44a620714e928dd7708064c807d94f50210a1179d7.txt",
+          "sha256": "dce30f7f8fff923e74d41b44a620714e928dd7708064c807d94f50210a1179d7",
+          "source": "same-upstream distribution license: third-party-licenses/Hocuspocus-2.15.3-LICENSE.txt"
+        }
+      ]
+    },
+    {
+      "name": "@hocuspocus/provider",
+      "version": "2.15.3",
+      "license": "MIT",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/dce30f7f8fff923e74d41b44a620714e928dd7708064c807d94f50210a1179d7.txt",
+          "sha256": "dce30f7f8fff923e74d41b44a620714e928dd7708064c807d94f50210a1179d7",
+          "source": "same-upstream distribution license: third-party-licenses/Hocuspocus-2.15.3-LICENSE.txt"
+        }
+      ]
+    },
+    {
+      "name": "@hocuspocus/server",
+      "version": "2.15.3",
+      "license": "MIT",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/dce30f7f8fff923e74d41b44a620714e928dd7708064c807d94f50210a1179d7.txt",
+          "sha256": "dce30f7f8fff923e74d41b44a620714e928dd7708064c807d94f50210a1179d7",
+          "source": "same-upstream distribution license: third-party-licenses/Hocuspocus-2.15.3-LICENSE.txt"
+        }
+      ]
+    },
+    {
+      "name": "@jridgewell/gen-mapping",
+      "version": "0.3.13",
+      "license": "MIT",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/769d154fbde32a915af110b1123650bc79f4cbe675acc66e005265bf069c6c6c.txt",
+          "sha256": "769d154fbde32a915af110b1123650bc79f4cbe675acc66e005265bf069c6c6c",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@jridgewell/remapping",
+      "version": "2.3.5",
+      "license": "MIT",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/769d154fbde32a915af110b1123650bc79f4cbe675acc66e005265bf069c6c6c.txt",
+          "sha256": "769d154fbde32a915af110b1123650bc79f4cbe675acc66e005265bf069c6c6c",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@jridgewell/resolve-uri",
+      "version": "3.1.2",
+      "license": "MIT",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/b8778b155bfde5a28b023a558753c0fa058a52bb9de35c343c250be1bbcdedab.txt",
+          "sha256": "b8778b155bfde5a28b023a558753c0fa058a52bb9de35c343c250be1bbcdedab",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@jridgewell/sourcemap-codec",
+      "version": "1.6.0",
+      "license": "MIT",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/769d154fbde32a915af110b1123650bc79f4cbe675acc66e005265bf069c6c6c.txt",
+          "sha256": "769d154fbde32a915af110b1123650bc79f4cbe675acc66e005265bf069c6c6c",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@jridgewell/trace-mapping",
+      "version": "0.3.31",
+      "license": "MIT",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/769d154fbde32a915af110b1123650bc79f4cbe675acc66e005265bf069c6c6c.txt",
+          "sha256": "769d154fbde32a915af110b1123650bc79f4cbe675acc66e005265bf069c6c6c",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@lifeomic/attempt",
+      "version": "3.1.0",
+      "license": "MIT",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/2bfbec382a4ebcc15fb6ac11412672437313d9d9ca70a6f44d899e5db0b84711.txt",
+          "sha256": "2bfbec382a4ebcc15fb6ac11412672437313d9d9ca70a6f44d899e5db0b84711",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@rollup/rollup-win32-x64-gnu",
+      "version": "4.64.5",
+      "license": "MIT",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/fa1bd040c5bdeefe65b3821cebf474f2733ce65df13089bd151dda1778e62fe8.txt",
+          "sha256": "fa1bd040c5bdeefe65b3821cebf474f2733ce65df13089bd151dda1778e62fe8",
+          "source": "same-upstream distribution license: local-board/node_modules/rollup/LICENSE.md"
+        }
+      ]
+    },
+    {
+      "name": "@rollup/rollup-win32-x64-msvc",
+      "version": "4.64.5",
+      "license": "MIT",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/fa1bd040c5bdeefe65b3821cebf474f2733ce65df13089bd151dda1778e62fe8.txt",
+          "sha256": "fa1bd040c5bdeefe65b3821cebf474f2733ce65df13089bd151dda1778e62fe8",
+          "source": "same-upstream distribution license: local-board/node_modules/rollup/LICENSE.md"
+        }
+      ]
+    },
+    {
+      "name": "@types/babel__core",
+      "version": "7.20.5",
+      "license": "MIT",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt",
+          "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@types/babel__generator",
+      "version": "7.27.0",
+      "license": "MIT",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt",
+          "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@types/babel__template",
+      "version": "7.4.4",
+      "license": "MIT",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt",
+          "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@types/babel__traverse",
+      "version": "7.28.0",
+      "license": "MIT",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt",
+          "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@types/estree",
+      "version": "1.0.9",
+      "license": "MIT",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt",
+          "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@types/prop-types",
+      "version": "15.7.15",
+      "license": "MIT",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt",
+          "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@types/react",
+      "version": "17.0.83",
+      "license": "MIT",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt",
+          "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@types/react-dom",
+      "version": "17.0.26",
+      "license": "MIT",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt",
+          "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@types/scheduler",
+      "version": "0.16.8",
+      "license": "MIT",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt",
+          "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@vitejs/plugin-react",
+      "version": "4.3.4",
+      "license": "MIT",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/29b68325fe026047d13e187b44c33b2acacf7dc647dec4583702e59f235e13b5.txt",
+          "sha256": "29b68325fe026047d13e187b44c33b2acacf7dc647dec4583702e59f235e13b5",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "async-lock",
+      "version": "1.4.1",
+      "license": "MIT",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/11e9f9acdfdfce6caa7b304c6ebb1a3269a61bb03d74bfcce629cc1462c06ddc.txt",
+          "sha256": "11e9f9acdfdfce6caa7b304c6ebb1a3269a61bb03d74bfcce629cc1462c06ddc",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "baseline-browser-mapping",
+      "version": "2.11.28",
+      "license": "Apache-2.0",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4.txt",
+          "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+          "originalName": "LICENSE.txt"
+        }
+      ]
+    },
+    {
+      "name": "browserslist",
+      "version": "4.29.3",
+      "license": "MIT",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/21c2679a63d7699c0e644409e2f17d0adbc7a965003feb06b3ff4b833d21f722.txt",
+          "sha256": "21c2679a63d7699c0e644409e2f17d0adbc7a965003feb06b3ff4b833d21f722",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "caniuse-lite",
+      "version": "1.0.30001815",
+      "license": "CC-BY-4.0",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/fd3a263fe19ed8faa9068b43abaebafc02c77897b0c6fc09abc04bb592e5f16e.txt",
+          "sha256": "fd3a263fe19ed8faa9068b43abaebafc02c77897b0c6fc09abc04bb592e5f16e",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "convert-source-map",
+      "version": "2.0.0",
+      "license": "MIT",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/1fa6ee8bb95a81ae3d73a5bd074a3ac380ffec13697051063ca1a601921b91db.txt",
+          "sha256": "1fa6ee8bb95a81ae3d73a5bd074a3ac380ffec13697051063ca1a601921b91db",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "csstype",
+      "version": "3.2.3",
+      "license": "MIT",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/11d55bd4541c75ee7879547ac49089c489163dae49551389713c3d026cab383e.txt",
+          "sha256": "11d55bd4541c75ee7879547ac49089c489163dae49551389713c3d026cab383e",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "dagre",
+      "version": "0.8.5",
+      "license": "MIT",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/6a349742a6cb219d5a2fc8d0844f6d89a6efc62e20c664450d884fc7ff2d6015.txt",
+          "sha256": "6a349742a6cb219d5a2fc8d0844f6d89a6efc62e20c664450d884fc7ff2d6015",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "debug",
+      "version": "4.4.3",
+      "license": "MIT",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/3a61c6c96caf5c1d9b623fb9b04c822b783dfcb78aa7e49c76a3f643e6ed7f95.txt",
+          "sha256": "3a61c6c96caf5c1d9b623fb9b04c822b783dfcb78aa7e49c76a3f643e6ed7f95",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "electron-to-chromium",
+      "version": "1.5.452",
+      "license": "ISC",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/25ba5c59dad3e0dd8f9540beaa0f0a86a10e3aec35af5fdc8e88c5f6a5c0d8c6.txt",
+          "sha256": "25ba5c59dad3e0dd8f9540beaa0f0a86a10e3aec35af5fdc8e88c5f6a5c0d8c6",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "esbuild",
+      "version": "0.21.5",
+      "license": "MIT",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/b40ec5baec7bb34fa5b1c09521fa3cd52d5fad7adafed74932a2010d3612a681.txt",
+          "sha256": "b40ec5baec7bb34fa5b1c09521fa3cd52d5fad7adafed74932a2010d3612a681",
+          "originalName": "LICENSE.md"
+        }
+      ]
+    },
+    {
+      "name": "escalade",
+      "version": "3.2.0",
+      "license": "MIT",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/9a9edad7baae52622bddf3c15b2ef8a33d2c89f2d25408ad13e8a7481c6b0c97.txt",
+          "sha256": "9a9edad7baae52622bddf3c15b2ef8a33d2c89f2d25408ad13e8a7481c6b0c97",
+          "originalName": "license"
+        }
+      ]
+    },
+    {
+      "name": "gensync",
+      "version": "1.0.0-beta.2",
+      "license": "MIT",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/e3a956681ee067f971ac413994171b3d90ca801ec6324e76c9c55366cfe31cb0.txt",
+          "sha256": "e3a956681ee067f971ac413994171b3d90ca801ec6324e76c9c55366cfe31cb0",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "graphlib",
+      "version": "2.1.8",
+      "license": "MIT",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/6a349742a6cb219d5a2fc8d0844f6d89a6efc62e20c664450d884fc7ff2d6015.txt",
+          "sha256": "6a349742a6cb219d5a2fc8d0844f6d89a6efc62e20c664450d884fc7ff2d6015",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "isomorphic.js",
+      "version": "0.2.5",
+      "license": "MIT",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/dd6488c9c1a4ce2dc978ecee067e5b6a725b52e6057a450b24f1a23bc373b057.txt",
+          "sha256": "dd6488c9c1a4ce2dc978ecee067e5b6a725b52e6057a450b24f1a23bc373b057",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "js-tokens",
+      "version": "4.0.0",
+      "license": "MIT",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/2213d91c606205c71eb051a199478cdc2adde945893404d7f1421436dd6d5cc1.txt",
+          "sha256": "2213d91c606205c71eb051a199478cdc2adde945893404d7f1421436dd6d5cc1",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "jsesc",
+      "version": "3.1.0",
+      "license": "MIT",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/483acb265f182907d1caf6cff9c16c96f31325ed23792832cc5d8b12d5f88c8a.txt",
+          "sha256": "483acb265f182907d1caf6cff9c16c96f31325ed23792832cc5d8b12d5f88c8a",
+          "originalName": "LICENSE-MIT.txt"
+        }
+      ]
+    },
+    {
+      "name": "json5",
+      "version": "2.2.3",
+      "license": "MIT",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/53e59feb13058722d977c699eb0407c7bce2f93c949b681bbd2ff31698535927.txt",
+          "sha256": "53e59feb13058722d977c699eb0407c7bce2f93c949b681bbd2ff31698535927",
+          "originalName": "LICENSE.md"
+        }
+      ]
+    },
+    {
+      "name": "kleur",
+      "version": "4.1.5",
+      "license": "MIT",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/306fa513e39b23a6e8747520de761809d206b99800ef41907b530226574c59ae.txt",
+          "sha256": "306fa513e39b23a6e8747520de761809d206b99800ef41907b530226574c59ae",
+          "originalName": "license"
+        }
+      ]
+    },
+    {
+      "name": "lib0",
+      "version": "0.2.119",
+      "license": "MIT",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/5446db1e43fe52faf3faab7e9959fe3762ac11bdc61c0945934c498affd52d73.txt",
+          "sha256": "5446db1e43fe52faf3faab7e9959fe3762ac11bdc61c0945934c498affd52d73",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "lodash",
+      "version": "4.18.1",
+      "license": "MIT",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/f71e8ed126b46346494aad5486874cd8f0aafe95092ed67d2e3cb6110f939abc.txt",
+          "sha256": "f71e8ed126b46346494aad5486874cd8f0aafe95092ed67d2e3cb6110f939abc",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "loose-envify",
+      "version": "1.4.0",
+      "license": "MIT",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/4eb7543b08d955a6d23fcc224601d43ff566e775be918805e26210d7f6eb4893.txt",
+          "sha256": "4eb7543b08d955a6d23fcc224601d43ff566e775be918805e26210d7f6eb4893",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "lru-cache",
+      "version": "5.1.1",
+      "license": "ISC",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b.txt",
+          "sha256": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "ms",
+      "version": "2.1.3",
+      "license": "MIT",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/1662fae9b5314d11cf51284e2dcd1f006a354f7343f08712a730fcff9a359801.txt",
+          "sha256": "1662fae9b5314d11cf51284e2dcd1f006a354f7343f08712a730fcff9a359801",
+          "originalName": "license.md"
+        }
+      ]
+    },
+    {
+      "name": "nanoid",
+      "version": "3.3.20",
+      "license": "MIT",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/da4db1480d9beea3483a2eda5c53b22238d0827d57da162b48f122e04d2d9987.txt",
+          "sha256": "da4db1480d9beea3483a2eda5c53b22238d0827d57da162b48f122e04d2d9987",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "node-releases",
+      "version": "2.0.58",
+      "license": "MIT",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/3706296ed611888111ceccc1dff4712844dea4bde0b185c82d718c3b69895abe.txt",
+          "sha256": "3706296ed611888111ceccc1dff4712844dea4bde0b185c82d718c3b69895abe",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "object-assign",
+      "version": "4.1.1",
+      "license": "MIT",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/6fb9754611c20f6649f68805e8c990e83261f29316e29de9e6cedae607b8634c.txt",
+          "sha256": "6fb9754611c20f6649f68805e8c990e83261f29316e29de9e6cedae607b8634c",
+          "originalName": "license"
+        }
+      ]
+    },
+    {
+      "name": "picocolors",
+      "version": "1.1.1",
+      "license": "ISC",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/6582629e2979466878f6014313dcc2f3756c9616148682227ce3063dde310750.txt",
+          "sha256": "6582629e2979466878f6014313dcc2f3756c9616148682227ce3063dde310750",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "postcss",
+      "version": "8.5.29",
+      "license": "MIT",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/5be1f3465bba68a626777f984878814aaf35e7ef8e9fd314d469bcf887050fb8.txt",
+          "sha256": "5be1f3465bba68a626777f984878814aaf35e7ef8e9fd314d469bcf887050fb8",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "react",
+      "version": "17.0.2",
+      "license": "MIT",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/52412d7bc7ce4157ea628bbaacb8829e0a9cb3c58f57f99176126bc8cf2bfc85.txt",
+          "sha256": "52412d7bc7ce4157ea628bbaacb8829e0a9cb3c58f57f99176126bc8cf2bfc85",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "react-dom",
+      "version": "17.0.2",
+      "license": "MIT",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/52412d7bc7ce4157ea628bbaacb8829e0a9cb3c58f57f99176126bc8cf2bfc85.txt",
+          "sha256": "52412d7bc7ce4157ea628bbaacb8829e0a9cb3c58f57f99176126bc8cf2bfc85",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "react-refresh",
+      "version": "0.14.2",
+      "license": "MIT",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/52412d7bc7ce4157ea628bbaacb8829e0a9cb3c58f57f99176126bc8cf2bfc85.txt",
+          "sha256": "52412d7bc7ce4157ea628bbaacb8829e0a9cb3c58f57f99176126bc8cf2bfc85",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "rollup",
+      "version": "4.64.5",
+      "license": "MIT",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/fa1bd040c5bdeefe65b3821cebf474f2733ce65df13089bd151dda1778e62fe8.txt",
+          "sha256": "fa1bd040c5bdeefe65b3821cebf474f2733ce65df13089bd151dda1778e62fe8",
+          "originalName": "LICENSE.md"
+        }
+      ]
+    },
+    {
+      "name": "scheduler",
+      "version": "0.20.2",
+      "license": "MIT",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/52412d7bc7ce4157ea628bbaacb8829e0a9cb3c58f57f99176126bc8cf2bfc85.txt",
+          "sha256": "52412d7bc7ce4157ea628bbaacb8829e0a9cb3c58f57f99176126bc8cf2bfc85",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "semver",
+      "version": "6.3.1",
+      "license": "ISC",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b.txt",
+          "sha256": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "source-map-js",
+      "version": "1.2.2",
+      "license": "BSD-3-Clause",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/6cb0631f71c7749763fd3dd1d5bee52dd1070ec17f2edc1710079ad070bd2fbd.txt",
+          "sha256": "6cb0631f71c7749763fd3dd1d5bee52dd1070ec17f2edc1710079ad070bd2fbd",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "typescript",
+      "version": "5.6.3",
+      "license": "Apache-2.0",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47.txt",
+          "sha256": "a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47",
+          "originalName": "LICENSE.txt"
+        }
+      ]
+    },
+    {
+      "name": "update-browserslist-db",
+      "version": "1.3.4",
+      "license": "MIT",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/9877e90da14aa8c931a1f9d07cc2a20ce119106e5dab1ebb41af865266d0cd2a.txt",
+          "sha256": "9877e90da14aa8c931a1f9d07cc2a20ce119106e5dab1ebb41af865266d0cd2a",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "uuid",
+      "version": "11.1.1",
+      "license": "MIT",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/beaa6b04fb82e41dd2ad679e19e27953afb5999b1abbb455b6564e78ebfeb332.txt",
+          "sha256": "beaa6b04fb82e41dd2ad679e19e27953afb5999b1abbb455b6564e78ebfeb332",
+          "originalName": "LICENSE.md"
+        }
+      ]
+    },
+    {
+      "name": "vite",
+      "version": "5.4.11",
+      "license": "MIT",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/04d9940b3b8b372bff74437c3b153eda8a89642669c4209a4f67135eb3132bc9.txt",
+          "sha256": "04d9940b3b8b372bff74437c3b153eda8a89642669c4209a4f67135eb3132bc9",
+          "originalName": "LICENSE.md"
+        }
+      ]
+    },
+    {
+      "name": "ws",
+      "version": "8.22.0",
+      "license": "MIT",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/2b29dcfe0d6471f7e8c92c5fb38c9f93edee10330937055440192f1832b1ecef.txt",
+          "sha256": "2b29dcfe0d6471f7e8c92c5fb38c9f93edee10330937055440192f1832b1ecef",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "y-protocols",
+      "version": "1.0.7",
+      "license": "MIT",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/5446db1e43fe52faf3faab7e9959fe3762ac11bdc61c0945934c498affd52d73.txt",
+          "sha256": "5446db1e43fe52faf3faab7e9959fe3762ac11bdc61c0945934c498affd52d73",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "yallist",
+      "version": "3.1.1",
+      "license": "ISC",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b.txt",
+          "sha256": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "yjs",
+      "version": "13.6.18",
+      "license": "MIT",
+      "area": "local-board",
+      "files": [
+        {
+          "file": "npm/341baa53605ed85d6f95782322854cca56c655ebc7fd4712649b8e7afc6020ff.txt",
+          "sha256": "341baa53605ed85d6f95782322854cca56c655ebc7fd4712649b8e7afc6020ff",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@babel/helper-string-parser",
+      "version": "7.29.7",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76.txt",
+          "sha256": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@babel/helper-validator-identifier",
+      "version": "7.29.7",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76.txt",
+          "sha256": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@babel/parser",
+      "version": "7.29.9",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/2e97627cb278aa7556fb9e8817368302301a595b6c7582512b8d74c57b773652.txt",
+          "sha256": "2e97627cb278aa7556fb9e8817368302301a595b6c7582512b8d74c57b773652",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@babel/types",
+      "version": "7.29.8",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76.txt",
+          "sha256": "117da2af0d4ce0fe1c8e19b5cff9dcd806adf973d328d27b11d4448c4ff24f76",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@electron/asar",
+      "version": "3.4.1",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/d5af8fc171f6f600c0ab4e7597dca398dda80dbe6821ce01cef78e859e7a00f8.txt",
+          "sha256": "d5af8fc171f6f600c0ab4e7597dca398dda80dbe6821ce01cef78e859e7a00f8",
+          "originalName": "LICENSE.md"
+        }
+      ]
+    },
+    {
+      "name": "balanced-match",
+      "version": "1.0.2",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/a1bd5deadb6a06dd74efa852c1b8b23f63b67f2214fbe9c8bd591da51da69268.txt",
+          "sha256": "a1bd5deadb6a06dd74efa852c1b8b23f63b67f2214fbe9c8bd591da51da69268",
+          "originalName": "LICENSE.md"
+        }
+      ]
+    },
+    {
+      "name": "brace-expansion",
+      "version": "1.1.21",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/68f12f6e2c33688699249c01d8f9623c534da20aa71989c57b061b7bc1676d14.txt",
+          "sha256": "68f12f6e2c33688699249c01d8f9623c534da20aa71989c57b061b7bc1676d14",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "minimatch",
+      "version": "3.1.5",
+      "license": "ISC",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b.txt",
+          "sha256": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@electron/fuses",
+      "version": "1.8.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/24e49a190cf97a2127e0588981e82ff6e4357632278c9ab510f328a2689eca53.txt",
+          "sha256": "24e49a190cf97a2127e0588981e82ff6e4357632278c9ab510f328a2689eca53",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "fs-extra",
+      "version": "9.1.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/1e76029602ae9b21cc4e612db2496d92febed882ba13ba745f8b3309e85f9d39.txt",
+          "sha256": "1e76029602ae9b21cc4e612db2496d92febed882ba13ba745f8b3309e85f9d39",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "jsonfile",
+      "version": "6.2.1",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/a9801fb52ba22ef808682a094da8a7a480584b7ed0dfd0d888ab543616335031.txt",
+          "sha256": "a9801fb52ba22ef808682a094da8a7a480584b7ed0dfd0d888ab543616335031",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "universalify",
+      "version": "2.0.1",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/3fda5977c0904e226190b4e21d64340c1731e2142d6fe5f3dee0090a216b8b63.txt",
+          "sha256": "3fda5977c0904e226190b4e21d64340c1731e2142d6fe5f3dee0090a216b8b63",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@electron/get",
+      "version": "2.0.3",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/edab8abb78d9c5b36944c3e00aebf6a90eb32378993f49ac8a3904007029c629.txt",
+          "sha256": "edab8abb78d9c5b36944c3e00aebf6a90eb32378993f49ac8a3904007029c629",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@electron/notarize",
+      "version": "2.5.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/60e42db5f32611ac978f4be323cba0511d1375a1af10f32d2a8bba9b291d9de2.txt",
+          "sha256": "60e42db5f32611ac978f4be323cba0511d1375a1af10f32d2a8bba9b291d9de2",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "fs-extra",
+      "version": "9.1.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/1e76029602ae9b21cc4e612db2496d92febed882ba13ba745f8b3309e85f9d39.txt",
+          "sha256": "1e76029602ae9b21cc4e612db2496d92febed882ba13ba745f8b3309e85f9d39",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "jsonfile",
+      "version": "6.2.1",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/a9801fb52ba22ef808682a094da8a7a480584b7ed0dfd0d888ab543616335031.txt",
+          "sha256": "a9801fb52ba22ef808682a094da8a7a480584b7ed0dfd0d888ab543616335031",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "universalify",
+      "version": "2.0.1",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/3fda5977c0904e226190b4e21d64340c1731e2142d6fe5f3dee0090a216b8b63.txt",
+          "sha256": "3fda5977c0904e226190b4e21d64340c1731e2142d6fe5f3dee0090a216b8b63",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@electron/osx-sign",
+      "version": "1.3.3",
+      "license": "BSD-2-Clause",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/fe6ac932d2a16058886ab32ce601b50ce2b9d65925305b72227a184185552535.txt",
+          "sha256": "fe6ac932d2a16058886ab32ce601b50ce2b9d65925305b72227a184185552535",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "fs-extra",
+      "version": "10.1.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/1e76029602ae9b21cc4e612db2496d92febed882ba13ba745f8b3309e85f9d39.txt",
+          "sha256": "1e76029602ae9b21cc4e612db2496d92febed882ba13ba745f8b3309e85f9d39",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "isbinaryfile",
+      "version": "4.0.10",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/2eedc70f2242aaf269e86e2c85eabeb875dc524d187d5953016b24091d26a843.txt",
+          "sha256": "2eedc70f2242aaf269e86e2c85eabeb875dc524d187d5953016b24091d26a843",
+          "originalName": "LICENSE.txt"
+        }
+      ]
+    },
+    {
+      "name": "jsonfile",
+      "version": "6.2.1",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/a9801fb52ba22ef808682a094da8a7a480584b7ed0dfd0d888ab543616335031.txt",
+          "sha256": "a9801fb52ba22ef808682a094da8a7a480584b7ed0dfd0d888ab543616335031",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "universalify",
+      "version": "2.0.1",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/3fda5977c0904e226190b4e21d64340c1731e2142d6fe5f3dee0090a216b8b63.txt",
+          "sha256": "3fda5977c0904e226190b4e21d64340c1731e2142d6fe5f3dee0090a216b8b63",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@electron/rebuild",
+      "version": "4.2.1",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/edab8abb78d9c5b36944c3e00aebf6a90eb32378993f49ac8a3904007029c629.txt",
+          "sha256": "edab8abb78d9c5b36944c3e00aebf6a90eb32378993f49ac8a3904007029c629",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@electron/universal",
+      "version": "2.0.3",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/edab8abb78d9c5b36944c3e00aebf6a90eb32378993f49ac8a3904007029c629.txt",
+          "sha256": "edab8abb78d9c5b36944c3e00aebf6a90eb32378993f49ac8a3904007029c629",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "balanced-match",
+      "version": "1.0.2",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/a1bd5deadb6a06dd74efa852c1b8b23f63b67f2214fbe9c8bd591da51da69268.txt",
+          "sha256": "a1bd5deadb6a06dd74efa852c1b8b23f63b67f2214fbe9c8bd591da51da69268",
+          "originalName": "LICENSE.md"
+        }
+      ]
+    },
+    {
+      "name": "brace-expansion",
+      "version": "2.1.7",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/68f12f6e2c33688699249c01d8f9623c534da20aa71989c57b061b7bc1676d14.txt",
+          "sha256": "68f12f6e2c33688699249c01d8f9623c534da20aa71989c57b061b7bc1676d14",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "fs-extra",
+      "version": "11.4.1",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/c6a7de1428955aa5a692f4d3a3d3ede658d959616944713337cda296736442e1.txt",
+          "sha256": "c6a7de1428955aa5a692f4d3a3d3ede658d959616944713337cda296736442e1",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "jsonfile",
+      "version": "6.2.1",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/a9801fb52ba22ef808682a094da8a7a480584b7ed0dfd0d888ab543616335031.txt",
+          "sha256": "a9801fb52ba22ef808682a094da8a7a480584b7ed0dfd0d888ab543616335031",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "minimatch",
+      "version": "9.0.9",
+      "license": "ISC",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/d11323827fa4edeaafc437cc5b91b6971b335f0127efeeb42bf5122fe8657e8f.txt",
+          "sha256": "d11323827fa4edeaafc437cc5b91b6971b335f0127efeeb42bf5122fe8657e8f",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "universalify",
+      "version": "2.0.1",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/3fda5977c0904e226190b4e21d64340c1731e2142d6fe5f3dee0090a216b8b63.txt",
+          "sha256": "3fda5977c0904e226190b4e21d64340c1731e2142d6fe5f3dee0090a216b8b63",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@electron/windows-sign",
+      "version": "1.2.2",
+      "license": "BSD-2-Clause",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/77cbd788d921cacb2eb6b35c96a37f6752a05c69884387a4e9b1588bacec8e4a.txt",
+          "sha256": "77cbd788d921cacb2eb6b35c96a37f6752a05c69884387a4e9b1588bacec8e4a",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "fs-extra",
+      "version": "11.4.1",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/c6a7de1428955aa5a692f4d3a3d3ede658d959616944713337cda296736442e1.txt",
+          "sha256": "c6a7de1428955aa5a692f4d3a3d3ede658d959616944713337cda296736442e1",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "jsonfile",
+      "version": "6.2.1",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/a9801fb52ba22ef808682a094da8a7a480584b7ed0dfd0d888ab543616335031.txt",
+          "sha256": "a9801fb52ba22ef808682a094da8a7a480584b7ed0dfd0d888ab543616335031",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "universalify",
+      "version": "2.0.1",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/3fda5977c0904e226190b4e21d64340c1731e2142d6fe5f3dee0090a216b8b63.txt",
+          "sha256": "3fda5977c0904e226190b4e21d64340c1731e2142d6fe5f3dee0090a216b8b63",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@esbuild/win32-x64",
+      "version": "0.25.12",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/b40ec5baec7bb34fa5b1c09521fa3cd52d5fad7adafed74932a2010d3612a681.txt",
+          "sha256": "b40ec5baec7bb34fa5b1c09521fa3cd52d5fad7adafed74932a2010d3612a681",
+          "source": "same-upstream distribution license: xiaomanbox/node_modules/esbuild/LICENSE.md"
+        }
+      ]
+    },
+    {
+      "name": "@isaacs/fs-minipass",
+      "version": "4.0.1",
+      "license": "ISC",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b.txt",
+          "sha256": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@jridgewell/sourcemap-codec",
+      "version": "1.6.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/769d154fbde32a915af110b1123650bc79f4cbe675acc66e005265bf069c6c6c.txt",
+          "sha256": "769d154fbde32a915af110b1123650bc79f4cbe675acc66e005265bf069c6c6c",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@malept/cross-spawn-promise",
+      "version": "2.0.0",
+      "license": "Apache-2.0",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@malept/flatpak-bundler",
+      "version": "0.4.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/503b8b4d83781a017ffee6b4ec40d7d8da68be5f898004bfeb4ef4a7cb52ef23.txt",
+          "sha256": "503b8b4d83781a017ffee6b4ec40d7d8da68be5f898004bfeb4ef4a7cb52ef23",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "fs-extra",
+      "version": "9.1.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/1e76029602ae9b21cc4e612db2496d92febed882ba13ba745f8b3309e85f9d39.txt",
+          "sha256": "1e76029602ae9b21cc4e612db2496d92febed882ba13ba745f8b3309e85f9d39",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "jsonfile",
+      "version": "6.2.1",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/a9801fb52ba22ef808682a094da8a7a480584b7ed0dfd0d888ab543616335031.txt",
+          "sha256": "a9801fb52ba22ef808682a094da8a7a480584b7ed0dfd0d888ab543616335031",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "universalify",
+      "version": "2.0.1",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/3fda5977c0904e226190b4e21d64340c1731e2142d6fe5f3dee0090a216b8b63.txt",
+          "sha256": "3fda5977c0904e226190b4e21d64340c1731e2142d6fe5f3dee0090a216b8b63",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@noble/hashes",
+      "version": "2.4.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/4f221aee6e072336700c408c68ab3b96a3fc09f6aebe6f48f1bd99e5ef13faec.txt",
+          "sha256": "4f221aee6e072336700c408c68ab3b96a3fc09f6aebe6f48f1bd99e5ef13faec",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@peculiar/asn1-schema",
+      "version": "2.10.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/1ecdd8e8977af83c07c5f97bec87b47d27059b7ea323ca3160fbfa2314f5d99c.txt",
+          "sha256": "1ecdd8e8977af83c07c5f97bec87b47d27059b7ea323ca3160fbfa2314f5d99c",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@peculiar/json-schema",
+      "version": "1.1.12",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/83e4dd21429a91fb7cea67a476032a9641425e5355df2e0f589a738b6ec9fd2c.txt",
+          "sha256": "83e4dd21429a91fb7cea67a476032a9641425e5355df2e0f589a738b6ec9fd2c",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@peculiar/utils",
+      "version": "2.0.3",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/ce2ae0f0066d1be56ab4ec851cc611805bb95cdc8dd858b301e22ee54b351d43.txt",
+          "sha256": "ce2ae0f0066d1be56ab4ec851cc611805bb95cdc8dd858b301e22ee54b351d43",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@peculiar/webcrypto",
+      "version": "1.7.1",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/06fa9b6896b5e0062651f1a769d08f19892e76f2c1b42329f60f4cdd8de4c378.txt",
+          "sha256": "06fa9b6896b5e0062651f1a769d08f19892e76f2c1b42329f60f4cdd8de4c378",
+          "originalName": "LICENSE.md"
+        }
+      ]
+    },
+    {
+      "name": "@rollup/rollup-win32-x64-gnu",
+      "version": "4.64.5",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/fa1bd040c5bdeefe65b3821cebf474f2733ce65df13089bd151dda1778e62fe8.txt",
+          "sha256": "fa1bd040c5bdeefe65b3821cebf474f2733ce65df13089bd151dda1778e62fe8",
+          "source": "same-upstream distribution license: xiaomanbox/node_modules/rollup/LICENSE.md"
+        }
+      ]
+    },
+    {
+      "name": "@rollup/rollup-win32-x64-msvc",
+      "version": "4.64.5",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/fa1bd040c5bdeefe65b3821cebf474f2733ce65df13089bd151dda1778e62fe8.txt",
+          "sha256": "fa1bd040c5bdeefe65b3821cebf474f2733ce65df13089bd151dda1778e62fe8",
+          "source": "same-upstream distribution license: xiaomanbox/node_modules/rollup/LICENSE.md"
+        }
+      ]
+    },
+    {
+      "name": "@sindresorhus/is",
+      "version": "4.6.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3.txt",
+          "sha256": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3",
+          "originalName": "license"
+        }
+      ]
+    },
+    {
+      "name": "@szmarczak/http-timer",
+      "version": "4.0.6",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/0194571d45a06ea2a22ceb51f981e3be92525966d28847dbc0d9982603bf90de.txt",
+          "sha256": "0194571d45a06ea2a22ceb51f981e3be92525966d28847dbc0d9982603bf90de",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@types/cacheable-request",
+      "version": "6.0.3",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt",
+          "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@types/debug",
+      "version": "4.1.13",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt",
+          "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@types/estree",
+      "version": "1.0.9",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt",
+          "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@types/fs-extra",
+      "version": "9.0.13",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt",
+          "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@types/http-cache-semantics",
+      "version": "4.2.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt",
+          "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@types/keyv",
+      "version": "3.1.4",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt",
+          "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@types/ms",
+      "version": "2.1.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt",
+          "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@types/node",
+      "version": "20.19.43",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt",
+          "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@types/responselike",
+      "version": "1.0.3",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt",
+          "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@types/yauzl",
+      "version": "2.10.3",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383.txt",
+          "sha256": "c2cfccb812fe482101a8f04597dfc5a9991a6b2748266c47ac91b6a5aae15383",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@vitejs/plugin-vue",
+      "version": "5.2.4",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/29b68325fe026047d13e187b44c33b2acacf7dc647dec4583702e59f235e13b5.txt",
+          "sha256": "29b68325fe026047d13e187b44c33b2acacf7dc647dec4583702e59f235e13b5",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@volar/language-core",
+      "version": "2.4.15",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/a56351045b45475385a9479d7310208ff0be9489babdb4e635fcea5d7dc1fb02.txt",
+          "sha256": "a56351045b45475385a9479d7310208ff0be9489babdb4e635fcea5d7dc1fb02",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@volar/source-map",
+      "version": "2.4.15",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/a56351045b45475385a9479d7310208ff0be9489babdb4e635fcea5d7dc1fb02.txt",
+          "sha256": "a56351045b45475385a9479d7310208ff0be9489babdb4e635fcea5d7dc1fb02",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@volar/typescript",
+      "version": "2.4.15",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/a56351045b45475385a9479d7310208ff0be9489babdb4e635fcea5d7dc1fb02.txt",
+          "sha256": "a56351045b45475385a9479d7310208ff0be9489babdb4e635fcea5d7dc1fb02",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@vue/compiler-core",
+      "version": "3.5.43",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/1bb85cc9b13b81ef41c81c51866172fc345e0503c86726a6755b796590b70175.txt",
+          "sha256": "1bb85cc9b13b81ef41c81c51866172fc345e0503c86726a6755b796590b70175",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@vue/compiler-dom",
+      "version": "3.5.43",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/1bb85cc9b13b81ef41c81c51866172fc345e0503c86726a6755b796590b70175.txt",
+          "sha256": "1bb85cc9b13b81ef41c81c51866172fc345e0503c86726a6755b796590b70175",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@vue/compiler-sfc",
+      "version": "3.5.43",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/1bb85cc9b13b81ef41c81c51866172fc345e0503c86726a6755b796590b70175.txt",
+          "sha256": "1bb85cc9b13b81ef41c81c51866172fc345e0503c86726a6755b796590b70175",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@vue/compiler-ssr",
+      "version": "3.5.43",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/1bb85cc9b13b81ef41c81c51866172fc345e0503c86726a6755b796590b70175.txt",
+          "sha256": "1bb85cc9b13b81ef41c81c51866172fc345e0503c86726a6755b796590b70175",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@vue/compiler-vue2",
+      "version": "2.7.16",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/17fb24bc303763f3fe1911ee24e5225c7ad59f0e3a5d8123e9b730c100a306a6.txt",
+          "sha256": "17fb24bc303763f3fe1911ee24e5225c7ad59f0e3a5d8123e9b730c100a306a6",
+          "source": "https://github.com/vuejs/vue/blob/v2.7.16/LICENSE"
+        }
+      ],
+      "upstreamLicenseVersionPinned": true
+    },
+    {
+      "name": "@vue/language-core",
+      "version": "2.2.12",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/a56351045b45475385a9479d7310208ff0be9489babdb4e635fcea5d7dc1fb02.txt",
+          "sha256": "a56351045b45475385a9479d7310208ff0be9489babdb4e635fcea5d7dc1fb02",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "balanced-match",
+      "version": "1.0.2",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/a1bd5deadb6a06dd74efa852c1b8b23f63b67f2214fbe9c8bd591da51da69268.txt",
+          "sha256": "a1bd5deadb6a06dd74efa852c1b8b23f63b67f2214fbe9c8bd591da51da69268",
+          "originalName": "LICENSE.md"
+        }
+      ]
+    },
+    {
+      "name": "brace-expansion",
+      "version": "2.1.7",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/68f12f6e2c33688699249c01d8f9623c534da20aa71989c57b061b7bc1676d14.txt",
+          "sha256": "68f12f6e2c33688699249c01d8f9623c534da20aa71989c57b061b7bc1676d14",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "minimatch",
+      "version": "9.0.9",
+      "license": "ISC",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/d11323827fa4edeaafc437cc5b91b6971b335f0127efeeb42bf5122fe8657e8f.txt",
+          "sha256": "d11323827fa4edeaafc437cc5b91b6971b335f0127efeeb42bf5122fe8657e8f",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@vue/reactivity",
+      "version": "3.5.43",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/1bb85cc9b13b81ef41c81c51866172fc345e0503c86726a6755b796590b70175.txt",
+          "sha256": "1bb85cc9b13b81ef41c81c51866172fc345e0503c86726a6755b796590b70175",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@vue/runtime-core",
+      "version": "3.5.43",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/1bb85cc9b13b81ef41c81c51866172fc345e0503c86726a6755b796590b70175.txt",
+          "sha256": "1bb85cc9b13b81ef41c81c51866172fc345e0503c86726a6755b796590b70175",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@vue/runtime-dom",
+      "version": "3.5.43",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/1bb85cc9b13b81ef41c81c51866172fc345e0503c86726a6755b796590b70175.txt",
+          "sha256": "1bb85cc9b13b81ef41c81c51866172fc345e0503c86726a6755b796590b70175",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@vue/server-renderer",
+      "version": "3.5.43",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/1bb85cc9b13b81ef41c81c51866172fc345e0503c86726a6755b796590b70175.txt",
+          "sha256": "1bb85cc9b13b81ef41c81c51866172fc345e0503c86726a6755b796590b70175",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@vue/shared",
+      "version": "3.5.43",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/1bb85cc9b13b81ef41c81c51866172fc345e0503c86726a6755b796590b70175.txt",
+          "sha256": "1bb85cc9b13b81ef41c81c51866172fc345e0503c86726a6755b796590b70175",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@xmldom/xmldom",
+      "version": "0.8.15",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/4da724fc305d81606b245b324d4d2586916b9d248b23d82183df753ace0fdf71.txt",
+          "sha256": "4da724fc305d81606b245b324d4d2586916b9d248b23d82183df753ace0fdf71",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "abbrev",
+      "version": "4.0.0",
+      "license": "ISC",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/9e0d5c7989f7e9f07d7c4b158aceff270f235eb7464ace41c5e7b200834a43e0.txt",
+          "sha256": "9e0d5c7989f7e9f07d7c4b158aceff270f235eb7464ace41c5e7b200834a43e0",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "agent-base",
+      "version": "7.1.4",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/8d8c55319c7729d57be811c747452636688d54f19701ee0752b6b15ad3771d9a.txt",
+          "sha256": "8d8c55319c7729d57be811c747452636688d54f19701ee0752b6b15ad3771d9a",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "ajv",
+      "version": "8.20.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/a05350a88e318e4f5f2c2a1ff1e2e88daa4dd38e6e78b71cccae422bdc762cc3.txt",
+          "sha256": "a05350a88e318e4f5f2c2a1ff1e2e88daa4dd38e6e78b71cccae422bdc762cc3",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "alien-signals",
+      "version": "1.0.13",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/75863f712f8f0603b0dba33edf4b725bab80fc858a51756e5905a3c4c8087169.txt",
+          "sha256": "75863f712f8f0603b0dba33edf4b725bab80fc858a51756e5905a3c4c8087169",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "ansi-regex",
+      "version": "5.0.1",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0.txt",
+          "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+          "originalName": "license"
+        }
+      ]
+    },
+    {
+      "name": "ansi-styles",
+      "version": "4.3.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0.txt",
+          "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+          "originalName": "license"
+        }
+      ]
+    },
+    {
+      "name": "app-builder-lib",
+      "version": "26.15.3",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/bed8d0ab3e6031817f775a641ff37313b0f5591bc8ba0ed79b978dafbd4231ce.txt",
+          "sha256": "bed8d0ab3e6031817f775a641ff37313b0f5591bc8ba0ed79b978dafbd4231ce",
+          "source": "same-upstream distribution license: xiaomanbox/node_modules/electron-builder/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@electron/get",
+      "version": "3.1.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/edab8abb78d9c5b36944c3e00aebf6a90eb32378993f49ac8a3904007029c629.txt",
+          "sha256": "edab8abb78d9c5b36944c3e00aebf6a90eb32378993f49ac8a3904007029c629",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "fs-extra",
+      "version": "8.1.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/1e76029602ae9b21cc4e612db2496d92febed882ba13ba745f8b3309e85f9d39.txt",
+          "sha256": "1e76029602ae9b21cc4e612db2496d92febed882ba13ba745f8b3309e85f9d39",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "semver",
+      "version": "6.3.1",
+      "license": "ISC",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b.txt",
+          "sha256": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "ci-info",
+      "version": "4.3.1",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/f58943cb354fb2707fea2f7b26b04e6014ddb56835cdfd414c9d2c6c59165b64.txt",
+          "sha256": "f58943cb354fb2707fea2f7b26b04e6014ddb56835cdfd414c9d2c6c59165b64",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "fs-extra",
+      "version": "10.1.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/1e76029602ae9b21cc4e612db2496d92febed882ba13ba745f8b3309e85f9d39.txt",
+          "sha256": "1e76029602ae9b21cc4e612db2496d92febed882ba13ba745f8b3309e85f9d39",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "jsonfile",
+      "version": "6.2.1",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/a9801fb52ba22ef808682a094da8a7a480584b7ed0dfd0d888ab543616335031.txt",
+          "sha256": "a9801fb52ba22ef808682a094da8a7a480584b7ed0dfd0d888ab543616335031",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "universalify",
+      "version": "2.0.1",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/3fda5977c0904e226190b4e21d64340c1731e2142d6fe5f3dee0090a216b8b63.txt",
+          "sha256": "3fda5977c0904e226190b4e21d64340c1731e2142d6fe5f3dee0090a216b8b63",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "semver",
+      "version": "7.7.4",
+      "license": "ISC",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b.txt",
+          "sha256": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "argparse",
+      "version": "2.0.1",
+      "license": "Python-2.0",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/de4d1f2d2ad5ad0cfd1657a106476b31cb5db5ef9d1ff842b237c0c81f0c8a23.txt",
+          "sha256": "de4d1f2d2ad5ad0cfd1657a106476b31cb5db5ef9d1ff842b237c0c81f0c8a23",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "asn1js",
+      "version": "3.0.10",
+      "license": "BSD-3-Clause",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/ebe5d98519d0dfcbcb80e20b22a56e7321e8557cd14355760434bbd4c1f4f683.txt",
+          "sha256": "ebe5d98519d0dfcbcb80e20b22a56e7321e8557cd14355760434bbd4c1f4f683",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "async",
+      "version": "3.2.6",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/d9fed24f132985934fca621c4dc1dfb53e03377a24d0568d424383d7eaa9c0ac.txt",
+          "sha256": "d9fed24f132985934fca621c4dc1dfb53e03377a24d0568d424383d7eaa9c0ac",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "async-exit-hook",
+      "version": "2.0.1",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/6fb9754611c20f6649f68805e8c990e83261f29316e29de9e6cedae607b8634c.txt",
+          "sha256": "6fb9754611c20f6649f68805e8c990e83261f29316e29de9e6cedae607b8634c",
+          "originalName": "license"
+        }
+      ]
+    },
+    {
+      "name": "asynckit",
+      "version": "0.4.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/1953150d5d4b10c7542cee6f6e0c613b2682545233f069d75cfff1936386ce10.txt",
+          "sha256": "1953150d5d4b10c7542cee6f6e0c613b2682545233f069d75cfff1936386ce10",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "at-least-node",
+      "version": "1.0.0",
+      "license": "ISC",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/ecc042b5f1cdc6854fc00486065084bed877daa8a7fadce15ef943a550d1dff0.txt",
+          "sha256": "ecc042b5f1cdc6854fc00486065084bed877daa8a7fadce15ef943a550d1dff0",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "aws4",
+      "version": "1.13.2",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/c366fee901d0ff03629d5b39509565785e5be424c73c85eef885f4e40eb32578.txt",
+          "sha256": "c366fee901d0ff03629d5b39509565785e5be424c73c85eef885f4e40eb32578",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "balanced-match",
+      "version": "4.0.4",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/d408f38ffa3355c5faec517153295338892eb0f1ea43f57874bb23c6075979b5.txt",
+          "sha256": "d408f38ffa3355c5faec517153295338892eb0f1ea43f57874bb23c6075979b5",
+          "originalName": "LICENSE.md"
+        }
+      ]
+    },
+    {
+      "name": "base64-js",
+      "version": "1.5.1",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/5b37224c080cdcc97c871ada971c224e9926370fe74f11b539aa1cf9f3b1aca1.txt",
+          "sha256": "5b37224c080cdcc97c871ada971c224e9926370fe74f11b539aa1cf9f3b1aca1",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "bluebird",
+      "version": "3.7.2",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/87092fe7ffd1e92eba5d1dd39b73a73fdb4fdd4df3474beacc3d9f6b08ece82c.txt",
+          "sha256": "87092fe7ffd1e92eba5d1dd39b73a73fdb4fdd4df3474beacc3d9f6b08ece82c",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "boolean",
+      "version": "3.2.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/8e4aa1aef825c37d6f74d4b867dccb7b059b66c75ecdedc74834e2f403568a27.txt",
+          "sha256": "8e4aa1aef825c37d6f74d4b867dccb7b059b66c75ecdedc74834e2f403568a27",
+          "originalName": "LICENSE.txt"
+        }
+      ]
+    },
+    {
+      "name": "brace-expansion",
+      "version": "5.0.12",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/9c63a23124d68cd30cd316a94a1a0bca34f032786df6df69fc4b5f136bac8d2e.txt",
+          "sha256": "9c63a23124d68cd30cd316a94a1a0bca34f032786df6df69fc4b5f136bac8d2e",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "buffer-crc32",
+      "version": "0.2.13",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/14895b82e3367b66bdb127fe91505f8615491f2a23eb1c0b7d8f7c54be67f57a.txt",
+          "sha256": "14895b82e3367b66bdb127fe91505f8615491f2a23eb1c0b7d8f7c54be67f57a",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "buffer-from",
+      "version": "1.1.2",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/14275f5c8139d02054c5259d52a88ccbba662a86af18c30f071c8d082dc6004c.txt",
+          "sha256": "14275f5c8139d02054c5259d52a88ccbba662a86af18c30f071c8d082dc6004c",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "builder-util",
+      "version": "26.15.3",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/bed8d0ab3e6031817f775a641ff37313b0f5591bc8ba0ed79b978dafbd4231ce.txt",
+          "sha256": "bed8d0ab3e6031817f775a641ff37313b0f5591bc8ba0ed79b978dafbd4231ce",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "fs-extra",
+      "version": "10.1.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/1e76029602ae9b21cc4e612db2496d92febed882ba13ba745f8b3309e85f9d39.txt",
+          "sha256": "1e76029602ae9b21cc4e612db2496d92febed882ba13ba745f8b3309e85f9d39",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "jsonfile",
+      "version": "6.2.1",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/a9801fb52ba22ef808682a094da8a7a480584b7ed0dfd0d888ab543616335031.txt",
+          "sha256": "a9801fb52ba22ef808682a094da8a7a480584b7ed0dfd0d888ab543616335031",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "universalify",
+      "version": "2.0.1",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/3fda5977c0904e226190b4e21d64340c1731e2142d6fe5f3dee0090a216b8b63.txt",
+          "sha256": "3fda5977c0904e226190b4e21d64340c1731e2142d6fe5f3dee0090a216b8b63",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "builder-util-runtime",
+      "version": "9.7.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/bed8d0ab3e6031817f775a641ff37313b0f5591bc8ba0ed79b978dafbd4231ce.txt",
+          "sha256": "bed8d0ab3e6031817f775a641ff37313b0f5591bc8ba0ed79b978dafbd4231ce",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "bytestreamjs",
+      "version": "2.0.1",
+      "license": "BSD-3-Clause",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/f0fd6a4bf9bf46cfcea2005f800305fbb72cd0152b3c269cf496388258ee08f9.txt",
+          "sha256": "f0fd6a4bf9bf46cfcea2005f800305fbb72cd0152b3c269cf496388258ee08f9",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "cacheable-lookup",
+      "version": "5.0.4",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/b35de79efc88b23c73dd431df6075bed0890db0db1544ee3d57b046aa7a8e72b.txt",
+          "sha256": "b35de79efc88b23c73dd431df6075bed0890db0db1544ee3d57b046aa7a8e72b",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "cacheable-request",
+      "version": "7.0.4",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/861908ec818ff6142fdd6c4b66d6264c206d3d5a46003b1342e1853a9a85abac.txt",
+          "sha256": "861908ec818ff6142fdd6c4b66d6264c206d3d5a46003b1342e1853a9a85abac",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "call-bind-apply-helpers",
+      "version": "1.0.2",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/5e325595b4ea8cfec3802f545b1def5d7b73e4a5b8e9ba63e32a320f67732292.txt",
+          "sha256": "5e325595b4ea8cfec3802f545b1def5d7b73e4a5b8e9ba63e32a320f67732292",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "chalk",
+      "version": "4.1.2",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0.txt",
+          "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+          "originalName": "license"
+        }
+      ]
+    },
+    {
+      "name": "chownr",
+      "version": "3.0.0",
+      "license": "BlueOak-1.0.0",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/a49c9ba464796f65b59fca3f1e6ca40912df1e859f575383223f7ec6c5baae09.txt",
+          "sha256": "a49c9ba464796f65b59fca3f1e6ca40912df1e859f575383223f7ec6c5baae09",
+          "originalName": "LICENSE.md"
+        }
+      ]
+    },
+    {
+      "name": "chromium-pickle-js",
+      "version": "0.2.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/e2d1d0be67ba92d392c9d171f9ddf5b8832d1ef0710a3e7927bd02d2ad9b13cf.txt",
+          "sha256": "e2d1d0be67ba92d392c9d171f9ddf5b8832d1ef0710a3e7927bd02d2ad9b13cf",
+          "source": "original npm license declaration; build-time dependency not shipped in desktop installer"
+        }
+      ],
+      "licenseDeclarationOnly": true,
+      "distributedInInstaller": false
+    },
+    {
+      "name": "ci-info",
+      "version": "4.4.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/f58943cb354fb2707fea2f7b26b04e6014ddb56835cdfd414c9d2c6c59165b64.txt",
+          "sha256": "f58943cb354fb2707fea2f7b26b04e6014ddb56835cdfd414c9d2c6c59165b64",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "cliui",
+      "version": "8.0.1",
+      "license": "ISC",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/2dc0465729366c3a7890dfa9e972a1ba7048a26c02116fb8b419a6a1ac110149.txt",
+          "sha256": "2dc0465729366c3a7890dfa9e972a1ba7048a26c02116fb8b419a6a1ac110149",
+          "originalName": "LICENSE.txt"
+        }
+      ]
+    },
+    {
+      "name": "clone-response",
+      "version": "1.0.3",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/861908ec818ff6142fdd6c4b66d6264c206d3d5a46003b1342e1853a9a85abac.txt",
+          "sha256": "861908ec818ff6142fdd6c4b66d6264c206d3d5a46003b1342e1853a9a85abac",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "color-convert",
+      "version": "2.0.1",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/693866fc419c6f61c8570438ec00659d156ec2b4d4a4d04091711f5f11a365d4.txt",
+          "sha256": "693866fc419c6f61c8570438ec00659d156ec2b4d4a4d04091711f5f11a365d4",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "color-name",
+      "version": "1.1.4",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/c064f7a3e353bc1bc977f3c897941c75ef763f44f41677e0a15370ca0853d6e2.txt",
+          "sha256": "c064f7a3e353bc1bc977f3c897941c75ef763f44f41677e0a15370ca0853d6e2",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "combined-stream",
+      "version": "1.0.8",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/47eb8ca82c798246774946d1be0f9aa08f025fa8325ced0947aeeb4c05fe5547.txt",
+          "sha256": "47eb8ca82c798246774946d1be0f9aa08f025fa8325ced0947aeeb4c05fe5547",
+          "originalName": "License"
+        }
+      ]
+    },
+    {
+      "name": "commander",
+      "version": "5.1.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/04512a63dce4d2d506ad612dc0bd7681ccf6e3655f7b6eaef7dfac8323d1ec0b.txt",
+          "sha256": "04512a63dce4d2d506ad612dc0bd7681ccf6e3655f7b6eaef7dfac8323d1ec0b",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "compare-version",
+      "version": "0.1.2",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/eb3b029a764ad8f9fc15ce467c575e563c41d2194ce40c90442dc3a859cf5224.txt",
+          "sha256": "eb3b029a764ad8f9fc15ce467c575e563c41d2194ce40c90442dc3a859cf5224",
+          "source": "original npm license declaration; build-time dependency not shipped in desktop installer"
+        }
+      ],
+      "licenseDeclarationOnly": true,
+      "distributedInInstaller": false
+    },
+    {
+      "name": "concat-map",
+      "version": "0.0.1",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/435a6722c786b0a56fbe7387028f1d9d3f3a2d0fb615bb8fee118727c3f59b7b.txt",
+          "sha256": "435a6722c786b0a56fbe7387028f1d9d3f3a2d0fb615bb8fee118727c3f59b7b",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "core-util-is",
+      "version": "1.0.3",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/33b734d60042d0fe0c92dd1fc1e874193a1c899ec3e276a2eb935d2d0bf5b710.txt",
+          "sha256": "33b734d60042d0fe0c92dd1fc1e874193a1c899ec3e276a2eb935d2d0bf5b710",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "cross-dirname",
+      "version": "0.1.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/5949f6cab465c633493e1de63c484be7516d9f945d3803c2db6d0e5ba442005c.txt",
+          "sha256": "5949f6cab465c633493e1de63c484be7516d9f945d3803c2db6d0e5ba442005c",
+          "source": "original npm license declaration; build-time dependency not shipped in desktop installer"
+        }
+      ],
+      "licenseDeclarationOnly": true,
+      "distributedInInstaller": false
+    },
+    {
+      "name": "cross-spawn",
+      "version": "7.0.6",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/aaa78451b6fecd1b9c4594c796c133c0e90cad100372ff8bc6de615e9ef9adf1.txt",
+          "sha256": "aaa78451b6fecd1b9c4594c796c133c0e90cad100372ff8bc6de615e9ef9adf1",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "isexe",
+      "version": "2.0.0",
+      "license": "ISC",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b.txt",
+          "sha256": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "which",
+      "version": "2.0.2",
+      "license": "ISC",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b.txt",
+          "sha256": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "csstype",
+      "version": "3.2.3",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/11d55bd4541c75ee7879547ac49089c489163dae49551389713c3d026cab383e.txt",
+          "sha256": "11d55bd4541c75ee7879547ac49089c489163dae49551389713c3d026cab383e",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "de-indent",
+      "version": "1.0.2",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/e490e1a063542f059140b60012beabf7f7b66c2404fae59f8d8c58f1bcf1208f.txt",
+          "sha256": "e490e1a063542f059140b60012beabf7f7b66c2404fae59f8d8c58f1bcf1208f",
+          "source": "original npm license declaration; build-time dependency not shipped in desktop installer"
+        }
+      ],
+      "licenseDeclarationOnly": true,
+      "distributedInInstaller": false
+    },
+    {
+      "name": "debug",
+      "version": "4.4.3",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/3a61c6c96caf5c1d9b623fb9b04c822b783dfcb78aa7e49c76a3f643e6ed7f95.txt",
+          "sha256": "3a61c6c96caf5c1d9b623fb9b04c822b783dfcb78aa7e49c76a3f643e6ed7f95",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "decompress-response",
+      "version": "6.0.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3.txt",
+          "sha256": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3",
+          "originalName": "license"
+        }
+      ]
+    },
+    {
+      "name": "mimic-response",
+      "version": "3.1.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3.txt",
+          "sha256": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3",
+          "originalName": "license"
+        }
+      ]
+    },
+    {
+      "name": "defer-to-connect",
+      "version": "2.0.1",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/0194571d45a06ea2a22ceb51f981e3be92525966d28847dbc0d9982603bf90de.txt",
+          "sha256": "0194571d45a06ea2a22ceb51f981e3be92525966d28847dbc0d9982603bf90de",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "define-data-property",
+      "version": "1.1.4",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/b41d08bc3624d8c436fc80237d73ebb361985a67f4504bbcd703e5ca2b27254c.txt",
+          "sha256": "b41d08bc3624d8c436fc80237d73ebb361985a67f4504bbcd703e5ca2b27254c",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "define-properties",
+      "version": "1.2.1",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/00d402c2bbe7c67369bd01ce2c16b8ed46ccc949a1ee2d6bb8f9606afa8c7434.txt",
+          "sha256": "00d402c2bbe7c67369bd01ce2c16b8ed46ccc949a1ee2d6bb8f9606afa8c7434",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "delayed-stream",
+      "version": "1.0.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/47eb8ca82c798246774946d1be0f9aa08f025fa8325ced0947aeeb4c05fe5547.txt",
+          "sha256": "47eb8ca82c798246774946d1be0f9aa08f025fa8325ced0947aeeb4c05fe5547",
+          "originalName": "License"
+        }
+      ]
+    },
+    {
+      "name": "detect-node",
+      "version": "2.1.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/54b32293ea560d22cd9b62af9b2cda1a030d910a48c6601d227c5ff2338d95f8.txt",
+          "sha256": "54b32293ea560d22cd9b62af9b2cda1a030d910a48c6601d227c5ff2338d95f8",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "dir-compare",
+      "version": "4.2.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/4b5d70dad6961c6f676e8a1dbd408e4869c1996dff9fc7d7d49c04916c60751f.txt",
+          "sha256": "4b5d70dad6961c6f676e8a1dbd408e4869c1996dff9fc7d7d49c04916c60751f",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "balanced-match",
+      "version": "1.0.2",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/a1bd5deadb6a06dd74efa852c1b8b23f63b67f2214fbe9c8bd591da51da69268.txt",
+          "sha256": "a1bd5deadb6a06dd74efa852c1b8b23f63b67f2214fbe9c8bd591da51da69268",
+          "originalName": "LICENSE.md"
+        }
+      ]
+    },
+    {
+      "name": "brace-expansion",
+      "version": "1.1.21",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/68f12f6e2c33688699249c01d8f9623c534da20aa71989c57b061b7bc1676d14.txt",
+          "sha256": "68f12f6e2c33688699249c01d8f9623c534da20aa71989c57b061b7bc1676d14",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "minimatch",
+      "version": "3.1.5",
+      "license": "ISC",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b.txt",
+          "sha256": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "dmg-builder",
+      "version": "26.15.3",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/bed8d0ab3e6031817f775a641ff37313b0f5591bc8ba0ed79b978dafbd4231ce.txt",
+          "sha256": "bed8d0ab3e6031817f775a641ff37313b0f5591bc8ba0ed79b978dafbd4231ce",
+          "source": "same-upstream distribution license: xiaomanbox/node_modules/electron-builder/LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "fs-extra",
+      "version": "10.1.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/1e76029602ae9b21cc4e612db2496d92febed882ba13ba745f8b3309e85f9d39.txt",
+          "sha256": "1e76029602ae9b21cc4e612db2496d92febed882ba13ba745f8b3309e85f9d39",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "jsonfile",
+      "version": "6.2.1",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/a9801fb52ba22ef808682a094da8a7a480584b7ed0dfd0d888ab543616335031.txt",
+          "sha256": "a9801fb52ba22ef808682a094da8a7a480584b7ed0dfd0d888ab543616335031",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "universalify",
+      "version": "2.0.1",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/3fda5977c0904e226190b4e21d64340c1731e2142d6fe5f3dee0090a216b8b63.txt",
+          "sha256": "3fda5977c0904e226190b4e21d64340c1731e2142d6fe5f3dee0090a216b8b63",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "dotenv",
+      "version": "16.6.1",
+      "license": "BSD-2-Clause",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/74b629b24865e1e83c5277ee84590b7937644d6fd959d0c7bdce758676cd2ced.txt",
+          "sha256": "74b629b24865e1e83c5277ee84590b7937644d6fd959d0c7bdce758676cd2ced",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "dotenv-expand",
+      "version": "11.0.7",
+      "license": "BSD-2-Clause",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/3726b9470c3a6b54e1ebcc1d802d37089b5a5fc97273b52b2cee578a4421ec45.txt",
+          "sha256": "3726b9470c3a6b54e1ebcc1d802d37089b5a5fc97273b52b2cee578a4421ec45",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "dunder-proto",
+      "version": "1.0.1",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/2b770a704c15de238c3f622b01b0044ddd60b49ee30608ea6991ebf19db7a7a1.txt",
+          "sha256": "2b770a704c15de238c3f622b01b0044ddd60b49ee30608ea6991ebf19db7a7a1",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "duplexer2",
+      "version": "0.1.4",
+      "license": "BSD-3-Clause",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/252a200ba7a38686f7954ec4cb09b3ad7788fa099eb724de167d7ab16b1244b9.txt",
+          "sha256": "252a200ba7a38686f7954ec4cb09b3ad7788fa099eb724de167d7ab16b1244b9",
+          "originalName": "LICENSE.md"
+        }
+      ]
+    },
+    {
+      "name": "ejs",
+      "version": "3.1.10",
+      "license": "Apache-2.0",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "electron",
+      "version": "33.4.11",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/5154e165bd6c2cc0cfbcd8916498c7abab0497923bafcd5cb07673fe8480087d.txt",
+          "sha256": "5154e165bd6c2cc0cfbcd8916498c7abab0497923bafcd5cb07673fe8480087d",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "electron-builder",
+      "version": "26.15.3",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/bed8d0ab3e6031817f775a641ff37313b0f5591bc8ba0ed79b978dafbd4231ce.txt",
+          "sha256": "bed8d0ab3e6031817f775a641ff37313b0f5591bc8ba0ed79b978dafbd4231ce",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "fs-extra",
+      "version": "10.1.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/1e76029602ae9b21cc4e612db2496d92febed882ba13ba745f8b3309e85f9d39.txt",
+          "sha256": "1e76029602ae9b21cc4e612db2496d92febed882ba13ba745f8b3309e85f9d39",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "jsonfile",
+      "version": "6.2.1",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/a9801fb52ba22ef808682a094da8a7a480584b7ed0dfd0d888ab543616335031.txt",
+          "sha256": "a9801fb52ba22ef808682a094da8a7a480584b7ed0dfd0d888ab543616335031",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "universalify",
+      "version": "2.0.1",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/3fda5977c0904e226190b4e21d64340c1731e2142d6fe5f3dee0090a216b8b63.txt",
+          "sha256": "3fda5977c0904e226190b4e21d64340c1731e2142d6fe5f3dee0090a216b8b63",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "electron-builder-squirrel-windows",
+      "version": "26.15.3",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/bed8d0ab3e6031817f775a641ff37313b0f5591bc8ba0ed79b978dafbd4231ce.txt",
+          "sha256": "bed8d0ab3e6031817f775a641ff37313b0f5591bc8ba0ed79b978dafbd4231ce",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "electron-publish",
+      "version": "26.15.3",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/bed8d0ab3e6031817f775a641ff37313b0f5591bc8ba0ed79b978dafbd4231ce.txt",
+          "sha256": "bed8d0ab3e6031817f775a641ff37313b0f5591bc8ba0ed79b978dafbd4231ce",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "fs-extra",
+      "version": "10.1.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/1e76029602ae9b21cc4e612db2496d92febed882ba13ba745f8b3309e85f9d39.txt",
+          "sha256": "1e76029602ae9b21cc4e612db2496d92febed882ba13ba745f8b3309e85f9d39",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "jsonfile",
+      "version": "6.2.1",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/a9801fb52ba22ef808682a094da8a7a480584b7ed0dfd0d888ab543616335031.txt",
+          "sha256": "a9801fb52ba22ef808682a094da8a7a480584b7ed0dfd0d888ab543616335031",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "universalify",
+      "version": "2.0.1",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/3fda5977c0904e226190b4e21d64340c1731e2142d6fe5f3dee0090a216b8b63.txt",
+          "sha256": "3fda5977c0904e226190b4e21d64340c1731e2142d6fe5f3dee0090a216b8b63",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "electron-winstaller",
+      "version": "5.4.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/379ecb81d11a2c2a72225e0cf8cd04803b220da64e1668042ddd0d04bd1c8666.txt",
+          "sha256": "379ecb81d11a2c2a72225e0cf8cd04803b220da64e1668042ddd0d04bd1c8666",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "fs-extra",
+      "version": "7.0.1",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/1e76029602ae9b21cc4e612db2496d92febed882ba13ba745f8b3309e85f9d39.txt",
+          "sha256": "1e76029602ae9b21cc4e612db2496d92febed882ba13ba745f8b3309e85f9d39",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "emoji-regex",
+      "version": "8.0.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/483acb265f182907d1caf6cff9c16c96f31325ed23792832cc5d8b12d5f88c8a.txt",
+          "sha256": "483acb265f182907d1caf6cff9c16c96f31325ed23792832cc5d8b12d5f88c8a",
+          "originalName": "LICENSE-MIT.txt"
+        }
+      ]
+    },
+    {
+      "name": "end-of-stream",
+      "version": "1.4.5",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/3fe8d55a98dbf260eace67c00cf9bc53edb46234e840098a0b93df3096b97fb6.txt",
+          "sha256": "3fe8d55a98dbf260eace67c00cf9bc53edb46234e840098a0b93df3096b97fb6",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "entities",
+      "version": "7.0.1",
+      "license": "BSD-2-Clause",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/cb992345949ccd6e8394b2cd6c465f7b897c864f845937dbf64e8997f389e164.txt",
+          "sha256": "cb992345949ccd6e8394b2cd6c465f7b897c864f845937dbf64e8997f389e164",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "env-paths",
+      "version": "2.2.1",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0.txt",
+          "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+          "originalName": "license"
+        }
+      ]
+    },
+    {
+      "name": "err-code",
+      "version": "2.0.3",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/ff5360c17c3e197fc4a4a4fa0d07640292556d585a49c8651fd198e926d47bcc.txt",
+          "sha256": "ff5360c17c3e197fc4a4a4fa0d07640292556d585a49c8651fd198e926d47bcc",
+          "source": "original npm license declaration; build-time dependency not shipped in desktop installer"
+        }
+      ],
+      "licenseDeclarationOnly": true,
+      "distributedInInstaller": false
+    },
+    {
+      "name": "es-define-property",
+      "version": "1.0.1",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/5e325595b4ea8cfec3802f545b1def5d7b73e4a5b8e9ba63e32a320f67732292.txt",
+          "sha256": "5e325595b4ea8cfec3802f545b1def5d7b73e4a5b8e9ba63e32a320f67732292",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "es-errors",
+      "version": "1.3.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/5e325595b4ea8cfec3802f545b1def5d7b73e4a5b8e9ba63e32a320f67732292.txt",
+          "sha256": "5e325595b4ea8cfec3802f545b1def5d7b73e4a5b8e9ba63e32a320f67732292",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "es-object-atoms",
+      "version": "1.1.2",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/5e325595b4ea8cfec3802f545b1def5d7b73e4a5b8e9ba63e32a320f67732292.txt",
+          "sha256": "5e325595b4ea8cfec3802f545b1def5d7b73e4a5b8e9ba63e32a320f67732292",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "es-set-tostringtag",
+      "version": "2.1.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/1a3aeb1f1398bd697d57c3c585faadf59d825aca6e3162cd7eeb72ff76eb2466.txt",
+          "sha256": "1a3aeb1f1398bd697d57c3c585faadf59d825aca6e3162cd7eeb72ff76eb2466",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "es6-error",
+      "version": "4.1.1",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/9f655c5baa5a6f254d1e87f27e14d04acaff4bd0b489ea3c2f33723919da2f44.txt",
+          "sha256": "9f655c5baa5a6f254d1e87f27e14d04acaff4bd0b489ea3c2f33723919da2f44",
+          "originalName": "LICENSE.md"
+        }
+      ]
+    },
+    {
+      "name": "esbuild",
+      "version": "0.25.12",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/b40ec5baec7bb34fa5b1c09521fa3cd52d5fad7adafed74932a2010d3612a681.txt",
+          "sha256": "b40ec5baec7bb34fa5b1c09521fa3cd52d5fad7adafed74932a2010d3612a681",
+          "originalName": "LICENSE.md"
+        }
+      ]
+    },
+    {
+      "name": "escalade",
+      "version": "3.2.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/9a9edad7baae52622bddf3c15b2ef8a33d2c89f2d25408ad13e8a7481c6b0c97.txt",
+          "sha256": "9a9edad7baae52622bddf3c15b2ef8a33d2c89f2d25408ad13e8a7481c6b0c97",
+          "originalName": "license"
+        }
+      ]
+    },
+    {
+      "name": "escape-string-regexp",
+      "version": "4.0.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3.txt",
+          "sha256": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3",
+          "originalName": "license"
+        }
+      ]
+    },
+    {
+      "name": "estree-walker",
+      "version": "2.0.2",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/8a6dcbabe7179f9c8489c08a7d874d0f1e093ae7449e03756ccf87cb9d0e296e.txt",
+          "sha256": "8a6dcbabe7179f9c8489c08a7d874d0f1e093ae7449e03756ccf87cb9d0e296e",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "exponential-backoff",
+      "version": "3.1.3",
+      "license": "Apache-2.0",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/f5afc95c69e116ea6b1755f91a8763f53eadb78b4f1582a08d2d18586a03a117.txt",
+          "sha256": "f5afc95c69e116ea6b1755f91a8763f53eadb78b4f1582a08d2d18586a03a117",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "extract-zip",
+      "version": "2.0.1",
+      "license": "BSD-2-Clause",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/77b2de947c65f3062fb347118ca198ca50898ead84a8509d8153fa65741f029b.txt",
+          "sha256": "77b2de947c65f3062fb347118ca198ca50898ead84a8509d8153fa65741f029b",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "fast-deep-equal",
+      "version": "3.1.3",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/7bf9b2de73a6b356761c948d0e9eeb4be6c1270bd04c79cd489c1e400ffdfc1a.txt",
+          "sha256": "7bf9b2de73a6b356761c948d0e9eeb4be6c1270bd04c79cd489c1e400ffdfc1a",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "fast-uri",
+      "version": "3.1.8",
+      "license": "BSD-3-Clause",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/b010b0dfdfdb23d7396e03b82cd4621fc9bb8f95d6b0aea70b9c24e12074c786.txt",
+          "sha256": "b010b0dfdfdb23d7396e03b82cd4621fc9bb8f95d6b0aea70b9c24e12074c786",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "fd-slicer",
+      "version": "1.1.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/176d95320d565cb034d8323797b6cd6160238f625453687f98aad2085c46c3b3.txt",
+          "sha256": "176d95320d565cb034d8323797b6cd6160238f625453687f98aad2085c46c3b3",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "fdir",
+      "version": "6.5.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/9a39f2aadab11a3697edd668ff2d8ad885b649737b7ab4d3bf12b34e5ada0c86.txt",
+          "sha256": "9a39f2aadab11a3697edd668ff2d8ad885b649737b7ab4d3bf12b34e5ada0c86",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "filelist",
+      "version": "1.0.6",
+      "license": "Apache-2.0",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "source": "https://github.com/mde/filelist/blob/v1.0.6/LICENSE"
+        }
+      ],
+      "upstreamLicenseVersionPinned": true
+    },
+    {
+      "name": "balanced-match",
+      "version": "1.0.2",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/a1bd5deadb6a06dd74efa852c1b8b23f63b67f2214fbe9c8bd591da51da69268.txt",
+          "sha256": "a1bd5deadb6a06dd74efa852c1b8b23f63b67f2214fbe9c8bd591da51da69268",
+          "originalName": "LICENSE.md"
+        }
+      ]
+    },
+    {
+      "name": "brace-expansion",
+      "version": "2.1.7",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/68f12f6e2c33688699249c01d8f9623c534da20aa71989c57b061b7bc1676d14.txt",
+          "sha256": "68f12f6e2c33688699249c01d8f9623c534da20aa71989c57b061b7bc1676d14",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "minimatch",
+      "version": "5.1.9",
+      "license": "ISC",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/d11323827fa4edeaafc437cc5b91b6971b335f0127efeeb42bf5122fe8657e8f.txt",
+          "sha256": "d11323827fa4edeaafc437cc5b91b6971b335f0127efeeb42bf5122fe8657e8f",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "form-data",
+      "version": "4.0.6",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/e5b780d4f38d1d3328e3e53186c4e62d3fa149ea6f2bacd5de5ad0c30ac85343.txt",
+          "sha256": "e5b780d4f38d1d3328e3e53186c4e62d3fa149ea6f2bacd5de5ad0c30ac85343",
+          "originalName": "License"
+        }
+      ]
+    },
+    {
+      "name": "fs-extra",
+      "version": "8.1.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/1e76029602ae9b21cc4e612db2496d92febed882ba13ba745f8b3309e85f9d39.txt",
+          "sha256": "1e76029602ae9b21cc4e612db2496d92febed882ba13ba745f8b3309e85f9d39",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "fs.realpath",
+      "version": "1.0.0",
+      "license": "ISC",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/8465b04b67f473341171b5c9c8b2c741a4a395b3f6ed58339b3a4f4db3db7472.txt",
+          "sha256": "8465b04b67f473341171b5c9c8b2c741a4a395b3f6ed58339b3a4f4db3db7472",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "function-bind",
+      "version": "1.1.2",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/773e131a7684726005a7e4688a80b4620033bc08499bc1404dd1a1eb3bca725e.txt",
+          "sha256": "773e131a7684726005a7e4688a80b4620033bc08499bc1404dd1a1eb3bca725e",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "get-caller-file",
+      "version": "2.0.5",
+      "license": "ISC",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/902dbb4154679fb2b8d7c33878183f45b268d01eae5e5033dddaa8852d45f213.txt",
+          "sha256": "902dbb4154679fb2b8d7c33878183f45b268d01eae5e5033dddaa8852d45f213",
+          "originalName": "LICENSE.md"
+        }
+      ]
+    },
+    {
+      "name": "get-intrinsic",
+      "version": "1.3.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/39c5ec504cf6bd5cd782a7c695828e09189df79f5d94840e4f08feb97b9fd416.txt",
+          "sha256": "39c5ec504cf6bd5cd782a7c695828e09189df79f5d94840e4f08feb97b9fd416",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "get-proto",
+      "version": "1.0.1",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/be46ce1e3b0479af9ce82d22b465a6d7d2ff084fca0aaf3d54172da2b5eb5781.txt",
+          "sha256": "be46ce1e3b0479af9ce82d22b465a6d7d2ff084fca0aaf3d54172da2b5eb5781",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "get-stream",
+      "version": "5.2.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3.txt",
+          "sha256": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3",
+          "originalName": "license"
+        }
+      ]
+    },
+    {
+      "name": "glob",
+      "version": "7.2.3",
+      "license": "ISC",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/6236fa0b88a4a0cce3dda0367979491b2052b3c8d6b1c10b3668de083e86a7f0.txt",
+          "sha256": "6236fa0b88a4a0cce3dda0367979491b2052b3c8d6b1c10b3668de083e86a7f0",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "balanced-match",
+      "version": "1.0.2",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/a1bd5deadb6a06dd74efa852c1b8b23f63b67f2214fbe9c8bd591da51da69268.txt",
+          "sha256": "a1bd5deadb6a06dd74efa852c1b8b23f63b67f2214fbe9c8bd591da51da69268",
+          "originalName": "LICENSE.md"
+        }
+      ]
+    },
+    {
+      "name": "brace-expansion",
+      "version": "1.1.21",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/68f12f6e2c33688699249c01d8f9623c534da20aa71989c57b061b7bc1676d14.txt",
+          "sha256": "68f12f6e2c33688699249c01d8f9623c534da20aa71989c57b061b7bc1676d14",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "minimatch",
+      "version": "3.1.5",
+      "license": "ISC",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b.txt",
+          "sha256": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "global-agent",
+      "version": "3.0.0",
+      "license": "BSD-3-Clause",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/ba98e94118579117505f6f11fd9a4354c5e65ece03b4898d8b8f7785efcd25c1.txt",
+          "sha256": "ba98e94118579117505f6f11fd9a4354c5e65ece03b4898d8b8f7785efcd25c1",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "semver",
+      "version": "7.8.5",
+      "license": "ISC",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b.txt",
+          "sha256": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "globalthis",
+      "version": "1.0.4",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/acfaf437865d82f0fa9b9cdcae8b550bed8d011adaa5b42d973191caf99f62a8.txt",
+          "sha256": "acfaf437865d82f0fa9b9cdcae8b550bed8d011adaa5b42d973191caf99f62a8",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "gopd",
+      "version": "1.2.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/d90bf0a089da4cf43d644ed240a0b3825dcdb705e64e38371d56995a4cc9e4c5.txt",
+          "sha256": "d90bf0a089da4cf43d644ed240a0b3825dcdb705e64e38371d56995a4cc9e4c5",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "got",
+      "version": "11.8.6",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0.txt",
+          "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+          "originalName": "license"
+        }
+      ]
+    },
+    {
+      "name": "graceful-fs",
+      "version": "4.2.11",
+      "license": "ISC",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/f65c5d9f22a317b2a10803bd1868461ce6499c2ed7217bc80c0cc772a748789c.txt",
+          "sha256": "f65c5d9f22a317b2a10803bd1868461ce6499c2ed7217bc80c0cc772a748789c",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "has-flag",
+      "version": "4.0.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0.txt",
+          "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+          "originalName": "license"
+        }
+      ]
+    },
+    {
+      "name": "has-property-descriptors",
+      "version": "1.0.2",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/0f0ca96f50793990031ebc488a38f7292ff70bce8ab6a8e5eeda674abc32ccdf.txt",
+          "sha256": "0f0ca96f50793990031ebc488a38f7292ff70bce8ab6a8e5eeda674abc32ccdf",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "has-symbols",
+      "version": "1.1.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/206c1adcf206dc0031b11232f5b054ec5f1662407ab1ca415247921cab2068ab.txt",
+          "sha256": "206c1adcf206dc0031b11232f5b054ec5f1662407ab1ca415247921cab2068ab",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "has-tostringtag",
+      "version": "1.0.2",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/e2560e002e13281578c75c850061d9255c33d16d732939e8c2db64c2506642fa.txt",
+          "sha256": "e2560e002e13281578c75c850061d9255c33d16d732939e8c2db64c2506642fa",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "hasown",
+      "version": "2.0.4",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/bf9b0d665be2a689851eea667ca9f42066ea1d903b38349c51e6a44b2577680a.txt",
+          "sha256": "bf9b0d665be2a689851eea667ca9f42066ea1d903b38349c51e6a44b2577680a",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "he",
+      "version": "1.2.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/483acb265f182907d1caf6cff9c16c96f31325ed23792832cc5d8b12d5f88c8a.txt",
+          "sha256": "483acb265f182907d1caf6cff9c16c96f31325ed23792832cc5d8b12d5f88c8a",
+          "originalName": "LICENSE-MIT.txt"
+        }
+      ]
+    },
+    {
+      "name": "hosted-git-info",
+      "version": "4.1.0",
+      "license": "ISC",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/c1476ec53119cd4c8370f91f5152ac76312a29b4fae2d49b5e0e0970fe0fa5ee.txt",
+          "sha256": "c1476ec53119cd4c8370f91f5152ac76312a29b4fae2d49b5e0e0970fe0fa5ee",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "http-cache-semantics",
+      "version": "4.3.0",
+      "license": "BSD-2-Clause",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/ab868ad5a2ef5068560d9cd3b2180ec63c140bb4c5cae1ba779d300a0ac74fa3.txt",
+          "sha256": "ab868ad5a2ef5068560d9cd3b2180ec63c140bb4c5cae1ba779d300a0ac74fa3",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "http-proxy-agent",
+      "version": "7.0.2",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/71368fd0f5b4129191e9afcd1e1ef2dc89a9090d3e4d80bbab92dafd032b3bef.txt",
+          "sha256": "71368fd0f5b4129191e9afcd1e1ef2dc89a9090d3e4d80bbab92dafd032b3bef",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "http2-wrapper",
+      "version": "1.0.3",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/0194571d45a06ea2a22ceb51f981e3be92525966d28847dbc0d9982603bf90de.txt",
+          "sha256": "0194571d45a06ea2a22ceb51f981e3be92525966d28847dbc0d9982603bf90de",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "https-proxy-agent",
+      "version": "7.0.6",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/8d8c55319c7729d57be811c747452636688d54f19701ee0752b6b15ad3771d9a.txt",
+          "sha256": "8d8c55319c7729d57be811c747452636688d54f19701ee0752b6b15ad3771d9a",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "inflight",
+      "version": "1.0.6",
+      "license": "ISC",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/05dc4d785ac3a488676d3ed10e901b75ad89dafcc63f8e66610fd4a39cc5c7e8.txt",
+          "sha256": "05dc4d785ac3a488676d3ed10e901b75ad89dafcc63f8e66610fd4a39cc5c7e8",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "inherits",
+      "version": "2.0.4",
+      "license": "ISC",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/5ffe28e7ade7d8f10d85d5337a73fd793dac5c462fb9a28fbf8c5046c7fbca3b.txt",
+          "sha256": "5ffe28e7ade7d8f10d85d5337a73fd793dac5c462fb9a28fbf8c5046c7fbca3b",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "is-fullwidth-code-point",
+      "version": "3.0.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0.txt",
+          "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+          "originalName": "license"
+        }
+      ]
+    },
+    {
+      "name": "isarray",
+      "version": "1.0.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/68f12f6e2c33688699249c01d8f9623c534da20aa71989c57b061b7bc1676d14.txt",
+          "sha256": "68f12f6e2c33688699249c01d8f9623c534da20aa71989c57b061b7bc1676d14",
+          "source": "https://github.com/juliangruber/isarray/blob/master/LICENSE"
+        }
+      ],
+      "upstreamLicenseVersionPinned": false
+    },
+    {
+      "name": "isbinaryfile",
+      "version": "5.0.7",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/2eedc70f2242aaf269e86e2c85eabeb875dc524d187d5953016b24091d26a843.txt",
+          "sha256": "2eedc70f2242aaf269e86e2c85eabeb875dc524d187d5953016b24091d26a843",
+          "originalName": "LICENSE.txt"
+        }
+      ]
+    },
+    {
+      "name": "isexe",
+      "version": "3.1.5",
+      "license": "BlueOak-1.0.0",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/8a1af140fdfbf5afd3df27f7e662f989c5b963a300020dfafce42033cae9e004.txt",
+          "sha256": "8a1af140fdfbf5afd3df27f7e662f989c5b963a300020dfafce42033cae9e004",
+          "originalName": "LICENSE.md"
+        }
+      ]
+    },
+    {
+      "name": "jake",
+      "version": "10.9.4",
+      "license": "Apache-2.0",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "source": "https://github.com/jakejs/jake/blob/v10.9.4/LICENSE"
+        }
+      ],
+      "upstreamLicenseVersionPinned": true
+    },
+    {
+      "name": "jiti",
+      "version": "2.7.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/46231df5a7733c3f52f11b71f3df61813007745b62b09031acfb45fb42d75082.txt",
+          "sha256": "46231df5a7733c3f52f11b71f3df61813007745b62b09031acfb45fb42d75082",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "js-yaml",
+      "version": "4.3.2",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/a07bc24468b9654ce76a547d47a2db282d07733b715db4c73a98bd63961f9550.txt",
+          "sha256": "a07bc24468b9654ce76a547d47a2db282d07733b715db4c73a98bd63961f9550",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "json-buffer",
+      "version": "3.0.1",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/715f1f0f2eb7688e53e4e958acdc7fc9e365ae3eaf26efc2604b93cc65fdc3f5.txt",
+          "sha256": "715f1f0f2eb7688e53e4e958acdc7fc9e365ae3eaf26efc2604b93cc65fdc3f5",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "json-schema-traverse",
+      "version": "1.0.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/7bf9b2de73a6b356761c948d0e9eeb4be6c1270bd04c79cd489c1e400ffdfc1a.txt",
+          "sha256": "7bf9b2de73a6b356761c948d0e9eeb4be6c1270bd04c79cd489c1e400ffdfc1a",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "json-stringify-safe",
+      "version": "5.0.1",
+      "license": "ISC",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b.txt",
+          "sha256": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "json5",
+      "version": "2.2.3",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/53e59feb13058722d977c699eb0407c7bce2f93c949b681bbd2ff31698535927.txt",
+          "sha256": "53e59feb13058722d977c699eb0407c7bce2f93c949b681bbd2ff31698535927",
+          "originalName": "LICENSE.md"
+        }
+      ]
+    },
+    {
+      "name": "jsonfile",
+      "version": "4.0.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/a9801fb52ba22ef808682a094da8a7a480584b7ed0dfd0d888ab543616335031.txt",
+          "sha256": "a9801fb52ba22ef808682a094da8a7a480584b7ed0dfd0d888ab543616335031",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "keyv",
+      "version": "4.5.4",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/e8afd30f2f2a40ef5023928b50fdaed3a3338aa7e1c4e86205413afb05e8a099.txt",
+          "sha256": "e8afd30f2f2a40ef5023928b50fdaed3a3338aa7e1c4e86205413afb05e8a099",
+          "source": "original npm license declaration; build-time dependency not shipped in desktop installer"
+        }
+      ],
+      "licenseDeclarationOnly": true,
+      "distributedInInstaller": false
+    },
+    {
+      "name": "lazy-val",
+      "version": "1.0.5",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/a5096f95098452cf6fe5c8ac9be8f13f59ab7c9f605ba5ef92c91b2c505744f0.txt",
+          "sha256": "a5096f95098452cf6fe5c8ac9be8f13f59ab7c9f605ba5ef92c91b2c505744f0",
+          "source": "original npm license declaration; build-time dependency not shipped in desktop installer"
+        }
+      ],
+      "licenseDeclarationOnly": true,
+      "distributedInInstaller": false
+    },
+    {
+      "name": "lodash",
+      "version": "4.18.1",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/f71e8ed126b46346494aad5486874cd8f0aafe95092ed67d2e3cb6110f939abc.txt",
+          "sha256": "f71e8ed126b46346494aad5486874cd8f0aafe95092ed67d2e3cb6110f939abc",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "lowercase-keys",
+      "version": "2.0.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0.txt",
+          "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+          "originalName": "license"
+        }
+      ]
+    },
+    {
+      "name": "lru-cache",
+      "version": "6.0.0",
+      "license": "ISC",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b.txt",
+          "sha256": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "magic-string",
+      "version": "0.30.21",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/1cbe51b907662f6cb1492b16c359384a595180bf0e4d101603ed525e75c4e484.txt",
+          "sha256": "1cbe51b907662f6cb1492b16c359384a595180bf0e4d101603ed525e75c4e484",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "matcher",
+      "version": "3.0.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3.txt",
+          "sha256": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3",
+          "originalName": "license"
+        }
+      ]
+    },
+    {
+      "name": "math-intrinsics",
+      "version": "1.1.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/2b770a704c15de238c3f622b01b0044ddd60b49ee30608ea6991ebf19db7a7a1.txt",
+          "sha256": "2b770a704c15de238c3f622b01b0044ddd60b49ee30608ea6991ebf19db7a7a1",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "mime",
+      "version": "2.6.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/8f2658c03422c408b2b2ce4d151decc3b1a6fd3d86e5ca9433777bccdcdf75a2.txt",
+          "sha256": "8f2658c03422c408b2b2ce4d151decc3b1a6fd3d86e5ca9433777bccdcdf75a2",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "mime-db",
+      "version": "1.52.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/cc1dfd4dafa27271e8212cd3b274eeb3f262e40a6fdab36ddc3f9696f706f58b.txt",
+          "sha256": "cc1dfd4dafa27271e8212cd3b274eeb3f262e40a6fdab36ddc3f9696f706f58b",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "mime-types",
+      "version": "2.1.35",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/71f83c4c0621102a56d9853812777b85751bce7e9726f686f5b056c1f8a4b0e6.txt",
+          "sha256": "71f83c4c0621102a56d9853812777b85751bce7e9726f686f5b056c1f8a4b0e6",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "mimic-response",
+      "version": "1.0.1",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0.txt",
+          "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+          "originalName": "license"
+        }
+      ]
+    },
+    {
+      "name": "minimatch",
+      "version": "10.2.6",
+      "license": "BlueOak-1.0.0",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/2c7c5d22ed5a8ee968c64757710979afcd77438c48b4a265b94e615babd8a901.txt",
+          "sha256": "2c7c5d22ed5a8ee968c64757710979afcd77438c48b4a265b94e615babd8a901",
+          "originalName": "LICENSE.md"
+        }
+      ]
+    },
+    {
+      "name": "minimist",
+      "version": "1.2.8",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/435a6722c786b0a56fbe7387028f1d9d3f3a2d0fb615bb8fee118727c3f59b7b.txt",
+          "sha256": "435a6722c786b0a56fbe7387028f1d9d3f3a2d0fb615bb8fee118727c3f59b7b",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "minipass",
+      "version": "7.1.3",
+      "license": "BlueOak-1.0.0",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/8a1af140fdfbf5afd3df27f7e662f989c5b963a300020dfafce42033cae9e004.txt",
+          "sha256": "8a1af140fdfbf5afd3df27f7e662f989c5b963a300020dfafce42033cae9e004",
+          "originalName": "LICENSE.md"
+        }
+      ]
+    },
+    {
+      "name": "minizlib",
+      "version": "3.1.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/df05697a04b8997c79d423930534e59cc18828f6e22d0c8c2d62fcbea1c4f50b.txt",
+          "sha256": "df05697a04b8997c79d423930534e59cc18828f6e22d0c8c2d62fcbea1c4f50b",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "mkdirp",
+      "version": "0.5.6",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/05991c2e8f070b69ec5b656c2c12fd07cd0153dd157d39b050b82af59b319a01.txt",
+          "sha256": "05991c2e8f070b69ec5b656c2c12fd07cd0153dd157d39b050b82af59b319a01",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "ms",
+      "version": "2.1.3",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/1662fae9b5314d11cf51284e2dcd1f006a354f7343f08712a730fcff9a359801.txt",
+          "sha256": "1662fae9b5314d11cf51284e2dcd1f006a354f7343f08712a730fcff9a359801",
+          "originalName": "license.md"
+        }
+      ]
+    },
+    {
+      "name": "muggle-string",
+      "version": "0.4.1",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/df52411dcd3c8f5897bbbec8c94e971519e13e75818c263e9a99a86255dd301b.txt",
+          "sha256": "df52411dcd3c8f5897bbbec8c94e971519e13e75818c263e9a99a86255dd301b",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "nanoid",
+      "version": "3.3.20",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/da4db1480d9beea3483a2eda5c53b22238d0827d57da162b48f122e04d2d9987.txt",
+          "sha256": "da4db1480d9beea3483a2eda5c53b22238d0827d57da162b48f122e04d2d9987",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "node-abi",
+      "version": "4.37.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/9a508cd4122f2dc1cc39f8ab0b6950efbc49fb087a581c7177a4b8c9d5d0d6a1.txt",
+          "sha256": "9a508cd4122f2dc1cc39f8ab0b6950efbc49fb087a581c7177a4b8c9d5d0d6a1",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "semver",
+      "version": "7.8.5",
+      "license": "ISC",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b.txt",
+          "sha256": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "node-api-version",
+      "version": "0.2.1",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/22b8f138e9eff852a031161a351e8973d2abb4cd8813a9939d79fcc3746f7677.txt",
+          "sha256": "22b8f138e9eff852a031161a351e8973d2abb4cd8813a9939d79fcc3746f7677",
+          "source": "original npm license declaration; build-time dependency not shipped in desktop installer"
+        }
+      ],
+      "licenseDeclarationOnly": true,
+      "distributedInInstaller": false
+    },
+    {
+      "name": "semver",
+      "version": "7.8.5",
+      "license": "ISC",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b.txt",
+          "sha256": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "node-gyp",
+      "version": "12.4.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/662a1b0115251cfb29c6aed0f221f8847bc49c6365d1c53a62c9f4bccc2489c3.txt",
+          "sha256": "662a1b0115251cfb29c6aed0f221f8847bc49c6365d1c53a62c9f4bccc2489c3",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "isexe",
+      "version": "4.0.0",
+      "license": "BlueOak-1.0.0",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/8a1af140fdfbf5afd3df27f7e662f989c5b963a300020dfafce42033cae9e004.txt",
+          "sha256": "8a1af140fdfbf5afd3df27f7e662f989c5b963a300020dfafce42033cae9e004",
+          "originalName": "LICENSE.md"
+        }
+      ]
+    },
+    {
+      "name": "semver",
+      "version": "7.8.5",
+      "license": "ISC",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b.txt",
+          "sha256": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "which",
+      "version": "6.0.1",
+      "license": "ISC",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b.txt",
+          "sha256": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "node-int64",
+      "version": "0.4.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/8f85aab053e268546014761da47630a09886626afbd0d8d440cb2c69611bb8d3.txt",
+          "sha256": "8f85aab053e268546014761da47630a09886626afbd0d8d440cb2c69611bb8d3",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "nopt",
+      "version": "9.0.0",
+      "license": "ISC",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b.txt",
+          "sha256": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "normalize-url",
+      "version": "6.1.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0.txt",
+          "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+          "originalName": "license"
+        }
+      ]
+    },
+    {
+      "name": "object-keys",
+      "version": "1.1.1",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/5640e5cbe2e9f57f6ccfdd8dbfbeadb875495bdbcb69d2666ce3177ccd0942e4.txt",
+          "sha256": "5640e5cbe2e9f57f6ccfdd8dbfbeadb875495bdbcb69d2666ce3177ccd0942e4",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "once",
+      "version": "1.4.0",
+      "license": "ISC",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b.txt",
+          "sha256": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "p-cancelable",
+      "version": "2.1.1",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0.txt",
+          "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+          "originalName": "license"
+        }
+      ]
+    },
+    {
+      "name": "p-limit",
+      "version": "3.1.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3.txt",
+          "sha256": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3",
+          "originalName": "license"
+        }
+      ]
+    },
+    {
+      "name": "path-browserify",
+      "version": "1.0.1",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/a22b9d5763f574e5db347c30acc0b33eaf4846767c03d2e27d012e864e79a824.txt",
+          "sha256": "a22b9d5763f574e5db347c30acc0b33eaf4846767c03d2e27d012e864e79a824",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "path-is-absolute",
+      "version": "1.0.1",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/6fb9754611c20f6649f68805e8c990e83261f29316e29de9e6cedae607b8634c.txt",
+          "sha256": "6fb9754611c20f6649f68805e8c990e83261f29316e29de9e6cedae607b8634c",
+          "originalName": "license"
+        }
+      ]
+    },
+    {
+      "name": "path-key",
+      "version": "3.1.1",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0.txt",
+          "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+          "originalName": "license"
+        }
+      ]
+    },
+    {
+      "name": "pe-library",
+      "version": "0.4.1",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/ad05317184b8cd78a770c1f55e386f600fd23feb88596c797ceb3ccd49f7d6bc.txt",
+          "sha256": "ad05317184b8cd78a770c1f55e386f600fd23feb88596c797ceb3ccd49f7d6bc",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "pend",
+      "version": "1.2.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/7e64acffcb0d20d33f5a86949ffd4a99ae045b10c7332a9c3a58635876c16880.txt",
+          "sha256": "7e64acffcb0d20d33f5a86949ffd4a99ae045b10c7332a9c3a58635876c16880",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "picocolors",
+      "version": "1.1.1",
+      "license": "ISC",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/6582629e2979466878f6014313dcc2f3756c9616148682227ce3063dde310750.txt",
+          "sha256": "6582629e2979466878f6014313dcc2f3756c9616148682227ce3063dde310750",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "picomatch",
+      "version": "4.0.7",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/d0cd141b0c322fded5dfad1d4645bb2fedfc05b7321fe1009469638190d59ef9.txt",
+          "sha256": "d0cd141b0c322fded5dfad1d4645bb2fedfc05b7321fe1009469638190d59ef9",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "pkijs",
+      "version": "3.4.1",
+      "license": "BSD-3-Clause",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/d27a2aa238102924ea75da808f79253484347d824b9b7b077837e4232f9493f5.txt",
+          "sha256": "d27a2aa238102924ea75da808f79253484347d824b9b7b077837e4232f9493f5",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "@noble/hashes",
+      "version": "1.8.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/4f221aee6e072336700c408c68ab3b96a3fc09f6aebe6f48f1bd99e5ef13faec.txt",
+          "sha256": "4f221aee6e072336700c408c68ab3b96a3fc09f6aebe6f48f1bd99e5ef13faec",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "plist",
+      "version": "3.1.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/3677dc86e6e5f119b500c308cc24cf533e2eb44c41050ea64584e049e5b70161.txt",
+          "sha256": "3677dc86e6e5f119b500c308cc24cf533e2eb44c41050ea64584e049e5b70161",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "postcss",
+      "version": "8.5.29",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/5be1f3465bba68a626777f984878814aaf35e7ef8e9fd314d469bcf887050fb8.txt",
+          "sha256": "5be1f3465bba68a626777f984878814aaf35e7ef8e9fd314d469bcf887050fb8",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "postject",
+      "version": "1.0.0-alpha.6",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/6546657539feb5b454f400db317e71fa39ff5cd048fa5d78ae0ada2df72f1ea7.txt",
+          "sha256": "6546657539feb5b454f400db317e71fa39ff5cd048fa5d78ae0ada2df72f1ea7",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "commander",
+      "version": "9.5.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/04512a63dce4d2d506ad612dc0bd7681ccf6e3655f7b6eaef7dfac8323d1ec0b.txt",
+          "sha256": "04512a63dce4d2d506ad612dc0bd7681ccf6e3655f7b6eaef7dfac8323d1ec0b",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "proc-log",
+      "version": "6.1.0",
+      "license": "ISC",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/dc32a0dee275e0a9aeffbc974dbf4899a30dcdc2e5ffa8934aecb69261065864.txt",
+          "sha256": "dc32a0dee275e0a9aeffbc974dbf4899a30dcdc2e5ffa8934aecb69261065864",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "process-nextick-args",
+      "version": "2.0.1",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/ecdccbcf39024f624ded480c01c0b25458e1eca8f26ecf040933865ce56d9a4f.txt",
+          "sha256": "ecdccbcf39024f624ded480c01c0b25458e1eca8f26ecf040933865ce56d9a4f",
+          "originalName": "license.md"
+        }
+      ]
+    },
+    {
+      "name": "progress",
+      "version": "2.0.3",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/d7d2a7786de7c7cfd96f920c6f12927d74e1d2a861ca4498bf465c3bc3f4c21c.txt",
+          "sha256": "d7d2a7786de7c7cfd96f920c6f12927d74e1d2a861ca4498bf465c3bc3f4c21c",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "promise-retry",
+      "version": "2.0.1",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/b1344bd78ebcbf8a359225ec444d038a653c6a5f9ecf405a50d4a5c11fbf27d1.txt",
+          "sha256": "b1344bd78ebcbf8a359225ec444d038a653c6a5f9ecf405a50d4a5c11fbf27d1",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "proper-lockfile",
+      "version": "4.1.2",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/aaa78451b6fecd1b9c4594c796c133c0e90cad100372ff8bc6de615e9ef9adf1.txt",
+          "sha256": "aaa78451b6fecd1b9c4594c796c133c0e90cad100372ff8bc6de615e9ef9adf1",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "pump",
+      "version": "3.0.4",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/3fe8d55a98dbf260eace67c00cf9bc53edb46234e840098a0b93df3096b97fb6.txt",
+          "sha256": "3fe8d55a98dbf260eace67c00cf9bc53edb46234e840098a0b93df3096b97fb6",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "pvtsutils",
+      "version": "1.3.6",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/c620c1d08a47c93ce242914a4269b86e41df5a97845325725a5f83d5d6f9d7fd.txt",
+          "sha256": "c620c1d08a47c93ce242914a4269b86e41df5a97845325725a5f83d5d6f9d7fd",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "pvutils",
+      "version": "1.2.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/15c88630f1e778db64a446cb31b67362cc9eb7a048fdf5ac7ab51905b74464cd.txt",
+          "sha256": "15c88630f1e778db64a446cb31b67362cc9eb7a048fdf5ac7ab51905b74464cd",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "quick-lru",
+      "version": "5.1.1",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0.txt",
+          "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+          "originalName": "license"
+        }
+      ]
+    },
+    {
+      "name": "read-binary-file-arch",
+      "version": "1.0.6",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/5cda10e2f5841c971884218c1f7023e4461571edbd3de941bfc72b8eadb357ed.txt",
+          "sha256": "5cda10e2f5841c971884218c1f7023e4461571edbd3de941bfc72b8eadb357ed",
+          "source": "original npm license declaration; build-time dependency not shipped in desktop installer"
+        }
+      ],
+      "licenseDeclarationOnly": true,
+      "distributedInInstaller": false
+    },
+    {
+      "name": "readable-stream",
+      "version": "2.3.8",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/ec62dc96da0099b87f4511736c87309335527fb7031639493e06c95728dc8c54.txt",
+          "sha256": "ec62dc96da0099b87f4511736c87309335527fb7031639493e06c95728dc8c54",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "require-directory",
+      "version": "2.1.1",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/a92e52eb1fa7cd746e3827bf01d3a3589bbc8e1e51348b1da042aad165525ad1.txt",
+          "sha256": "a92e52eb1fa7cd746e3827bf01d3a3589bbc8e1e51348b1da042aad165525ad1",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "require-from-string",
+      "version": "2.0.2",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/6ee0feb1f6ef996ff5a68600f8cf98909cf412d39ef3cdceaefd87d636fa1b7f.txt",
+          "sha256": "6ee0feb1f6ef996ff5a68600f8cf98909cf412d39ef3cdceaefd87d636fa1b7f",
+          "originalName": "license"
+        }
+      ]
+    },
+    {
+      "name": "resedit",
+      "version": "1.7.2",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/ad05317184b8cd78a770c1f55e386f600fd23feb88596c797ceb3ccd49f7d6bc.txt",
+          "sha256": "ad05317184b8cd78a770c1f55e386f600fd23feb88596c797ceb3ccd49f7d6bc",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "resolve-alpn",
+      "version": "1.2.1",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/03b347a3d13b0e5bdb8fc5edeed0286b1be51441c6490a90710692d227136e0d.txt",
+          "sha256": "03b347a3d13b0e5bdb8fc5edeed0286b1be51441c6490a90710692d227136e0d",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "responselike",
+      "version": "2.0.1",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/2c4e066228dbca96c8c6e8bef5377306f227ffa1d87a18a218b230e13ac5d39e.txt",
+          "sha256": "2c4e066228dbca96c8c6e8bef5377306f227ffa1d87a18a218b230e13ac5d39e",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "retry",
+      "version": "0.12.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/01ad164273e8e095abc9dbd1c21e194594a671af7d528cb43ee7b4c903ba7da3.txt",
+          "sha256": "01ad164273e8e095abc9dbd1c21e194594a671af7d528cb43ee7b4c903ba7da3",
+          "originalName": "License"
+        }
+      ]
+    },
+    {
+      "name": "rimraf",
+      "version": "2.6.3",
+      "license": "ISC",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b.txt",
+          "sha256": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "roarr",
+      "version": "2.15.4",
+      "license": "BSD-3-Clause",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/ba98e94118579117505f6f11fd9a4354c5e65ece03b4898d8b8f7785efcd25c1.txt",
+          "sha256": "ba98e94118579117505f6f11fd9a4354c5e65ece03b4898d8b8f7785efcd25c1",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "rollup",
+      "version": "4.64.5",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/fa1bd040c5bdeefe65b3821cebf474f2733ce65df13089bd151dda1778e62fe8.txt",
+          "sha256": "fa1bd040c5bdeefe65b3821cebf474f2733ce65df13089bd151dda1778e62fe8",
+          "originalName": "LICENSE.md"
+        }
+      ]
+    },
+    {
+      "name": "safe-buffer",
+      "version": "5.1.2",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/c7cc929b57080f4b9d0c6cf57669f0463fc5b39906344dfc8d3bc43426b30eac.txt",
+          "sha256": "c7cc929b57080f4b9d0c6cf57669f0463fc5b39906344dfc8d3bc43426b30eac",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "sanitize-filename",
+      "version": "1.6.4",
+      "license": "WTFPL OR ISC",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/69dbd0bb60112fbdd6da878a5ecddee7ddac764d669591d7846cb0310c6e7be8.txt",
+          "sha256": "69dbd0bb60112fbdd6da878a5ecddee7ddac764d669591d7846cb0310c6e7be8",
+          "originalName": "LICENSE.md"
+        }
+      ]
+    },
+    {
+      "name": "sax",
+      "version": "1.6.1",
+      "license": "BlueOak-1.0.0",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/8a1af140fdfbf5afd3df27f7e662f989c5b963a300020dfafce42033cae9e004.txt",
+          "sha256": "8a1af140fdfbf5afd3df27f7e662f989c5b963a300020dfafce42033cae9e004",
+          "originalName": "LICENSE.md"
+        }
+      ]
+    },
+    {
+      "name": "semver",
+      "version": "6.3.1",
+      "license": "ISC",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b.txt",
+          "sha256": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "semver-compare",
+      "version": "1.0.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/435a6722c786b0a56fbe7387028f1d9d3f3a2d0fb615bb8fee118727c3f59b7b.txt",
+          "sha256": "435a6722c786b0a56fbe7387028f1d9d3f3a2d0fb615bb8fee118727c3f59b7b",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "serialize-error",
+      "version": "7.0.1",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3.txt",
+          "sha256": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3",
+          "originalName": "license"
+        }
+      ]
+    },
+    {
+      "name": "shebang-command",
+      "version": "2.0.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/69dee148a2cc470554dfa7142e830662062394d0fe67cddd379aba90dc60d6b3.txt",
+          "sha256": "69dee148a2cc470554dfa7142e830662062394d0fe67cddd379aba90dc60d6b3",
+          "originalName": "license"
+        }
+      ]
+    },
+    {
+      "name": "shebang-regex",
+      "version": "3.0.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0.txt",
+          "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+          "originalName": "license"
+        }
+      ]
+    },
+    {
+      "name": "signal-exit",
+      "version": "3.0.7",
+      "license": "ISC",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/e05b1eaf5b5f99b7ad75cd1f38858ff9a311780b97715ead67936d60bf96aa7e.txt",
+          "sha256": "e05b1eaf5b5f99b7ad75cd1f38858ff9a311780b97715ead67936d60bf96aa7e",
+          "originalName": "LICENSE.txt"
+        }
+      ]
+    },
+    {
+      "name": "simple-update-notifier",
+      "version": "2.0.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/c34396f8f573f642c7ce5d18fb9b46b2d85e46979f8c06facca387c5293baede.txt",
+          "sha256": "c34396f8f573f642c7ce5d18fb9b46b2d85e46979f8c06facca387c5293baede",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "semver",
+      "version": "7.8.5",
+      "license": "ISC",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b.txt",
+          "sha256": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "source-map",
+      "version": "0.6.1",
+      "license": "BSD-3-Clause",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/6cb0631f71c7749763fd3dd1d5bee52dd1070ec17f2edc1710079ad070bd2fbd.txt",
+          "sha256": "6cb0631f71c7749763fd3dd1d5bee52dd1070ec17f2edc1710079ad070bd2fbd",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "source-map-js",
+      "version": "1.2.2",
+      "license": "BSD-3-Clause",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/6cb0631f71c7749763fd3dd1d5bee52dd1070ec17f2edc1710079ad070bd2fbd.txt",
+          "sha256": "6cb0631f71c7749763fd3dd1d5bee52dd1070ec17f2edc1710079ad070bd2fbd",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "source-map-support",
+      "version": "0.5.21",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/3a7d3bb198e909ed642bd68bd29a7d7c09a636d27a51ec663d35f00c4760ec42.txt",
+          "sha256": "3a7d3bb198e909ed642bd68bd29a7d7c09a636d27a51ec663d35f00c4760ec42",
+          "originalName": "LICENSE.md"
+        }
+      ]
+    },
+    {
+      "name": "sprintf-js",
+      "version": "1.1.3",
+      "license": "BSD-3-Clause",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/f8287e4dd9480be58c56aca4a55c23b782c43a86e69aabad78fff4df0d29edef.txt",
+          "sha256": "f8287e4dd9480be58c56aca4a55c23b782c43a86e69aabad78fff4df0d29edef",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "stat-mode",
+      "version": "1.0.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/57e9315162353f033b16b7dfb95dd1aab998a0c8dcae9f198988c4a25ffebc0d.txt",
+          "sha256": "57e9315162353f033b16b7dfb95dd1aab998a0c8dcae9f198988c4a25ffebc0d",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "string-width",
+      "version": "4.2.3",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0.txt",
+          "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+          "originalName": "license"
+        }
+      ]
+    },
+    {
+      "name": "string_decoder",
+      "version": "1.1.1",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/11f2aafb37d06b3ee5bdaf06e9811141d0da05263c316f3d627f45c20d43261b.txt",
+          "sha256": "11f2aafb37d06b3ee5bdaf06e9811141d0da05263c316f3d627f45c20d43261b",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "strip-ansi",
+      "version": "6.0.1",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0.txt",
+          "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+          "originalName": "license"
+        }
+      ]
+    },
+    {
+      "name": "sumchecker",
+      "version": "3.0.1",
+      "license": "Apache-2.0",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30.txt",
+          "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "supports-color",
+      "version": "7.2.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0.txt",
+          "sha256": "48da2f39e100d4085767e94966b43f4fa95ff6a0698fba57ed460914e35f94a0",
+          "originalName": "license"
+        }
+      ]
+    },
+    {
+      "name": "tar",
+      "version": "7.5.22",
+      "license": "BlueOak-1.0.0",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/8a1af140fdfbf5afd3df27f7e662f989c5b963a300020dfafce42033cae9e004.txt",
+          "sha256": "8a1af140fdfbf5afd3df27f7e662f989c5b963a300020dfafce42033cae9e004",
+          "originalName": "LICENSE.md"
+        }
+      ]
+    },
+    {
+      "name": "yallist",
+      "version": "5.0.0",
+      "license": "BlueOak-1.0.0",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/a49c9ba464796f65b59fca3f1e6ca40912df1e859f575383223f7ec6c5baae09.txt",
+          "sha256": "a49c9ba464796f65b59fca3f1e6ca40912df1e859f575383223f7ec6c5baae09",
+          "originalName": "LICENSE.md"
+        }
+      ]
+    },
+    {
+      "name": "temp",
+      "version": "0.9.4",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/63053a2fc2b06fe2138fa128ab29c487e28e38be8a7b9c16a4ef7209e945c0b0.txt",
+          "sha256": "63053a2fc2b06fe2138fa128ab29c487e28e38be8a7b9c16a4ef7209e945c0b0",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "temp-file",
+      "version": "3.4.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/8c7d3661d611965e51bf7bf0ddee60955e0c44a3f6bd511b28b532b8b365136d.txt",
+          "sha256": "8c7d3661d611965e51bf7bf0ddee60955e0c44a3f6bd511b28b532b8b365136d",
+          "source": "original npm license declaration; build-time dependency not shipped in desktop installer"
+        }
+      ],
+      "licenseDeclarationOnly": true,
+      "distributedInInstaller": false
+    },
+    {
+      "name": "fs-extra",
+      "version": "10.1.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/1e76029602ae9b21cc4e612db2496d92febed882ba13ba745f8b3309e85f9d39.txt",
+          "sha256": "1e76029602ae9b21cc4e612db2496d92febed882ba13ba745f8b3309e85f9d39",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "jsonfile",
+      "version": "6.2.1",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/a9801fb52ba22ef808682a094da8a7a480584b7ed0dfd0d888ab543616335031.txt",
+          "sha256": "a9801fb52ba22ef808682a094da8a7a480584b7ed0dfd0d888ab543616335031",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "universalify",
+      "version": "2.0.1",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/3fda5977c0904e226190b4e21d64340c1731e2142d6fe5f3dee0090a216b8b63.txt",
+          "sha256": "3fda5977c0904e226190b4e21d64340c1731e2142d6fe5f3dee0090a216b8b63",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "tiny-async-pool",
+      "version": "1.3.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/b454bece2de2ec708e14ce7596c36a853e04fbe763b85f63169ea6cd62a10f29.txt",
+          "sha256": "b454bece2de2ec708e14ce7596c36a853e04fbe763b85f63169ea6cd62a10f29",
+          "originalName": "LICENSE-MIT"
+        }
+      ]
+    },
+    {
+      "name": "semver",
+      "version": "5.7.2",
+      "license": "ISC",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b.txt",
+          "sha256": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "tinyglobby",
+      "version": "0.2.17",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/22c68811e174cbbfb3813d4135918df4f540959c14d872e601d9abe83d3cde8f.txt",
+          "sha256": "22c68811e174cbbfb3813d4135918df4f540959c14d872e601d9abe83d3cde8f",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "tmp",
+      "version": "0.2.7",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/162413c61e0982abe89a06bf7a02ec760dc49a7364d838bd9f01daebb5b95954.txt",
+          "sha256": "162413c61e0982abe89a06bf7a02ec760dc49a7364d838bd9f01daebb5b95954",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "tmp-promise",
+      "version": "3.0.3",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/dad8968b995df651f91060c2c0874c81ded4d6b2657c4bc00352b57683a113d4.txt",
+          "sha256": "dad8968b995df651f91060c2c0874c81ded4d6b2657c4bc00352b57683a113d4",
+          "source": "original npm license declaration; build-time dependency not shipped in desktop installer"
+        }
+      ],
+      "licenseDeclarationOnly": true,
+      "distributedInInstaller": false
+    },
+    {
+      "name": "truncate-utf8-bytes",
+      "version": "1.0.2",
+      "license": "WTFPL",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/8da766c7092b0ce9fd8f3b2ac2f41d1b739df9210067d3f710d65d95c9c17a7a.txt",
+          "sha256": "8da766c7092b0ce9fd8f3b2ac2f41d1b739df9210067d3f710d65d95c9c17a7a",
+          "source": "original npm license declaration; build-time dependency not shipped in desktop installer"
+        }
+      ],
+      "licenseDeclarationOnly": true,
+      "distributedInInstaller": false
+    },
+    {
+      "name": "tslib",
+      "version": "2.8.1",
+      "license": "0BSD",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/210b19e543130388c68654b7497e967119ce17145f66ab7d85688fbd70f08751.txt",
+          "sha256": "210b19e543130388c68654b7497e967119ce17145f66ab7d85688fbd70f08751",
+          "originalName": "LICENSE.txt"
+        }
+      ]
+    },
+    {
+      "name": "type-fest",
+      "version": "0.13.1",
+      "license": "(MIT OR CC0-1.0)",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/64a93ffc0a06a2266dbb57ed7ebe3b56ba66ab337b6347fabdbf86c76819fbae.txt",
+          "sha256": "64a93ffc0a06a2266dbb57ed7ebe3b56ba66ab337b6347fabdbf86c76819fbae",
+          "originalName": "license"
+        }
+      ]
+    },
+    {
+      "name": "typescript",
+      "version": "5.6.3",
+      "license": "Apache-2.0",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47.txt",
+          "sha256": "a7d00bfd54525bc694b6e32f64c7ebcf5e6b7ae3657be5cc12767bce74654a47",
+          "originalName": "LICENSE.txt"
+        }
+      ]
+    },
+    {
+      "name": "undici",
+      "version": "6.29.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/a6db8096b2707bc0102d256917d4d33f298ba36d8c3f25de067a2b5bb379db27.txt",
+          "sha256": "a6db8096b2707bc0102d256917d4d33f298ba36d8c3f25de067a2b5bb379db27",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "undici-types",
+      "version": "6.21.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/a6db8096b2707bc0102d256917d4d33f298ba36d8c3f25de067a2b5bb379db27.txt",
+          "sha256": "a6db8096b2707bc0102d256917d4d33f298ba36d8c3f25de067a2b5bb379db27",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "universalify",
+      "version": "0.1.2",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/3fda5977c0904e226190b4e21d64340c1731e2142d6fe5f3dee0090a216b8b63.txt",
+          "sha256": "3fda5977c0904e226190b4e21d64340c1731e2142d6fe5f3dee0090a216b8b63",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "unzipper",
+      "version": "0.12.5",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/b9e9abeaf8b92573dc28915d4948dbce30d55b30c688d109898b35e6105c4215.txt",
+          "sha256": "b9e9abeaf8b92573dc28915d4948dbce30d55b30c688d109898b35e6105c4215",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "fs-extra",
+      "version": "11.3.1",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/c6a7de1428955aa5a692f4d3a3d3ede658d959616944713337cda296736442e1.txt",
+          "sha256": "c6a7de1428955aa5a692f4d3a3d3ede658d959616944713337cda296736442e1",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "jsonfile",
+      "version": "6.2.1",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/a9801fb52ba22ef808682a094da8a7a480584b7ed0dfd0d888ab543616335031.txt",
+          "sha256": "a9801fb52ba22ef808682a094da8a7a480584b7ed0dfd0d888ab543616335031",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "universalify",
+      "version": "2.0.1",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/3fda5977c0904e226190b4e21d64340c1731e2142d6fe5f3dee0090a216b8b63.txt",
+          "sha256": "3fda5977c0904e226190b4e21d64340c1731e2142d6fe5f3dee0090a216b8b63",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "utf8-byte-length",
+      "version": "1.0.5",
+      "license": "(WTFPL OR MIT)",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/bfefe6b48c92732f278120d7a3bf682c3b01e25fdc2e0327544cbb62a2fa9a8e.txt",
+          "sha256": "bfefe6b48c92732f278120d7a3bf682c3b01e25fdc2e0327544cbb62a2fa9a8e",
+          "originalName": "LICENSE.MIT.txt"
+        },
+        {
+          "file": "npm/184d8dd2923c05139a55da1ff61a367e45ca596ac4fb96a26856c3c90003c4bb.txt",
+          "sha256": "184d8dd2923c05139a55da1ff61a367e45ca596ac4fb96a26856c3c90003c4bb",
+          "originalName": "LICENSE.WTFPL.txt"
+        }
+      ]
+    },
+    {
+      "name": "util-deprecate",
+      "version": "1.0.2",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/0154425673db15cdfa80ecba2c9b1f1a867f7197a006764712849bfc3a93cbb7.txt",
+          "sha256": "0154425673db15cdfa80ecba2c9b1f1a867f7197a006764712849bfc3a93cbb7",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "vite",
+      "version": "6.4.4",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/008938a3441801ca3960f8e3ccb4c0738e7996442a53063141d57d3769a7344d.txt",
+          "sha256": "008938a3441801ca3960f8e3ccb4c0738e7996442a53063141d57d3769a7344d",
+          "originalName": "LICENSE.md"
+        }
+      ]
+    },
+    {
+      "name": "vscode-uri",
+      "version": "3.2.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/c669138cb1eb01fbb745e8e460b291e4f2869c14a40061390b6095d845ed4c82.txt",
+          "sha256": "c669138cb1eb01fbb745e8e460b291e4f2869c14a40061390b6095d845ed4c82",
+          "originalName": "LICENSE.md"
+        }
+      ]
+    },
+    {
+      "name": "vue",
+      "version": "3.5.43",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/1bb85cc9b13b81ef41c81c51866172fc345e0503c86726a6755b796590b70175.txt",
+          "sha256": "1bb85cc9b13b81ef41c81c51866172fc345e0503c86726a6755b796590b70175",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "vue-tsc",
+      "version": "2.2.12",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/a56351045b45475385a9479d7310208ff0be9489babdb4e635fcea5d7dc1fb02.txt",
+          "sha256": "a56351045b45475385a9479d7310208ff0be9489babdb4e635fcea5d7dc1fb02",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "webcrypto-core",
+      "version": "1.9.2",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/77f65dc73794f48cbf111484def84366d470b0fab2b4c51c564c3ce62ea028b8.txt",
+          "sha256": "77f65dc73794f48cbf111484def84366d470b0fab2b4c51c564c3ce62ea028b8",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "which",
+      "version": "5.0.0",
+      "license": "ISC",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b.txt",
+          "sha256": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "wrap-ansi",
+      "version": "7.0.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3.txt",
+          "sha256": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3",
+          "originalName": "license"
+        }
+      ]
+    },
+    {
+      "name": "wrappy",
+      "version": "1.0.2",
+      "license": "ISC",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b.txt",
+          "sha256": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "ws",
+      "version": "8.22.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/2b29dcfe0d6471f7e8c92c5fb38c9f93edee10330937055440192f1832b1ecef.txt",
+          "sha256": "2b29dcfe0d6471f7e8c92c5fb38c9f93edee10330937055440192f1832b1ecef",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "xmlbuilder",
+      "version": "15.1.1",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/e368bc4263b466cf98c225af15e300549e00da8859416a4536109e9654d434a8.txt",
+          "sha256": "e368bc4263b466cf98c225af15e300549e00da8859416a4536109e9654d434a8",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "y18n",
+      "version": "5.0.8",
+      "license": "ISC",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/2034cce3b6fafcddd642c4175e01d3ddfc332a53b9f20fdc46b1466dc89ac469.txt",
+          "sha256": "2034cce3b6fafcddd642c4175e01d3ddfc332a53b9f20fdc46b1466dc89ac469",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "yallist",
+      "version": "4.0.0",
+      "license": "ISC",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b.txt",
+          "sha256": "4ec3d4c66cd87f5c8d8ad911b10f99bf27cb00cdfcff82621956e379186b016b",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "yargs",
+      "version": "17.7.3",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/2f1a503bfab84b3ba7393627308b3274501e459e3b5185bbb56bbf16cb1602d4.txt",
+          "sha256": "2f1a503bfab84b3ba7393627308b3274501e459e3b5185bbb56bbf16cb1602d4",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "yargs-parser",
+      "version": "21.1.1",
+      "license": "ISC",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/365496ca1f56da40b23c9815fc40fa9005847b2f8f8fd1c1a4929ef25ec8cd1d.txt",
+          "sha256": "365496ca1f56da40b23c9815fc40fa9005847b2f8f8fd1c1a4929ef25ec8cd1d",
+          "originalName": "LICENSE.txt"
+        }
+      ]
+    },
+    {
+      "name": "yauzl",
+      "version": "2.10.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/b303783d5eb7ca50b853ffa5f145e4e7998fab339831d848f507ca6cd970577a.txt",
+          "sha256": "b303783d5eb7ca50b853ffa5f145e4e7998fab339831d848f507ca6cd970577a",
+          "originalName": "LICENSE"
+        }
+      ]
+    },
+    {
+      "name": "yocto-queue",
+      "version": "0.1.0",
+      "license": "MIT",
+      "area": "xiaomanbox",
+      "files": [
+        {
+          "file": "npm/5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3.txt",
+          "sha256": "5c932d88256b4ab958f64a856fa48e8bd1f55bc1d96b8149c65689e0c61789d3",
+          "originalName": "license"
+        }
+      ]
+    }
+  ]
+}

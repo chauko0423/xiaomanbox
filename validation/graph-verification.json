@@ -1,0 +1,35 @@
+{
+  "at": "2026-10-12T11:14:39.884Z",
+  "passed": true,
+  "scope": "native response contract fixtures and simulated SSE/UAL integration; not actual model or UE",
+  "results": [
+    {
+      "name": "native category/node_id/linked_to detects used pure input despite implicit engine zero default",
+      "ok": true
+    },
+    {
+      "name": "submission label maps to plugin GUID for explicit constants",
+      "ok": true
+    },
+    {
+      "name": "actual linked input is accepted",
+      "ok": true
+    },
+    {
+      "name": "unused pure output does not warn",
+      "ok": true
+    },
+    {
+      "name": "execution nodes are excluded using native pin category",
+      "ok": true
+    },
+    {
+      "name": "readback preserves selected function graph",
+      "ok": true
+    },
+    {
+      "name": "agent performs target graph RPC readback and returns missing input warning to model",
+      "ok": true
+    }
+  ]
+}

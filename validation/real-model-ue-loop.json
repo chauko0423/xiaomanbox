@@ -1,10 +1,10 @@
 {
   "passed": true,
-  "at": "2026-10-12T18:16:42+0800",
+  "at": "2026-10-12T18:59:05+0800",
   "model": "xiaoman-v6-sd",
   "engineVersion": "UE 5.7.4",
   "contextWindow": 2048,
-  "scope": "actual quantized XiaoMan V6 + published text runtime + Basic.5 backend with zero-thinking compatibility fix (same backend bytes shipped in Basic.6) + compiled source UnrealAgentLink in isolated NullRHI UE project; actor and basic Blueprint workflows only",
+  "scope": "actual quantized XiaoMan V6 + published text runtime + current exported backend + compiled source UnrealAgentLink in isolated NullRHI UE project; actor and basic Blueprint workflows only",
   "originalProjectsModified": false,
   "tasks": [
     {
@@ -17,8 +17,8 @@
       "job": {
         "contract": "v1",
         "state": "done",
-        "jobId": "AG-1791800228819",
-        "startedAt": "2026-10-12T10:17:08.819Z",
+        "jobId": "AG-1791802775004",
+        "startedAt": "2026-10-12T10:59:35.004Z",
         "task": "请用工具在当前UE场景创建一个cube，命名为XiaoManLoopCube，初始location为x=101,y=202,z=303；然后把它移动到x=411,y=522,z=633；最后调用读取工具核对最终位置。按此顺序执行，只操作此对象，全部完成后用一句话报告实际核对的坐标。",
         "sessionId": null,
         "provider": "Actual XiaoMan local UE test",
@@ -35,16 +35,16 @@
         "toolCount": 3,
         "stats": {
           "rounds": 4,
-          "modelMs": 4399,
+          "modelMs": 4353,
           "promptTokens": 6468,
           "completionTokens": 207,
           "cachedTokens": 4651,
-          "tps": 47.1
+          "tps": 47.6
         },
         "steps": [
           {
             "type": "model",
-            "ms": 2243,
+            "ms": 2244,
             "tool_calls": [
               {
                 "name": "ue_spawn_actor",
@@ -71,12 +71,12 @@
               }
             },
             "ok": true,
-            "ms": 46,
-            "result": "{\"name\":\"XiaoManLoopCube\",\"path\":\"/Game/XiaoManModelUE_1791800202/Map_ModelLoop.Map_ModelLoop:PersistentLevel.XiaoManLoopCube\",\"class\":\"StaticMeshActor\",\"asset_id\":\"cube\",\"type\":\"StaticMeshActor\",\"preset\":\"cube\",\"world\":\"editor\",\"__rpc\":{\"code\":200}}"
+            "ms": 61,
+            "result": "{\"name\":\"XiaoManLoopCube\",\"path\":\"/Game/XiaoManModelUE_1791802745/Map_ModelLoop.Map_ModelLoop:PersistentLevel.XiaoManLoopCube\",\"class\":\"StaticMeshActor\",\"asset_id\":\"cube\",\"type\":\"StaticMeshActor\",\"preset\":\"cube\",\"world\":\"editor\",\"__rpc\":{\"code\":200}}"
           },
           {
             "type": "model",
-            "ms": 938,
+            "ms": 888,
             "tool_calls": [
               {
                 "name": "ue_set_transform",
@@ -102,12 +102,12 @@
               }
             },
             "ok": true,
-            "ms": 8,
-            "result": "{\"count\":1,\"failed_count\":0,\"actors\":[{\"name\":\"XiaoManLoopCube\",\"path\":\"/Game/XiaoManModelUE_1791800202/Map_ModelLoop.Map_ModelLoop:PersistentLevel.XiaoManLoopCube\",\"class\":\"StaticMeshActor\",\"folder_path\":\"None\",\"location\":{\"x\":411,\"y\":522,\"z\":633},\"rotation\":{\"pitch\":0,\"yaw\":0,\"roll\":0},\"scale\":{\"x\":1,\"y\":1,\"z\":1}}],\"reported\":1,\"report_limit\":100,\"world\":\"editor\",\"__rpc\":{\"code\":200}}"
+            "ms": 16,
+            "result": "{\"count\":1,\"failed_count\":0,\"actors\":[{\"name\":\"XiaoManLoopCube\",\"path\":\"/Game/XiaoManModelUE_1791802745/Map_ModelLoop.Map_ModelLoop:PersistentLevel.XiaoManLoopCube\",\"class\":\"StaticMeshActor\",\"folder_path\":\"None\",\"location\":{\"x\":411,\"y\":522,\"z\":633},\"rotation\":{\"pitch\":0,\"yaw\":0,\"roll\":0},\"scale\":{\"x\":1,\"y\":1,\"z\":1}}],\"reported\":1,\"report_limit\":100,\"world\":\"editor\",\"__rpc\":{\"code\":200}}"
           },
           {
             "type": "model",
-            "ms": 554,
+            "ms": 547,
             "tool_calls": [
               {
                 "name": "ue_get_actor",
@@ -129,11 +129,11 @@
             },
             "ok": true,
             "ms": 4,
-            "result": "{\"count\":1,\"total_found\":1,\"actors\":[{\"name\":\"XiaoManLoopCube\",\"path\":\"/Game/XiaoManModelUE_1791800202/Map_ModelLoop.Map_ModelLoop:PersistentLevel.XiaoManLoopCube\",\"class\":\"StaticMeshActor\",\"folder_path\":\"None\",\"transform\":{\"location\":{\"x\":411,\"y\":522,\"z\":633},\"rotation\":{\"pitch\":0,\"yaw\":0,\"roll\":0},\"scale\":{\"x\":1,\"y\":1,\"z\":1}}}],\"world\":\"editor\",\"__rpc\":{\"code\":200}}"
+            "result": "{\"count\":1,\"total_found\":1,\"actors\":[{\"name\":\"XiaoManLoopCube\",\"path\":\"/Game/XiaoManModelUE_1791802745/Map_ModelLoop.Map_ModelLoop:PersistentLevel.XiaoManLoopCube\",\"class\":\"StaticMeshActor\",\"folder_path\":\"None\",\"transform\":{\"location\":{\"x\":411,\"y\":522,\"z\":633},\"rotation\":{\"pitch\":0,\"yaw\":0,\"roll\":0},\"scale\":{\"x\":1,\"y\":1,\"z\":1}}}],\"world\":\"editor\",\"__rpc\":{\"code\":200}}"
           },
           {
             "type": "model",
-            "ms": 664,
+            "ms": 674,
             "answer": "已创建 XiaoManLoopCube 并移动到目标位置，读取核对最终坐标为 x=411, y=522, z=633。",
             "thinking": "",
             "usage": {
@@ -149,7 +149,7 @@
       }
     },
     {
-      "task": "用工具创建Actor蓝图/Game/XiaoManModelUE_1791800202/BP_ModelLoop，给它添加float类型变量XiaoSpeed，默认值为12.5，然后编译并保存此蓝图。按顺序完成后报告编译结果。",
+      "task": "用工具创建Actor蓝图/Game/XiaoManModelUE_1791802745/BP_ModelLoop，给它添加float类型变量XiaoSpeed，默认值为12.5，然后编译并保存此蓝图。按顺序完成后报告编译结果。",
       "toolNames": [
         "blueprint_create",
         "blueprint_add_variable",
@@ -158,9 +158,9 @@
       "job": {
         "contract": "v1",
         "state": "done",
-        "jobId": "AG-1791800234102",
-        "startedAt": "2026-10-12T10:17:14.102Z",
-        "task": "用工具创建Actor蓝图/Game/XiaoManModelUE_1791800202/BP_ModelLoop，给它添加float类型变量XiaoSpeed，默认值为12.5，然后编译并保存此蓝图。按顺序完成后报告编译结果。",
+        "jobId": "AG-1791802780200",
+        "startedAt": "2026-10-12T10:59:40.200Z",
+        "task": "用工具创建Actor蓝图/Game/XiaoManModelUE_1791802745/BP_ModelLoop，给它添加float类型变量XiaoSpeed，默认值为12.5，然后编译并保存此蓝图。按顺序完成后报告编译结果。",
         "sessionId": null,
         "provider": "Actual XiaoMan local UE test",
         "ctx": {
@@ -176,20 +176,20 @@
         "toolCount": 3,
         "stats": {
           "rounds": 4,
-          "modelMs": 6527,
+          "modelMs": 6547,
           "promptTokens": 5343,
           "completionTokens": 309,
           "cachedTokens": 2401,
-          "tps": 47.3
+          "tps": 47.2
         },
         "steps": [
           {
             "type": "model",
-            "ms": 1578,
+            "ms": 1556,
             "tool_calls": [
               {
                 "name": "blueprint_create",
-                "arguments": "{\"blueprint_path\":\"/Game/XiaoManModelUE_1791800202/BP_ModelLoop\"}"
+                "arguments": "{\"blueprint_path\":\"/Game/XiaoManModelUE_1791802745/BP_ModelLoop\"}"
               }
             ],
             "thinking": "",
@@ -203,19 +203,19 @@
             "type": "tool",
             "name": "blueprint_create",
             "args": {
-              "blueprint_path": "/Game/XiaoManModelUE_1791800202/BP_ModelLoop"
+              "blueprint_path": "/Game/XiaoManModelUE_1791802745/BP_ModelLoop"
             },
             "ok": true,
             "ms": 32,
-            "result": "{\"ok\":true,\"name\":\"BP_ModelLoop\",\"path\":\"/Game/XiaoManModelUE_1791800202/BP_ModelLoop.BP_ModelLoop\",\"parent_class\":\"Actor\",\"parent_class_path\":\"/Script/Engine.Actor\",\"generated_class\":\"/Game/XiaoManModelUE_1791800202/BP_ModelLoop.BP_ModelLoop_C\",\"components\":[{\"name\":\"DefaultSceneRoot\",\"class\":\"SceneComponent\",\"class_path\":\"/Script/Engine.SceneComponent\",\"source\":\"added\",\"editable\":true,\"attach_to"
+            "result": "{\"ok\":true,\"name\":\"BP_ModelLoop\",\"path\":\"/Game/XiaoManModelUE_1791802745/BP_ModelLoop.BP_ModelLoop\",\"parent_class\":\"Actor\",\"parent_class_path\":\"/Script/Engine.Actor\",\"generated_class\":\"/Game/XiaoManModelUE_1791802745/BP_ModelLoop.BP_ModelLoop_C\",\"components\":[{\"name\":\"DefaultSceneRoot\",\"class\":\"SceneComponent\",\"class_path\":\"/Script/Engine.SceneComponent\",\"source\":\"added\",\"editable\":true,\"attach_to"
           },
           {
             "type": "model",
-            "ms": 1155,
+            "ms": 1187,
             "tool_calls": [
               {
                 "name": "blueprint_add_variable",
-                "arguments": "{\"blueprint_path\":\"/Game/XiaoManModelUE_1791800202/BP_ModelLoop\",\"variable_name\":\"XiaoSpeed\",\"variable_type\":\"float\",\"default_value\":\"12.5\"}"
+                "arguments": "{\"blueprint_path\":\"/Game/XiaoManModelUE_1791802745/BP_ModelLoop\",\"variable_name\":\"XiaoSpeed\",\"variable_type\":\"float\",\"default_value\":\"12.5\"}"
               }
             ],
             "thinking": "",
@@ -229,22 +229,22 @@
             "type": "tool",
             "name": "blueprint_add_variable",
             "args": {
-              "blueprint_path": "/Game/XiaoManModelUE_1791800202/BP_ModelLoop",
+              "blueprint_path": "/Game/XiaoManModelUE_1791802745/BP_ModelLoop",
               "variable_name": "XiaoSpeed",
               "variable_type": "float",
               "default_value": "12.5"
             },
             "ok": true,
-            "ms": 24,
-            "result": "{\"ok\":true,\"blueprint_path\":\"/Game/XiaoManModelUE_1791800202/BP_ModelLoop.BP_ModelLoop\",\"variable\":{\"name\":\"XiaoSpeed\",\"type\":\"real\",\"is_array\":false,\"default_value\":\"12.500000\"},\"__rpc\":{\"code\":200}}"
+            "ms": 27,
+            "result": "{\"ok\":true,\"blueprint_path\":\"/Game/XiaoManModelUE_1791802745/BP_ModelLoop.BP_ModelLoop\",\"variable\":{\"name\":\"XiaoSpeed\",\"type\":\"real\",\"is_array\":false,\"default_value\":\"12.500000\"},\"__rpc\":{\"code\":200}}"
           },
           {
             "type": "model",
-            "ms": 661,
+            "ms": 628,
             "tool_calls": [
               {
                 "name": "blueprint_compile",
-                "arguments": "{\"blueprint_path\":\"/Game/XiaoManModelUE_1791800202/BP_ModelLoop\"}"
+                "arguments": "{\"blueprint_path\":\"/Game/XiaoManModelUE_1791802745/BP_ModelLoop\"}"
               }
             ],
             "thinking": "",
@@ -258,17 +258,17 @@
             "type": "tool",
             "name": "blueprint_compile",
             "args": {
-              "blueprint_path": "/Game/XiaoManModelUE_1791800202/BP_ModelLoop"
+              "blueprint_path": "/Game/XiaoManModelUE_1791802745/BP_ModelLoop"
             },
             "ok": true,
-            "ms": 26,
-            "result": "{\"ok\":true,\"status\":\"UpToDate\",\"saved\":true,\"path\":\"/Game/XiaoManModelUE_1791800202/BP_ModelLoop.BP_ModelLoop\",\"diagnostics\":[],\"__rpc\":{\"code\":200}}"
+            "ms": 25,
+            "result": "{\"ok\":true,\"status\":\"UpToDate\",\"saved\":true,\"path\":\"/Game/XiaoManModelUE_1791802745/BP_ModelLoop.BP_ModelLoop\",\"diagnostics\":[],\"__rpc\":{\"code\":200}}"
           },
           {
             "type": "model",
-            "ms": 3133,
-            "answer": "已按顺序完成：\n\n1. 创建 Actor 蓝图 `/Game/XiaoManModelUE_1791800202/BP_ModelLoop`（父类 Actor，含 DefaultSceneRoot 组件）。\n2. 添加 float 变量 `XiaoSpeed`，默认值 12.5。\n3. 编译并保存。\n\n编译结果：状态 UpToDate，无错误、无警告，已保存。",
-            "thinking": "The user asked to compile and save. blueprint_compile returned saved:true. Done.\n",
+            "ms": 3176,
+            "answer": "已按顺序完成：\n\n1. 创建 Actor 蓝图 `/Game/XiaoManModelUE_1791802745/BP_ModelLoop`（父类 Actor，含 DefaultSceneRoot 组件）。\n2. 添加 float 变量 `XiaoSpeed`，默认值 12.5。\n3. 编译并保存。\n\n编译结果：状态 UpToDate，无错误、无警告，已保存。",
+            "thinking": "The user asked to compile and save. The compile returned saved:true. Good.\n",
             "usage": {
               "promptTokens": 1602,
               "completionTokens": 115,
@@ -276,7 +276,7 @@
             }
           }
         ],
-        "answer": "已按顺序完成：\n\n1. 创建 Actor 蓝图 `/Game/XiaoManModelUE_1791800202/BP_ModelLoop`（父类 Actor，含 DefaultSceneRoot 组件）。\n2. 添加 float 变量 `XiaoSpeed`，默认值 12.5。\n3. 编译并保存。\n\n编译结果：状态 UpToDate，无错误、无警告，已保存。",
+        "answer": "已按顺序完成：\n\n1. 创建 Actor 蓝图 `/Game/XiaoManModelUE_1791802745/BP_ModelLoop`（父类 Actor，含 DefaultSceneRoot 组件）。\n2. 添加 float 变量 `XiaoSpeed`，默认值 12.5。\n3. 编译并保存。\n\n编译结果：状态 UpToDate，无错误、无警告，已保存。",
         "error": null,
         "liveThinking": ""
       }
@@ -291,9 +291,9 @@
     "model created Actor Blueprint, added float variable and compiled/saved actual asset",
     "independent UE describe and spawned-instance property readback confirm XiaoSpeed default 12.5; model-triggered compile is UpToDate without diagnostics"
   ],
-  "sourceCommit": "d26d5858a73e7ebf53d58d3bd695ca2539f0b125",
+  "sourceCommit": "ff4d3fecd7336dbab5af1cc9c214cbf0e5acd935",
   "runtimeSha256": "71fb706fed7ea1b65e49da7e4a9af5053c92ec0949e8728b3d7d72265a079c88",
-  "backendAgentSha256": "6825936ce41572225e19d31b3fc6c8dd5a815f1be2a1336db7d425d7ebfd40f5",
+  "backendAgentSha256": "a8b058f6a4652d29935fb0462d0cadddadd705cdc3e59c9308cf088748a91fc7",
   "sourceHadLocalFixes": true,
   "gpuBefore": "NVIDIA GeForce RTX 5080, 16303, 50",
   "modelSha256": "511046e8b813aea45ce314bfa9d56325bf83e0c197640c90bde7e65a4262d184",
@@ -326,7 +326,7 @@
   "models": {
     "data": [
       {
-        "created": 1791800215,
+        "created": 1791802762,
         "id": "xiaoman",
         "max_model_len": 2048,
         "object": "model",
@@ -338,7 +338,7 @@
   "gpuLoaded": "NVIDIA GeForce RTX 5080, 16303, 14742",
   "independentActorReadback": {
     "name": "XiaoManLoopCube",
-    "path": "/Game/XiaoManModelUE_1791800202/Map_ModelLoop.Map_ModelLoop:PersistentLevel.XiaoManLoopCube",
+    "path": "/Game/XiaoManModelUE_1791802745/Map_ModelLoop.Map_ModelLoop:PersistentLevel.XiaoManLoopCube",
     "class": "StaticMeshActor",
     "folder_path": "None",
     "transform": {
@@ -362,10 +362,10 @@
   "independentBlueprintReadback": {
     "ok": true,
     "name": "BP_ModelLoop",
-    "path": "/Game/XiaoManModelUE_1791800202/BP_ModelLoop.BP_ModelLoop",
+    "path": "/Game/XiaoManModelUE_1791802745/BP_ModelLoop.BP_ModelLoop",
     "parent_class": "Actor",
     "parent_class_path": "/Script/Engine.Actor",
-    "generated_class": "/Game/XiaoManModelUE_1791800202/BP_ModelLoop.BP_ModelLoop_C",
+    "generated_class": "/Game/XiaoManModelUE_1791802745/BP_ModelLoop.BP_ModelLoop_C",
     "components": [
       {
         "name": "DefaultSceneRoot",
@@ -433,7 +433,7 @@
       {
         "kind": "actor",
         "name": "XiaoManBPReadback",
-        "class": "/Game/XiaoManModelUE_1791800202/BP_ModelLoop.BP_ModelLoop_C",
+        "class": "/Game/XiaoManModelUE_1791802745/BP_ModelLoop.BP_ModelLoop_C",
         "properties": {
           "XiaoSpeed": 12.5
         },
@@ -462,10 +462,9 @@
       "code": 200
     }
   },
-  "gpuAfterTask": "NVIDIA GeForce RTX 5080, 16303, 14744",
+  "gpuAfterTask": "NVIDIA GeForce RTX 5080, 16303, 14739",
   "ownChildProcessesStopped": true,
-  "elapsedSeconds": 38.81,
+  "elapsedSeconds": 41.84,
   "gpuAfterStop": "NVIDIA GeForce RTX 5080, 16303, 54",
-  "desktopRelease": "v0.3.0-basic.6",
-  "matchedCurrentAgentSourceHash": true
+  "desktopRelease": "v0.3.0-basic.7"
 }

@@ -1,0 +1,63 @@
+{
+  "at": "2026-10-12",
+  "scope": "package license/notice file inventory and unchanged font matching; preserves original licenses, not a legal opinion",
+  "passed": true,
+  "lockedInstalledPackages": 452,
+  "packagesWithLicenseDocument": 452,
+  "packagesWithFullLicenseText": 440,
+  "buildOnlyDeclarationPackages": [
+    "chromium-pickle-js",
+    "compare-version",
+    "cross-dirname",
+    "de-indent",
+    "err-code",
+    "keyv",
+    "lazy-val",
+    "node-api-version",
+    "read-binary-file-arch",
+    "temp-file",
+    "tmp-promise",
+    "truncate-utf8-bytes"
+  ],
+  "fonts": [
+    {
+      "file": "Assistant-Bold.woff2",
+      "sha256": "e0cdd332ce039770e93ec44336b6db65f931940f42b0342aad35a06e7f991d29",
+      "unmodifiedLockedExcalidrawAsset": true,
+      "license": "Assistant-OFL.txt"
+    },
+    {
+      "file": "Assistant-Medium.woff2",
+      "sha256": "81a9f280ce6a790f20ca8cd521183caa430f1f7fdc0752c36ef1cc6dc828ac57",
+      "unmodifiedLockedExcalidrawAsset": true,
+      "license": "Assistant-OFL.txt"
+    },
+    {
+      "file": "Assistant-Regular.woff2",
+      "sha256": "76945f09225aae65bdbd204cb4ac40d4caa4ff67150e5074bab1a04d1b778fc3",
+      "unmodifiedLockedExcalidrawAsset": true,
+      "license": "Assistant-OFL.txt"
+    },
+    {
+      "file": "Assistant-SemiBold.woff2",
+      "sha256": "bba47a7d1b185a4a2e0d265ec82aeac5dbc2dc9cb0f482a2ff57cbdfe4e5045d",
+      "unmodifiedLockedExcalidrawAsset": true,
+      "license": "Assistant-OFL.txt"
+    },
+    {
+      "file": "Cascadia.woff2",
+      "sha256": "6d27c0474bb6c7922911f90ae811918f6be943005f1c4a6ec0e5b70a2bfddf16",
+      "unmodifiedLockedExcalidrawAsset": true,
+      "license": "Cascadia-OFL.txt"
+    },
+    {
+      "file": "Virgil.woff2",
+      "sha256": "9976295bfe709bdea64839a4d4e9a1d436dd6eb67538399a5a0e8b8fadbcf1cf",
+      "unmodifiedLockedExcalidrawAsset": true,
+      "license": "Virgil-OFL.txt"
+    }
+  ],
+  "electronBinaryNoticesRetained": true,
+  "installerIncludesThirdPartyDirectory": true,
+  "actualPackagedLicenseFilesVerified": true
+}

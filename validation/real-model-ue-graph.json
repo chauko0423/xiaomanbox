@@ -1,0 +1,1431 @@
+{
+  "passed": true,
+  "at": "2026-10-12T18:55:21+0800",
+  "model": "xiaoman-v6-sd",
+  "engineVersion": "UE 5.7.4",
+  "contextWindow": 4096,
+  "scope": "actual quantized XiaoMan V6 + published text runtime + current exported backend + compiled source UnrealAgentLink in isolated NullRHI UE project; model-authored event and function node graphs; NullRHI compilation and structural readback only",
+  "originalProjectsModified": false,
+  "tasks": [
+    {
+      "task": "创建Actor蓝图/Game/XiaoManGraphUE_1791802521/BP_GraphLoop，搜索PrintString的真实节点和引脚，然后在EventGraph里创建自定义事件XiaoGraphHello，连到PrintString，InString设为XiaoManGraph_OK，编译保存。不要放BeginPlay事件，不要改其他蓝图。完成后报告。",
+      "toolNames": [
+        "blueprint_create",
+        "blueprint_search_nodes",
+        "blueprint_apply_graph"
+      ],
+      "job": {
+        "contract": "v1",
+        "state": "done",
+        "jobId": "AG-1791802554977",
+        "startedAt": "2026-10-12T10:55:54.977Z",
+        "task": "创建Actor蓝图/Game/XiaoManGraphUE_1791802521/BP_GraphLoop，搜索PrintString的真实节点和引脚，然后在EventGraph里创建自定义事件XiaoGraphHello，连到PrintString，InString设为XiaoManGraph_OK，编译保存。不要放BeginPlay事件，不要改其他蓝图。完成后报告。",
+        "sessionId": null,
+        "provider": "Actual XiaoMan local UE test",
+        "ctx": {
+          "sceneId": null,
+          "memoryGlobalKeys": 0,
+          "memorySceneKeys": 0,
+          "historyMessages": 0,
+          "skills": [],
+          "attachments": [],
+          "attachmentImages": 0
+        },
+        "systemPrompt": "你是「小满」，XiaoMan Box（AI 工作台）的 AI 助手，能用工具帮用户完成任务。\n\n规则：\n1. 中文命名：用户要求中文命名时，资产名、变量名、组件名、函数名、Timeline 名都用中文。\n2. 一步一步来，每步根据工具返回结果决定下一步。\n3. 完成一个完整的小任务后，用中文简洁总结你做了什么、结果如何。\n\n只调用本次请求提供的工具；用户自行配置的 MCP 服务以实际工具列表为准。局域网画板通过本地网页分享，不内置团队画板 MCP 服务。\n\n【权限模式】标准受限：执行删除文件、覆盖资产、改配置等破坏性操作前，先用一句话说明将要做什么并征得用户同意，得到确认后再动手。",
+        "toolCount": 3,
+        "stats": {
+          "rounds": 4,
+          "modelMs": 8600,
+          "promptTokens": 8867,
+          "completionTokens": 377,
+          "cachedTokens": 4992,
+          "tps": 43.8
+        },
+        "steps": [
+          {
+            "type": "model",
+            "ms": 2383,
+            "tool_calls": [
+              {
+                "name": "blueprint_create",
+                "arguments": "{\"blueprint_path\":\"/Game/XiaoManGraphUE_1791802521/BP_GraphLoop\"}"
+              }
+            ],
+            "thinking": "",
+            "usage": {
+              "promptTokens": 1515,
+              "completionTokens": 51,
+              "cachedTokens": 0
+            }
+          },
+          {
+            "type": "tool",
+            "name": "blueprint_create",
+            "args": {
+              "blueprint_path": "/Game/XiaoManGraphUE_1791802521/BP_GraphLoop"
+            },
+            "ok": true,
+            "ms": 40,
+            "result": "{\"ok\":true,\"name\":\"BP_GraphLoop\",\"path\":\"/Game/XiaoManGraphUE_1791802521/BP_GraphLoop.BP_GraphLoop\",\"parent_class\":\"Actor\",\"parent_class_path\":\"/Script/Engine.Actor\",\"generated_class\":\"/Game/XiaoManGraphUE_1791802521/BP_GraphLoop.BP_GraphLoop_C\",\"components\":[{\"name\":\"DefaultSceneRoot\",\"class\":\"SceneComponent\",\"class_path\":\"/Script/Engine.SceneComponent\",\"source\":\"added\",\"editable\":true,\"attach_to"
+          },
+          {
+            "type": "model",
+            "ms": 1097,
+            "tool_calls": [
+              {
+                "name": "blueprint_search_nodes",
+                "arguments": "{\"query\":\"PrintString\",\"blueprint_path\":\"/Game/XiaoManGraphUE_1791802521/BP_GraphLoop\"}"
+              }
+            ],
+            "thinking": "",
+            "usage": {
+              "promptTokens": 1856,
+              "completionTokens": 64,
+              "cachedTokens": 1565
+            }
+          },
+          {
+            "type": "tool",
+            "name": "blueprint_search_nodes",
+            "args": {
+              "query": "PrintString",
+              "blueprint_path": "/Game/XiaoManGraphUE_1791802521/BP_GraphLoop"
+            },
+            "ok": true,
+            "ms": 9,
+            "result": "{\"ok\":true,\"query\":\"PrintString\",\"match_count\":1,\"total_candidates\":1,\"functions\":[{\"name\":\"PrintString\",\"member_name\":\"KismetSystemLibrary.PrintString\",\"class\":\"KismetSystemLibrary\",\"is_pure\":false,\"summary\":\"Prints a string to the log, and optionally, to the screen If Print To Log is true, it will be visible in the Output Log window.  Otherwise it will be logged onl\",\"params\":[{\"name\":\"WorldCont"
+          },
+          {
+            "type": "model",
+            "ms": 1616,
+            "tool_calls": [
+              {
+                "name": "blueprint_apply_graph",
+                "arguments": "{\"blueprint_path\":\"/Game/XiaoManGraphUE_1791802521/BP_GraphLoop\",\"nodes\":[{\"id\":\"hello\",\"class\":\"CustomEvent\",\"member_name\":\"XiaoGraphHello\"},{\"id\":\"print\",\"class\":\"Function\",\"member_name\":\"KismetSystemLibrary.PrintString\",\"pin_defaults\":{\"InString\":\"XiaoManGraph_OK\"}}],\"connections\":[{\"from\":\"hello.then\",\"to\":\"print.execute\"}]}"
+              }
+            ],
+            "thinking": "",
+            "usage": {
+              "promptTokens": 2141,
+              "completionTokens": 137,
+              "cachedTokens": 1919
+            }
+          },
+          {
+            "type": "tool",
+            "name": "blueprint_apply_graph",
+            "args": {
+              "blueprint_path": "/Game/XiaoManGraphUE_1791802521/BP_GraphLoop",
+              "nodes": [
+                {
+                  "id": "hello",
+                  "class": "CustomEvent",
+                  "member_name": "XiaoGraphHello"
+                },
+                {
+                  "id": "print",
+                  "class": "Function",
+                  "member_name": "KismetSystemLibrary.PrintString",
+                  "pin_defaults": {
+                    "InString": "XiaoManGraph_OK"
+                  }
+                }
+              ],
+              "connections": [
+                {
+                  "from": "hello.then",
+                  "to": "print.execute"
+                }
+              ]
+            },
+            "ok": true,
+            "ms": 35,
+            "result": "{\"ok\":true,\"blueprint_path\":\"/Game/XiaoManGraphUE_1791802521/BP_GraphLoop.BP_GraphLoop\",\"graph_name\":\"EventGraph\",\"created_count\":2,\"connection_count\":1,\"nodes\":[{\"id\":\"hello\",\"node_id\":\"DED3ED49-4AF8-4F03-C988-599607B27EA6\",\"class\":\"K2Node_CustomEvent\",\"pins\":[{\"name\":\"OutputDelegate\",\"dir\":\"Output\",\"category\":\"delegate\",\"sub_category\":\"None\",\"is_array\":false,\"is_reference\":false,\"is_const\":false"
+          },
+          {
+            "type": "verify",
+            "graphName": "EventGraph",
+            "issues": []
+          },
+          {
+            "type": "model",
+            "ms": 3504,
+            "answer": "完成，报告如下：\n\n1. 创建蓝图 `/Game/XiaoManGraphUE_1791802521/BP_GraphLoop`（父类 Actor）。\n2. 搜索确认 PrintString 真实节点为 `KismetSystemLibrary.PrintString`，输入引脚含 InString。\n3. 在 EventGraph 里建了自定义事件 XiaoGraphHello，连到 PrintString，InString 设为 XiaoManGraph_OK。\n4. 已编译保存，无报错、无警告。未放 BeginPlay 事件，未动其他蓝图。",
+            "thinking": "",
+            "usage": {
+              "promptTokens": 3355,
+              "completionTokens": 125,
+              "cachedTokens": 1508
+            }
+          }
+        ],
+        "answer": "完成，报告如下：\n\n1. 创建蓝图 `/Game/XiaoManGraphUE_1791802521/BP_GraphLoop`（父类 Actor）。\n2. 搜索确认 PrintString 真实节点为 `KismetSystemLibrary.PrintString`，输入引脚含 InString。\n3. 在 EventGraph 里建了自定义事件 XiaoGraphHello，连到 PrintString，InString 设为 XiaoManGraph_OK。\n4. 已编译保存，无报错、无警告。未放 BeginPlay 事件，未动其他蓝图。",
+        "error": null,
+        "liveThinking": ""
+      }
+    },
+    {
+      "task": "在蓝图/Game/XiaoManGraphUE_1791802521/BP_GraphLoop中创建无输入、无输出的函数XiaoGraphFunction。不要改其他图。",
+      "toolNames": [
+        "blueprint_create_function"
+      ],
+      "job": {
+        "contract": "v1",
+        "state": "done",
+        "jobId": "AG-1791802564267",
+        "startedAt": "2026-10-12T10:56:04.267Z",
+        "task": "在蓝图/Game/XiaoManGraphUE_1791802521/BP_GraphLoop中创建无输入、无输出的函数XiaoGraphFunction。不要改其他图。",
+        "sessionId": null,
+        "provider": "Actual XiaoMan local UE test",
+        "ctx": {
+          "sceneId": null,
+          "memoryGlobalKeys": 0,
+          "memorySceneKeys": 0,
+          "historyMessages": 0,
+          "skills": [],
+          "attachments": [],
+          "attachmentImages": 0
+        },
+        "systemPrompt": "你是「小满」，XiaoMan Box（AI 工作台）的 AI 助手，能用工具帮用户完成任务。\n\n规则：\n1. 中文命名：用户要求中文命名时，资产名、变量名、组件名、函数名、Timeline 名都用中文。\n2. 一步一步来，每步根据工具返回结果决定下一步。\n3. 完成一个完整的小任务后，用中文简洁总结你做了什么、结果如何。\n\n只调用本次请求提供的工具；用户自行配置的 MCP 服务以实际工具列表为准。局域网画板通过本地网页分享，不内置团队画板 MCP 服务。\n\n【权限模式】标准受限：执行删除文件、覆盖资产、改配置等破坏性操作前，先用一句话说明将要做什么并征得用户同意，得到确认后再动手。",
+        "toolCount": 1,
+        "stats": {
+          "rounds": 2,
+          "modelMs": 1955,
+          "promptTokens": 1476,
+          "completionTokens": 110,
+          "cachedTokens": 726,
+          "tps": 56.3
+        },
+        "steps": [
+          {
+            "type": "model",
+            "ms": 1560,
+            "tool_calls": [
+              {
+                "name": "blueprint_create_function",
+                "arguments": "{\"blueprint_path\":\"/Game/XiaoManGraphUE_1791802521/BP_GraphLoop\",\"function_name\":\"XiaoGraphFunction\",\"inputs\":[],\"outputs\":[]}"
+              }
+            ],
+            "thinking": "",
+            "usage": {
+              "promptTokens": 636,
+              "completionTokens": 91,
+              "cachedTokens": 0
+            }
+          },
+          {
+            "type": "tool",
+            "name": "blueprint_create_function",
+            "args": {
+              "blueprint_path": "/Game/XiaoManGraphUE_1791802521/BP_GraphLoop",
+              "function_name": "XiaoGraphFunction",
+              "inputs": [],
+              "outputs": []
+            },
+            "ok": true,
+            "ms": 24,
+            "result": "{\"ok\":true,\"graph_name\":\"XiaoGraphFunction\",\"entry_node_id\":\"DDEF9721-49E9-1418-671C-CCBBB64D1A53\",\"result_node_id\":\"B3C56639-4D3E-EAB3-B2C9-32829350BF3B\",\"__rpc\":{\"code\":200}}"
+          },
+          {
+            "type": "model",
+            "ms": 395,
+            "answer": "已在 BP_GraphLoop 中创建无输入、无输出的函数 XiaoGraphFunction。",
+            "thinking": "",
+            "usage": {
+              "promptTokens": 840,
+              "completionTokens": 19,
+              "cachedTokens": 726
+            }
+          }
+        ],
+        "answer": "已在 BP_GraphLoop 中创建无输入、无输出的函数 XiaoGraphFunction。",
+        "error": null,
+        "liveThinking": ""
+      }
+    },
+    {
+      "task": "在蓝图/Game/XiaoManGraphUE_1791802521/BP_GraphLoop的函数图XiaoGraphFunction内，先读取图确认现有入口节点GUID和执行输出，再搜索PrintString，添加该节点，把入口的执行输出连到打印执行输入，InString设为XiaoManFunction_OK，编译保存。只改XiaoGraphFunction，保留EventGraph。",
+      "toolNames": [
+        "blueprint_get_graph",
+        "blueprint_search_nodes",
+        "blueprint_apply_graph"
+      ],
+      "job": {
+        "contract": "v1",
+        "state": "done",
+        "jobId": "AG-1791802566277",
+        "startedAt": "2026-10-12T10:56:06.277Z",
+        "task": "在蓝图/Game/XiaoManGraphUE_1791802521/BP_GraphLoop的函数图XiaoGraphFunction内，先读取图确认现有入口节点GUID和执行输出，再搜索PrintString，添加该节点，把入口的执行输出连到打印执行输入，InString设为XiaoManFunction_OK，编译保存。只改XiaoGraphFunction，保留EventGraph。",
+        "sessionId": null,
+        "provider": "Actual XiaoMan local UE test",
+        "ctx": {
+          "sceneId": null,
+          "memoryGlobalKeys": 0,
+          "memorySceneKeys": 0,
+          "historyMessages": 0,
+          "skills": [],
+          "attachments": [],
+          "attachmentImages": 0
+        },
+        "systemPrompt": "你是「小满」，XiaoMan Box（AI 工作台）的 AI 助手，能用工具帮用户完成任务。\n\n规则：\n1. 中文命名：用户要求中文命名时，资产名、变量名、组件名、函数名、Timeline 名都用中文。\n2. 一步一步来，每步根据工具返回结果决定下一步。\n3. 完成一个完整的小任务后，用中文简洁总结你做了什么、结果如何。\n\n只调用本次请求提供的工具；用户自行配置的 MCP 服务以实际工具列表为准。局域网画板通过本地网页分享，不内置团队画板 MCP 服务。\n\n【权限模式】标准受限：执行删除文件、覆盖资产、改配置等破坏性操作前，先用一句话说明将要做什么并征得用户同意，得到确认后再动手。",
+        "toolCount": 3,
+        "stats": {
+          "rounds": 4,
+          "modelMs": 13951,
+          "promptTokens": 8811,
+          "completionTokens": 461,
+          "cachedTokens": 3542,
+          "tps": 33
+        },
+        "steps": [
+          {
+            "type": "model",
+            "ms": 2248,
+            "tool_calls": [
+              {
+                "name": "blueprint_get_graph",
+                "arguments": "{\"blueprint_path\":\"/Game/XiaoManGraphUE_1791802521/BP_GraphLoop\",\"graph_name\":\"XiaoGraphFunction\"}"
+              }
+            ],
+            "thinking": "",
+            "usage": {
+              "promptTokens": 1516,
+              "completionTokens": 68,
+              "cachedTokens": 0
+            }
+          },
+          {
+            "type": "tool",
+            "name": "blueprint_get_graph",
+            "args": {
+              "blueprint_path": "/Game/XiaoManGraphUE_1791802521/BP_GraphLoop",
+              "graph_name": "XiaoGraphFunction"
+            },
+            "ok": true,
+            "ms": 12,
+            "result": "{\"ok\":true,\"blueprint_path\":\"/Game/XiaoManGraphUE_1791802521/BP_GraphLoop.BP_GraphLoop\",\"graph_name\":\"XiaoGraphFunction\",\"nodes\":[{\"node_id\":\"DDEF9721-49E9-1418-671C-CCBBB64D1A53\",\"class\":\"K2Node_FunctionEntry\",\"title\":\"XiaoGraphFunction\",\"pos_x\":0,\"pos_y\":0,\"is_ghost_node\":false,\"pins\":[{\"name\":\"then\",\"dir\":\"Output\",\"category\":\"exec\",\"sub_category\":\"None\",\"is_array\":false,\"is_reference\":false,\"is"
+          },
+          {
+            "type": "model",
+            "ms": 1001,
+            "tool_calls": [
+              {
+                "name": "blueprint_search_nodes",
+                "arguments": "{\"query\":\"PrintString\",\"blueprint_path\":\"/Game/XiaoManGraphUE_1791802521/BP_GraphLoop\"}"
+              }
+            ],
+            "thinking": "",
+            "usage": {
+              "promptTokens": 1896,
+              "completionTokens": 64,
+              "cachedTokens": 1583
+            }
+          },
+          {
+            "type": "tool",
+            "name": "blueprint_search_nodes",
+            "args": {
+              "query": "PrintString",
+              "blueprint_path": "/Game/XiaoManGraphUE_1791802521/BP_GraphLoop"
+            },
+            "ok": true,
+            "ms": 13,
+            "result": "{\"ok\":true,\"query\":\"PrintString\",\"match_count\":1,\"total_candidates\":1,\"functions\":[{\"name\":\"PrintString\",\"member_name\":\"KismetSystemLibrary.PrintString\",\"class\":\"KismetSystemLibrary\",\"is_pure\":false,\"summary\":\"Prints a string to the log, and optionally, to the screen If Print To Log is true, it will be visible in the Output Log window.  Otherwise it will be logged onl\",\"params\":[{\"name\":\"WorldCont"
+          },
+          {
+            "type": "model",
+            "ms": 1958,
+            "tool_calls": [
+              {
+                "name": "blueprint_apply_graph",
+                "arguments": "{\"blueprint_path\":\"/Game/XiaoManGraphUE_1791802521/BP_GraphLoop\",\"graph_name\":\"XiaoGraphFunction\",\"nodes\":[{\"id\":\"print\",\"class\":\"Function\",\"member_name\":\"KismetSystemLibrary.PrintString\",\"pin_defaults\":{\"InString\":\"XiaoManFunction_OK\"}}],\"connections\":[{\"from\":\"DDEF9721-49E9-1418-671C-CCBBB64D1A53.then\",\"to\":\"print.execute\"}],\"compile\":true}"
+              }
+            ],
+            "thinking": "",
+            "usage": {
+              "promptTokens": 2181,
+              "completionTokens": 179,
+              "cachedTokens": 1959
+            }
+          },
+          {
+            "type": "tool",
+            "name": "blueprint_apply_graph",
+            "args": {
+              "blueprint_path": "/Game/XiaoManGraphUE_1791802521/BP_GraphLoop",
+              "graph_name": "XiaoGraphFunction",
+              "nodes": [
+                {
+                  "id": "print",
+                  "class": "Function",
+                  "member_name": "KismetSystemLibrary.PrintString",
+                  "pin_defaults": {
+                    "InString": "XiaoManFunction_OK"
+                  }
+                }
+              ],
+              "connections": [
+                {
+                  "from": "DDEF9721-49E9-1418-671C-CCBBB64D1A53.then",
+                  "to": "print.execute"
+                }
+              ],
+              "compile": true
+            },
+            "ok": true,
+            "ms": 20,
+            "result": "{\"ok\":true,\"blueprint_path\":\"/Game/XiaoManGraphUE_1791802521/BP_GraphLoop.BP_GraphLoop\",\"graph_name\":\"XiaoGraphFunction\",\"created_count\":1,\"connection_count\":1,\"nodes\":[{\"id\":\"print\",\"node_id\":\"CAB0D81C-4FFC-E919-D609-C099E97C0053\",\"class\":\"K2Node_CallFunction\",\"pins\":[{\"name\":\"execute\",\"dir\":\"Input\",\"category\":\"exec\",\"sub_category\":\"None\",\"is_array\":false,\"is_reference\":false,\"is_const\":false,\"fr"
+          },
+          {
+            "type": "verify",
+            "graphName": "XiaoGraphFunction",
+            "issues": []
+          },
+          {
+            "type": "model",
+            "ms": 8744,
+            "answer": "已完成，XiaoGraphFunction 函数图内：\n\n1. 读取图：确认入口节点 GUID 为 DDEF9721-49E9-1418-671C-CCBBB64D1A53，其 then 执行输出未连接。\n2. 搜索 PrintString：精确名 KismetSystemLibrary.PrintString。\n3. 添加 PrintString 节点，InString 设为 XiaoManFunction_OK。\n4. 把入口 then 连到打印节点 execute。\n5. 编译保存：compiled=true，0 错误 0 警告。\n\nEventGraph 未改动。",
+            "thinking": "Done. Summarize.\n",
+            "usage": {
+              "promptTokens": 3218,
+              "completionTokens": 150,
+              "cachedTokens": 0
+            }
+          }
+        ],
+        "answer": "已完成，XiaoGraphFunction 函数图内：\n\n1. 读取图：确认入口节点 GUID 为 DDEF9721-49E9-1418-671C-CCBBB64D1A53，其 then 执行输出未连接。\n2. 搜索 PrintString：精确名 KismetSystemLibrary.PrintString。\n3. 添加 PrintString 节点，InString 设为 XiaoManFunction_OK。\n4. 把入口 then 连到打印节点 execute。\n5. 编译保存：compiled=true，0 错误 0 警告。\n\nEventGraph 未改动。",
+        "error": null,
+        "liveThinking": ""
+      }
+    }
+  ],
+  "checks": [
+    "actual model, current exported backend and UE plugin connected on isolated ports",
+    "model event-to-PrintString exec link, exact string literal and compiled/saved asset independently verified",
+    "model uses actual function entry GUID, writes only requested function graph, automatic readback targets same function, and EventGraph remains intact"
+  ],
+  "sourceCommit": "ff4d3fecd7336dbab5af1cc9c214cbf0e5acd935",
+  "runtimeSha256": "71fb706fed7ea1b65e49da7e4a9af5053c92ec0949e8728b3d7d72265a079c88",
+  "backendAgentSha256": "a8b058f6a4652d29935fb0462d0cadddadd705cdc3e59c9308cf088748a91fc7",
+  "sourceHadLocalFixes": true,
+  "gpuBefore": "NVIDIA GeForce RTX 5080, 16303, 54",
+  "modelSha256": "511046e8b813aea45ce314bfa9d56325bf83e0c197640c90bde7e65a4262d184",
+  "modelFullFileHashVerifiedThisRun": true,
+  "modelArguments": [
+    "--host",
+    "127.0.0.1",
+    "--port",
+    "18395",
+    "--model-id",
+    "xiaoman",
+    "--max-context",
+    "4096",
+    "--kv-dtype",
+    "nvfp4",
+    "--spec",
+    "mtp",
+    "--draft-tokens",
+    "2",
+    "--prefill-chunk",
+    "256",
+    "--host-state-slots",
+    "1",
+    "--host-kv-mib",
+    "256",
+    "--no-cuda-graph",
+    "--chat-template",
+    "..\\..\\chat_template.jinja"
+  ],
+  "models": {
+    "data": [
+      {
+        "created": 1791802540,
+        "id": "xiaoman",
+        "max_model_len": 4096,
+        "object": "model",
+        "owned_by": "ninfer"
+      }
+    ],
+    "object": "list"
+  },
+  "gpuLoaded": "NVIDIA GeForce RTX 5080, 16303, 14775",
+  "independentGraphs": [
+    {
+      "ok": true,
+      "blueprint_path": "/Game/XiaoManGraphUE_1791802521/BP_GraphLoop.BP_GraphLoop",
+      "graph_name": "EventGraph",
+      "nodes": [
+        {
+          "node_id": "C5B6F7E0-45B1-334A-4E24-92859C1DAEFB",
+          "class": "K2Node_Event",
+          "title": "Event BeginPlay",
+          "pos_x": 0,
+          "pos_y": 0,
+          "is_ghost_node": true,
+          "write_as": "Event",
+          "member_name": "ReceiveBeginPlay",
+          "pins": [
+            {
+              "name": "OutputDelegate",
+              "dir": "Output",
+              "category": "delegate",
+              "sub_category": "None",
+              "is_array": false,
+              "is_reference": false,
+              "is_const": false,
+              "friendly_name": "",
+              "linked_to": [],
+              "linked_count": 0,
+              "is_connected": false
+            },
+            {
+              "name": "then",
+              "dir": "Output",
+              "category": "exec",
+              "sub_category": "None",
+              "is_array": false,
+              "is_reference": false,
+              "is_const": false,
+              "friendly_name": "",
+              "linked_to": [],
+              "linked_count": 0,
+              "is_connected": false
+            }
+          ]
+        },
+        {
+          "node_id": "3746666C-4783-5B15-7530-ABAED6431D42",
+          "class": "K2Node_Event",
+          "title": "Event ActorBeginOverlap",
+          "pos_x": 0,
+          "pos_y": 208,
+          "is_ghost_node": true,
+          "write_as": "Event",
+          "member_name": "ReceiveActorBeginOverlap",
+          "pins": [
+            {
+              "name": "OutputDelegate",
+              "dir": "Output",
+              "category": "delegate",
+              "sub_category": "None",
+              "is_array": false,
+              "is_reference": false,
+              "is_const": false,
+              "friendly_name": "",
+              "linked_to": [],
+              "linked_count": 0,
+              "is_connected": false
+            },
+            {
+              "name": "then",
+              "dir": "Output",
+              "category": "exec",
+              "sub_category": "None",
+              "is_array": false,
+              "is_reference": false,
+              "is_const": false,
+              "friendly_name": "",
+              "linked_to": [],
+              "linked_count": 0,
+              "is_connected": false
+            },
+            {
+              "name": "OtherActor",
+              "dir": "Output",
+              "category": "object",
+              "sub_category": "None",
+              "is_array": false,
+              "is_reference": false,
+              "is_const": false,
+              "sub_category_object": "/Script/Engine.Actor",
+              "friendly_name": "",
+              "linked_to": [],
+              "linked_count": 0,
+              "is_connected": false
+            }
+          ]
+        },
+        {
+          "node_id": "3FA1F5BF-4A75-2AC0-9A44-999AEEF3B55D",
+          "class": "K2Node_Event",
+          "title": "Event Tick",
+          "pos_x": 0,
+          "pos_y": 416,
+          "is_ghost_node": true,
+          "write_as": "Event",
+          "member_name": "ReceiveTick",
+          "pins": [
+            {
+              "name": "OutputDelegate",
+              "dir": "Output",
+              "category": "delegate",
+              "sub_category": "None",
+              "is_array": false,
+              "is_reference": false,
+              "is_const": false,
+              "friendly_name": "",
+              "linked_to": [],
+              "linked_count": 0,
+              "is_connected": false
+            },
+            {
+              "name": "then",
+              "dir": "Output",
+              "category": "exec",
+              "sub_category": "None",
+              "is_array": false,
+              "is_reference": false,
+              "is_const": false,
+              "friendly_name": "",
+              "linked_to": [],
+              "linked_count": 0,
+              "is_connected": false
+            },
+            {
+              "name": "DeltaSeconds",
+              "dir": "Output",
+              "category": "real",
+              "sub_category": "float",
+              "is_array": false,
+              "is_reference": false,
+              "is_const": false,
+              "friendly_name": "",
+              "default_value": "0.0",
+              "linked_to": [],
+              "linked_count": 0,
+              "is_connected": false
+            }
+          ]
+        },
+        {
+          "node_id": "DED3ED49-4AF8-4F03-C988-599607B27EA6",
+          "class": "K2Node_CustomEvent",
+          "title": "XiaoGraphHello",
+          "pos_x": 0,
+          "pos_y": 0,
+          "is_ghost_node": false,
+          "write_as": "CustomEvent",
+          "member_name": "XiaoGraphHello",
+          "pins": [
+            {
+              "name": "OutputDelegate",
+              "dir": "Output",
+              "category": "delegate",
+              "sub_category": "None",
+              "is_array": false,
+              "is_reference": false,
+              "is_const": false,
+              "friendly_name": "",
+              "linked_to": [],
+              "linked_count": 0,
+              "is_connected": false
+            },
+            {
+              "name": "then",
+              "dir": "Output",
+              "category": "exec",
+              "sub_category": "None",
+              "is_array": false,
+              "is_reference": false,
+              "is_const": false,
+              "friendly_name": "",
+              "linked_to": [
+                {
+                  "pin_name": "execute",
+                  "dir": "Input",
+                  "node_id": "00B45A93-4B67-3381-9E6D-C58933D03411",
+                  "node_class": "K2Node_CallFunction",
+                  "node_title": "Print String"
+                }
+              ],
+              "linked_count": 1,
+              "is_connected": true
+            }
+          ]
+        },
+        {
+          "node_id": "00B45A93-4B67-3381-9E6D-C58933D03411",
+          "class": "K2Node_CallFunction",
+          "title": "Print String",
+          "pos_x": 350,
+          "pos_y": 0,
+          "is_ghost_node": false,
+          "write_as": "Function",
+          "member_name": "KismetSystemLibrary.PrintString",
+          "pins": [
+            {
+              "name": "execute",
+              "dir": "Input",
+              "category": "exec",
+              "sub_category": "None",
+              "is_array": false,
+              "is_reference": false,
+              "is_const": false,
+              "friendly_name": "",
+              "linked_to": [
+                {
+                  "pin_name": "then",
+                  "dir": "Output",
+                  "node_id": "DED3ED49-4AF8-4F03-C988-599607B27EA6",
+                  "node_class": "K2Node_CustomEvent",
+                  "node_title": "XiaoGraphHello"
+                }
+              ],
+              "linked_count": 1,
+              "is_connected": true
+            },
+            {
+              "name": "then",
+              "dir": "Output",
+              "category": "exec",
+              "sub_category": "None",
+              "is_array": false,
+              "is_reference": false,
+              "is_const": false,
+              "friendly_name": "",
+              "linked_to": [],
+              "linked_count": 0,
+              "is_connected": false
+            },
+            {
+              "name": "self",
+              "dir": "Input",
+              "category": "object",
+              "sub_category": "None",
+              "is_array": false,
+              "is_reference": false,
+              "is_const": false,
+              "sub_category_object": "/Script/Engine.KismetSystemLibrary",
+              "friendly_name": "Target",
+              "default_object": "/Script/Engine.Default__KismetSystemLibrary",
+              "linked_to": [],
+              "linked_count": 0,
+              "is_connected": false
+            },
+            {
+              "name": "WorldContextObject",
+              "dir": "Input",
+              "category": "object",
+              "sub_category": "None",
+              "is_array": false,
+              "is_reference": false,
+              "is_const": true,
+              "sub_category_object": "/Script/CoreUObject.Object",
+              "friendly_name": "",
+              "linked_to": [],
+              "linked_count": 0,
+              "is_connected": false
+            },
+            {
+              "name": "InString",
+              "dir": "Input",
+              "category": "string",
+              "sub_category": "None",
+              "is_array": false,
+              "is_reference": false,
+              "is_const": false,
+              "friendly_name": "",
+              "default_value": "XiaoManGraph_OK",
+              "linked_to": [],
+              "linked_count": 0,
+              "is_connected": false
+            },
+            {
+              "name": "bPrintToScreen",
+              "dir": "Input",
+              "category": "bool",
+              "sub_category": "None",
+              "is_array": false,
+              "is_reference": false,
+              "is_const": false,
+              "friendly_name": "",
+              "default_value": "true",
+              "linked_to": [],
+              "linked_count": 0,
+              "is_connected": false
+            },
+            {
+              "name": "bPrintToLog",
+              "dir": "Input",
+              "category": "bool",
+              "sub_category": "None",
+              "is_array": false,
+              "is_reference": false,
+              "is_const": false,
+              "friendly_name": "",
+              "default_value": "true",
+              "linked_to": [],
+              "linked_count": 0,
+              "is_connected": false
+            },
+            {
+              "name": "TextColor",
+              "dir": "Input",
+              "category": "struct",
+              "sub_category": "None",
+              "is_array": false,
+              "is_reference": false,
+              "is_const": false,
+              "sub_category_object": "/Script/CoreUObject.LinearColor",
+              "friendly_name": "",
+              "default_value": "(R=0.000000,G=0.660000,B=1.000000,A=1.000000)",
+              "linked_to": [],
+              "linked_count": 0,
+              "is_connected": false
+            },
+            {
+              "name": "Duration",
+              "dir": "Input",
+              "category": "real",
+              "sub_category": "float",
+              "is_array": false,
+              "is_reference": false,
+              "is_const": false,
+              "friendly_name": "",
+              "default_value": "2.000000",
+              "linked_to": [],
+              "linked_count": 0,
+              "is_connected": false
+            },
+            {
+              "name": "Key",
+              "dir": "Input",
+              "category": "name",
+              "sub_category": "None",
+              "is_array": false,
+              "is_reference": false,
+              "is_const": true,
+              "friendly_name": "",
+              "default_value": "None",
+              "linked_to": [],
+              "linked_count": 0,
+              "is_connected": false
+            }
+          ]
+        }
+      ],
+      "__rpc": {
+        "code": 200
+      }
+    },
+    {
+      "ok": true,
+      "blueprint_path": "/Game/XiaoManGraphUE_1791802521/BP_GraphLoop.BP_GraphLoop",
+      "graph_name": "XiaoGraphFunction",
+      "nodes": [
+        {
+          "node_id": "DDEF9721-49E9-1418-671C-CCBBB64D1A53",
+          "class": "K2Node_FunctionEntry",
+          "title": "XiaoGraphFunction",
+          "pos_x": 0,
+          "pos_y": 0,
+          "is_ghost_node": false,
+          "pins": [
+            {
+              "name": "then",
+              "dir": "Output",
+              "category": "exec",
+              "sub_category": "None",
+              "is_array": false,
+              "is_reference": false,
+              "is_const": false,
+              "friendly_name": "",
+              "linked_to": [
+                {
+                  "pin_name": "execute",
+                  "dir": "Input",
+                  "node_id": "CAB0D81C-4FFC-E919-D609-C099E97C0053",
+                  "node_class": "K2Node_CallFunction",
+                  "node_title": "Print String"
+                }
+              ],
+              "linked_count": 1,
+              "is_connected": true
+            }
+          ]
+        },
+        {
+          "node_id": "B3C56639-4D3E-EAB3-B2C9-32829350BF3B",
+          "class": "K2Node_FunctionResult",
+          "title": "Return Node",
+          "pos_x": 400,
+          "pos_y": 0,
+          "is_ghost_node": false,
+          "pins": [
+            {
+              "name": "execute",
+              "dir": "Input",
+              "category": "exec",
+              "sub_category": "None",
+              "is_array": false,
+              "is_reference": false,
+              "is_const": false,
+              "friendly_name": "",
+              "linked_to": [],
+              "linked_count": 0,
+              "is_connected": false
+            }
+          ]
+        },
+        {
+          "node_id": "CAB0D81C-4FFC-E919-D609-C099E97C0053",
+          "class": "K2Node_CallFunction",
+          "title": "Print String",
+          "pos_x": 0,
+          "pos_y": 0,
+          "is_ghost_node": false,
+          "write_as": "Function",
+          "member_name": "KismetSystemLibrary.PrintString",
+          "pins": [
+            {
+              "name": "execute",
+              "dir": "Input",
+              "category": "exec",
+              "sub_category": "None",
+              "is_array": false,
+              "is_reference": false,
+              "is_const": false,
+              "friendly_name": "",
+              "linked_to": [
+                {
+                  "pin_name": "then",
+                  "dir": "Output",
+                  "node_id": "DDEF9721-49E9-1418-671C-CCBBB64D1A53",
+                  "node_class": "K2Node_FunctionEntry",
+                  "node_title": "XiaoGraphFunction"
+                }
+              ],
+              "linked_count": 1,
+              "is_connected": true
+            },
+            {
+              "name": "then",
+              "dir": "Output",
+              "category": "exec",
+              "sub_category": "None",
+              "is_array": false,
+              "is_reference": false,
+              "is_const": false,
+              "friendly_name": "",
+              "linked_to": [],
+              "linked_count": 0,
+              "is_connected": false
+            },
+            {
+              "name": "self",
+              "dir": "Input",
+              "category": "object",
+              "sub_category": "None",
+              "is_array": false,
+              "is_reference": false,
+              "is_const": false,
+              "sub_category_object": "/Script/Engine.KismetSystemLibrary",
+              "friendly_name": "Target",
+              "default_object": "/Script/Engine.Default__KismetSystemLibrary",
+              "linked_to": [],
+              "linked_count": 0,
+              "is_connected": false
+            },
+            {
+              "name": "WorldContextObject",
+              "dir": "Input",
+              "category": "object",
+              "sub_category": "None",
+              "is_array": false,
+              "is_reference": false,
+              "is_const": true,
+              "sub_category_object": "/Script/CoreUObject.Object",
+              "friendly_name": "",
+              "linked_to": [],
+              "linked_count": 0,
+              "is_connected": false
+            },
+            {
+              "name": "InString",
+              "dir": "Input",
+              "category": "string",
+              "sub_category": "None",
+              "is_array": false,
+              "is_reference": false,
+              "is_const": false,
+              "friendly_name": "",
+              "default_value": "XiaoManFunction_OK",
+              "linked_to": [],
+              "linked_count": 0,
+              "is_connected": false
+            },
+            {
+              "name": "bPrintToScreen",
+              "dir": "Input",
+              "category": "bool",
+              "sub_category": "None",
+              "is_array": false,
+              "is_reference": false,
+              "is_const": false,
+              "friendly_name": "",
+              "default_value": "true",
+              "linked_to": [],
+              "linked_count": 0,
+              "is_connected": false
+            },
+            {
+              "name": "bPrintToLog",
+              "dir": "Input",
+              "category": "bool",
+              "sub_category": "None",
+              "is_array": false,
+              "is_reference": false,
+              "is_const": false,
+              "friendly_name": "",
+              "default_value": "true",
+              "linked_to": [],
+              "linked_count": 0,
+              "is_connected": false
+            },
+            {
+              "name": "TextColor",
+              "dir": "Input",
+              "category": "struct",
+              "sub_category": "None",
+              "is_array": false,
+              "is_reference": false,
+              "is_const": false,
+              "sub_category_object": "/Script/CoreUObject.LinearColor",
+              "friendly_name": "",
+              "default_value": "(R=0.000000,G=0.660000,B=1.000000,A=1.000000)",
+              "linked_to": [],
+              "linked_count": 0,
+              "is_connected": false
+            },
+            {
+              "name": "Duration",
+              "dir": "Input",
+              "category": "real",
+              "sub_category": "float",
+              "is_array": false,
+              "is_reference": false,
+              "is_const": false,
+              "friendly_name": "",
+              "default_value": "2.000000",
+              "linked_to": [],
+              "linked_count": 0,
+              "is_connected": false
+            },
+            {
+              "name": "Key",
+              "dir": "Input",
+              "category": "name",
+              "sub_category": "None",
+              "is_array": false,
+              "is_reference": false,
+              "is_const": true,
+              "friendly_name": "",
+              "default_value": "None",
+              "linked_to": [],
+              "linked_count": 0,
+              "is_connected": false
+            }
+          ]
+        }
+      ],
+      "__rpc": {
+        "code": 200
+      }
+    },
+    {
+      "ok": true,
+      "blueprint_path": "/Game/XiaoManGraphUE_1791802521/BP_GraphLoop.BP_GraphLoop",
+      "graph_name": "EventGraph",
+      "nodes": [
+        {
+          "node_id": "C5B6F7E0-45B1-334A-4E24-92859C1DAEFB",
+          "class": "K2Node_Event",
+          "title": "Event BeginPlay",
+          "pos_x": 0,
+          "pos_y": 0,
+          "is_ghost_node": true,
+          "write_as": "Event",
+          "member_name": "ReceiveBeginPlay",
+          "pins": [
+            {
+              "name": "OutputDelegate",
+              "dir": "Output",
+              "category": "delegate",
+              "sub_category": "None",
+              "is_array": false,
+              "is_reference": false,
+              "is_const": false,
+              "friendly_name": "",
+              "linked_to": [],
+              "linked_count": 0,
+              "is_connected": false
+            },
+            {
+              "name": "then",
+              "dir": "Output",
+              "category": "exec",
+              "sub_category": "None",
+              "is_array": false,
+              "is_reference": false,
+              "is_const": false,
+              "friendly_name": "",
+              "linked_to": [],
+              "linked_count": 0,
+              "is_connected": false
+            }
+          ]
+        },
+        {
+          "node_id": "3746666C-4783-5B15-7530-ABAED6431D42",
+          "class": "K2Node_Event",
+          "title": "Event ActorBeginOverlap",
+          "pos_x": 0,
+          "pos_y": 208,
+          "is_ghost_node": true,
+          "write_as": "Event",
+          "member_name": "ReceiveActorBeginOverlap",
+          "pins": [
+            {
+              "name": "OutputDelegate",
+              "dir": "Output",
+              "category": "delegate",
+              "sub_category": "None",
+              "is_array": false,
+              "is_reference": false,
+              "is_const": false,
+              "friendly_name": "",
+              "linked_to": [],
+              "linked_count": 0,
+              "is_connected": false
+            },
+            {
+              "name": "then",
+              "dir": "Output",
+              "category": "exec",
+              "sub_category": "None",
+              "is_array": false,
+              "is_reference": false,
+              "is_const": false,
+              "friendly_name": "",
+              "linked_to": [],
+              "linked_count": 0,
+              "is_connected": false
+            },
+            {
+              "name": "OtherActor",
+              "dir": "Output",
+              "category": "object",
+              "sub_category": "None",
+              "is_array": false,
+              "is_reference": false,
+              "is_const": false,
+              "sub_category_object": "/Script/Engine.Actor",
+              "friendly_name": "",
+              "linked_to": [],
+              "linked_count": 0,
+              "is_connected": false
+            }
+          ]
+        },
+        {
+          "node_id": "3FA1F5BF-4A75-2AC0-9A44-999AEEF3B55D",
+          "class": "K2Node_Event",
+          "title": "Event Tick",
+          "pos_x": 0,
+          "pos_y": 416,
+          "is_ghost_node": true,
+          "write_as": "Event",
+          "member_name": "ReceiveTick",
+          "pins": [
+            {
+              "name": "OutputDelegate",
+              "dir": "Output",
+              "category": "delegate",
+              "sub_category": "None",
+              "is_array": false,
+              "is_reference": false,
+              "is_const": false,
+              "friendly_name": "",
+              "linked_to": [],
+              "linked_count": 0,
+              "is_connected": false
+            },
+            {
+              "name": "then",
+              "dir": "Output",
+              "category": "exec",
+              "sub_category": "None",
+              "is_array": false,
+              "is_reference": false,
+              "is_const": false,
+              "friendly_name": "",
+              "linked_to": [],
+              "linked_count": 0,
+              "is_connected": false
+            },
+            {
+              "name": "DeltaSeconds",
+              "dir": "Output",
+              "category": "real",
+              "sub_category": "float",
+              "is_array": false,
+              "is_reference": false,
+              "is_const": false,
+              "friendly_name": "",
+              "default_value": "0.0",
+              "linked_to": [],
+              "linked_count": 0,
+              "is_connected": false
+            }
+          ]
+        },
+        {
+          "node_id": "DED3ED49-4AF8-4F03-C988-599607B27EA6",
+          "class": "K2Node_CustomEvent",
+          "title": "XiaoGraphHello",
+          "pos_x": 0,
+          "pos_y": 0,
+          "is_ghost_node": false,
+          "write_as": "CustomEvent",
+          "member_name": "XiaoGraphHello",
+          "pins": [
+            {
+              "name": "OutputDelegate",
+              "dir": "Output",
+              "category": "delegate",
+              "sub_category": "None",
+              "is_array": false,
+              "is_reference": false,
+              "is_const": false,
+              "friendly_name": "",
+              "linked_to": [],
+              "linked_count": 0,
+              "is_connected": false
+            },
+            {
+              "name": "then",
+              "dir": "Output",
+              "category": "exec",
+              "sub_category": "None",
+              "is_array": false,
+              "is_reference": false,
+              "is_const": false,
+              "friendly_name": "",
+              "linked_to": [
+                {
+                  "pin_name": "execute",
+                  "dir": "Input",
+                  "node_id": "00B45A93-4B67-3381-9E6D-C58933D03411",
+                  "node_class": "K2Node_CallFunction",
+                  "node_title": "Print String"
+                }
+              ],
+              "linked_count": 1,
+              "is_connected": true
+            }
+          ]
+        },
+        {
+          "node_id": "00B45A93-4B67-3381-9E6D-C58933D03411",
+          "class": "K2Node_CallFunction",
+          "title": "Print String",
+          "pos_x": 350,
+          "pos_y": 0,
+          "is_ghost_node": false,
+          "write_as": "Function",
+          "member_name": "KismetSystemLibrary.PrintString",
+          "pins": [
+            {
+              "name": "execute",
+              "dir": "Input",
+              "category": "exec",
+              "sub_category": "None",
+              "is_array": false,
+              "is_reference": false,
+              "is_const": false,
+              "friendly_name": "",
+              "linked_to": [
+                {
+                  "pin_name": "then",
+                  "dir": "Output",
+                  "node_id": "DED3ED49-4AF8-4F03-C988-599607B27EA6",
+                  "node_class": "K2Node_CustomEvent",
+                  "node_title": "XiaoGraphHello"
+                }
+              ],
+              "linked_count": 1,
+              "is_connected": true
+            },
+            {
+              "name": "then",
+              "dir": "Output",
+              "category": "exec",
+              "sub_category": "None",
+              "is_array": false,
+              "is_reference": false,
+              "is_const": false,
+              "friendly_name": "",
+              "linked_to": [],
+              "linked_count": 0,
+              "is_connected": false
+            },
+            {
+              "name": "self",
+              "dir": "Input",
+              "category": "object",
+              "sub_category": "None",
+              "is_array": false,
+              "is_reference": false,
+              "is_const": false,
+              "sub_category_object": "/Script/Engine.KismetSystemLibrary",
+              "friendly_name": "Target",
+              "default_object": "/Script/Engine.Default__KismetSystemLibrary",
+              "linked_to": [],
+              "linked_count": 0,
+              "is_connected": false
+            },
+            {
+              "name": "WorldContextObject",
+              "dir": "Input",
+              "category": "object",
+              "sub_category": "None",
+              "is_array": false,
+              "is_reference": false,
+              "is_const": true,
+              "sub_category_object": "/Script/CoreUObject.Object",
+              "friendly_name": "",
+              "linked_to": [],
+              "linked_count": 0,
+              "is_connected": false
+            },
+            {
+              "name": "InString",
+              "dir": "Input",
+              "category": "string",
+              "sub_category": "None",
+              "is_array": false,
+              "is_reference": false,
+              "is_const": false,
+              "friendly_name": "",
+              "default_value": "XiaoManGraph_OK",
+              "linked_to": [],
+              "linked_count": 0,
+              "is_connected": false
+            },
+            {
+              "name": "bPrintToScreen",
+              "dir": "Input",
+              "category": "bool",
+              "sub_category": "None",
+              "is_array": false,
+              "is_reference": false,
+              "is_const": false,
+              "friendly_name": "",
+              "default_value": "true",
+              "linked_to": [],
+              "linked_count": 0,
+              "is_connected": false
+            },
+            {
+              "name": "bPrintToLog",
+              "dir": "Input",
+              "category": "bool",
+              "sub_category": "None",
+              "is_array": false,
+              "is_reference": false,
+              "is_const": false,
+              "friendly_name": "",
+              "default_value": "true",
+              "linked_to": [],
+              "linked_count": 0,
+              "is_connected": false
+            },
+            {
+              "name": "TextColor",
+              "dir": "Input",
+              "category": "struct",
+              "sub_category": "None",
+              "is_array": false,
+              "is_reference": false,
+              "is_const": false,
+              "sub_category_object": "/Script/CoreUObject.LinearColor",
+              "friendly_name": "",
+              "default_value": "(R=0.000000,G=0.660000,B=1.000000,A=1.000000)",
+              "linked_to": [],
+              "linked_count": 0,
+              "is_connected": false
+            },
+            {
+              "name": "Duration",
+              "dir": "Input",
+              "category": "real",
+              "sub_category": "float",
+              "is_array": false,
+              "is_reference": false,
+              "is_const": false,
+              "friendly_name": "",
+              "default_value": "2.000000",
+              "linked_to": [],
+              "linked_count": 0,
+              "is_connected": false
+            },
+            {
+              "name": "Key",
+              "dir": "Input",
+              "category": "name",
+              "sub_category": "None",
+              "is_array": false,
+              "is_reference": false,
+              "is_const": true,
+              "friendly_name": "",
+              "default_value": "None",
+              "linked_to": [],
+              "linked_count": 0,
+              "is_connected": false
+            }
+          ]
+        }
+      ],
+      "__rpc": {
+        "code": 200
+      }
+    }
+  ],
+  "independentCompiles": [
+    {
+      "ok": true,
+      "status": "UpToDate",
+      "saved": true,
+      "path": "/Game/XiaoManGraphUE_1791802521/BP_GraphLoop.BP_GraphLoop",
+      "diagnostics": [],
+      "__rpc": {
+        "code": 200
+      }
+    },
+    {
+      "ok": true,
+      "status": "UpToDate",
+      "saved": true,
+      "path": "/Game/XiaoManGraphUE_1791802521/BP_GraphLoop.BP_GraphLoop",
+      "diagnostics": [],
+      "__rpc": {
+        "code": 200
+      }
+    },
+    {
+      "ok": true,
+      "status": "UpToDate",
+      "saved": true,
+      "path": "/Game/XiaoManGraphUE_1791802521/BP_GraphLoop.BP_GraphLoop",
+      "diagnostics": [],
+      "__rpc": {
+        "code": 200
+      }
+    }
+  ],
+  "gpuAfterTask": "NVIDIA GeForce RTX 5080, 16303, 14782",
+  "ownChildProcessesStopped": true,
+  "elapsedSeconds": 59.36,
+  "gpuAfterStop": "NVIDIA GeForce RTX 5080, 16303, 54",
+  "desktopRelease": "v0.3.0-basic.7"
+}

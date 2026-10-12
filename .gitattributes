@@ -6,3 +6,4 @@ assets/chat_template.jinja -text
 *.bat text eol=crlf
 *.mjs text eol=lf
 *.cjs text eol=lf
+third-party-licenses/npm/*.txt -text -whitespace

@@ -10,6 +10,8 @@
  */
 
 import http from 'node:http';
+import { verifyGraph, graphReadbackArgs } from './graph-verification.mjs';
+export { verifyGraph } from './graph-verification.mjs';
 import { estimateTokens as estTokens, requestBudget, enforceRequestBudget } from './agent-budget.mjs';
 import https from 'node:https';
 import fs from 'node:fs';
@@ -548,72 +550,7 @@ async function executeWorkbenchTool(name, args = {}, sessionId = null) {
   }
 }
 
-/** 数据输入引脚：Input 方向 + 非 exec + 非 delegate + 排除 self/target/世界上下文 */
-function isDataPin(p) {
-  return (
-    p &&
-    p.dir === 'Input' &&
-    p.type !== 'exec' &&
-    !String(p.type).startsWith('delegate') &&
-    !['self', 'target', '__WorldContext'].includes(p.name)
-  );
-}
 
-/**
- * 程序化核查（编译通过 ≠ 正确的兜底）：回读图，找出「参与计算链的纯函数」里
- * 悬空的数据输入——既没连线、模型也没设 pin_defaults，但它的输出已被使用。
- * 这种输入会静默取默认值（如乘法 B 悬空 → ReturnValue 恒 0），引擎不报错。
- * 返回悬空清单 [{node, pin}]。
- */
-export function verifyGraph(graph, submitted) {
-  const nodes = graph?.nodes || [];
-  const connections = graph?.connections || [];
-  const nodeById = new Map(nodes.map((n) => [n.id, n]));
-
-  // 模型提交的 args 里设了 pin_defaults 的引脚 → 视为有来源，不报
-  const hasDefault = new Set();
-  for (const n of submitted?.nodes || []) {
-    if (n.pin_defaults && typeof n.pin_defaults === 'object') {
-      for (const k of Object.keys(n.pin_defaults)) hasDefault.add(`${n.id}.${k}`);
-    }
-  }
-  // 已连线的输入引脚
-  const connected = new Set(connections.map((c) => `${c.to_node}.${c.to_pin}`));
-  // 有「数据输出」被连出去使用的节点 id
-  const usedNode = new Set();
-  for (const c of connections) {
-    const from = nodeById.get(c.from_node);
-    if (!from) {
-      usedNode.add(c.from_node);
-      continue;
-    }
-    const pin = (from.pins || []).find((p) => p.name === c.from_pin);
-    if (pin && pin.dir === 'Output' && pin.type !== 'exec' && !String(pin.type).startsWith('delegate')) {
-      usedNode.add(c.from_node);
-    }
-  }
-
-  const issues = [];
-  for (const n of nodes) {
-    const pins = n.pins || [];
-    const hasExecInput = pins.some((p) => p.dir === 'Input' && p.type === 'exec');
-    const dataOutputs = pins.filter(
-      (p) => p.dir === 'Output' && p.type !== 'exec' && !String(p.type).startsWith('delegate')
-    );
-    const dataInputs = pins.filter(isDataPin);
-    // 纯函数特征：无 exec 输入、有数据输出、有数据输入
-    if (hasExecInput || dataOutputs.length === 0 || dataInputs.length === 0) continue;
-    // 只查「输出已被使用」的节点（在计算链里才需要输入）
-    if (!usedNode.has(n.id)) continue;
-    for (const inp of dataInputs) {
-      const key = `${n.id}.${inp.name}`;
-      if (!connected.has(key) && !hasDefault.has(key)) {
-        issues.push({ node: n.title || n.member_name || n.class, pin: inp.name });
-      }
-    }
-  }
-  return issues;
-}
 
 let job = null;
 let abortRequested = false; // stopAgent() 置位，run 循环下一轮检查点退出（2026-10-08）
@@ -1500,7 +1437,7 @@ async function run(task, sessionId, attachments = [], activeSkills = [], toolGro
           toolStreak = toolStreak && toolStreak.tool === name ? { tool: name, count: toolStreak.count + 1 } : { tool: name, count: 1 };
         }
 
-        if (name === 'blueprint_apply_graph' && res.ok) lastApplyGraph = args;
+        if (name === 'blueprint_apply_graph' && res.ok) lastApplyGraph = {args, created: res.data?.nodes || []};
       }
 
       // 防呆注入（先判严格档）：同工具+同参数 ≥2 次 → 原样重试不会变结果。
@@ -1527,18 +1464,19 @@ async function run(task, sessionId, attachments = [], activeSkills = [], toolGro
 
       // 程序化核查兜底：apply_graph 成功后回读图，查纯函数输入是否连满。
       // 发现悬空输入 → 额外塞一条反馈给模型，让它修正（比靠模型自觉更可靠）。
-      if (lastApplyGraph?.blueprint_path) {
+      if (lastApplyGraph?.args?.blueprint_path) {
         try {
-          const g = await ual.ualCall('blueprint.get_graph', { blueprint_path: lastApplyGraph.blueprint_path }, 60_000);
+          const g = await ual.ualCall('blueprint.get_graph', graphReadbackArgs(lastApplyGraph.args), 60_000);
           if (g) {
-            const issues = verifyGraph(g, lastApplyGraph);
+            const issues = verifyGraph(g, lastApplyGraph.args, lastApplyGraph.created);
+            job.steps.push({type: 'verify', graphName: g.graph_name || lastApplyGraph.args.graph_name || 'EventGraph', issues: issues.map(i => `${i.node}.${i.pin}`)});
             if (issues.length) {
               const fb =
-                '⚠️ 程序化核查：你刚写的蓝图有悬空输入（编译通过但逻辑可能失效，结果会静默取默认值）：\n' +
+                `⚠️ 程序化核查【${lastApplyGraph.args.blueprint_path} / ${lastApplyGraph.args.graph_name || 'EventGraph'}】：你刚写的蓝图有悬空输入（编译通过但逻辑可能失效，结果会静默取默认值）：\n` +
                 issues.map((i) => `- 节点「${i.node}」的输入引脚「${i.pin}」没连线、也没设 pin_defaults，但它的输出已被使用。`).join('\n') +
                 '\n请用 blueprint_apply_graph（加 clear_existing:true 重写完整图）修正：确保每个纯函数的每个输入引脚都有来源——要么连线，要么 pin_defaults 设字符串默认值。修正后再回读确认。';
               messages.push({ role: 'user', content: fb });
-              job.steps.push({ type: 'verify', issues: issues.map((i) => `${i.node}.${i.pin}`) });
+
             }
           }
         } catch {
