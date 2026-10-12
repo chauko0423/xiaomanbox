@@ -15,6 +15,8 @@
 9. `node deploy.mjs verify --desktop` 是健康检查。完整功能验证需运行 `node tests/acceptance.mjs`，并在人机 UI、另一台 LAN 机器、实际 UE 编辑器和真实模型上补验相应功能。不得把模拟 API 测试称为模型效果评测。
 10. 输出配置位置、实际通过的检查、未完成事项、停止命令。`node deploy.mjs stop` 只处理该 HOME 下登记的进程。
 
+网络有代理需求时，先读人工说明中的 Node 原生代理方法。只使用使用者自己提供的代理，不能自动接入作者或第三方代理；localhost 服务加入 NO_PROXY。浏览器可下载不代表旧版 Node fetch 已使用同一代理。
+
 ## 严格遵守的范围
 
 - 不上传完整 BF16、LoRA、训练数据、训练密钥、个人会话、原账号目录或运维记录。
