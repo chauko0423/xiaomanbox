@@ -1,6 +1,6 @@
 {
   "asset": "XiaoMan-AI-Deployment.zip",
-  "sha256": "b5f5b8a447c37b68468dc798e8f0a9d4e9b943a64ca20547a8ffae12bef194a0",
+  "sha256": "0df1fd0aaaee20b77c367143c2d6cbab5df256902e422a00d3f5a51fbb239e1c",
   "actualNativeFetchAndFileHashVerified": true,
   "node": "v24.19.0",
   "usedUserConfiguredProxy": true
