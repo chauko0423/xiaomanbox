@@ -294,10 +294,11 @@ export const UAL_TOOLS = [
     params: S({ name: { type: 'string', description: 'Actor 名或路径' }, actor_path: { type: 'string' } }),
   },
   {
-    name: 'ue_get_actor', method: 'actor.get', risk: 'safe',
-    desc: '读 Actor 的变换/属性/包围盒。可按名或路径查，返回 return_bounds 时带 bounds。',
+    name: 'ue_get_actor', method: 'actor.get_info', risk: 'safe',
+    desc: '读 Actor 的基本信息、变换和包围盒。可按名或路径查，return_bounds=true 时返回包围盒。',
     params: S({
-      name: { type: 'string', description: 'Actor 名（省略返回全部）' },
+      name: { type: 'string', description: 'Actor 名；省略列出场景，默认最多 50 个' },
+      path: { type: 'string', description: 'Actor 对象路径，与 name 二选一' },
       return_bounds: { type: 'boolean', description: '是否返回包围盒 bounds_min/bounds_max/pivot_offset' },
     }),
   },
@@ -308,19 +309,18 @@ export const UAL_TOOLS = [
       name: { type: 'string', description: 'Actor 名' },
       component: { type: 'string', description: '组件名，省略改 Actor 本身' },
       property_name: { type: 'string', description: '属性名' },
-      value: { type: 'string', description: '值（字符串形式）' },
+      value: { description: '属性值；数值和布尔值使用对应 JSON 类型', anyOf: [{ type: 'string' }, { type: 'number' }, { type: 'boolean' }, { type: 'object' }, { type: 'array' }] },
     }, ['name', 'property_name', 'value']),
   },
   {
     name: 'ue_set_transform', method: 'actor.set_transform', risk: 'mutating',
-    desc: '改 Actor 的位置/旋转/缩放。可 snap_to_floor 落地、sun 定太阳角度。',
+    desc: '改 Actor 的位置/旋转/缩放。可 snap_to_floor 落地；灯光角度使用 rotation。',
     params: S({
       name: { type: 'string', description: 'Actor 名' },
       location: { type: 'object', properties: { x: { type: 'number' }, y: { type: 'number' }, z: { type: 'number' } } },
       rotation: { type: 'object', properties: { pitch: { type: 'number' }, yaw: { type: 'number' }, roll: { type: 'number' } } },
       scale: { type: 'object', properties: { x: { type: 'number' }, y: { type: 'number' }, z: { type: 'number' } } },
       snap_to_floor: { type: 'boolean', description: '落地对齐' },
-      sun: { type: 'object', properties: { elevation: { type: 'number' }, azimuth: { type: 'number' } } },
     }, ['name']),
   },
 
@@ -1344,6 +1344,24 @@ export function findUalTool(name) {
 function adaptArgs(method, args) {
   if (!args || typeof args !== 'object') return args;
   const a = { ...args };
+
+  // 当前插件使用统一 targets；修改工具缺少目标时不能扩展为全场景操作。
+  if (['actor.get_info', 'actor.set_transform', 'actor.set_property'].includes(method) && !a.targets) {
+    if (typeof a.name === 'string' && a.name.trim()) a.targets = { names: [a.name] };
+    else if (typeof a.path === 'string' && a.path.trim()) a.targets = { paths: [a.path] };
+    else if (method === 'actor.get_info') a.targets = { filter: {} };
+  }
+  if (method === 'actor.set_transform' && !a.operation) {
+    const set = {};
+    for (const key of ['location', 'rotation', 'scale']) if (a[key] !== undefined) set[key] = a[key];
+    a.operation = {};
+    if (Object.keys(set).length) a.operation.set = set;
+    if (a.snap_to_floor !== undefined) a.operation.snap_to_floor = a.snap_to_floor;
+  }
+  if (method === 'actor.set_property' && !a.properties && typeof a.property_name === 'string') {
+    const key = a.component ? `${a.component}.${a.property_name}` : a.property_name;
+    a.properties = { [key]: a.value };
+  }
 
   if (method === 'blueprint.create') {
     // 模型按 schema 传 blueprint_path，C++ 只认 path/folder。

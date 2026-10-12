@@ -29,5 +29,6 @@
   "reusedUploadedLargeParts": 4,
   "reslicedForNetworkReliability": true,
   "release": "https://github.com/chauko0423/xiaomanbox/releases/tag/xiaoman-v6-quantized",
-  "runtimePublicDownloadScope": "Blackwell text-only; vision and Ada runtimes pending"
+  "runtimePublicDownloadScope": "Blackwell text and vision; Ada pending",
+  "visionRuntimeRelease": "https://github.com/chauko0423/xiaomanbox/releases/tag/ninfer-blackwell-vision-v1"
 }

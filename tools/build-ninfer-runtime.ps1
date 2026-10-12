@@ -5,6 +5,8 @@ param(
   [string]$CmakeExe = 'cmake',
   [string]$NinjaExe = 'ninja',
   [string]$VsRoot,
+  [switch]$Vision,
+  [string]$FfmpegRoot,
   [int]$Jobs = 0
 )
 $ErrorActionPreference = 'Stop'
@@ -28,9 +30,14 @@ $env:LIB = "$($msvc.FullName)\lib\x64;$sdk\Lib\$sdkV\ucrt\x64;$sdk\Lib\$sdkV\um\
 $cFlags = '/DNOMINMAX /DWIN32_LEAN_AND_MEAN /DUTF8PROC_STATIC /D_CRT_SECURE_NO_WARNINGS /D_SCL_SECURE_NO_WARNINGS /utf-8'
 $hostFlags = "$cFlags /Zc:preprocessor /Zc:__cplusplus /bigobj /EHsc"
 $cudaFlags = ($hostFlags.Split(' ') | ForEach-Object { "-Xcompiler=$_" }) -join ' '
-& $CmakeExe -S $Source -B $Build -G Ninja "-DCMAKE_MAKE_PROGRAM=$NinjaExe" "-DCMAKE_C_COMPILER=$compiler" "-DCMAKE_CXX_COMPILER=$compiler" "-DCMAKE_CUDA_COMPILER=$CudaRoot\bin\nvcc.exe" "-DCMAKE_CUDA_HOST_COMPILER=$compiler" "-DCMAKE_C_FLAGS=$cFlags" "-DCMAKE_CXX_FLAGS=$hostFlags" "-DCMAKE_CUDA_FLAGS=$cudaFlags" '-DCMAKE_CUDA_ARCHITECTURES=120a' '-DCMAKE_BUILD_TYPE=Release' '-DCMAKE_CXX_SCAN_FOR_MODULES=OFF' '-DCMAKE_MSVC_RUNTIME_LIBRARY=MultiThreaded' '-DNINFER_ENABLE_VISION=OFF' '-DBUILD_TESTING=OFF' '-DNINFER_BUILD_BENCHMARKS=OFF'
+$mediaOptions = @('-DNINFER_ENABLE_VISION=OFF')
+if ($Vision) {
+  if (-not $FfmpegRoot) { throw '-Vision requires -FfmpegRoot containing the shared FFmpeg headers and import libraries.' }
+  $mediaOptions = @('-DNINFER_ENABLE_VISION=ON',"-DNINFER_FFMPEG_ROOT=$([System.IO.Path]::GetFullPath($FfmpegRoot))")
+}
+& $CmakeExe -S $Source -B $Build -G Ninja "-DCMAKE_MAKE_PROGRAM=$NinjaExe" "-DCMAKE_C_COMPILER=$compiler" "-DCMAKE_CXX_COMPILER=$compiler" "-DCMAKE_CUDA_COMPILER=$CudaRoot\bin\nvcc.exe" "-DCMAKE_CUDA_HOST_COMPILER=$compiler" "-DCMAKE_C_FLAGS=$cFlags" "-DCMAKE_CXX_FLAGS=$hostFlags" "-DCMAKE_CUDA_FLAGS=$cudaFlags" '-DCMAKE_CUDA_ARCHITECTURES=120a' '-DCMAKE_BUILD_TYPE=Release' '-DCMAKE_CXX_SCAN_FOR_MODULES=OFF' '-DCMAKE_MSVC_RUNTIME_LIBRARY=MultiThreaded' @mediaOptions '-DBUILD_TESTING=OFF' '-DNINFER_BUILD_BENCHMARKS=OFF'
 if ($LASTEXITCODE -ne 0) { throw 'CMake configure failed.' }
 if ($Jobs -gt 0) { & $CmakeExe --build $Build --target ninfer-serve -j $Jobs }
 else { & $CmakeExe --build $Build --target ninfer-serve -j }
 if ($LASTEXITCODE -ne 0) { throw 'NInfer build failed.' }
-Write-Output "Text runtime built: $Build\apps\ninfer-serve.exe"
+Write-Output "Runtime built: $Build\apps\ninfer-serve.exe"

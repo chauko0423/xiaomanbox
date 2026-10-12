@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "releaseStatus": "source_selected_quantized_and_text_runtime_published_vision_runtime_pending",
+  "releaseStatus": "source_selected_quantized_text_and_vision_runtimes_published_ada_pending",
   "platform": "Windows x64",
   "assets": [
     {
@@ -640,7 +640,12 @@
           "url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd-vis.ninfer.part015"
         }
       ],
-      "runtimeId": "ninfer-blackwell-windows"
+      "runtimeId": "ninfer-blackwell-vision-windows",
+      "deploymentProfile": {
+        "context": 2048,
+        "hostStateSlots": 1,
+        "hostKvMiB": 256
+      }
     },
     {
       "id": "xiaoman-v6-fixed",
@@ -672,7 +677,16 @@
       "url": null,
       "type": "runtime",
       "family": "blackwell",
-      "redistribution": "dependency_notices_pending"
+      "redistribution": "dependency_notices_pending",
+      "dependencies": [
+        "dll-avcodec-63",
+        "dll-avdevice-63",
+        "dll-avfilter-12",
+        "dll-avformat-63",
+        "dll-avutil-61",
+        "dll-swresample-7",
+        "dll-swscale-10"
+      ]
     },
     {
       "id": "dll-avcodec-63",
@@ -768,14 +782,76 @@
       "url": "https://github.com/chauko0423/xiaomanbox/releases/download/ninfer-blackwell-text-v1/NInfer-Text-Runtime-Licenses.txt"
     },
     {
+      "id": "ffmpeg-vision-avcodec-63",
+      "path": "assets/runtime/blackwell-vision/avcodec-63.dll",
+      "type": "runtime-dll",
+      "license": "LGPL-2.1-or-later",
+      "bytes": 3144704,
+      "sha256": "f93a9d480e7ce1fc52ae2df931559408a48848f9a58b97aa84ef7d6ea6356080",
+      "url": "https://github.com/chauko0423/xiaomanbox/releases/download/ninfer-blackwell-vision-v1/avcodec-63.dll"
+    },
+    {
+      "id": "ffmpeg-vision-avformat-63",
+      "path": "assets/runtime/blackwell-vision/avformat-63.dll",
+      "type": "runtime-dll",
+      "license": "LGPL-2.1-or-later",
+      "bytes": 716288,
+      "sha256": "6f4bd16a5b9132101cc37b393b4d8165128ddd1049e59b261754bb521c14dd6f",
+      "url": "https://github.com/chauko0423/xiaomanbox/releases/download/ninfer-blackwell-vision-v1/avformat-63.dll"
+    },
+    {
+      "id": "ffmpeg-vision-avutil-61",
+      "path": "assets/runtime/blackwell-vision/avutil-61.dll",
+      "type": "runtime-dll",
+      "license": "LGPL-2.1-or-later",
+      "bytes": 980480,
+      "sha256": "a1b0eb350b10d83c52d919bc23fe2c3e66a75ce315cc3ee4ec096d270e980ad6",
+      "url": "https://github.com/chauko0423/xiaomanbox/releases/download/ninfer-blackwell-vision-v1/avutil-61.dll"
+    },
+    {
+      "id": "ffmpeg-vision-swscale-10",
+      "path": "assets/runtime/blackwell-vision/swscale-10.dll",
+      "type": "runtime-dll",
+      "license": "LGPL-2.1-or-later",
+      "bytes": 957952,
+      "sha256": "f3de142c2239669da5c28f177cd5758e25e9e7c9a1a7eaff2bfcc99f822f7a02",
+      "url": "https://github.com/chauko0423/xiaomanbox/releases/download/ninfer-blackwell-vision-v1/swscale-10.dll"
+    },
+    {
+      "id": "ninfer-vision-runtime-licenses",
+      "path": "assets/runtime/blackwell-vision/THIRD-PARTY-LICENSES.txt",
+      "type": "runtime-license",
+      "bytes": 145387,
+      "sha256": "a964522ac1fc41b8cfb5240b5e05dfe6a06fba6b5d46ad28ca146f6d3390604d",
+      "url": "https://github.com/chauko0423/xiaomanbox/releases/download/ninfer-blackwell-vision-v1/NInfer-Vision-Runtime-Licenses.txt"
+    },
+    {
+      "id": "ninfer-blackwell-vision-windows",
+      "path": "assets/runtime/blackwell-vision/ninfer-serve.exe",
+      "type": "runtime",
+      "family": "blackwell",
+      "vision": true,
+      "dependencies": [
+        "ffmpeg-vision-avcodec-63",
+        "ffmpeg-vision-avformat-63",
+        "ffmpeg-vision-avutil-61",
+        "ffmpeg-vision-swscale-10",
+        "ninfer-vision-runtime-licenses"
+      ],
+      "signature": "unsigned",
+      "bytes": 179085312,
+      "sha256": "e421aec93378535717a5d1e2209ef616a1b67340aa42701680467b33d196599f",
+      "url": "https://github.com/chauko0423/xiaomanbox/releases/download/ninfer-blackwell-vision-v1/ninfer-serve-blackwell-vision.exe"
+    },
+    {
       "id": "xiaomanbox-basic-installer",
-      "path": "release-candidates/XiaoManBox-0.3.0-basic.1-Setup.exe",
-      "bytes": 85127273,
-      "sha256": "0986aad534407fb5f398c2da8532c954039d15821078acf46978dca27b3ed7b4",
-      "url": "https://github.com/chauko0423/xiaomanbox/releases/download/v0.3.0-basic.1/XiaoManBox-0.3.0-basic.1-Setup.exe",
+      "path": "release-candidates/XiaoManBox-0.3.0-basic.2-Setup.exe",
+      "bytes": 85127907,
+      "sha256": "68f3ceb0709e4074b819393f44dba142780a9fe2768d8c4d4489f1076f8da204",
+      "url": "https://github.com/chauko0423/xiaomanbox/releases/download/v0.3.0-basic.2/XiaoManBox-0.3.0-basic.2-Setup.exe",
       "type": "desktop-installer",
       "signature": "unsigned",
-      "verification": "packaged_lifecycle_and_pipe_failure_smoke_pass; frontend_render_pass; native_UE_and_real_model_pending"
+      "verification": "basic.2 packaged_lifecycle_and_pipe_failure_smoke_pass; UE5.7.4 actual compiled_plugin_actor_read_modify_headless_pass; frontend_built"
     }
   ],
   "notes": [

@@ -8,7 +8,7 @@ XiaoManBox 是面向开发者与数字内容创作者的 AI 工作台。搭配�
 
 XiaoManBox 基础版提供本地 AI 对话、文件/命令工具、技能、MCP、UE 编辑器集成，以及无需账号的本地基础画板。账号系统、团队交流和成员发现已移除。画板由使用者自己的电脑托管，局域网内通过编辑/只读链接分享。
 
-**本仓库提供基础版源码和部署工具。** 源码已构建并完成隔离集成验收。Windows 安装包与 AI 部署 ZIP 已提供公开下载；主线量化权重与 Blackwell 文本推理包已公开；主线文本模型已完成真实生成与工具调用回环，视觉模型已完成文本与单图颜色冒烟测试（RTX 5080、2048上下文）；UE 真机复验尚未完成。主线量化权重已分片公开并完成逐片 SHA256 核对；视觉推理引擎及 FFmpeg DLL 的公开分发材料仍在整理。
+**本仓库提供基础版源码和部署工具。** 源码已构建并完成隔离集成验收。Windows 安装包与 AI 部署 ZIP 已提供公开下载；主线量化权重与 Blackwell 文本、视觉推理包均已公开；主线文本模型已完成真实生成与工具调用回环，视觉模型已完成文本与单图颜色冒烟测试（RTX 5080、2048上下文）；UE 5.7.4 已在隔离临时工程通过插件编译、连接、Actor 读取与修改检查（无渲染模式）；其他版本和用户工程仍需复验。主线量化权重已分片公开并完成逐片 SHA256 核对；视觉版采用固定源码构建的LGPL共享库，完整对应源码、构建参数与许可文本随独立推理包提供。
 
 正式仓库：https://github.com/chauko0423/xiaomanbox 。点击 Code → Download ZIP，或使用 `git clone https://github.com/chauko0423/xiaomanbox.git` 获取源码。
 
@@ -16,10 +16,11 @@ XiaoManBox 基础版提供本地 AI 对话、文件/命令工具、技能、MCP�
 
 - 给 AI：把下载的仓库源码 ZIP（或作者另行提供的 `小满-AI部署包.zip`）交给 AI，要求先读 `AI部署入口.md`。
 - 人工部署：读 `人工部署说明.md`。源码部署需要官方 Node.js 22+（含 npm）。
-- Windows 安装包：[GitHub Release](https://github.com/chauko0423/xiaomanbox/releases/tag/v0.3.0-basic.1)。安装后配置自己的模型 API；无需小满权重。
-- AI 部署 ZIP：[XiaoMan-AI-Deployment.zip](https://github.com/chauko0423/xiaomanbox/releases/download/v0.3.0-basic.1/XiaoMan-AI-Deployment.zip)。内含主线量化权重的公开分片清单、自动下载与合并工具，以及项目和模型介绍。
-- 使用小满量化模型：读 `xiaoman/MODEL_CARD.md`；Git 源码不含权重，按 `release-manifest.json` 的分片清单下载；Ada 候选及视觉运行时暂无公开下载。
+- Windows 安装包：[GitHub Release](https://github.com/chauko0423/xiaomanbox/releases/tag/v0.3.0-basic.2)。安装后配置自己的模型 API；无需小满权重。
+- AI 部署 ZIP：[XiaoMan-AI-Deployment.zip](https://github.com/chauko0423/xiaomanbox/releases/download/v0.3.0-basic.2/XiaoMan-AI-Deployment.zip)。内含主线量化权重的公开分片清单、自动下载与合并工具，以及项目和模型介绍。
+- 使用小满量化模型：读 `xiaoman/MODEL_CARD.md`；Git 源码不含权重，按 `release-manifest.json` 的分片清单下载；Ada 候选仍暂无匹配硬件实测与公开下载。
 - 本地文本推理：[Windows Blackwell 文本推理包](https://github.com/chauko0423/xiaomanbox/releases/tag/ninfer-blackwell-text-v1)。部署工具自动下载引擎与许可说明；文本默认采用已实测的2048上下文、1个host state与256MiB host KV。
+- 本地视觉推理：[Windows Blackwell 视觉推理包](https://github.com/chauko0423/xiaomanbox/releases/tag/ninfer-blackwell-vision-v1)。自动下载引擎、4份精简LGPL共享库与许可说明；已完成PNG/JPEG和短H264视频输入冒烟。
 - 复验：`node tests/acceptance.mjs`。脚本使用独立数据目录及测试端口，不加载真实模型。
 
 ## 快速启动（源码方式）

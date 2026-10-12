@@ -26,8 +26,8 @@ XiaoManBox 与小满 V6 共同组成一套围绕创作任务的技术体系：�
 
 Windows 安装包可先接入自己的模型 API。源码和 AI 部署包同时提供人工说明、AI 部署入口、环境检查与部署脚本。小满量化权重独立发布，安装包不包含权重或推理引擎。
 
-当前已有桌面构建、隔离集成与画板协作测试记录；UE 插件在真实工程中的编译与操作、跨机器局域网复验仍待补齐。具体部署条件与验收记录见仓库说明。
+当前已有桌面构建、隔离集成与画板协作测试记录；UE 插件已在 UE 5.7.4 的隔离临时工程编译，并通过本机连接、Actor 创建、读取、位置修改及属性设置验收；采用无渲染模式，跨机器局域网和其他 UE 版本仍待复验。具体部署条件与验收记录见仓库说明。
 
 - [源码与部署入口](https://github.com/chauko0423/xiaomanbox)
-- [Windows 基础版与 AI 部署包](https://github.com/chauko0423/xiaomanbox/releases/tag/v0.3.0-basic.1)
+- [Windows 基础版与 AI 部署包](https://github.com/chauko0423/xiaomanbox/releases/tag/v0.3.0-basic.2)
 - [小满 V6 介绍](xiaoman/INTRODUCTION.md)

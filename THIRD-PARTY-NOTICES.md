@@ -15,3 +15,7 @@
 ## 独立文本推理包
 
 [Blackwell文本推理包](https://github.com/chauko0423/xiaomanbox/releases/tag/ninfer-blackwell-text-v1)附带完整构建源码快照、逐文件摘要、Windows构建脚本和许可证。以本地fork快照构建，关闭FFmpeg解码，静态链接CUDA与MSVC运行库。NInfer/llama-jinja/cpp-httplib/nlohmann-json/spdlog/utf8proc保留各自许可，NVTX采用Apache-2.0带LLVM例外；NVIDIA CUDA部分保持NVIDIA条款，不由根目录Apache许可重新授权。许可汇总见third-party-licenses/ninfer-runtime/。
+
+## 独立视觉推理包
+
+[Blackwell视觉推理包](https://github.com/chauko0423/xiaomanbox/releases/tag/ninfer-blackwell-vision-v1)使用自行构建的FFmpeg9.0 LGPL2.1-or-later共享库，关闭GPL、nonfree与version3选项，zlib1.3.1静态链接。4份DLL合计约5.5MiB；完整FFmpeg/zlib对应源码、修改补丁、生成配置与Windows构建脚本在同一Release提供。许可文本见third-party-licenses/ffmpeg-vision/。此新包不分发旧的BtbN GPL候选；NInfer及NVIDIA部分仍保持各自许可。FFmpeg动态库可按许可修改和替换，需维护兼容ABI与自己的摘要清单。

@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "engineVersion": "5.7.4",
+  "pluginSourceCompiledSuccessfully": true,
+  "scope": "isolated temporary UE project; actual compiled plugin, local WebSocket and exported backend; headless NullRHI",
+  "originalProjectsModified": false,
+  "checks": [
+    "actual compiled UE plugin handshake",
+    "spawn cube and read actual name, position and bounds",
+    "modify position and independently read back 411/522/633 cm",
+    "set Mobility property with plugin internal readback",
+    "read scene without explicit name"
+  ],
+  "ownChildProcessesStopped": true,
+  "seconds": 14.22,
+  "backendToolSourceSha256": "76e905a6632383d579cb4e219fb23f102865ea3f81191ee2f5459cfb376ffac9",
+  "pluginBuild": {
+    "engineVersion": "5.7.4",
+    "exportedSourcePlugin": true,
+    "isolatedBuildDirectory": true,
+    "exitCode": 0,
+    "seconds": 56.78,
+    "compiledSuccessfully": true
+  },
+  "toolContractAndMissingMutationTargetNegativeControlPassed": true
+}

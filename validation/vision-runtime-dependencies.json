@@ -1,0 +1,53 @@
+{
+  "ffmpegVersion": "9.0",
+  "ffmpegCommit": "d32b387f2b0a484599d4587d651891f0c63c4238",
+  "zlibCommit": "51b7f2abdade71cd9bb0e7a373ef2610ec6f9daf",
+  "license": "LGPL version 2.1 or later",
+  "configuration": "--prefix=/c/Users/Administrator/Documents/Codex/2026-10-11/h-e-ninfer-work/work/ffmpeg-minimal-install --toolchain=msvc --arch=x86_64 --target-os=win64 --enable-shared --disable-static --disable-programs --disable-doc --disable-debug --disable-x86asm --disable-autodetect --disable-network --disable-everything --disable-avdevice --disable-avfilter --disable-swresample --enable-avcodec --enable-avformat --enable-avutil --enable-swscale --enable-zlib --enable-decoder='png,mjpeg,bmp,gif,webp,h264,hevc,vp8,vp9' --enable-demuxer='image2,image2pipe,image_png_pipe,image_jpeg_pipe,image_bmp_pipe,image_webp_pipe,image_gif_pipe,gif,h264,hevc,mov,matroska,avi' --enable-parser='h264,hevc,vp8,vp9,png,mjpeg,webp' --enable-protocol=file --extra-cflags='-MT -IC:/Users/Administrator/Documents/Codex/2026-10-11/h-e-ninfer-work/work/ffmpeg-minimal-build/zlib-install/include' --extra-ldflags='-libpath:C:/Users/Administrator/Documents/Codex/2026-10-11/h-e-ninfer-work/work/ffmpeg-minimal-build/zlib-install/lib'",
+  "gplEnabled": false,
+  "nonfreeEnabled": false,
+  "version3Enabled": false,
+  "sharedLibraries": [
+    {
+      "name": "avcodec-63.dll",
+      "bytes": 3144704,
+      "sha256": "f93a9d480e7ce1fc52ae2df931559408a48848f9a58b97aa84ef7d6ea6356080",
+      "imports": [
+        "avutil-61.dll",
+        "KERNEL32.dll"
+      ]
+    },
+    {
+      "name": "avformat-63.dll",
+      "bytes": 716288,
+      "sha256": "6f4bd16a5b9132101cc37b393b4d8165128ddd1049e59b261754bb521c14dd6f",
+      "imports": [
+        "avcodec-63.dll",
+        "avutil-61.dll",
+        "KERNEL32.dll"
+      ]
+    },
+    {
+      "name": "avutil-61.dll",
+      "bytes": 980480,
+      "sha256": "a1b0eb350b10d83c52d919bc23fe2c3e66a75ce315cc3ee4ec096d270e980ad6",
+      "imports": [
+        "bcrypt.dll",
+        "KERNEL32.dll"
+      ]
+    },
+    {
+      "name": "swscale-10.dll",
+      "bytes": 957952,
+      "sha256": "f3de142c2239669da5c28f177cd5758e25e9e7c9a1a7eaff2bfcc99f822f7a02",
+      "imports": [
+        "avutil-61.dll",
+        "KERNEL32.dll"
+      ]
+    }
+  ],
+  "fullCorrespondingSourcesIncludedInRelease": true,
+  "windowsSourceChanges": "localized compiler banner/dependency detection and UTF-8 resource compilation; zlib MSVC header interoperation",
+  "noBundledBuildTools": true,
+  "release": "https://github.com/chauko0423/xiaomanbox/releases/tag/ninfer-blackwell-vision-v1"
+}

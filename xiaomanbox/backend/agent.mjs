@@ -122,7 +122,7 @@ const WORKBENCH_TOOLS = [
     type: 'function',
     function: {
       name: 'workbench_compiler_verify',
-      description: '触发 UE 工程（DIAOYU）增量编译验证，等待编译完成，返回 exitCode/errors。用于验证代码改动能否编译通过。',
+      description: '触发用户配置的 UE 工程增量编译验证，等待编译完成，返回 exitCode/errors。用于验证代码改动能否编译通过。',
       parameters: { type: 'object', properties: {}, required: [] },
     },
   },

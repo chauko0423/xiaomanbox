@@ -16,16 +16,16 @@
     },
     {
       "name": "MODEL_CARD.md",
-      "size": 4111,
+      "size": 4464,
       "state": "uploaded",
-      "digest": "sha256:2c8fef8f7a2aa3d9e6e9a9aefbf2eac0c78e8cbb70e47ce370372beaf461762d",
+      "digest": "sha256:894d3b20ee86546f7878b69b36115990e387ff3dc110aa8b2b2816cfb92afd56",
       "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/MODEL_CARD.md"
     },
     {
       "name": "release-manifest.json",
-      "size": 41261,
+      "size": 44442,
       "state": "uploaded",
-      "digest": "sha256:348212ad1256ee20012ebb453c90dff0dc8cc87740e97b260b51d98fc49e2050",
+      "digest": "sha256:87f4f7996895dc86455c37188ff91e7d6958b989900c1f60c0a9b54f60d1e6a9",
       "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/release-manifest.json"
     },
     {
@@ -743,5 +743,6 @@
       "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd.ninfer.part014.part004"
     }
   ],
-  "metadataUpdatedForTextRuntime": true
+  "metadataUpdatedForTextRuntime": true,
+  "metadataUpdatedForVisionRuntime": true
 }

@@ -4,4 +4,4 @@
 
 建议在上一级部署包运行 `node deploy.mjs install`，会同时构建 ../local-board。单独构建本目录：`npm ci`、`npm run type-check`、`npm run build`、`npm start`。打包：`npm run dist`，要求相邻 local-board 已安装依赖并完成 build。
 
-详见上级人工部署说明和第三方归属。UE插件只有源码；量化权重和推理引擎没有塞进桌面安装包。根代码许可为待确认的Apache-2.0方案，插件仍用自身MIT许可。
+详见上级人工部署说明和第三方归属。UE插件只有源码；量化权重和推理引擎没有塞进桌面安装包。自有代码采用Apache-2.0许可，插件仍用自身MIT许可。

@@ -1,0 +1,69 @@
+{
+  "cases": [
+    {
+      "fixture": "opaque.png",
+      "width": 31,
+      "height": 17,
+      "maxRGBDifference": 0,
+      "passed": true
+    },
+    {
+      "fixture": "alpha.png",
+      "width": 19,
+      "height": 11,
+      "maxRGBDifference": 0,
+      "passed": true
+    },
+    {
+      "fixture": "odd.jpg",
+      "width": 37,
+      "height": 25,
+      "maxRGBDifference": 0,
+      "passed": true
+    },
+    {
+      "fixture": "orientation.jpg",
+      "width": 16,
+      "height": 32,
+      "maxRGBDifference": 0,
+      "passed": true
+    },
+    {
+      "fixture": "opaque.bmp",
+      "width": 31,
+      "height": 17,
+      "maxRGBDifference": 0,
+      "passed": true
+    },
+    {
+      "fixture": "opaque.gif",
+      "width": 31,
+      "height": 17,
+      "maxRGBDifference": 0,
+      "passed": true
+    },
+    {
+      "fixture": "opaque.webp",
+      "width": 31,
+      "height": 17,
+      "maxRGBDifference": 0,
+      "passed": true
+    },
+    {
+      "fixture": "invalid bytes",
+      "rejected": true
+    },
+    {
+      "fixture": "pixel budget",
+      "rejected": true
+    },
+    {
+      "fixture": "red H264/MP4",
+      "probeMatchesDecode": true,
+      "frames": 2,
+      "passed": true
+    }
+  ],
+  "reference": "Pillow RGB and EXIF-transpose; exact lossless pixels, JPEG tolerance <=3",
+  "cudaUsed": false
+}

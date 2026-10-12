@@ -1,0 +1,218 @@
+{
+  "passed": true,
+  "scope": "RTX5080/2048 context; text, PNG/JPEG color and short H264 clip smoke only; no model benchmark",
+  "runtimeSha256": "e421aec93378535717a5d1e2209ef616a1b67340aa42701680467b33d196599f",
+  "gpuBefore": "NVIDIA GeForce RTX 5080, 16303, 149",
+  "arguments": [
+    "--host",
+    "127.0.0.1",
+    "--port",
+    "18392",
+    "--model-id",
+    "xiaoman",
+    "--max-context",
+    "2048",
+    "--kv-dtype",
+    "nvfp4",
+    "--spec",
+    "mtp",
+    "--draft-tokens",
+    "2",
+    "--prefill-chunk",
+    "256",
+    "--host-state-slots",
+    "1",
+    "--host-kv-mib",
+    "256",
+    "--no-cuda-graph",
+    "--vision",
+    "--chat-template",
+    "..\\..\\chat_template.jinja"
+  ],
+  "loadSeconds": 7.78,
+  "textReply": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "小满视觉推理部署成功",
+          "reasoning_content": "We need answer only exact string. Need comply.\n",
+          "refusal": null,
+          "role": "assistant"
+        }
+      }
+    ],
+    "created": 1791783029,
+    "id": "chatcmpl-850af0275ba8f05c",
+    "model": "xiaoman",
+    "object": "chat.completion",
+    "timings": {
+      "cache_n": 0,
+      "draft_n": 22,
+      "draft_n_accepted": 10,
+      "predicted_ms": 264.41429999999997,
+      "predicted_n": 20,
+      "predicted_per_second": 71.85693058204492,
+      "predicted_per_token_ms": 13.916542105263156,
+      "prompt_ms": 141.1969,
+      "prompt_n": 20,
+      "prompt_per_second": 141.6461692855863,
+      "prompt_per_token_ms": 7.059845
+    },
+    "usage": {
+      "completion_tokens": 20,
+      "completion_tokens_details": {
+        "reasoning_tokens": 12
+      },
+      "prompt_tokens": 20,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "total_tokens": 40
+    }
+  },
+  "imageReplies": [
+    {
+      "fixture": "model-red.png",
+      "reply": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+              "content": "红色",
+              "reasoning_content": "用户询问图片主要颜色，要求只回答一个中文颜色词。图片是纯红色。直接回答“红色”。\n",
+              "refusal": null,
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1791783030,
+        "id": "chatcmpl-94b3b1670b25f40a",
+        "model": "xiaoman",
+        "object": "chat.completion",
+        "timings": {
+          "cache_n": 0,
+          "draft_n": 26,
+          "draft_n_accepted": 17,
+          "predicted_ms": 311.8899,
+          "predicted_n": 29,
+          "predicted_per_second": 89.77527005523423,
+          "predicted_per_token_ms": 11.138925,
+          "prompt_ms": 188.74689999999998,
+          "prompt_n": 88,
+          "prompt_per_second": 466.23282289669396,
+          "prompt_per_token_ms": 2.144851136363636
+        },
+        "usage": {
+          "completion_tokens": 29,
+          "completion_tokens_details": {
+            "reasoning_tokens": 26
+          },
+          "prompt_tokens": 88,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "total_tokens": 117
+        }
+      }
+    },
+    {
+      "fixture": "model-blue.jpg",
+      "reply": {
+        "choices": [
+          {
+            "finish_reason": "stop",
+            "index": 0,
+            "logprobs": null,
+            "message": {
+              "content": "蓝色",
+              "reasoning_content": "用户询问图片主要颜色，要求只回答一个中文颜色词。图片是纯蓝色。直接回答“蓝色”。\n",
+              "refusal": null,
+              "role": "assistant"
+            }
+          }
+        ],
+        "created": 1791783030,
+        "id": "chatcmpl-00638f6d3a409bec",
+        "model": "xiaoman",
+        "object": "chat.completion",
+        "timings": {
+          "cache_n": 0,
+          "draft_n": 24,
+          "draft_n_accepted": 16,
+          "predicted_ms": 288.4233,
+          "predicted_n": 29,
+          "predicted_per_second": 97.07953552989652,
+          "predicted_per_token_ms": 10.300832142857143,
+          "prompt_ms": 200.3183,
+          "prompt_n": 88,
+          "prompt_per_second": 439.3008526929392,
+          "prompt_per_token_ms": 2.276344318181818
+        },
+        "usage": {
+          "completion_tokens": 29,
+          "completion_tokens_details": {
+            "reasoning_tokens": 26
+          },
+          "prompt_tokens": 88,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          },
+          "total_tokens": 117
+        }
+      }
+    }
+  ],
+  "pngAndJpegPassed": true,
+  "videoReply": {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "logprobs": null,
+        "message": {
+          "content": "红色",
+          "reasoning_content": "用户询问视频画面的主要颜色，要求只回答一个中文颜色词。图像显示为纯红色。直接回答“红色”。\n",
+          "refusal": null,
+          "role": "assistant"
+        }
+      }
+    ],
+    "created": 1791783031,
+    "id": "chatcmpl-d5ce89ca21d51c81",
+    "model": "xiaoman",
+    "object": "chat.completion",
+    "timings": {
+      "cache_n": 0,
+      "draft_n": 26,
+      "draft_n_accepted": 18,
+      "predicted_ms": 312.42569999999995,
+      "predicted_n": 31,
+      "predicted_per_second": 96.0228303881531,
+      "predicted_per_token_ms": 10.414189999999998,
+      "prompt_ms": 127.6162,
+      "prompt_n": 37,
+      "prompt_per_second": 289.9318425090231,
+      "prompt_per_token_ms": 3.4490864864864865
+    },
+    "usage": {
+      "completion_tokens": 31,
+      "completion_tokens_details": {
+        "reasoning_tokens": 28
+      },
+      "prompt_tokens": 37,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      },
+      "total_tokens": 68
+    }
+  },
+  "shortH264VideoPassed": true,
+  "gpuLoaded": "NVIDIA GeForce RTX 5080, 16303, 15179",
+  "stoppedOwnEngine": true,
+  "elapsedSeconds": 9.95
+}

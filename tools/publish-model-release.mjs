@@ -79,7 +79,9 @@ try{
     if(!target||target.sha256!==a.sha256)throw new Error('主清单与分片清单不符');
     target.parts=a.parts.map(p=>({...p,url:`https://github.com/${repo}/releases/download/${encodeURIComponent(tag)}/${encodeURIComponent(p.name)}`}));target.url=null;
   }
-  manifest.releaseStatus=manifest.assets.some(a=>a.id==='ninfer-blackwell-text-windows'&&a.url)
+  manifest.releaseStatus=manifest.assets.some(a=>a.id==='ninfer-blackwell-vision-windows'&&a.url)
+    ?'source_selected_quantized_text_and_vision_runtimes_published_ada_pending'
+    :manifest.assets.some(a=>a.id==='ninfer-blackwell-text-windows'&&a.url)
     ?'source_selected_quantized_and_text_runtime_published_vision_runtime_pending'
     :'source_and_selected_quantized_assets_published_runtime_pending';
   const publishedManifest=path.join(root,'release-candidates/model-parts/release-manifest.json');

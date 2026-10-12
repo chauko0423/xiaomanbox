@@ -47,7 +47,7 @@ async function configureProvider(endpoint,model){
 }
 async function configureModel(){
   const a=asset(option('id','xiaoman-v6-sd'));const gpu=gpus()[0];if(!gpu||gpu.computeCapability!=='12.0'||gpu.vramMiB<16000||a.family!=='blackwell')throw new Error('此自动配置只支持已标记的 Blackwell 16GB+；其他显卡请按说明验证匹配引擎或使用 API。');
-  const runtimeAsset=asset(a.runtimeId||(a.vision?'ninfer-blackwell-windows':'ninfer-blackwell-text-windows'));
+  const runtimeAsset=asset(a.runtimeId||(a.vision?'ninfer-blackwell-vision-windows':'ninfer-blackwell-text-windows'));
   if(!runtimeAsset.url&&!fs.existsSync(path.join(ROOT,runtimeAsset.path)))throw new Error('匹配的推理引擎尚未提供下载，请先准备匹配引擎，或配置自己的 API。');
   const profile=a.deploymentProfile||{context:2048,hostStateSlots:a.vision?8:1,hostKvMiB:a.vision?4096:256};
   const ctx=Number(option('context',String(profile.context)));if(!Number.isInteger(ctx)||ctx<1024||ctx>32768)throw new Error('context 应为 1024–32768；超过默认值需自行验收显存');

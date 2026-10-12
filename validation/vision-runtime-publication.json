@@ -1,0 +1,70 @@
+{
+  "url": "https://github.com/chauko0423/xiaomanbox/releases/tag/ninfer-blackwell-vision-v1",
+  "releaseId": 410216746,
+  "assets": [
+    {
+      "name": "avcodec-63.dll",
+      "bytes": 3144704,
+      "sha256": "f93a9d480e7ce1fc52ae2df931559408a48848f9a58b97aa84ef7d6ea6356080",
+      "url": "https://github.com/chauko0423/xiaomanbox/releases/download/ninfer-blackwell-vision-v1/avcodec-63.dll"
+    },
+    {
+      "name": "avformat-63.dll",
+      "bytes": 716288,
+      "sha256": "6f4bd16a5b9132101cc37b393b4d8165128ddd1049e59b261754bb521c14dd6f",
+      "url": "https://github.com/chauko0423/xiaomanbox/releases/download/ninfer-blackwell-vision-v1/avformat-63.dll"
+    },
+    {
+      "name": "avutil-61.dll",
+      "bytes": 980480,
+      "sha256": "a1b0eb350b10d83c52d919bc23fe2c3e66a75ce315cc3ee4ec096d270e980ad6",
+      "url": "https://github.com/chauko0423/xiaomanbox/releases/download/ninfer-blackwell-vision-v1/avutil-61.dll"
+    },
+    {
+      "name": "ninfer-serve-blackwell-vision.exe",
+      "bytes": 179085312,
+      "sha256": "e421aec93378535717a5d1e2209ef616a1b67340aa42701680467b33d196599f",
+      "url": "https://github.com/chauko0423/xiaomanbox/releases/download/ninfer-blackwell-vision-v1/ninfer-serve-blackwell-vision.exe"
+    },
+    {
+      "name": "NInfer-Vision-Runtime-Licenses.txt",
+      "bytes": 145387,
+      "sha256": "a964522ac1fc41b8cfb5240b5e05dfe6a06fba6b5d46ad28ca146f6d3390604d",
+      "url": "https://github.com/chauko0423/xiaomanbox/releases/download/ninfer-blackwell-vision-v1/NInfer-Vision-Runtime-Licenses.txt"
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "bytes": 832,
+      "sha256": "101c02271da921406d786d260bb6f4441ce8d62b0e11dd2ef864addee3214b55",
+      "url": "https://github.com/chauko0423/xiaomanbox/releases/download/ninfer-blackwell-vision-v1/SHA256SUMS.txt"
+    },
+    {
+      "name": "swscale-10.dll",
+      "bytes": 957952,
+      "sha256": "f3de142c2239669da5c28f177cd5758e25e9e7c9a1a7eaff2bfcc99f822f7a02",
+      "url": "https://github.com/chauko0423/xiaomanbox/releases/download/ninfer-blackwell-vision-v1/swscale-10.dll"
+    },
+    {
+      "name": "VISION-RUNTIME-README.md",
+      "bytes": 3280,
+      "sha256": "13af7955119ee30b7b773d71b9048be5586cb2a07ee566a08c11efcac257b078",
+      "url": "https://github.com/chauko0423/xiaomanbox/releases/download/ninfer-blackwell-vision-v1/VISION-RUNTIME-README.md"
+    },
+    {
+      "name": "XiaoMan-FFmpeg9-LGPL-Source.zip",
+      "bytes": 24912228,
+      "sha256": "955b4b133692c134f8e70669dbf5318575df639a09ca491625738bfa25cbe545",
+      "url": "https://github.com/chauko0423/xiaomanbox/releases/download/ninfer-blackwell-vision-v1/XiaoMan-FFmpeg9-LGPL-Source.zip"
+    },
+    {
+      "name": "XiaoMan-NInfer-Blackwell-Vision-Source.zip",
+      "bytes": 3369724,
+      "sha256": "cf36050af1b0dac609426464227524d5f362684dd4603fad24001e7f390bf98d",
+      "url": "https://github.com/chauko0423/xiaomanbox/releases/download/ninfer-blackwell-vision-v1/XiaoMan-NInfer-Blackwell-Vision-Source.zip"
+    }
+  ],
+  "allRemoteSha256Verified": true,
+  "realPngJpegAndShortH264Passed": true,
+  "fullFfmpegAndZlibSourcesProvided": true,
+  "ffmpegLicense": "LGPL-2.1-or-later"
+}

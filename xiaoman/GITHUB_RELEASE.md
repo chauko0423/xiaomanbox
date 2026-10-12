@@ -30,6 +30,6 @@ node tools/publish-model-release.mjs --gh gh
 
 发布器固定核对 chauko0423 账号与 chauko0423/xiaomanbox 仓库。先建立预发布草稿，校验本地分片，再上传；已上传同名文件只有 GitHub 的大小和服务端 SHA256 均一致时才复用，不会覆盖不一致文件。所有分片与校验说明成功后才公开草稿并填写主清单 URL。最后提交更新的 release-manifest.json，并重做源码部署 ZIP。
 
-上传失败后重新运行同一命令即可复用已确认的分片。登录凭据由 GitHub CLI 管理，不能放入部署 ZIP、源码、命令参数或聊天。模型来源与授权说明仍需维护；主线文本引擎已在独立Release公开，部署工具按模型绑定下载；视觉运行时的公开分发尚在整理。
+上传失败后重新运行同一命令即可复用已确认的分片。登录凭据由 GitHub CLI 管理，不能放入部署 ZIP、源码、命令参数或聊天。模型来源与授权说明仍需维护；主线文本引擎已在独立Release公开，部署工具按模型绑定下载；视觉引擎同样已独立公开，按清单下载其绑定的4份LGPL共享库与许可说明。
 
 官方文件大小限制：https://docs.github.com/en/repositories/releasing-projects-on-github/about-releases

@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "homeScope": "isolated validation directory",
+  "managedEngineStopped": true,
+  "scope": "configuration only; real text, image and video generation recorded separately",
+  "configurationOutput": "校验通过：xiaoman-v6-sd-vis\n校验通过：ninfer-blackwell-vision-windows\n校验通过：ffmpeg-vision-avcodec-63\n校验通过：ffmpeg-vision-avformat-63\n校验通过：ffmpeg-vision-avutil-61\n校验通过：ffmpeg-vision-swscale-10\n安装并校验：ninfer-vision-runtime-licenses\n校验通过：chat-template\n本地模型已配置。运行 node deploy.mjs model-start，再运行 verify --model。\n",
+  "publishedProfileSelected": true
+}
