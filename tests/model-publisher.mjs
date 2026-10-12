@@ -28,8 +28,8 @@ if(path.basename(process.argv[1])==='api'){
  if(endpoint.includes('/assets?'))console.log(JSON.stringify(s.assets));else console.log(JSON.stringify(s));
 }else{
  if(args[0]==='create')s={id:1,tag_name:'fixture',draft:true,html_url:'https://github.com/chauko0423/xiaomanbox/releases/tag/fixture',assets:[],events:['create-draft']};
- if(args[0]==='upload'){const p=args[2],b=fs.readFileSync(p);s.assets.push({name:path.basename(p),size:b.length,digest:'sha256:'+crypto.createHash('sha256').update(b).digest('hex'),state:'uploaded',browser_download_url:'https://github.com/chauko0423/xiaomanbox/releases/download/fixture/'+path.basename(p)});s.events.push('upload:'+path.basename(p));}
- if(args[0]==='edit'){s.draft=false;s.events.push('publish');}fs.writeFileSync(file,JSON.stringify(s));
+ if(args[0]==='upload'){const p=args[2],b=fs.readFileSync(p);s.assets.push({name:path.basename(p),size:b.length,digest:'sha256:'+crypto.createHash('sha256').update(b).digest('hex'),state:'uploaded',browser_download_url:'https://github.com/chauko0423/xiaomanbox/releases/download/'+(s.draft?'untagged-test':'fixture')+'/'+path.basename(p)});s.events.push('upload:'+path.basename(p));}
+ if(args[0]==='edit'){s.draft=false;for(const a of s.assets)a.browser_download_url=a.browser_download_url.replace('/untagged-test/','/fixture/');s.events.push('publish');}fs.writeFileSync(file,JSON.stringify(s));
 }`;
   for(const name of ['api','release'])await fs.writeFile(path.join(temp,name),fake);
   const run=()=>spawnSync(process.execPath,[path.join(temp,'tools/publish-model-release.mjs'),'--gh',process.execPath,'--ids','fixture','--tag','fixture'],{cwd:temp,encoding:'utf8',windowsHide:true});
@@ -38,6 +38,7 @@ if(path.basename(process.argv[1])==='api'){
   assert.equal(state.events.at(-1),'publish');assert.equal(state.assets.length,5);assert.equal(state.draft,false);
   const manifest=JSON.parse(await fs.readFile(path.join(temp,'release-manifest.json'),'utf8'));
   assert(manifest.assets[0].parts[0].url.startsWith('https://github.com/'));
+  assert(manifest.assets[0].parts[0].url.includes('/download/fixture/'),'must not store temporary draft URLs');
   const second=run();assert.equal(second.status,0,second.stderr);
   state=JSON.parse(await fs.readFile(stateFile,'utf8'));assert.equal(state.assets.length,5,'resume must not upload duplicates');
   state.assets[0].digest='sha256:'+hash('corruption');await fs.writeFile(stateFile,JSON.stringify(state));

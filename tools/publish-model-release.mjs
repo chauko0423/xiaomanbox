@@ -69,7 +69,7 @@ try{
   for(const {a} of selected){
     const target=manifest.assets.find(x=>x.id===a.id);
     if(!target||target.sha256!==a.sha256)throw new Error('主清单与分片清单不符');
-    target.parts=a.parts.map(p=>({...p,url:remote.find(x=>x.name===p.name).browser_download_url}));target.url=null;
+    target.parts=a.parts.map(p=>({...p,url:`https://github.com/${repo}/releases/download/${encodeURIComponent(tag)}/${encodeURIComponent(p.name)}`}));target.url=null;
   }
   manifest.releaseStatus='source_and_selected_quantized_assets_published_runtime_pending';
   const publishedManifest=path.join(root,'release-candidates/model-parts/release-manifest.json');
@@ -86,6 +86,10 @@ try{
   }
   if(release.draft)await run(['release','edit',tag,'--repo',repo,'--draft=false']);
   release=await api('releases/tags/'+tag);if(release.draft)throw new Error('Release 仍为草稿');
+  remote=await assets();
+  for(const {a} of selected)for(const p of manifest.assets.find(x=>x.id===a.id).parts){
+    if(remote.find(x=>x.name===p.name)?.browser_download_url!==p.url)throw new Error('公开后的分片下载地址与清单不一致：'+p.name);
+  }
   // Update public URLs only after all chunks passed GitHub's server-side digest checks.
   await fsp.writeFile(manifestFile,JSON.stringify(manifest,null,2));
   await fsp.writeFile(path.join(root,'release-candidates/model-parts/publication-receipt.json'),JSON.stringify({repository:repo,release:release.html_url,ids,partCount:selected.reduce((n,{a})=>n+a.parts.length,0),remoteSha256Verified:true},null,2));
