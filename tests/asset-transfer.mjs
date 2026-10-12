@@ -12,6 +12,12 @@ try{
   const a={id:'fixture',path:'model.ninfer',bytes:data.length,sha256:digest(data),url:null};
   const parts=await splitAsset(a,dir,path.join(dir,'parts'),{partBytes:9});
   assert.equal(parts.parts.length,Math.ceil(data.length/9));
+  const sizes=[18,7,data.length-25];let offset=0;
+  const mixed={...a,parts:sizes.map((bytes,i)=>{const p={name:'mixed-'+i,bytes,sha256:digest(data.subarray(offset,offset+bytes)),url:null};offset+=bytes;return p;})};
+  const mixedDir=path.join(dir,'mixed-parts');await splitAsset(mixed,dir,mixedDir);
+  await fs.unlink(path.join(mixedDir,'mixed-1'));await splitAsset(mixed,dir,mixedDir);
+  await acquireAsset({...mixed,path:'mixed-merged.ninfer'},dir,{partsDir:mixedDir});
+  assert.deepEqual(await fs.readFile(path.join(dir,'mixed-merged.ninfer')),data);
   await fs.unlink(path.join(dir,a.path));
   await acquireAsset(parts,dir,{partsDir:path.join(dir,'parts')});
   assert.deepEqual(await fs.readFile(path.join(dir,a.path)),data);
@@ -40,5 +46,5 @@ try{
   await fs.writeFile(corrupt,data.subarray(9,18));
   await assert.rejects(acquireAsset(reversed,dir,{partsDir:path.join(dir,'parts')}),/完整文件校验失败/);
   await assert.rejects(fs.stat(path.join(dir,a.path)),{code:'ENOENT'});
-  console.log('PASS: split, merge, full hash, interrupted download reuse, corrupted part, unsafe path, duplicate part, wrong ordering');
-}finally{await fs.rm(dir,{recursive:true,force:true});}
+  console.log('PASS: split, mixed-size manifest reconstruction, merge, full hash, interrupted download reuse, corrupted part, unsafe path, duplicate part, wrong ordering');
+}finally{assert(path.resolve(dir).startsWith(path.resolve(os.tmpdir())+path.sep));await fs.rm(dir,{recursive:true,force:true});}

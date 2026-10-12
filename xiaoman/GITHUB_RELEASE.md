@@ -1,6 +1,6 @@
 # GitHub 量化权重分片发布与使用
 
-只处理 release-manifest.json 中已有 SHA256 的量化权重。BF16、LoRA、训练数据与个人配置不会进入发布候选。每片最多1 GiB，低于 GitHub Release 的单文件2 GiB限制。
+只处理 release-manifest.json 中已有 SHA256 的量化权重。BF16、LoRA、训练数据与个人配置不会进入发布候选。首次准备默认256 MiB；已有分片清单时按清单尺寸重建。当前4片已验证的1 GiB大片继续复用，其余新增片最多256 MiB，均低于GitHub Release单文件2 GiB限制。
 
 ## 下载者
 

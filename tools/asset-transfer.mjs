@@ -68,8 +68,31 @@ export async function acquireAsset(a,root,{manual,partsDir,fetchImpl=fetch}={}){
   if(!await matches(temp,a))throw new Error('完整文件校验失败，未替换正式文件：'+temp);
   await fsp.rename(temp,destination);console.log('安装并校验：'+a.id);return destination;
 }
-export async function splitAsset(a,root,out,{partBytes=1024**3}={}){
+async function materializeParts(a,root,out){
+  validateSizeHash(a);const source=within(root,a.path),names=new Set();let size=0;
+  for(const p of a.parts){
+    validateSizeHash(p);
+    if(!/^[A-Za-z0-9._-]+$/.test(p.name)||p.name==='.'||p.name==='..'||names.has(p.name)||p.bytes>1024**3)throw new Error('非法分片清单');
+    names.add(p.name);size+=p.bytes;
+  }
+  if(size!==a.bytes||(await fsp.stat(source)).size!==a.bytes)throw new Error('分片与原始文件大小不符');
+  await fsp.mkdir(out,{recursive:true});const total=createHash('sha256');let offset=0;
+  for(const p of a.parts){
+    const file=path.join(out,p.name),existing=fs.existsSync(file),h=createHash('sha256');
+    if(existing&&!await matches(file,p))throw new Error('已有发布分片不符：'+p.name);
+    const handle=existing?null:await fsp.open(file+'.partial','w');
+    try{for await(const chunk of fs.createReadStream(source,{start:offset,end:offset+p.bytes-1})){h.update(chunk);total.update(chunk);if(handle)await handle.writeFile(chunk);}}
+    finally{if(handle)await handle.close();}
+    if(h.digest('hex')!==p.sha256)throw new Error('原始数据与分片清单 SHA256 不符：'+p.name);
+    if(!existing)await fsp.rename(file+'.partial',file);offset+=p.bytes;
+    console.log('按清单准备分片：'+p.name);
+  }
+  if(total.digest('hex')!==a.sha256)throw new Error('完整原始文件 SHA256 不符');
+  return {...a,url:null,parts:a.parts.map(p=>({...p,url:null}))};
+}
+export async function splitAsset(a,root,out,{partBytes=256*1024**2}={}){
   validateSizeHash(a);
+  if(a.parts?.length)return materializeParts(a,root,out);
   if(!Number.isSafeInteger(partBytes)||partBytes<1||partBytes>1024**3)throw new Error('分片大小必须在1字节至1 GiB之间');
   const source=within(root,a.path);
   if((await fsp.stat(source)).size!==a.bytes)throw new Error('原始文件大小不符');

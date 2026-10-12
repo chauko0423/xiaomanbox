@@ -44,4 +44,4 @@ if(path.basename(process.argv[1])==='api'){
   state.assets[0].digest='sha256:'+hash('corruption');await fs.writeFile(stateFile,JSON.stringify(state));
   const bad=run();assert.notEqual(bad.status,0);assert.match(bad.stderr,/远程同名分片不一致/);
   console.log('PASS: draft first, verified assets before publish, manifest URLs after publish, resume without duplicates, mismatched remote digest rejected');
-}finally{await fs.rm(temp,{recursive:true,force:true});}
+}finally{assert(path.resolve(temp).startsWith(path.resolve(os.tmpdir())+path.sep));await fs.rm(temp,{recursive:true,force:true});}

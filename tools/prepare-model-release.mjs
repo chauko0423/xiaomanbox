@@ -12,7 +12,7 @@ try{
   const asset=manifest.assets.find(a=>a.id===opt('id'));
   if(!asset||asset.type!=='quantized-model')throw new Error('只能处理清单中的量化权重');
   const out=path.join(root,'release-candidates','model-parts',asset.id);
-  const segmented=await splitAsset(asset,root,out);
+  const segmented=await splitAsset(asset,root,out,{partBytes:Number(opt('part-mib','256'))*1024**2});
   await fsp.writeFile(path.join(out,'asset-manifest.json'),JSON.stringify(segmented,null,2));
   await fsp.writeFile(path.join(out,'SHA256SUMS.txt'),segmented.parts.map(p=>p.sha256+'  '+p.name).join('\n')+'\n');
   console.log('分片和完整权重均已核对，发布候选目录：'+out);
