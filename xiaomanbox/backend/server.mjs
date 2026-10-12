@@ -452,7 +452,11 @@ const server = http.createServer(async (req, res) => {
       // 上下文用量（对标 UEBox「上下文用量」面板）：分类 token 统计
       if (p === '/api/v1/agent/context-usage') {
         const u = new URL(req.url, 'http://localhost');
-        return send(res, 200, await agent.contextUsage(u.searchParams.get('sessionId') || undefined));
+        let selection;
+        try { selection = JSON.parse(u.searchParams.get('selection') || '{}'); }
+        catch { return send(res, 400, {error: 'invalid_selection'}); }
+        if (!selection || typeof selection !== 'object' || Array.isArray(selection) || ['skills', 'toolNames'].some(k => selection[k] !== undefined && (!Array.isArray(selection[k]) || selection[k].some(n => typeof n !== 'string')))) return send(res, 400, {error: 'invalid_selection'});
+        return send(res, 200, await agent.contextUsage(u.searchParams.get('sessionId') || undefined, selection.skills || [], selection.toolGroups, selection.toolNames));
       }
 
       // API key（分级鉴权）：本机回环可读，返回 key 供用户复制给外部 AI（GPT/WorkBuddy 等）
@@ -886,7 +890,7 @@ const server = http.createServer(async (req, res) => {
         } catch {
           return send(res, 400, { contract: CONTRACT, error: 'invalid_json' });
         }
-        const r = agent.startAgentTask(body.task, body.sessionId, body.attachments, body.skills, body.toolGroups);
+        const r = agent.startAgentTask(body.task, body.sessionId, body.attachments, body.skills, body.toolGroups, body.toolNames);
         return send(res, r.ok ? 202 : r.code ?? 500, { contract: CONTRACT, ...r });
       }
       if (p === '/api/v1/agent/stop') {

@@ -79,9 +79,9 @@ export interface AgentConfig {
   retainSessions: boolean;
   /** 模型上下文窗口（token，用量面板分母） */
   contextWindow: number;
-  /** 单次请求输入 token 上限（0 = 不限制） */
+  /** 估算输入上限（0 = 使用窗口减输出预留） */
   maxInputTokens: number;
-  /** 单次响应输出 token 上限（0 = 不限制；>0 透传引擎 max_tokens） */
+  /** 输出上限（0 = 自动预留；透传引擎 max_tokens） */
   maxOutputTokens: number;
 }
 

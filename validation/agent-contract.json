@@ -1,0 +1,44 @@
+{
+  "at": "2026-10-12T09:43:35.565Z",
+  "passed": true,
+  "scope": "isolated backend and simulated SSE API; no real XiaoMan generation or UE execution",
+  "gpuUEModelLoop": "deferred per user until GPU idle",
+  "results": [
+    {
+      "name": "usage respects actual UE/tools/skills selection; full UE exceeds 2048",
+      "ok": true
+    },
+    {
+      "name": "unoffered file write, destructive UE and nonexistent MCP rejected without file side effects",
+      "ok": true
+    },
+    {
+      "name": "standard permission excludes destructive UE tool even when requested by name",
+      "ok": true
+    },
+    {
+      "name": "oversized initial request blocked before contacting model",
+      "ok": true
+    },
+    {
+      "name": "2048 window selected file tool executes and returns result with output reserve",
+      "ok": true
+    },
+    {
+      "name": "explicit empty enabled list remains disabled; request allowlist cannot re-enable tool",
+      "ok": true
+    },
+    {
+      "name": "oversized tool result blocks next model round without silently truncating result",
+      "ok": true
+    },
+    {
+      "name": "input cap and invalid selection/config handled explicitly",
+      "ok": true
+    },
+    {
+      "name": "only explicitly selected skill contributes to usage",
+      "ok": true
+    }
+  ]
+}

@@ -845,13 +845,13 @@
     },
     {
       "id": "xiaomanbox-basic-installer",
-      "path": "release-candidates/XiaoManBox-0.3.0-basic.4-Setup.exe",
-      "bytes": 85128392,
-      "sha256": "56320a35d8d3c2f5ca5ae14a99e23b69401dabef5dd65e70ee5da13d115beb22",
-      "url": "https://github.com/chauko0423/xiaomanbox/releases/download/v0.3.0-basic.4/XiaoManBox-0.3.0-basic.4-Setup.exe",
+      "path": "release-candidates/XiaoManBox-0.3.0-basic.5-Setup.exe",
+      "bytes": 85129762,
+      "sha256": "146eaed1849c395d4ced85f6645e5c019e2b8d7c04e32034d69f0212fcda770a",
+      "url": "https://github.com/chauko0423/xiaomanbox/releases/download/v0.3.0-basic.5/XiaoManBox-0.3.0-basic.5-Setup.exe",
       "type": "desktop-installer",
       "signature": "unsigned",
-      "verification": "basic.4 packaged_lifecycle_and_pipe_failure_smoke_pass; UE5.7.4 actual_Blueprint_and_level_workflow_21_checks_pass; RPC_tool_registry_and_argument_negative_controls_pass"
+      "verification": "agent_selection_and_budget_simulated_API_pass; UI_and_packaged_smoke_pass; prior_native_UE_pass; actual_model_UE_loop_deferred_until_GPU_idle"
     }
   ],
   "notes": [

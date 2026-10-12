@@ -13,12 +13,13 @@ export interface AgentAttachment {
   base64?: string | null;
 }
 
-export function startAgentTask(task: string, sessionId?: string, attachments?: AgentAttachment[], skills?: string[], toolGroups?: { ue?: boolean }): Promise<AgentStartResponse> {
+export function startAgentTask(task: string, sessionId?: string, attachments?: AgentAttachment[], skills?: string[], toolGroups?: { ue?: boolean }, toolNames?: string[]): Promise<AgentStartResponse> {
   return post<AgentStartResponse>('/agent/run', {
     task,
     sessionId,
     attachments: attachments?.length ? attachments : undefined,
-    skills: skills?.length ? skills : undefined,
+    skills: skills ?? [],
+    toolNames,
     toolGroups: toolGroups && typeof toolGroups.ue === 'boolean' ? toolGroups : undefined,
   });
 }
@@ -50,8 +51,8 @@ export interface ContextUsageResponse {
   historyMessages: number;
   parts: ContextUsagePart[];
 }
-export function getContextUsage(sessionId?: string | null): Promise<ContextUsageResponse> {
-  const q = sessionId ? `?sessionId=${encodeURIComponent(sessionId)}` : '';
+export function getContextUsage(sessionId?: string | null, skills: string[] = [], toolGroups?: {ue?: boolean}, toolNames?: string[]): Promise<ContextUsageResponse> {
+  const q = `?selection=${encodeURIComponent(JSON.stringify({skills, toolGroups, toolNames}))}` + (sessionId ? `&sessionId=${encodeURIComponent(sessionId)}` : '');
   return get<ContextUsageResponse>(`/agent/context-usage${q}`);
 }
 

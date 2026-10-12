@@ -374,9 +374,7 @@ export function loadEnabledTools() {
     const raw = JSON.parse(fs.readFileSync(ENABLED_FILE, 'utf8'));
     if (raw && Array.isArray(raw.enabled)) {
       const list = raw.enabled.filter((n) => typeof n === 'string');
-      // 2026-10-10 修「会话无法触发」致命 bug：enabled 为空数组 = 从未显式停用任何工具，
-      // 语义应是「默认全启用」，而不是「全禁用」（后者会让模型 tools=0，任何任务都干不了）。
-      if (list.length > 0) return list;
+      return list; // 显式空数组表示全停用；只有缺少配置才默认全启用。
     }
   } catch { /* 忽略 */ }
   return WORKBENCH_TOOL_META.map((t) => t.name);

@@ -102,6 +102,11 @@ function toggleSkill(name: string) {
   else selectedSkills.value.push(name);
 }
 /** 工具组（2026-10-10 用户）：UE 工具 166 个 schema 62KB，默认不带（prefill 11s+/502 主因），勾选才带 */
+const limitToolText = ref('');
+const noTools = ref(false);
+function selectedToolNames(): string[] | undefined {
+  return noTools.value ? [] : limitToolText.value.trim() ? limitToolText.value.split(/[\s,，]+/).filter(Boolean) : undefined;
+}
 const loadUeTools = ref<boolean | null>(null); // null=按预设自动；true/false=用户显式选择
 const autoUe = ref(true); // 当前会话按预设是否自动带 UE 工具（展示用）
 function effectiveUe(): boolean {
@@ -585,9 +590,10 @@ async function viewSession(id: string) {
   }
 }
 
+watch([selectedSkills, loadUeTools, limitToolText, noTools], () => { if (pop.value === 'usage') void loadUsage(); }, {deep: true});
 async function loadUsage() {
   try {
-    usage.value = await getContextUsage(currentSessionId.value);
+    usage.value = await getContextUsage(currentSessionId.value, selectedSkills.value, {ue: effectiveUe()}, selectedToolNames());
   } catch {
     usage.value = null;
   }
@@ -1063,7 +1069,7 @@ async function send() {
       const r = await createSession({ pinTarget: currentScene.value?.id });
       await settleNewChat(currentScene.value?.id ?? '', r.session.sessionId);
     }
-    await startAgentTask(t, currentSessionId.value ?? undefined, hasAttach ? attachments.value : undefined, selectedSkills.value, loadUeTools.value === null ? undefined : { ue: loadUeTools.value });
+    await startAgentTask(t, currentSessionId.value ?? undefined, hasAttach ? attachments.value : undefined, selectedSkills.value, loadUeTools.value === null ? undefined : { ue: loadUeTools.value }, selectedToolNames());
     bumpSessions(); // 标题已在 startAgentTask 内自动更新 → 侧栏立即刷新（不等轮询）
     pendingTask.value = t;
     task.value = '';
@@ -1906,15 +1912,22 @@ window.addEventListener('mousedown', onGlobalDown);
             <!-- UE 工具组按需加载（2026-10-10 用户）：166 个 schema 62KB，非 UE 任务不带（prefill 11s+/502 主因） -->
             <div
               class="pop-item skill-load"
-              :title="t('UE 工具 166 个（schema 62KB），非 UE 任务不带可大幅提速')"
+              :title="t('UE 工具 数量较多；短上下文请限定所需工具')"
               @click="loadUeTools = effectiveUe() ? false : true"
             >
               <span class="pi-check" :class="{ on: effectiveUe() }">✓</span>
               <span class="pi-ico">▦</span>
               <span class="pi-main">
                 <span class="pi-label">{{ t('本次加载 UE 工具') }}</span>
-                <span class="pi-hint">{{ effectiveUe() ? t('已加载（UE5 会话默认加载）') : t('未加载（166 个工具 · 62KB）') }}</span>
+                <span class="pi-hint">{{ effectiveUe() ? t('已加载（UE5 会话默认加载）') : t('未加载') }}</span>
               </span>
+            </div>
+            <div class="pop-item static">
+              <label><input v-model="noTools" type="checkbox" /> {{ t('纯对话：本次不加载工具') }}</label>
+            </div>
+            <div class="pop-item static" style="display:block">
+              <label>{{ t('限定工具名（可选，逗号分隔）') }}<input @mousedown.stop v-model="limitToolText" :disabled="noTools" placeholder="read_file, write_file" style="width:100%;margin-top:6px" /></label>
+              <div class="pi-hint">{{ t('留空加载已启用工具；短上下文可只选本次需要的工具。') }}</div>
             </div>
             <div v-for="s in mcpServers" :key="s.name" class="pop-item static">
               <span class="pi-ico">⇄</span>
@@ -2030,13 +2043,14 @@ window.addEventListener('mousedown', onGlobalDown);
               <span class="usage-pct">{{ (usage.ratio * 100).toFixed(1) }}%</span>
             </div>
             <div class="usage-bar"><i class="usage-fill" :style="{ width: Math.min(usage.ratio * 100, 100) + '%' }"></i></div>
-            <div class="usage-total">{{ t('已使用') }} {{ fmtTok(usage.used) }} / {{ fmtTok(usage.contextWindow) }}</div>
+            <div class="usage-total">{{ t('背景估算') }} {{ fmtTok(usage.used) }} / {{ fmtTok(usage.contextWindow) }}</div>
             <div v-for="p in usage.parts" :key="p.key" class="usage-row">
               <span class="u-dot" :style="{ background: USAGE_COLORS[p.key] || '#888' }"></span>
               <span class="u-label">{{ p.label }}</span>
               <span class="u-bar"><i :style="{ width: (p.tokens / usageMaxTok) * 100 + '%', background: USAGE_COLORS[p.key] || '#888' }"></i></span>
               <span class="u-val">{{ (p.ratio * 100).toFixed(1) }}%</span>
             </div>
+            <div class="usage-foot">{{ t('背景为估算，未含待发任务与附件；模型实际 token 为准。') }}</div>
             <div class="usage-foot">
               {{ usage.retainSessions ? `${t('保留开启')} · ${usage.historyMessages} ${t('条历史在上下文中')}` : t('保留已关 · 每条任务独立（不带历史）') }}
             </div>

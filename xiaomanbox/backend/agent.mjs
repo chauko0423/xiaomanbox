@@ -10,6 +10,7 @@
  */
 
 import http from 'node:http';
+import { estimateTokens as estTokens, requestBudget, enforceRequestBudget } from './agent-budget.mjs';
 import https from 'node:https';
 import fs from 'node:fs';
 import path from 'node:path';
@@ -45,9 +46,9 @@ const DEFAULTS = {
   //   'medium'/'high'=更深思考（长创作任务更容易泄漏）。引擎不认识该字段时忽略，无害。
   allowFullAccess: false, // 权限模式：false=标准受限（破坏性操作先征得同意），true=直接执行
   retainSessions: true, // 会话保留：true=历史进上下文并持久化（可查询）；false=一句一句独立（不留存）
-  contextWindow: 131072, // 模型上下文窗口（token，用量面板的分母）
-  maxInputTokens: 0, // 单次请求输入 token 上限（0 = 不限制，交给引擎/上下文窗口决定）
-  maxOutputTokens: 0, // 单次响应输出 token 上限（0 = 不限制；>0 时透传引擎 max_tokens）
+  contextWindow: 131072, // 模型上下文窗口（token，估算请求预算）
+  maxInputTokens: 0, // 单次请求输入 token 上限（0 = 使用上下文窗口减输出预留）
+  maxOutputTokens: 0, // 单次响应输出 token 上限（0 = 自动预留输出；>0 时透传引擎 max_tokens）
 };
 
 function loadConfig() {
@@ -79,6 +80,8 @@ export function setConfigPatch(patch) {
     if (patch[k] === null || typeof patch[k] !== typeof DEFAULTS[k]) {
       return { ok: false, code: 400, error: `${k} 类型应为 ${typeof DEFAULTS[k]}` };
     }
+    if (typeof patch[k] === 'number' && !Number.isFinite(patch[k])) return { ok: false, code: 400, error: `${k} 必须是有限数值` };
+    if (['contextWindow', 'maxInputTokens', 'maxOutputTokens'].includes(k) && (!Number.isSafeInteger(patch[k]) || patch[k] < (k === 'contextWindow' ? 1024 : 0))) return { ok: false, code: 400, error: `${k} 超出 token 参数范围` };
     cur[k] = patch[k];
   }
   try {
@@ -102,8 +105,7 @@ const SYSTEM_PROMPT = `你是「小满」，XiaoMan Box（AI 工作台）的 AI 
 2. 一步一步来，每步根据工具返回结果决定下一步。
 3. 完成一个完整的小任务后，用中文简洁总结你做了什么、结果如何。
 
-接入的 MCP 工具（前缀 mcp__<服务器>__，是接进来的外部服务能力）：
-- 团队画板 team-board（mcp__team-board__*）：能读写局域网多人协作画板——get_board_state 查元素、add_shape 加图形（rectangle/ellipse/text/arrow）、add_comment/reply_comment 加评论、delete_shape/delete_comment 删除等。所有写工具需要 roomId（房间名）+ token 字段，token 由系统自动注入，你调的时候不用管 token。用户提到「画板/白板/会议/脑暴」时优先用它。`;
+只调用本次请求提供的工具；用户自行配置的 MCP 服务以实际工具列表为准。局域网画板通过本地网页分享，不内置团队画板 MCP 服务。`;
 
 // ── 工作台自有工具（后端自己的能力，不走 UEBox）────────────────
 // 这些是 XiaoMan Box 后端自己的动作：拉起编辑器、编译验证、一键编排。
@@ -657,6 +659,7 @@ function friendlyModelError(e, cfg) {
 }
 
 function modelChatOnce(messages, tools, cfg) {
+  const budget = enforceRequestBudget(messages, tools, cfg);
   const p = new Promise((resolve, reject) => {
     const body = {
       model: cfg.model,
@@ -679,10 +682,7 @@ function modelChatOnce(messages, tools, cfg) {
     if (typeof cfg.reasoningEffort === 'string' && cfg.reasoningEffort) {
       body.reasoning_effort = cfg.reasoningEffort;
     }
-    // maxOutputTokens > 0 → 显式限制单次输出长度（透传引擎 max_tokens）
-    if (typeof cfg.maxOutputTokens === 'number' && cfg.maxOutputTokens > 0) {
-      body.max_tokens = cfg.maxOutputTokens;
-    }
+    body.max_tokens = budget.output;
     const payload = JSON.stringify(body);
     const u = new URL(cfg.modelUrl);
     const headers = { 'Content-Type': 'application/json', 'Content-Length': Buffer.byteLength(payload), Accept: 'text/event-stream' };
@@ -1065,7 +1065,8 @@ export async function resolveAttachments(atts) {
 /** 图文请求被拒时的判定（用于优雅降级：剥掉图片重试 + 如实说明） */
 const VISION_REJECT_RE = /image|vision|multimodal|multi-modal|content part|invalid content|visual/i;
 
-export function startAgentTask(task, sessionId, attachments, skills, toolGroups) {
+export function startAgentTask(task, sessionId, attachments, skills, toolGroups, toolNames) {
+  if (toolNames !== undefined && (!Array.isArray(toolNames) || toolNames.some(n => typeof n !== 'string'))) return { ok: false, code: 400, error: 'toolNames 必须是字符串数组' };
   if (job && job.state === 'running') {
     return { ok: false, code: 409, error: '小满正在干活', jobId: job.id };
   }
@@ -1100,7 +1101,7 @@ export function startAgentTask(task, sessionId, attachments, skills, toolGroups)
   keepalive.setKeepaliveBusy(true); // 任务在跑，暂停保活（不抢推理槽）
   // 会话标题：从任务文本提取关键词自动命名（实时跟随最新话题；手动改过的标题不覆盖）
   if (sessionId) session.autoTitle(sessionId, task);
-  run(task, sessionId, normalizeAttachments(attachments), Array.isArray(skills) ? skills : null, toolGroups || null).catch((e) => {
+  run(task, sessionId, normalizeAttachments(attachments), Array.isArray(skills) ? skills : [], toolGroups || null, toolNames).catch((e) => {
     const msg = String(e.message || e);
     // 用户手动停止 → aborted（区别于真失败的 failed，UI 显示「已停止」而不是「失败」）
     job.state = msg.includes('手动停止') || abortRequested ? 'aborted' : 'failed';
@@ -1144,7 +1145,7 @@ export function stopAgent() {
  * 旧场景 id 'ue5-dev'/'control-room' 在 presets 里做兼容映射；未知/无绑定 → 仅底座）
  * + 记忆 / 技能清单 / 权限段。
  */
-function buildPromptParts(sessionId, cfg, activeSkills = null) {
+function buildPromptParts(sessionId, cfg, activeSkills = []) {
   const sess = sessionId ? session.getSession(sessionId) : null;
   const presetId = sess?.pinTarget ?? null;
   // 聊天模式（presets.mjs 里 chat:true 的预设）：去掉底座身份、预设专属段、记忆、skill 清单，
@@ -1167,7 +1168,7 @@ function buildPromptParts(sessionId, cfg, activeSkills = null) {
     }
   }
   // skill 清单（2026-10-09 用户：选择性加载）——
-  //   activeSkills = null → 全部注入（向后兼容）；
+  //   activeSkills = null → 内部兼容入口加载全部（公开任务入口默认 []）；
   //   activeSkills = [] → 不注入任何 skill（默认，用户没选就不带，省 token + 提速）；
   //   activeSkills = [names] → 只注入选中的 skill。
   const allSkillMetas = isChat ? [] : skills.listSkills().skills;
@@ -1193,16 +1194,6 @@ function buildPromptParts(sessionId, cfg, activeSkills = null) {
   return { sess, sceneMem, globalMem, memParts, skillNames, skillSummaries, permPart, presetPart, presetId, isChat, sysPrompt };
 }
 
-/** 粗估 token：CJK 字符 1:1，其余按 4 字符 1 token（对齐 UEBox 的保守估法） */
-function estTokens(x) {
-  if (x === null || x === undefined) return 0;
-  const str = typeof x === 'string' ? x : JSON.stringify(x);
-  if (!str) return 0;
-  let cjk = 0;
-  for (const ch of str) if (ch.codePointAt(0) > 0x2e7f) cjk += 1;
-  return cjk + Math.ceil((str.length - cjk) / 4);
-}
-
 /**
  * 上下文压缩：把旧对话历史总结成一段摘要（2026-10-10 用户）。
  * 调一次模型（不带工具、低温度、限长），把 old 消息串成一条 user 让模型概括。
@@ -1214,7 +1205,7 @@ async function summarizeHistory(old, cfg) {
   const r = await modelChatOnce(
     [{ role: 'user', content: prompt }],
     [],
-    { ...cfg, temperature: 0.2, maxOutputTokens: 1024 }
+    { ...cfg, temperature: 0.2, maxOutputTokens: Math.min(1024, Math.floor(cfg.contextWindow / 4)) }
   );
   const msg = r?.choices?.[0]?.message;
   const text = String(msg?.content || msg?.reasoning_content || '').trim();
@@ -1225,38 +1216,46 @@ async function summarizeHistory(old, cfg) {
  * 上下文用量（对标 UEBox「上下文用量」面板）：
  * 分类估算当前会话下一次请求将携带的 token 构成。
  */
-export async function contextUsage(sessionId) {
-  const cfg = loadConfig();
-  const pp = buildPromptParts(sessionId, cfg);
-  const ueTools = ualModelTools(cfg.allowFullAccess);
+async function selectTools(sessionId, cfg, toolGroups, toolNames) {
+  const sess = sessionId ? session.getSession(sessionId) : null;
+  const ueWanted = typeof toolGroups?.ue === 'boolean' ? toolGroups.ue : isUe5Preset(sess?.pinTarget);
+  const ueTools = ueWanted ? ualModelTools(cfg.allowFullAccess) : [];
   const mcpTools = await mcpModelTools();
+  const enabled = new Set(basic.loadEnabledTools());
+  const workbenchTools = WORKBENCH_TOOLS.filter(t => t.function.name.startsWith('workbench_') || enabled.has(t.function.name));
+  const selected = Array.isArray(toolNames) ? new Set(toolNames) : null;
+  const filter = ts => selected ? ts.filter(t => selected.has(t.function.name)) : ts;
+  return {ueTools: filter(ueTools), workbenchTools: filter(workbenchTools), mcpTools: filter(mcpTools)};
+}
+function workspacePrompt() {
+  const activeWs = getActiveWorkspace();
+  return activeWs ? `\n\n【当前工作区】${activeWs}\n所有产出文件默认写入此目录；相对路径以此目录为根。用户明确指定其他保存位置时按用户要求，并说明实际路径。` : '';
+}
+export async function contextUsage(sessionId, activeSkills = [], toolGroups = null, toolNames) {
+  const cfg = loadConfig();
+  const pp = buildPromptParts(sessionId, cfg, activeSkills);
+  const {ueTools, workbenchTools, mcpTools} = await selectTools(sessionId, cfg, toolGroups, toolNames);
   const history = cfg.retainSessions && sessionId ? session.getMessages(sessionId) : [];
-
+  const workspace = workspacePrompt();
   const parts = [
-    { key: 'system', label: '系统提示词', tokens: (pp.isChat ? 0 : estTokens(SYSTEM_PROMPT)) + estTokens(pp.permPart) },
-    { key: 'preset', label: '预设专精', tokens: estTokens(pp.presetPart) },
-    { key: 'tools', label: '工具及子智能体', tokens: estTokens(ueTools) + estTokens(WORKBENCH_TOOLS) },
-    { key: 'mcp', label: '连接器及 MCP', tokens: estTokens(mcpTools) },
-    { key: 'skills', label: '技能', tokens: estTokens(pp.skillSummaries || '') },
-    { key: 'memory', label: '记忆', tokens: estTokens(pp.memParts.join('\n\n')) },
-    { key: 'messages', label: '对话消息', tokens: history.reduce((n, h) => n + estTokens(h.content) + 8, 0) },
+    {key: 'system', label: '系统提示词', tokens: estTokens(pp.sysPrompt) - estTokens(pp.presetPart) - estTokens(pp.skillSummaries || '') - estTokens(pp.memParts.join('\n\n')) + estTokens(workspace)},
+    {key: 'preset', label: '预设专精', tokens: estTokens(pp.presetPart)},
+    {key: 'tools', label: '已选工具', tokens: estTokens([...ueTools, ...workbenchTools])},
+    {key: 'mcp', label: '连接器及 MCP', tokens: estTokens(mcpTools)},
+    {key: 'skills', label: '已选技能', tokens: estTokens(pp.skillSummaries || '')},
+    {key: 'memory', label: '记忆', tokens: estTokens(pp.memParts.join('\n\n'))},
+    {key: 'messages', label: '对话消息', tokens: history.reduce((n,h) => n + estTokens(h.content) + 8, 0)},
   ];
-  const used = parts.reduce((n, p) => n + p.tokens, 0);
-  const window = Number(cfg.contextWindow) || 131072;
-  return {
-    contract: 'v1',
-    ok: true,
-    sessionId: sessionId || null,
-    contextWindow: window,
-    used,
-    ratio: Math.min(used / window, 1),
-    retainSessions: Boolean(cfg.retainSessions),
-    historyMessages: history.length,
-    parts: parts.map((p) => ({ ...p, ratio: window > 0 ? p.tokens / window : 0 })),
-  };
+  const used = parts.reduce((n,p) => n + p.tokens, 0);
+  const budget = requestBudget([{role: 'system', content: pp.sysPrompt + workspace}, ...history], [...ueTools, ...workbenchTools, ...mcpTools], cfg);
+  return {contract: 'v1', ok: true, estimated: true, sessionId: sessionId || null, contextWindow: budget.window, used,
+    ratio: Math.min(used / budget.window, 1), retainSessions: Boolean(cfg.retainSessions), historyMessages: history.length,
+    toolCount: ueTools.length + workbenchTools.length + mcpTools.length, skills: pp.skillNames, outputReserve: budget.output,
+    note: '估算当前背景；待发任务、附件及下一轮工具结果未包含。模型实际 tokenizer 为准。',
+    parts: parts.map(p => ({...p, ratio: p.tokens / budget.window}))};
 }
 
-async function run(task, sessionId, attachments = [], activeSkills = null, toolGroups = null) {
+async function run(task, sessionId, attachments = [], activeSkills = [], toolGroups = null, toolNames) {
   const cfg = loadConfig();
   // 模型提供方（2026-10-07）：激活的提供方优先于 agent.json 的 modelUrl/model。
   // 本地引擎无 apiKey；云端提供方带 key 时 modelChat 自动加 Authorization。
@@ -1276,22 +1275,9 @@ async function run(task, sessionId, attachments = [], activeSkills = null, toolG
   //   全量传入让 prefill 从 ~1s 拖到 11s+，再叠加历史/MCP 时超过服务端网关超时 → 502。
   //   工具组两级控制：①用户显式选择（toolGroups.ue，随任务传入）优先；②未选时按预设自动——
   //   UE5 类预设（category=ue5）才带 UAL 工具，其他预设不带，prefill 回到 1-2s。
-  const sess0 = sessionId ? session.getSession(sessionId) : null;
-  const presetId0 = sess0?.pinTarget ?? null;
-  const ueWanted = toolGroups && typeof toolGroups.ue === 'boolean' ? toolGroups.ue : isUe5Preset(presetId0);
-  const ueTools = ueWanted ? ualModelTools(cfg.allowFullAccess) : [];
-  const mcpTools = await mcpModelTools();
-  // 工具启用状态（插件「下载→装载」）：停用的工作台工具不传给模型。
-  // 2026-10-10 修「会话无法触发」：enabled 列表存的是 WORKBENCH_TOOL_META 的裸名（bash/write_file…），
-  //   而 WORKBENCH_TOOLS 里还有 workbench_xxx 前缀的系统工具（launch_editor/node_search 等）。
-  //   过滤规则：workbench_xxx 前缀的固定系统工具始终保留；裸名工具查 enabled 白名单。
-  const enabledSet = new Set(basic.loadEnabledTools());
-  const workbenchTools = WORKBENCH_TOOLS.filter((t) => {
-    const n = t.function.name;
-    if (n.startsWith('workbench_')) return true; // 系统固定工具（不在 META 里，始终带）
-    return enabledSet.has(n); // 通用能力工具（在 META 里，可停用）
-  });
+  const {ueTools, workbenchTools, mcpTools} = await selectTools(sessionId, cfg, toolGroups, toolNames);
   const tools = [...ueTools, ...workbenchTools, ...mcpTools];
+  const offeredNames = new Set(tools.map(t => t.function.name));
   job.toolCount = tools.length;
 
   // 防串台核心：只加载「这个 sessionId」的历史作为上下文前缀。
@@ -1305,13 +1291,7 @@ async function run(task, sessionId, attachments = [], activeSkills = null, toolG
   //   产出文件全写去别处（如 outputs）。注入路径 + 硬规则：产出文件一律写进工作区；
   //   相对路径以工作区为基。无工作区时保持原行为。
   const activeWs = getActiveWorkspace();
-  let sysPrompt = pp.sysPrompt;
-  if (activeWs) {
-    sysPrompt += `\n\n【当前工作区】${activeWs}
-- 用户已选择这个目录作为工作区。**所有产出文件（网页/文档/代码/图片/数据等做出来的东西）必须写到这个工作区目录里**，不要写到其他位置（如 outputs、临时目录）。
-- 写文件给相对路径时，以工作区为根解析。
-- 用户在任务里明确指定了其他保存位置时，按用户说的写，但完成后仍应在回复里说明文件的实际位置。`;
-  }
+  const sysPrompt = pp.sysPrompt + workspacePrompt();
   job.workspace = activeWs;
   const sess = pp.sess;
   if (pp.memParts.length) {
@@ -1376,7 +1356,7 @@ async function run(task, sessionId, attachments = [], activeSkills = null, toolG
   // 只在「保留会话 + 历史足够长」时压缩；压缩 = 调一次模型把旧历史总结成摘要，替换旧逐条消息。
   const COMPACT_AT_MESSAGES = 12; // 历史超过 12 条才开始考虑压缩
   const win = cfg.contextWindow || 131072;
-  const COMPACT_AT_TOKENS = Math.max(8192, Math.floor(win * 0.2)); // 历史 token 超窗口 20% 就压（留足本轮+工具往返空间）
+  const COMPACT_AT_TOKENS = Math.max(256, Math.floor(win * 0.2)); // 历史 token 超窗口 20% 就压（留足本轮+工具往返空间）
   const histTok = history.reduce((n, h) => n + estTokens(h.content) + 8, 0);
   if (history.length > COMPACT_AT_MESSAGES && histTok > COMPACT_AT_TOKENS) {
     // 保留最近 4 条原文，其余压成摘要
@@ -1389,7 +1369,7 @@ async function run(task, sessionId, attachments = [], activeSkills = null, toolG
         job.ctx.compacted = { fromMessages: old.length, keptMessages: recent.length, summaryChars: sum.length, histTokens: histTok };
       }
     } catch {
-      /* 压缩失败（模型离线等）不阻断：原样用完整历史，最多触发模型侧截断 */
+      /* 压缩失败（模型离线等）不阻断：原样用完整历史，后续预算检查会如实阻止超限请求 */
     }
   }
 
@@ -1484,7 +1464,9 @@ async function run(task, sessionId, attachments = [], activeSkills = null, toolG
         //   导致模型明明调了 write_file，却走「工具未内置」兜底。改为：名字在 workbench 工具
         //   清单（workbench_ 前缀 或 裸名通用工具）里 → 都路由到 executeWorkbenchTool。
         const isWorkbenchTool = name.startsWith('workbench_') || basic.WORKBENCH_TOOL_META.some((t) => t.name === name);
-        const res = isWorkbenchTool
+        const res = !offeredNames.has(name)
+          ? { ok: false, error: `tool_not_offered：本轮未启用工具 ${name}，未执行` }
+          : isWorkbenchTool
           ? await executeWorkbenchTool(name, args, sessionId)
           : name.startsWith('mcp__')
             ? await executeMcpTool(name, args)

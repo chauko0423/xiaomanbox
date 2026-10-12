@@ -1,8 +1,16 @@
 {
-  "at": "2026-10-12T07:20:40.656Z",
+  "at": "2026-10-12T09:46:39.613Z",
   "results": [
     {
       "name": "desktop rendered basic navigation",
+      "ok": true
+    },
+    {
+      "name": "agent tool input accepts edits; pure conversation switch disables selection",
+      "ok": true
+    },
+    {
+      "name": "agent usage renders estimate with scope note",
       "ok": true
     },
     {

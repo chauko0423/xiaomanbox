@@ -175,9 +175,9 @@ const TIMEOUT_FIELDS: NumField[] = [
   { key: 'toolTimeoutMs', label: '工具超时', hint: '等工具执行多久（毫秒，如编译/UE 操作）', step: 10000, min: 10000, max: 600000 },
 ];
 const CONTEXT_FIELDS: NumField[] = [
-  { key: 'contextWindow', label: '上下文窗口', hint: '模型上下文总窗口（token，用量面板的分母）', step: 4096, min: 4096, max: 1048576 },
-  { key: 'maxInputTokens', label: '输入 token 上限', hint: '单次请求输入上限（0 = 不限制）', step: 1024, min: 0, max: 1048576 },
-  { key: 'maxOutputTokens', label: '输出 token 上限', hint: '单次响应输出上限（0 = 不限制；>0 透传引擎 max_tokens）', step: 1024, min: 0, max: 1048576 },
+  { key: 'contextWindow', label: '上下文窗口', hint: '应与引擎一致；每轮按估算检查输入与输出预留', step: 1024, min: 1024, max: 1048576 },
+  { key: 'maxInputTokens', label: '输入 token 上限', hint: '估算输入上限（0 = 使用窗口减输出预留）', step: 1024, min: 0, max: 1048576 },
+  { key: 'maxOutputTokens', label: '输出 token 上限', hint: '输出上限（0 = 自动预留 256–1024；透传 max_tokens）', step: 1024, min: 0, max: 1048576 },
 ];
 
 async function loadCfg() {
