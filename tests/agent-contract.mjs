@@ -60,4 +60,3 @@ try {
  const skills=(await json('/skills')).body.skills;await config({maxInputTokens:0});if(skills?.length){const chosen=skills[0].name;u=await usage({skills:[chosen],toolNames:[]});assert.deepEqual(u.skills,[chosen]);assert.ok(u.parts.find(p=>p.key==='skills').tokens>0);record('only explicitly selected skill contributes to usage');}
 } catch(e){results.push({name:'failure',ok:false,error:e.stack});console.error(e.stack);process.exitCode=1;}
 finally {if(child && child.exitCode===null && child.signalCode===null){child.kill();await new Promise(r=>child.once('exit',r));}if(model)await new Promise(r=>model.close(r));await fs.writeFile(path.join(root,'validation/agent-contract.json'),JSON.stringify({at:new Date().toISOString(),passed:results.every(r=>r.ok),scope:'isolated backend and simulated SSE API; no real XiaoMan generation or UE execution',gpuUEModelLoop:'deferred per user until GPU idle',results},null,2));}
-
