@@ -25,7 +25,10 @@ if(path.basename(process.argv[1])==='api'){
  const endpoint=args[0];if(endpoint==='user'){console.log(JSON.stringify({login:'chauko0423'}));process.exit(0);}
  if(endpoint.includes('/releases?')){console.log(JSON.stringify(s?[s]:[]));process.exit(0);}
  if(!s){console.error('HTTP 404');process.exit(1);}
- if(endpoint.includes('/assets?'))console.log(JSON.stringify(s.assets));else console.log(JSON.stringify(s));
+ if(endpoint.includes('/assets?')){
+  if(!s.readRetryTested){s.readRetryTested=true;fs.writeFileSync(file,JSON.stringify(s));console.error('temporary network EOF');process.exit(1);}
+  console.log(JSON.stringify(s.assets));
+ }else console.log(JSON.stringify(s));
 }else{
  if(args[0]==='create')s={id:1,tag_name:'fixture',draft:true,html_url:'https://github.com/chauko0423/xiaomanbox/releases/tag/fixture',assets:[],events:['create-draft']};
  if(args[0]==='upload'){const p=args[2],b=fs.readFileSync(p);s.assets.push({name:path.basename(p),size:b.length,digest:'sha256:'+crypto.createHash('sha256').update(b).digest('hex'),state:'uploaded',browser_download_url:'https://github.com/chauko0423/xiaomanbox/releases/download/'+(s.draft?'untagged-test':'fixture')+'/'+path.basename(p)});s.events.push('upload:'+path.basename(p));}

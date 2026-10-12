@@ -16,7 +16,15 @@ async function run(argv,{capture=false}={}){
     p.once('error',reject);p.once('exit',code=>code===0?resolve(stdout):reject(new Error(`gh 退出码 ${code}: ${stderr}`)));
   });
 }
-const api=endpoint=>run(['api',`repos/${repo}/${endpoint}`],{capture:true}).then(JSON.parse);
+async function api(endpoint){
+  for(let attempt=0;;attempt++){
+    try{return JSON.parse(await run(['api',`repos/${repo}/${endpoint}`],{capture:true}));}
+    catch(e){
+      if(attempt>=4||!/EOF|timed out|timeout|connection.*(?:reset|refused)|HTTP 50[234]|TLS handshake/i.test(e.message))throw e;
+      await new Promise(resolve=>setTimeout(resolve,(attempt+1)*500));
+    }
+  }
+}
 try{
   if(!/^[A-Za-z0-9._-]+$/.test(tag))throw new Error('非法发布标签');
   const user=JSON.parse(await run(['api','user'],{capture:true}));
