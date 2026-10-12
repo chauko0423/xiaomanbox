@@ -23,9 +23,9 @@
     },
     {
       "name": "release-manifest.json",
-      "size": 44469,
+      "size": 44477,
       "state": "uploaded",
-      "digest": "sha256:b2c4ec92413995dd4d4201b5a5ffe2faae165a8f1b973ad46f1c2888815d5349",
+      "digest": "sha256:60d9aba1d58e78584ced6db10f3ac69c8c888691b473f25dc8f9e330b93a143e",
       "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/release-manifest.json"
     },
     {

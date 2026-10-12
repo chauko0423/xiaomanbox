@@ -74,12 +74,11 @@ packaged build — say so when you report numbers.
 
 ## Crashes: check the count, not the presence of a report
 
-`ue_get_crash_logs` falls back to the tail of the current run's log when there are no crash
-reports. Read `crash_report_count`:
-
-- `0` → nothing crashed. The attached log lines are context only. Do not tell the user their
-  project crashed.
-- `> 0` → real reports from `Saved/Crashes`, worth analysing.
+The basic release does not expose `ue_get_crash_logs`: that RPC is not implemented
+by the bundled plugin. Use `ue_get_project_info` to identify the user's project,
+then `glob` and `read_file` to inspect that project's `Saved/Crashes` or `Saved/Logs`
+when the user asks for diagnosis. A normal run log is context, not proof of a crash;
+confirm an actual crash report or fatal error before saying the project crashed.
 
 ## Local cache: ask ZenServer, not the file system
 

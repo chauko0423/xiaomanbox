@@ -29,8 +29,8 @@ read it, add the new nodes, and wire them to the existing GUIDs.
 
 Each call only lays out the nodes *it* creates; they are placed below whatever is
 already in the graph so nothing overlaps. After adding to a graph two or three
-times the result is correct but stacked in blocks — run `blueprint_tidy_graph`
-to re-flow the whole thing.
+times the result may be stacked in blocks. Read the actual graph, compute explicit
+coordinates, and send them through `blueprint_tidy_graph`.
 
 ## Picking up a graph that stopped half-written
 
@@ -57,10 +57,10 @@ These are for touch-ups after the batch, not for building.
 
 - `blueprint_delete_node` — one node, by the `node_id` from `blueprint_get_graph`. Its
   wires go with it.
-- `blueprint_disconnect_pins` — every wire on one pin. Pass `other_node_id` +
-  `other_pin` (together) to break just one of them; that only matters on exec *inputs*,
-  which several nodes can drive at once. Breaking a pin that has no wires is not a
-  failure, so "make sure this is disconnected" is a single call.
+- `blueprint_disconnect_pins` — one connection. Supply both `from` and `to`, each
+  in `nodeGUID.pinName` form, using IDs read from the graph. The model-facing tool
+  requires both endpoints so a missing endpoint cannot expand into breaking all
+  connections on a pin.
 
 Compile after either one: the node downstream may now be missing an input, and nothing
 says so until you do.
@@ -73,15 +73,11 @@ so it takes the rest of that call with it.
 
 ## Tidying up
 
-`blueprint_tidy_graph` re-lays-out an entire existing graph — including nodes you
-did not create — so it reads left-to-right along the execution flow. Comment boxes
-move with the logic they frame. The change is undoable.
-
-It makes exactly one change beyond moving things: a pure getter (variable get, Self,
-literal) used in two distant places gets a second copy next to the far consumer, the
-way a person laying out a graph by hand would. Pure nodes are already evaluated once
-per consumer, so the copy changes nothing about behaviour — it only removes a wire
-that crossed the whole canvas. Pass `duplicate_getters: false` to move nodes only.
+`blueprint_tidy_graph` moves only the nodes named in a `positions` array:
+`[{node_id, x, y}]`. Read `blueprint_get_graph` first, plan coordinates, then pass
+the current GUIDs and optional `graph_name`. It does not compute a layout,
+duplicate getters or move comment boxes automatically. Include comment nodes
+explicitly when their positions need to change. The movement is undoable.
 
 Worth doing when you have built a graph across several calls, or when the user says
 the graph is hard to read. Take a `ue_screenshot` afterwards if you want to confirm.
@@ -92,12 +88,12 @@ the graph is hard to read. Take a `ue_screenshot` afterwards if you want to conf
 the only grouping device a Blueprint graph has, so a long graph is much easier to read
 with two or three of them than without.
 
-- Creating: omit `node_id` and pass `enclose_nodes` (node GUIDs). The box sizes itself
+- Creating: omit `node_id` and pass `node_ids` (node GUIDs). The box sizes itself
   around them.
 - Editing: pass the `node_id` of a node whose `class` is `EdGraphNode_Comment`. Fields
   you leave out are not touched.
 
-`enclose_nodes` is not only about size: the engine uses that list to decide which nodes
+`node_ids` is not only about size: the engine uses that list to decide which nodes
 travel with the box when a user drags it. A box with an empty list leaves its contents
 behind when moved.
 

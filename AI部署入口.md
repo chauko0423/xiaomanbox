@@ -13,6 +13,8 @@
 7. 主线文本与视觉均使用独立发布的匹配引擎，默认采用已实测的2048上下文、1个host state与256MiB host KV；视觉引擎只下载绑定的4份LGPL共享库和许可说明。配好本地模型后 `node deploy.mjs model-config --id xiaoman-v6-sd`、`node deploy.mjs model-start`。启动前检查显存、内存、磁盘和端口，不能杀掉使用者正在运行的其他服务。实际回答与工具调用通过才记录模型成功。
 8. `node deploy.mjs app`；按需 `node deploy.mjs board` 或从桌面本地画板启动。管理链接只给宿主，协作者只拿画板内生成的编辑/只读链接。另一台 LAN 机器的操作与结果记录按 `局域网双机验收.md` 执行；本机网卡地址测试不能替代双机验证。
 9. `node deploy.mjs verify --desktop` 是健康检查。完整功能验证需运行 `node tests/acceptance.mjs`，并在人机 UI、另一台 LAN 机器、实际 UE 编辑器和真实模型上补验相应功能。不得把模拟 API 测试称为模型效果评测。
+使用 UE 工具时先读 `UE工具验收说明.md`；按真实接口参数与回执核查结果，不把源码注册检查当成全部工具实测。
+
 10. 输出配置位置、实际通过的检查、未完成事项、停止命令。`node deploy.mjs stop` 只处理该 HOME 下登记的进程。
 
 网络有代理需求时，先读人工说明中的 Node 原生代理方法。只使用使用者自己提供的代理，不能自动接入作者或第三方代理；localhost 服务加入 NO_PROXY。浏览器可下载不代表旧版 Node fetch 已使用同一代理。

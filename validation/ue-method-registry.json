@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "scope": "literal command registrations in exported C++ source; not full parameter, compiled-plugin or all-tool execution verification",
+  "tools": 165,
+  "rpcTools": 134,
+  "literalPluginCommands": 159,
+  "unsupported": []
+}

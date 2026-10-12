@@ -66,8 +66,9 @@ export const UAL_TOOLS = [
     desc: '写蓝图节点图（唯一写图入口）。两种用法：①整图写入——nodes 建节点+connections 连线一次性发全（常用，节点在本次 nodes 里用 id 标签互相引用）；②增量补线——nodes 传 []，connections 里引用图里已有节点（必须用 GUID，见 nodes 说明）。pin_defaults 设常量。member_name 用 blueprint_search_nodes 查到的精确名。',
     params: S({
       blueprint_path: { type: 'string', description: '蓝图路径' },
+      graph_name: { type: 'string', description: '目标图名，省略 EventGraph' },
       nodes: {
-        type: 'array', description: '要建的节点。必填；传 [] 表示不建节点、只补已有节点之间的连线（补线模式）。注意：id 标签只在本次调用内有效，上一次调用用过的标签不会被记住——补线时引用已有节点必须用它们的 GUID（blueprint_get_graph 回的 node_id，或上次 apply_graph 成功回执 created_nodes[].node_id）',
+        type: 'array', description: '要建的节点。必填；传 [] 表示不建节点、只补已有节点之间的连线（补线模式）。注意：id 标签只在本次调用内有效，上一次调用用过的标签不会被记住——补线时引用已有节点必须用它们的 GUID（blueprint_get_graph 回的 node_id，或上次 apply_graph 成功回执 nodes[].node_id）',
         items: {
           type: 'object',
           properties: {
@@ -109,13 +110,15 @@ export const UAL_TOOLS = [
       ...BLUEPRINT_PATH,
       from: { type: 'string', description: '源「节点id.引脚名」' },
       to: { type: 'string', description: '目标「节点id.引脚名」' },
-    }, ['blueprint_path']),
+    }, ['blueprint_path', 'from', 'to']),
   },
   {
     name: 'blueprint_comment', method: 'blueprint.set_comment', risk: 'mutating',
     desc: '给蓝图节点加/改注释框（分组说明）。',
     params: S({
       ...BLUEPRINT_PATH,
+      graph_name: { type: 'string', description: '图名，省略 EventGraph' },
+      node_id: { type: 'string', description: '已有注释框 GUID；省略创建新注释框' },
       node_ids: { type: 'array', items: { type: 'string' }, description: '框住的节点 id 列表' },
       text: { type: 'string', description: '注释文字' },
     }, ['blueprint_path']),
@@ -134,9 +137,9 @@ export const UAL_TOOLS = [
     desc: '设置蓝图/组件上的属性（如 StaticMesh 组件的 StaticMesh 资产、碰撞配置）。',
     params: S({
       ...BLUEPRINT_PATH,
-      target: { type: 'string', description: '目标：蓝图或组件名' },
+      target: { type: 'string', description: '组件名；省略则修改蓝图默认对象' },
       property_name: { type: 'string', description: '属性名' },
-      value: { type: 'string', description: '值（字符串形式）' },
+      value: { description: '属性值，数值和布尔值使用对应 JSON 类型；资产路径使用字符串', anyOf: [{ type: 'string' }, { type: 'number' }, { type: 'boolean' }, { type: 'object' }, { type: 'array' }] },
     }, ['blueprint_path', 'property_name', 'value']),
   },
   {
@@ -177,6 +180,10 @@ export const UAL_TOOLS = [
       variable_name: { type: 'string', description: '变量名' },
       instance_editable: { type: 'boolean', description: '是否实例可编辑' },
       category: { type: 'string', description: '分类' },
+      tooltip: { type: 'string', description: '变量提示文字' },
+      blueprint_read_only: { type: 'boolean', description: '是否在蓝图中只读' },
+      expose_on_spawn: { type: 'boolean', description: '是否暴露为生成时参数' },
+      replication: { type: 'string', enum: ['None', 'Replicated', 'RepNotify'], description: '复制方式；RepNotify 需自行创建 OnRep 函数' },
     }, ['blueprint_path', 'variable_name']),
   },
   {
@@ -224,8 +231,13 @@ export const UAL_TOOLS = [
   },
   {
     name: 'blueprint_tidy_graph', method: 'blueprint.set_node_positions', risk: 'mutating',
-    desc: '自动排版蓝图节点（只挪位置不动逻辑）。',
-    params: S(BLUEPRINT_PATH, ['blueprint_path']),
+    desc: '按指定坐标整理蓝图节点，只移动位置。先用 blueprint_get_graph 读取 node_id，再提供 positions。',
+    params: S({ ...BLUEPRINT_PATH,
+      graph_name: { type: 'string', description: '图名，省略 EventGraph' },
+      positions: { type: 'array', minItems: 1, items: { type: 'object', properties: {
+        node_id: { type: 'string' }, x: { type: 'number' }, y: { type: 'number' },
+      }, required: ['node_id', 'x', 'y'] } },
+    }, ['blueprint_path', 'positions']),
   },
   {
     name: 'blueprint_compile_all', method: 'blueprint.compile_all', risk: 'mutating',
@@ -445,8 +457,8 @@ export const UAL_TOOLS = [
   },
   {
     name: 'ue_new_level', method: 'level.new', risk: 'destructive',
-    desc: '新建关卡。',
-    params: S({ level_path: { type: 'string', description: '新关卡路径' }, template: { type: 'string' } }, ['level_path']),
+    desc: '新建空白关卡，并按 level_path 保存；当前关卡有未保存修改时由插件拒绝切换。',
+    params: S({ level_path: { type: 'string', description: '新关卡保存路径，如 /Game/Maps/Main' } }, ['level_path']),
   },
   {
     name: 'ue_get_levels', method: 'level.list', risk: 'safe',
@@ -1109,11 +1121,6 @@ export const UAL_TOOLS = [
 
   // ── System 补充 ───────────────────────────────────────────
   {
-    name: 'ue_get_crash_logs', method: 'system.get_latest_crash_info', risk: 'safe',
-    desc: '读最近的编辑器崩溃日志。',
-    params: S({ limit: { type: 'number', description: '最近几条崩溃记录，默认 1' } }),
-  },
-  {
     name: 'ue_insights_trace', method: 'system.capture_insights_trace', risk: 'safe',
     desc: '性能采集：录 Unreal Insights trace 并分析（capture/analyze/compare）。',
     params: S({
@@ -1398,6 +1405,25 @@ function adaptArgs(method, args) {
     }
   }
 
+  if (method === 'blueprint.set_variable_meta' || method === 'blueprint.remove_variable') {
+    if (!(typeof a.name === 'string' && a.name.trim()) && typeof a.variable_name === 'string') a.name = a.variable_name;
+  }
+  if (method === 'blueprint.set_property') {
+    if (!a.properties && typeof a.property_name === 'string') a.properties = { [a.property_name]: a.value };
+    if (!a.component_name && typeof a.target === 'string' && a.target.trim()) a.component_name = a.target;
+  }
+  if (method === 'blueprint.set_comment' && !a.enclose_nodes && Array.isArray(a.node_ids)) a.enclose_nodes = a.node_ids;
+  if (method === 'blueprint.disconnect_pins' && (a.from !== undefined || a.to !== undefined)) {
+    const endpoint = value => {
+      if (typeof value !== 'string' || !value.includes('.')) throw new Error('连线端点应为 node_id.pin，from 和 to 必须同时提供');
+      const index = value.indexOf('.');
+      if (index === 0 || index === value.length - 1) throw new Error('连线端点缺少节点或引脚');
+      return [value.slice(0, index), value.slice(index + 1)];
+    };
+    [a.node_id, a.pin] = endpoint(a.from);
+    [a.other_node_id, a.other_pin] = endpoint(a.to);
+  }
+
   if (method === 'blueprint.add_component') {
     // 字段名对齐：schema 用 blueprint_path/component_class，C++ 读 blueprint_name/component_type/component_name（三个都必填）
     if (typeof a.blueprint_path === 'string' && a.blueprint_path.trim() && !(typeof a.blueprint_name === 'string' && a.blueprint_name.trim())) {
@@ -1498,9 +1524,9 @@ function adaptArgs(method, args) {
   }
 
   if (method === 'level.new' || method === 'level.open') {
-    // schema 用 level_path，C++ 读 path
-    if (typeof a.level_path === 'string' && a.level_path.trim() && !(typeof a.path === 'string' && a.path.trim())) {
-      a.path = a.level_path;
+    const destination = method === 'level.new' ? 'save_as' : 'path';
+    if (typeof a.level_path === 'string' && a.level_path.trim() && !(typeof a[destination] === 'string' && a[destination].trim())) {
+      a[destination] = a.level_path;
     }
   }
 
