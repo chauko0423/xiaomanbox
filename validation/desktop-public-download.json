@@ -1,21 +1,21 @@
 {
   "assets": [
     {
-      "name": "XiaoManBox-0.3.0-basic.6-Setup.exe",
-      "bytes": 85129862,
-      "sha256": "9d2ff5f7b47103082364abb2f61ccaad3572b3f07ef6d4d919e48114fb68c0c9",
+      "name": "XiaoManBox-0.3.0-basic.7-Setup.exe",
+      "bytes": 85421025,
+      "sha256": "66f3d5a317be7ef91f242253ff4c47fc915ec238dc549785fcc77c326a319faa",
       "anonymousFullDownloadVerified": true
     },
     {
       "name": "XiaoMan-AI-Deployment.zip",
-      "bytes": 3285449,
-      "sha256": "0b53a4afe991f5f6d39f576802b49a0d341dfd0cf4669a0bf5f6b8c033f84d92",
+      "bytes": 3586128,
+      "sha256": "eccf5aa68997807b670c0bc001fd4fa9a1723e3813e0f8a3c0cd9e673f85d80b",
       "anonymousFullDownloadVerified": true
     },
     {
       "name": "SHA256SUMS.txt",
       "bytes": 195,
-      "sha256": "c742e657f2e8556a276284211227ad2d094d7cb8f06db96d54b2d9e350d8aea9",
+      "sha256": "077af86734a4c2af933cf1ec23f3766a3ab74f30c5fdc1aa4a845283a029014f",
       "anonymousFullDownloadVerified": true
     }
   ]
