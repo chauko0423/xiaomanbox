@@ -1,0 +1,35 @@
+{
+  "assets": [
+    {
+      "name": "LICENSE-XiaoMan-Quantized.txt",
+      "bytes": 11558,
+      "sha256": "1eb85fc97224598dad1852b5d6483bbcf0aa8608790dcc657a5a2a761ae9c8c6",
+      "anonymousFullDownloadVerified": true
+    },
+    {
+      "name": "MODEL_CARD.md",
+      "bytes": 3814,
+      "sha256": "565f10c02f16d919cf4c482b46cb0e1a56d27975b71a57d89f571cade2b969a6",
+      "anonymousFullDownloadVerified": true
+    },
+    {
+      "name": "release-manifest.json",
+      "bytes": 39302,
+      "sha256": "92cfbbdb21740fa0a738f87f287bab3743c9dc5a326d0e2a072a6fd0f8a7e98c",
+      "anonymousFullDownloadVerified": true
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "bytes": 10591,
+      "sha256": "b81787d9e6d81ef901a502e253294fa6397c2a302e1ab01e5b960632f38afa76",
+      "anonymousFullDownloadVerified": true
+    },
+    {
+      "name": "xiaoman-v6-sd-vis.ninfer.part015",
+      "bytes": 29010688,
+      "sha256": "ac6d544d04b86de58fc0262a34b6996588afeae905c4ab0858a7f3c8d54f28b7",
+      "anonymousFullDownloadVerified": true
+    }
+  ],
+  "scope": "metadata and one 27MiB weight fragment; all 101 remote fragments verified separately using server digests, no full remote redownload"
+}

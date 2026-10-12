@@ -1,7 +1,7 @@
 {
   "at": "2026-10-11",
   "scope": "explicit source allowlist and original infrastructure IPv4 exclusion; not a complete security/license audit",
-  "files": 414,
+  "files": 420,
   "weightOrRuntimeBinariesIncluded": false,
   "originalServerIPHits": [],
   "privateRuntimeDirectoriesIncluded": false

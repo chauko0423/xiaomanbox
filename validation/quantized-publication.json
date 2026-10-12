@@ -1,0 +1,746 @@
+{
+  "release": "https://github.com/chauko0423/xiaomanbox/releases/tag/xiaoman-v6-quantized",
+  "partCount": 101,
+  "allRemotePartSha256Verified": true,
+  "models": [
+    "xiaoman-v6-sd",
+    "xiaoman-v6-sd-vis"
+  ],
+  "assets": [
+    {
+      "name": "LICENSE-XiaoMan-Quantized.txt",
+      "size": 11558,
+      "state": "uploaded",
+      "digest": "sha256:1eb85fc97224598dad1852b5d6483bbcf0aa8608790dcc657a5a2a761ae9c8c6",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/LICENSE-XiaoMan-Quantized.txt"
+    },
+    {
+      "name": "MODEL_CARD.md",
+      "size": 3814,
+      "state": "uploaded",
+      "digest": "sha256:565f10c02f16d919cf4c482b46cb0e1a56d27975b71a57d89f571cade2b969a6",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/MODEL_CARD.md"
+    },
+    {
+      "name": "release-manifest.json",
+      "size": 39302,
+      "state": "uploaded",
+      "digest": "sha256:92cfbbdb21740fa0a738f87f287bab3743c9dc5a326d0e2a072a6fd0f8a7e98c",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/release-manifest.json"
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "size": 10591,
+      "state": "uploaded",
+      "digest": "sha256:b81787d9e6d81ef901a502e253294fa6397c2a302e1ab01e5b960632f38afa76",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/SHA256SUMS.txt"
+    },
+    {
+      "name": "xiaoman-v6-sd-vis.ninfer.part001.part001",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:d6624aa2b4ad232188877e9de7f73e3f2689b56a364270a5037227537fcadf51",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd-vis.ninfer.part001.part001"
+    },
+    {
+      "name": "xiaoman-v6-sd-vis.ninfer.part001.part002",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:99db03283a39c7ed860ad154936969edeb7e18c07271872801562b46163b13d6",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd-vis.ninfer.part001.part002"
+    },
+    {
+      "name": "xiaoman-v6-sd-vis.ninfer.part001.part003",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:7e7ff2b1a41b03c4df1823b80a3fc290b125dea4ff69fb9c647bacec5df751c7",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd-vis.ninfer.part001.part003"
+    },
+    {
+      "name": "xiaoman-v6-sd-vis.ninfer.part001.part004",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:3c22b2df327ea3c5aa4e3ea7dea1c2a2678e1f1819edce229ec1c9ed2bf33ee8",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd-vis.ninfer.part001.part004"
+    },
+    {
+      "name": "xiaoman-v6-sd-vis.ninfer.part002.part001",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:d614eda02452b8acbf63d526ccd8018c83e960ee9d65391d8b8f0d067a537f72",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd-vis.ninfer.part002.part001"
+    },
+    {
+      "name": "xiaoman-v6-sd-vis.ninfer.part002.part002",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:e17dd548f415f6217db443aa164210cb0283fc2bde1a43ec4280342d5339a8e0",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd-vis.ninfer.part002.part002"
+    },
+    {
+      "name": "xiaoman-v6-sd-vis.ninfer.part002.part003",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:b173d1a99b78e13c115e8c8dbd3e90bd06054541b140c8b00685ebaa81bb323f",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd-vis.ninfer.part002.part003"
+    },
+    {
+      "name": "xiaoman-v6-sd-vis.ninfer.part002.part004",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:b85aa84ec3ed9b580435e10b922f33b5c497715ba6452fe9eae61d294c99188b",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd-vis.ninfer.part002.part004"
+    },
+    {
+      "name": "xiaoman-v6-sd-vis.ninfer.part003.part001",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:daccd833521f4aca8296e713642bb18d10b2ac28a7f03a058b4cbb4448c356ad",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd-vis.ninfer.part003.part001"
+    },
+    {
+      "name": "xiaoman-v6-sd-vis.ninfer.part003.part002",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:879b7c50e8e00f22f8e670179cfcd906ce9ab1fc9a4f6d76eb6a841754994ecb",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd-vis.ninfer.part003.part002"
+    },
+    {
+      "name": "xiaoman-v6-sd-vis.ninfer.part003.part003",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:85b7f696cb933cfb716201a454a680b2a0a15b269f5e4aefea6f62036dbdf1c5",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd-vis.ninfer.part003.part003"
+    },
+    {
+      "name": "xiaoman-v6-sd-vis.ninfer.part003.part004",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:3ea73ea10fd176ec8b8008409d32aa8f735ddef6689b00491a792f02eec9d2a8",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd-vis.ninfer.part003.part004"
+    },
+    {
+      "name": "xiaoman-v6-sd-vis.ninfer.part004.part001",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:a85ae7e9cd8dcae3c7d05453a54093e48daa7e7cc33929336ac6f020098da0f6",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd-vis.ninfer.part004.part001"
+    },
+    {
+      "name": "xiaoman-v6-sd-vis.ninfer.part004.part002",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:c6cb5e48c4c703ed10de0ffe60c82e2b1adf262f0adc0ddd534977c912f60642",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd-vis.ninfer.part004.part002"
+    },
+    {
+      "name": "xiaoman-v6-sd-vis.ninfer.part004.part003",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:b14e5b3ac86963b498af219c5643d315da35750e70593404be441d216c67a02a",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd-vis.ninfer.part004.part003"
+    },
+    {
+      "name": "xiaoman-v6-sd-vis.ninfer.part004.part004",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:55eb3c547e6f7023c4c01029c36ab13870369476c91e19edd82fb89332ecccb1",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd-vis.ninfer.part004.part004"
+    },
+    {
+      "name": "xiaoman-v6-sd-vis.ninfer.part005.part001",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:5ab581caddda92cef6a55e0d5ff6b67e4c654d7a263b90e2d0744783a57d9a6d",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd-vis.ninfer.part005.part001"
+    },
+    {
+      "name": "xiaoman-v6-sd-vis.ninfer.part005.part002",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:50d539ca718df61a84a776d391ab2192700fcd23e825236ae6139aa77e2c6ea5",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd-vis.ninfer.part005.part002"
+    },
+    {
+      "name": "xiaoman-v6-sd-vis.ninfer.part005.part003",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:952950e3ec0be5637b283e5a3ff1a8d7262d51e41e5e0112d5667eb9e32ab6e9",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd-vis.ninfer.part005.part003"
+    },
+    {
+      "name": "xiaoman-v6-sd-vis.ninfer.part005.part004",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:ca89320899f5d2d3f3afcd47346ff8ced3b749d68a3577e4027d327cbaf1329b",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd-vis.ninfer.part005.part004"
+    },
+    {
+      "name": "xiaoman-v6-sd-vis.ninfer.part006.part001",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:cdc3ae13bede54119260c67a1478823582eaba9196cd364658d68c5078732931",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd-vis.ninfer.part006.part001"
+    },
+    {
+      "name": "xiaoman-v6-sd-vis.ninfer.part006.part002",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:11faa44560ffbd4b6b0b57ee001cfd03b61ee4ce76b40a1e77650bf7fa2e952c",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd-vis.ninfer.part006.part002"
+    },
+    {
+      "name": "xiaoman-v6-sd-vis.ninfer.part006.part003",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:e34bc690a527c246fa9d78ccbc521b7ee62df133a03ff9dfd37577f02d8636cd",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd-vis.ninfer.part006.part003"
+    },
+    {
+      "name": "xiaoman-v6-sd-vis.ninfer.part006.part004",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:647ff0c8d310d1240404ea57c3a82a0c5c2a5e83018c82f5584ef7dde25ca846",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd-vis.ninfer.part006.part004"
+    },
+    {
+      "name": "xiaoman-v6-sd-vis.ninfer.part007.part001",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:e2926514a22514ba9d88fcd9157b035fb030d5eaad7e338e4de36f8f83892942",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd-vis.ninfer.part007.part001"
+    },
+    {
+      "name": "xiaoman-v6-sd-vis.ninfer.part007.part002",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:7b286e080087549bf29d7d15f8556dd07228095f17c730f0c2e113f9fd8e21be",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd-vis.ninfer.part007.part002"
+    },
+    {
+      "name": "xiaoman-v6-sd-vis.ninfer.part007.part003",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:38f0589f4ddf469abb2b05c8609e695d78f7436e7c1d32497b59b8fc9b95cc89",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd-vis.ninfer.part007.part003"
+    },
+    {
+      "name": "xiaoman-v6-sd-vis.ninfer.part007.part004",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:a76f608ca778d041a0d837f24f20b9898361b09beb2dcf42873c0ae27ed0b0ca",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd-vis.ninfer.part007.part004"
+    },
+    {
+      "name": "xiaoman-v6-sd-vis.ninfer.part008.part001",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:184e0632fe33feff3d2276befb548c8b9798d0adc02b09e68b9cae935a70f1f3",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd-vis.ninfer.part008.part001"
+    },
+    {
+      "name": "xiaoman-v6-sd-vis.ninfer.part008.part002",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:520b4523a30d00f5aa5be58fe841b4d178b64900cdac865fe72de13511006cea",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd-vis.ninfer.part008.part002"
+    },
+    {
+      "name": "xiaoman-v6-sd-vis.ninfer.part008.part003",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:ad6ba5bdfbee9100e60591c306e5f7e1ef9dba525d3c70becd8770b869483ec3",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd-vis.ninfer.part008.part003"
+    },
+    {
+      "name": "xiaoman-v6-sd-vis.ninfer.part008.part004",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:a16babed7bbf4ab144f2f2d06cb0fc643f6b061be68764edc75c4f5c1006a3b2",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd-vis.ninfer.part008.part004"
+    },
+    {
+      "name": "xiaoman-v6-sd-vis.ninfer.part009.part001",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:ab8179a55ad9fe5741d7c8ebe2278136184dbd1031f03b9f6a92462ca485b4a8",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd-vis.ninfer.part009.part001"
+    },
+    {
+      "name": "xiaoman-v6-sd-vis.ninfer.part009.part002",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:fb162eafe99adb05e9fba240e41f168119d0574ea31ca9d5d1605aa8e41103a8",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd-vis.ninfer.part009.part002"
+    },
+    {
+      "name": "xiaoman-v6-sd-vis.ninfer.part009.part003",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:ced78a2d9c0bfe3acffca30ebf58f66fd9615fa8f7604cf7a39a31d2289c427e",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd-vis.ninfer.part009.part003"
+    },
+    {
+      "name": "xiaoman-v6-sd-vis.ninfer.part009.part004",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:dfeddd7b55e718be667f8e8b984f7b493450fa63d86cfcb231cb7596335fead0",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd-vis.ninfer.part009.part004"
+    },
+    {
+      "name": "xiaoman-v6-sd-vis.ninfer.part010.part001",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:647eabfb28bee8934a7608b89dfa8c66ac864544dc1c4df4df4178dad6e312c3",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd-vis.ninfer.part010.part001"
+    },
+    {
+      "name": "xiaoman-v6-sd-vis.ninfer.part010.part002",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:133aee8b01861105a5e7050f07e1ec637915e639f287ef7f416d48309bbfe404",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd-vis.ninfer.part010.part002"
+    },
+    {
+      "name": "xiaoman-v6-sd-vis.ninfer.part010.part003",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:883c9d1c0eda070afabce5916dac0f1a6fb9d43bb7ec031ead272b94295db1a9",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd-vis.ninfer.part010.part003"
+    },
+    {
+      "name": "xiaoman-v6-sd-vis.ninfer.part010.part004",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:0b305b3bb533bcd653e824b76db89ee326613550c5abdd72b1542bec4b4cd184",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd-vis.ninfer.part010.part004"
+    },
+    {
+      "name": "xiaoman-v6-sd-vis.ninfer.part011.part001",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:049abd490d36ea715f8399035c067973a39481754454791b22773eedc3c9c9ae",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd-vis.ninfer.part011.part001"
+    },
+    {
+      "name": "xiaoman-v6-sd-vis.ninfer.part011.part002",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:b795dc80b76f06e09f820a06986de1f42f23011b18b4b281bd4b24e46709714b",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd-vis.ninfer.part011.part002"
+    },
+    {
+      "name": "xiaoman-v6-sd-vis.ninfer.part011.part003",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:a3c4901dd7a5137f39823c36c72a44682daf91b41a2b4f874beea67461250fe7",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd-vis.ninfer.part011.part003"
+    },
+    {
+      "name": "xiaoman-v6-sd-vis.ninfer.part011.part004",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:02917a62eb2bb5c684f71e8598efa908db795b50725ca7d04a1bcb005be76d7d",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd-vis.ninfer.part011.part004"
+    },
+    {
+      "name": "xiaoman-v6-sd-vis.ninfer.part012.part001",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:3431ca83d9b535448483093fbc8c6662afacd9a2a3813130a65e074582417be1",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd-vis.ninfer.part012.part001"
+    },
+    {
+      "name": "xiaoman-v6-sd-vis.ninfer.part012.part002",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:dd32d7aec5c6a9a7ed5ca4e930512dffa8d304f842ca036bd3a84b317d8ad9b0",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd-vis.ninfer.part012.part002"
+    },
+    {
+      "name": "xiaoman-v6-sd-vis.ninfer.part012.part003",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:da0098fdd617750b014a6943b44dd621e12cfa25bf850e29c9d5602f8469ad42",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd-vis.ninfer.part012.part003"
+    },
+    {
+      "name": "xiaoman-v6-sd-vis.ninfer.part012.part004",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:1e26dc25c23ae599674f0576da104fb8fbda9f189987bc8579aec900a0274050",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd-vis.ninfer.part012.part004"
+    },
+    {
+      "name": "xiaoman-v6-sd-vis.ninfer.part013.part001",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:af960117f0f4e87684d43a1367b8a3e9c2ebb27580aecdaba3291ac7bc4e4440",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd-vis.ninfer.part013.part001"
+    },
+    {
+      "name": "xiaoman-v6-sd-vis.ninfer.part013.part002",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:96edd85d92046d2f44f9fe9f3709eecd1d50b88df7815808ff6749c53ada706c",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd-vis.ninfer.part013.part002"
+    },
+    {
+      "name": "xiaoman-v6-sd-vis.ninfer.part013.part003",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:06ef5bbfa3b22b9dd2d6ffdc4f601e5268e50e87a70da6fa7491aedfee131d46",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd-vis.ninfer.part013.part003"
+    },
+    {
+      "name": "xiaoman-v6-sd-vis.ninfer.part013.part004",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:390d96717e1e89a4e04f57443304762830b0747de4bd78109a68e460131f836f",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd-vis.ninfer.part013.part004"
+    },
+    {
+      "name": "xiaoman-v6-sd-vis.ninfer.part014.part001",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:c08a7cb63ef5b67ed17e3b014d9935ff15a7e5f320a94f46da9075be1cabaedf",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd-vis.ninfer.part014.part001"
+    },
+    {
+      "name": "xiaoman-v6-sd-vis.ninfer.part014.part002",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:84360d366b4b33a77fb591f5262d74a63304700fe0ba4ff78126200488e9a654",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd-vis.ninfer.part014.part002"
+    },
+    {
+      "name": "xiaoman-v6-sd-vis.ninfer.part014.part003",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:0eda3112aa542bcdceea082e72ef3809fc632137bad9bd95f25b2de3f359d1ce",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd-vis.ninfer.part014.part003"
+    },
+    {
+      "name": "xiaoman-v6-sd-vis.ninfer.part014.part004",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:4d4e5055a927f0c9247a13861dc49d3e7f8f62ef5194c7a77f1293ecc4382f47",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd-vis.ninfer.part014.part004"
+    },
+    {
+      "name": "xiaoman-v6-sd-vis.ninfer.part015",
+      "size": 29010688,
+      "state": "uploaded",
+      "digest": "sha256:ac6d544d04b86de58fc0262a34b6996588afeae905c4ab0858a7f3c8d54f28b7",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd-vis.ninfer.part015"
+    },
+    {
+      "name": "xiaoman-v6-sd.ninfer.part001",
+      "size": 1073741824,
+      "state": "uploaded",
+      "digest": "sha256:35ea1492218cd1ff2b6dfc3b8c146a5459aa98552526a2847fff76492309df35",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd.ninfer.part001"
+    },
+    {
+      "name": "xiaoman-v6-sd.ninfer.part002",
+      "size": 1073741824,
+      "state": "uploaded",
+      "digest": "sha256:092aeac5bc99692fa6baf9a930076a9d55fad026472f5b6fb262395c346f1385",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd.ninfer.part002"
+    },
+    {
+      "name": "xiaoman-v6-sd.ninfer.part003",
+      "size": 1073741824,
+      "state": "uploaded",
+      "digest": "sha256:2cc00e37c60907f8b9d85a1f6b37a92b02d9ce2c856160a49d9c568d15e9a869",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd.ninfer.part003"
+    },
+    {
+      "name": "xiaoman-v6-sd.ninfer.part004",
+      "size": 1073741824,
+      "state": "uploaded",
+      "digest": "sha256:5df002619457e2585e579f336475deadd3ee6fb14f6916bb99c9df765853a3b8",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd.ninfer.part004"
+    },
+    {
+      "name": "xiaoman-v6-sd.ninfer.part005.part001",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:82afc09ff99665f1bdf54501c9458eb61131be55290c3e7a668409be15b047b5",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd.ninfer.part005.part001"
+    },
+    {
+      "name": "xiaoman-v6-sd.ninfer.part005.part002",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:39793895816c2bbea5ba8d12d365b0ac92410d971001c80cc4e475929dc24f51",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd.ninfer.part005.part002"
+    },
+    {
+      "name": "xiaoman-v6-sd.ninfer.part005.part003",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:c821e58f7328075cccdf3d490488134e57450f006da8297baa45ea048508ad20",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd.ninfer.part005.part003"
+    },
+    {
+      "name": "xiaoman-v6-sd.ninfer.part005.part004",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:88cd212b88065f657a2fd9c688c865a35c236db2379215dc9109310aaed5d7ed",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd.ninfer.part005.part004"
+    },
+    {
+      "name": "xiaoman-v6-sd.ninfer.part006.part001",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:c0962a60876672a124ac8db800d72233f674950810cc1e73e89b16dfcbdfd3ac",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd.ninfer.part006.part001"
+    },
+    {
+      "name": "xiaoman-v6-sd.ninfer.part006.part002",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:f5b1449b8b2a95457c08e44004c7bf25adf3fbb0797c5482c8390beefcecd921",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd.ninfer.part006.part002"
+    },
+    {
+      "name": "xiaoman-v6-sd.ninfer.part006.part003",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:9d9f041c364000b970c6d493625e7819def07a59eb17ba90011f37f48970ece0",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd.ninfer.part006.part003"
+    },
+    {
+      "name": "xiaoman-v6-sd.ninfer.part006.part004",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:de6895360dbfb870fff11816bece10eadcdc0b9260d4ddab4280f4a52764c28d",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd.ninfer.part006.part004"
+    },
+    {
+      "name": "xiaoman-v6-sd.ninfer.part007.part001",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:2ca1e4b83c50043da8fe922b64f802cf7c0b51aa38a420f412799e2bdd2ef7ed",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd.ninfer.part007.part001"
+    },
+    {
+      "name": "xiaoman-v6-sd.ninfer.part007.part002",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:254029ea10e9dfabf55f49cf6f4c31d276fa4f06f4a93a02de313411e8a01111",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd.ninfer.part007.part002"
+    },
+    {
+      "name": "xiaoman-v6-sd.ninfer.part007.part003",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:3155f776fb46c406bbcf6e36e44df5369f52b5cb77e7958f7d20d987ffceb185",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd.ninfer.part007.part003"
+    },
+    {
+      "name": "xiaoman-v6-sd.ninfer.part007.part004",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:a59ab5f3d0a14b1d47a2611b2625b0b211d5e556d93a763666b54654a83335d0",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd.ninfer.part007.part004"
+    },
+    {
+      "name": "xiaoman-v6-sd.ninfer.part008.part001",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:b31573561d8e53212cd4a03b6326436d9619f31c17f9becd8a0b35a0ca414e67",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd.ninfer.part008.part001"
+    },
+    {
+      "name": "xiaoman-v6-sd.ninfer.part008.part002",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:45900f26a973cbd3f172dde8d70e09eac86c8ab5304f0ebaf70162945825f184",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd.ninfer.part008.part002"
+    },
+    {
+      "name": "xiaoman-v6-sd.ninfer.part008.part003",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:cf82da341245fb2e1ce5b80aaa2d028a6ca7181f02ddbdc46ad4fff3c49269a0",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd.ninfer.part008.part003"
+    },
+    {
+      "name": "xiaoman-v6-sd.ninfer.part008.part004",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:86622a0e3503acfe5b0b45ef3080e4047d7d6fd3eb3f0a8e7a3d02419d685f2f",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd.ninfer.part008.part004"
+    },
+    {
+      "name": "xiaoman-v6-sd.ninfer.part009.part001",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:aeb10b577fff780f0fd3ac71685dd6b798b67ef7c2c23a67fdd6a7ae18cb2e4c",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd.ninfer.part009.part001"
+    },
+    {
+      "name": "xiaoman-v6-sd.ninfer.part009.part002",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:d1c75c1034fbb72f3d82460052243446f36fa8b92e64d31edd3cc20aa3814543",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd.ninfer.part009.part002"
+    },
+    {
+      "name": "xiaoman-v6-sd.ninfer.part009.part003",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:af3cc94e65ccd80594bc6f929a5954238f4439ce7bf1f61a259a48146ab25af5",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd.ninfer.part009.part003"
+    },
+    {
+      "name": "xiaoman-v6-sd.ninfer.part009.part004",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:95658af45aab2fc7ccc42e0db8fd97d8e67ec4ed0a3658878dbc962e278373d0",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd.ninfer.part009.part004"
+    },
+    {
+      "name": "xiaoman-v6-sd.ninfer.part010.part001",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:b0b57b404adfdbcdf14f4d6382dba258d25eb71873413309944fea336858d618",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd.ninfer.part010.part001"
+    },
+    {
+      "name": "xiaoman-v6-sd.ninfer.part010.part002",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:4d194b699f7eb3d94c10cd3968ba5a049cd6a38ab8bc1abdc9b8719b41affcbc",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd.ninfer.part010.part002"
+    },
+    {
+      "name": "xiaoman-v6-sd.ninfer.part010.part003",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:33a765b57a9dc72bf36d9d55c4460a16eb90b65baac4bbcd8a57fb75a873deed",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd.ninfer.part010.part003"
+    },
+    {
+      "name": "xiaoman-v6-sd.ninfer.part010.part004",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:16574165e991de30f30af2925b06caac8011277e23cbdd3c8f548e245c4afce7",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd.ninfer.part010.part004"
+    },
+    {
+      "name": "xiaoman-v6-sd.ninfer.part011.part001",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:229cdd2e8ed23811e1b03d4480f409e34af1dc704760c93fef2466e54b138558",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd.ninfer.part011.part001"
+    },
+    {
+      "name": "xiaoman-v6-sd.ninfer.part011.part002",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:f38f35be37a5233a5976d93d2a163fd7dc734b8a73df7a8cbf3efe498dda553d",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd.ninfer.part011.part002"
+    },
+    {
+      "name": "xiaoman-v6-sd.ninfer.part011.part003",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:88a751376402d77abbf6a0b7d3e44df89e91c14217193e6c5a4da4b1f0ce1a48",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd.ninfer.part011.part003"
+    },
+    {
+      "name": "xiaoman-v6-sd.ninfer.part011.part004",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:a210b1c888d5cfd6b5219c3c8000e81b34c1ed230b50f0cba11638a694d46863",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd.ninfer.part011.part004"
+    },
+    {
+      "name": "xiaoman-v6-sd.ninfer.part012.part001",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:cbb484d36ac38b02e626613b4429c66aeefda18b680636f5a3c2fa9bbcfa3502",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd.ninfer.part012.part001"
+    },
+    {
+      "name": "xiaoman-v6-sd.ninfer.part012.part002",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:d07af1db80a34138442916322eda4544302db7f074d788aced2820144d0f0167",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd.ninfer.part012.part002"
+    },
+    {
+      "name": "xiaoman-v6-sd.ninfer.part012.part003",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:d12e097db10029d27ea6e05cee0da4f3458c9fb20516afc3bdfae3b6e0a011a2",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd.ninfer.part012.part003"
+    },
+    {
+      "name": "xiaoman-v6-sd.ninfer.part012.part004",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:15cfc69a0e42199f08e3a16e2388f607a3a284d9c18ea9190947935d494e0ab4",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd.ninfer.part012.part004"
+    },
+    {
+      "name": "xiaoman-v6-sd.ninfer.part013.part001",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:fd6348daf747eeeeeae29d269f270f5cfcf29d5688503bdbde58881da7f80271",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd.ninfer.part013.part001"
+    },
+    {
+      "name": "xiaoman-v6-sd.ninfer.part013.part002",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:12c61091184ae0cc3542bf2ff7fa04b015da3154d598e3f5c579b22f1daf7c56",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd.ninfer.part013.part002"
+    },
+    {
+      "name": "xiaoman-v6-sd.ninfer.part013.part003",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:c453074d59a1a05b0d152efbd9c05a32501d10adc76cbd95a6456277dc7f2f7b",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd.ninfer.part013.part003"
+    },
+    {
+      "name": "xiaoman-v6-sd.ninfer.part013.part004",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:4945bfacb8b5fed5ee610e956d698bf57cb9c50abebf3b891bb39358d6256f63",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd.ninfer.part013.part004"
+    },
+    {
+      "name": "xiaoman-v6-sd.ninfer.part014.part001",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:9eca28c01692581cd9be5d40148da5a28599b91545286b9fb544f13cc6fb8036",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd.ninfer.part014.part001"
+    },
+    {
+      "name": "xiaoman-v6-sd.ninfer.part014.part002",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:a82f9c0b0f8635f5f700c1fc5173c42468ce863d913656313e2bbe5c780c9ae2",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd.ninfer.part014.part002"
+    },
+    {
+      "name": "xiaoman-v6-sd.ninfer.part014.part003",
+      "size": 268435456,
+      "state": "uploaded",
+      "digest": "sha256:96edc87bdb811eb684732cc2bd2168e35d9b33b537c81c37db093bffe0d46133",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd.ninfer.part014.part003"
+    },
+    {
+      "name": "xiaoman-v6-sd.ninfer.part014.part004",
+      "size": 1627648,
+      "state": "uploaded",
+      "digest": "sha256:f0a68418b4a5901e77474a9de8c441c787bf2796304bd2c2f8cb756e2f6f1adc",
+      "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd.ninfer.part014.part004"
+    }
+  ]
+}

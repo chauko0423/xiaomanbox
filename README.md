@@ -8,7 +8,7 @@ XiaoManBox 是面向开发者与数字内容创作者的 AI 工作台。搭配�
 
 XiaoManBox 基础版提供本地 AI 对话、文件/命令工具、技能、MCP、UE 编辑器集成，以及无需账号的本地基础画板。账号系统、团队交流和成员发现已移除。画板由使用者自己的电脑托管，局域网内通过编辑/只读链接分享。
 
-**本仓库提供基础版源码和部署工具。** 源码已构建并完成隔离集成验收。Windows 安装包与 AI 部署 ZIP 已提供公开下载；量化权重正在上传，推理引擎尚未提供公开下载；主线文本模型已完成真实生成与工具调用回环，视觉模型已完成文本与单图颜色冒烟测试（RTX 5080、2048上下文）；UE 真机复验尚未完成。量化候选只有文件清单与 SHA256，引擎及 DLL 的分发材料尚未补齐。
+**本仓库提供基础版源码和部署工具。** 源码已构建并完成隔离集成验收。Windows 安装包与 AI 部署 ZIP 已提供公开下载；主线量化权重已公开，推理引擎尚未提供公开下载；主线文本模型已完成真实生成与工具调用回环，视觉模型已完成文本与单图颜色冒烟测试（RTX 5080、2048上下文）；UE 真机复验尚未完成。主线量化权重已分片公开并完成逐片 SHA256 核对；引擎及 DLL 的公开分发材料尚未补齐。
 
 正式仓库：https://github.com/chauko0423/xiaomanbox 。点击 Code → Download ZIP，或使用 `git clone https://github.com/chauko0423/xiaomanbox.git` 获取源码。
 
@@ -17,8 +17,8 @@ XiaoManBox 基础版提供本地 AI 对话、文件/命令工具、技能、MCP�
 - 给 AI：把下载的仓库源码 ZIP（或作者另行提供的 `小满-AI部署包.zip`）交给 AI，要求先读 `AI部署入口.md`。
 - 人工部署：读 `人工部署说明.md`。源码部署需要官方 Node.js 22+（含 npm）。
 - Windows 安装包：[GitHub Release](https://github.com/chauko0423/xiaomanbox/releases/tag/v0.3.0-basic.1)。安装后配置自己的模型 API；无需小满权重。
-- AI 部署 ZIP：[XiaoMan-AI-Deployment.zip](https://github.com/chauko0423/xiaomanbox/releases/download/v0.3.0-basic.1/XiaoMan-AI-Deployment.zip)。量化权重下载地址将随上传完成更新，当前也可从源码仓库取得最新清单。
-- 使用小满量化模型：读 `xiaoman/MODEL_CARD.md`；公开仓库不含权重，校验值在 `release-manifest.json`；下载地址为 null 的文件尚未发布。
+- AI 部署 ZIP：[XiaoMan-AI-Deployment.zip](https://github.com/chauko0423/xiaomanbox/releases/download/v0.3.0-basic.1/XiaoMan-AI-Deployment.zip)。内含主线量化权重的公开分片清单、自动下载与合并工具，以及项目和模型介绍。
+- 使用小满量化模型：读 `xiaoman/MODEL_CARD.md`；Git 源码不含权重，按 `release-manifest.json` 的分片清单下载；Ada 候选及运行时暂无公开下载。
 - 复验：`node tests/acceptance.mjs`。脚本使用独立数据目录及测试端口，不加载真实模型。
 
 ## 快速启动（源码方式）
@@ -57,4 +57,4 @@ node deploy.mjs app
 
 ## GitHub 量化分片
 
-主线文本与视觉候选按每片最多1 GiB准备，清单含逐片和完整文件 SHA256。当前分片尚未公开上传，URL 为 null；不会自动下载不存在的文件。发布后 `node deploy.mjs download --id xiaoman-v6-sd` 将自动下载、校验并合并，完成的分片可复用。手动下载全部分片后，用 `--parts-dir <分片目录>` 合并。详见 `xiaoman/GITHUB_RELEASE.md`。
+主线文本44片、视觉57片；已复用的4片为1 GiB，其余新增片最多256 MiB，清单含逐片和完整文件 SHA256。[主线量化分片已公开](https://github.com/chauko0423/xiaomanbox/releases/tag/xiaoman-v6-quantized)， `node deploy.mjs download --id xiaoman-v6-sd` 将自动下载、校验并合并，完成的分片可复用。手动下载全部分片后，用 `--parts-dir <分片目录>` 合并。详见 `xiaoman/GITHUB_RELEASE.md`。

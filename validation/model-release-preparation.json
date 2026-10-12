@@ -20,12 +20,13 @@
     }
   ],
   "totalParts": 101,
-  "weightUploadComplete": false,
+  "weightUploadComplete": true,
   "runtimePublicDownloadAvailable": false,
   "textGenerationPassed": true,
   "realToolLoopPassed": true,
   "singleImageColorSmokePassed": true,
   "scope": "RTX5080, 2048 context, host states 1, host KV 256MiB; not model benchmark or all-hardware validation",
   "reusedUploadedLargeParts": 4,
-  "reslicedForNetworkReliability": true
+  "reslicedForNetworkReliability": true,
+  "release": "https://github.com/chauko0423/xiaomanbox/releases/tag/xiaoman-v6-quantized"
 }

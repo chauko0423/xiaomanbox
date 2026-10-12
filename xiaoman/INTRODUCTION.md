@@ -33,5 +33,5 @@
 **以 UE5 为专业起点，以更广泛的创造力为目标。小满 V6，让 AI 理解你的工具，也理解你想完成的作品。**
 
 - [项目与部署说明](https://github.com/chauko0423/xiaomanbox)
-- [量化模型发布页](https://github.com/chauko0423/xiaomanbox/releases/tag/xiaoman-v6-quantized)（分片全部校验后公开）
+- [量化模型发布页](https://github.com/chauko0423/xiaomanbox/releases/tag/xiaoman-v6-quantized)
 - [XiaoManBox 介绍](../XiaoManBox介绍.md)
