@@ -18,7 +18,7 @@ async function run(body){assert.equal((await json('/agent/run',{task:'完成本�
 async function config(p){assert.equal((await json('/agent/config',p,'PUT')).body.ok,true);}
 function record(name){results.push({name,ok:true});console.log('PASS '+name);}
 try {
- await fs.writeFile(path.join(home,'agent.json'),JSON.stringify({modelUrl:'http://127.0.0.1:18394/v1/chat/completions',model:'contract',contextWindow:2048,retainSessions:false,maxIterations:4,allowFullAccess:false}));
+ await fs.writeFile(path.join(home,'agent.json'),JSON.stringify({modelUrl:'http://127.0.0.1:18394/v1/chat/completions',model:'contract',contextWindow:2048,retainSessions:false,maxIterations:4,allowFullAccess:false,thinkingBudget:0}));
  await fs.writeFile(path.join(home,'providers.json'),JSON.stringify({active:'contract',providers:[{id:'contract',name:'Isolated SSE test',baseUrl:'http://127.0.0.1:18394/v1/chat/completions',model:'contract'}]}));
  await fs.writeFile(big,'超长工具结果'.repeat(5000));
  model=http.createServer(async(req,res)=>{let raw='';for await(const c of req)raw+=c;const input=JSON.parse(raw);requests.push(input);
@@ -45,6 +45,8 @@ try {
  record('oversized initial request blocked before contacting model');
  mode='write';const done=await run({toolGroups:{ue:false},skills:[],toolNames:['write_file']});assert.equal(done.state,'done');assert.equal(await fs.readFile(allowed,'utf8'),'passed');
  assert.deepEqual(requests.at(-1).tools.map(t=>t.function.name),['write_file']);assert.equal(requests.at(-1).max_tokens,256);
+ assert.equal(requests.at(-1).reasoning_effort,'none');assert.equal('thinking_budget' in requests.at(-1),false);
+ record('zero thinking budget maps to reasoning_effort none without unsupported parameter');
  record('2048 window selected file tool executes and returns result with output reserve');
  await fs.writeFile(path.join(home,'enabled-tools.json'),JSON.stringify({enabled:[]}));u=await usage({toolGroups:{ue:false},toolNames:['write_file']});assert.equal(u.toolCount,0);
  mode='forbidden';const disabled=await run({toolGroups:{ue:false},toolNames:['write_file']});assert.ok(disabled.steps.some(s=>s.name==='write_file'&&!s.ok&&s.result.includes('tool_not_offered')));

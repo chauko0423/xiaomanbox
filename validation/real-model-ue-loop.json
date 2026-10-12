@@ -1,0 +1,471 @@
+{
+  "passed": true,
+  "at": "2026-10-12T18:16:42+0800",
+  "model": "xiaoman-v6-sd",
+  "engineVersion": "UE 5.7.4",
+  "contextWindow": 2048,
+  "scope": "actual quantized XiaoMan V6 + published text runtime + Basic.5 backend with zero-thinking compatibility fix (same backend bytes shipped in Basic.6) + compiled source UnrealAgentLink in isolated NullRHI UE project; actor and basic Blueprint workflows only",
+  "originalProjectsModified": false,
+  "tasks": [
+    {
+      "task": "请用工具在当前UE场景创建一个cube，命名为XiaoManLoopCube，初始location为x=101,y=202,z=303；然后把它移动到x=411,y=522,z=633；最后调用读取工具核对最终位置。按此顺序执行，只操作此对象，全部完成后用一句话报告实际核对的坐标。",
+      "toolNames": [
+        "ue_spawn_actor",
+        "ue_set_transform",
+        "ue_get_actor"
+      ],
+      "job": {
+        "contract": "v1",
+        "state": "done",
+        "jobId": "AG-1791800228819",
+        "startedAt": "2026-10-12T10:17:08.819Z",
+        "task": "请用工具在当前UE场景创建一个cube，命名为XiaoManLoopCube，初始location为x=101,y=202,z=303；然后把它移动到x=411,y=522,z=633；最后调用读取工具核对最终位置。按此顺序执行，只操作此对象，全部完成后用一句话报告实际核对的坐标。",
+        "sessionId": null,
+        "provider": "Actual XiaoMan local UE test",
+        "ctx": {
+          "sceneId": null,
+          "memoryGlobalKeys": 0,
+          "memorySceneKeys": 0,
+          "historyMessages": 0,
+          "skills": [],
+          "attachments": [],
+          "attachmentImages": 0
+        },
+        "systemPrompt": "你是「小满」，XiaoMan Box（AI 工作台）的 AI 助手，能用工具帮用户完成任务。\n\n规则：\n1. 中文命名：用户要求中文命名时，资产名、变量名、组件名、函数名、Timeline 名都用中文。\n2. 一步一步来，每步根据工具返回结果决定下一步。\n3. 完成一个完整的小任务后，用中文简洁总结你做了什么、结果如何。\n\n只调用本次请求提供的工具；用户自行配置的 MCP 服务以实际工具列表为准。局域网画板通过本地网页分享，不内置团队画板 MCP 服务。\n\n【权限模式】标准受限：执行删除文件、覆盖资产、改配置等破坏性操作前，先用一句话说明将要做什么并征得用户同意，得到确认后再动手。",
+        "toolCount": 3,
+        "stats": {
+          "rounds": 4,
+          "modelMs": 4399,
+          "promptTokens": 6468,
+          "completionTokens": 207,
+          "cachedTokens": 4651,
+          "tps": 47.1
+        },
+        "steps": [
+          {
+            "type": "model",
+            "ms": 2243,
+            "tool_calls": [
+              {
+                "name": "ue_spawn_actor",
+                "arguments": "{\"asset_id\":\"cube\",\"name\":\"XiaoManLoopCube\",\"location\":{\"x\":101,\"y\":202,\"z\":303}}"
+              }
+            ],
+            "thinking": "",
+            "usage": {
+              "promptTokens": 1331,
+              "completionTokens": 74,
+              "cachedTokens": 0
+            }
+          },
+          {
+            "type": "tool",
+            "name": "ue_spawn_actor",
+            "args": {
+              "asset_id": "cube",
+              "name": "XiaoManLoopCube",
+              "location": {
+                "x": 101,
+                "y": 202,
+                "z": 303
+              }
+            },
+            "ok": true,
+            "ms": 46,
+            "result": "{\"name\":\"XiaoManLoopCube\",\"path\":\"/Game/XiaoManModelUE_1791800202/Map_ModelLoop.Map_ModelLoop:PersistentLevel.XiaoManLoopCube\",\"class\":\"StaticMeshActor\",\"asset_id\":\"cube\",\"type\":\"StaticMeshActor\",\"preset\":\"cube\",\"world\":\"editor\",\"__rpc\":{\"code\":200}}"
+          },
+          {
+            "type": "model",
+            "ms": 938,
+            "tool_calls": [
+              {
+                "name": "ue_set_transform",
+                "arguments": "{\"name\":\"XiaoManLoopCube\",\"location\":{\"x\": 411, \"y\": 522, \"z\": 633}}"
+              }
+            ],
+            "thinking": "",
+            "usage": {
+              "promptTokens": 1505,
+              "completionTokens": 66,
+              "cachedTokens": 1324
+            }
+          },
+          {
+            "type": "tool",
+            "name": "ue_set_transform",
+            "args": {
+              "name": "XiaoManLoopCube",
+              "location": {
+                "x": 411,
+                "y": 522,
+                "z": 633
+              }
+            },
+            "ok": true,
+            "ms": 8,
+            "result": "{\"count\":1,\"failed_count\":0,\"actors\":[{\"name\":\"XiaoManLoopCube\",\"path\":\"/Game/XiaoManModelUE_1791800202/Map_ModelLoop.Map_ModelLoop:PersistentLevel.XiaoManLoopCube\",\"class\":\"StaticMeshActor\",\"folder_path\":\"None\",\"location\":{\"x\":411,\"y\":522,\"z\":633},\"rotation\":{\"pitch\":0,\"yaw\":0,\"roll\":0},\"scale\":{\"x\":1,\"y\":1,\"z\":1}}],\"reported\":1,\"report_limit\":100,\"world\":\"editor\",\"__rpc\":{\"code\":200}}"
+          },
+          {
+            "type": "model",
+            "ms": 554,
+            "tool_calls": [
+              {
+                "name": "ue_get_actor",
+                "arguments": "{\"name\":\"XiaoManLoopCube\"}"
+              }
+            ],
+            "thinking": "",
+            "usage": {
+              "promptTokens": 1727,
+              "completionTokens": 31,
+              "cachedTokens": 1570
+            }
+          },
+          {
+            "type": "tool",
+            "name": "ue_get_actor",
+            "args": {
+              "name": "XiaoManLoopCube"
+            },
+            "ok": true,
+            "ms": 4,
+            "result": "{\"count\":1,\"total_found\":1,\"actors\":[{\"name\":\"XiaoManLoopCube\",\"path\":\"/Game/XiaoManModelUE_1791800202/Map_ModelLoop.Map_ModelLoop:PersistentLevel.XiaoManLoopCube\",\"class\":\"StaticMeshActor\",\"folder_path\":\"None\",\"transform\":{\"location\":{\"x\":411,\"y\":522,\"z\":633},\"rotation\":{\"pitch\":0,\"yaw\":0,\"roll\":0},\"scale\":{\"x\":1,\"y\":1,\"z\":1}}}],\"world\":\"editor\",\"__rpc\":{\"code\":200}}"
+          },
+          {
+            "type": "model",
+            "ms": 664,
+            "answer": "已创建 XiaoManLoopCube 并移动到目标位置，读取核对最终坐标为 x=411, y=522, z=633。",
+            "thinking": "",
+            "usage": {
+              "promptTokens": 1905,
+              "completionTokens": 36,
+              "cachedTokens": 1757
+            }
+          }
+        ],
+        "answer": "已创建 XiaoManLoopCube 并移动到目标位置，读取核对最终坐标为 x=411, y=522, z=633。",
+        "error": null,
+        "liveThinking": ""
+      }
+    },
+    {
+      "task": "用工具创建Actor蓝图/Game/XiaoManModelUE_1791800202/BP_ModelLoop，给它添加float类型变量XiaoSpeed，默认值为12.5，然后编译并保存此蓝图。按顺序完成后报告编译结果。",
+      "toolNames": [
+        "blueprint_create",
+        "blueprint_add_variable",
+        "blueprint_compile"
+      ],
+      "job": {
+        "contract": "v1",
+        "state": "done",
+        "jobId": "AG-1791800234102",
+        "startedAt": "2026-10-12T10:17:14.102Z",
+        "task": "用工具创建Actor蓝图/Game/XiaoManModelUE_1791800202/BP_ModelLoop，给它添加float类型变量XiaoSpeed，默认值为12.5，然后编译并保存此蓝图。按顺序完成后报告编译结果。",
+        "sessionId": null,
+        "provider": "Actual XiaoMan local UE test",
+        "ctx": {
+          "sceneId": null,
+          "memoryGlobalKeys": 0,
+          "memorySceneKeys": 0,
+          "historyMessages": 0,
+          "skills": [],
+          "attachments": [],
+          "attachmentImages": 0
+        },
+        "systemPrompt": "你是「小满」，XiaoMan Box（AI 工作台）的 AI 助手，能用工具帮用户完成任务。\n\n规则：\n1. 中文命名：用户要求中文命名时，资产名、变量名、组件名、函数名、Timeline 名都用中文。\n2. 一步一步来，每步根据工具返回结果决定下一步。\n3. 完成一个完整的小任务后，用中文简洁总结你做了什么、结果如何。\n\n只调用本次请求提供的工具；用户自行配置的 MCP 服务以实际工具列表为准。局域网画板通过本地网页分享，不内置团队画板 MCP 服务。\n\n【权限模式】标准受限：执行删除文件、覆盖资产、改配置等破坏性操作前，先用一句话说明将要做什么并征得用户同意，得到确认后再动手。",
+        "toolCount": 3,
+        "stats": {
+          "rounds": 4,
+          "modelMs": 6527,
+          "promptTokens": 5343,
+          "completionTokens": 309,
+          "cachedTokens": 2401,
+          "tps": 47.3
+        },
+        "steps": [
+          {
+            "type": "model",
+            "ms": 1578,
+            "tool_calls": [
+              {
+                "name": "blueprint_create",
+                "arguments": "{\"blueprint_path\":\"/Game/XiaoManModelUE_1791800202/BP_ModelLoop\"}"
+              }
+            ],
+            "thinking": "",
+            "usage": {
+              "promptTokens": 962,
+              "completionTokens": 50,
+              "cachedTokens": 0
+            }
+          },
+          {
+            "type": "tool",
+            "name": "blueprint_create",
+            "args": {
+              "blueprint_path": "/Game/XiaoManModelUE_1791800202/BP_ModelLoop"
+            },
+            "ok": true,
+            "ms": 32,
+            "result": "{\"ok\":true,\"name\":\"BP_ModelLoop\",\"path\":\"/Game/XiaoManModelUE_1791800202/BP_ModelLoop.BP_ModelLoop\",\"parent_class\":\"Actor\",\"parent_class_path\":\"/Script/Engine.Actor\",\"generated_class\":\"/Game/XiaoManModelUE_1791800202/BP_ModelLoop.BP_ModelLoop_C\",\"components\":[{\"name\":\"DefaultSceneRoot\",\"class\":\"SceneComponent\",\"class_path\":\"/Script/Engine.SceneComponent\",\"source\":\"added\",\"editable\":true,\"attach_to"
+          },
+          {
+            "type": "model",
+            "ms": 1155,
+            "tool_calls": [
+              {
+                "name": "blueprint_add_variable",
+                "arguments": "{\"blueprint_path\":\"/Game/XiaoManModelUE_1791800202/BP_ModelLoop\",\"variable_name\":\"XiaoSpeed\",\"variable_type\":\"float\",\"default_value\":\"12.5\"}"
+              }
+            ],
+            "thinking": "",
+            "usage": {
+              "promptTokens": 1297,
+              "completionTokens": 94,
+              "cachedTokens": 1011
+            }
+          },
+          {
+            "type": "tool",
+            "name": "blueprint_add_variable",
+            "args": {
+              "blueprint_path": "/Game/XiaoManModelUE_1791800202/BP_ModelLoop",
+              "variable_name": "XiaoSpeed",
+              "variable_type": "float",
+              "default_value": "12.5"
+            },
+            "ok": true,
+            "ms": 24,
+            "result": "{\"ok\":true,\"blueprint_path\":\"/Game/XiaoManModelUE_1791800202/BP_ModelLoop.BP_ModelLoop\",\"variable\":{\"name\":\"XiaoSpeed\",\"type\":\"real\",\"is_array\":false,\"default_value\":\"12.500000\"},\"__rpc\":{\"code\":200}}"
+          },
+          {
+            "type": "model",
+            "ms": 661,
+            "tool_calls": [
+              {
+                "name": "blueprint_compile",
+                "arguments": "{\"blueprint_path\":\"/Game/XiaoManModelUE_1791800202/BP_ModelLoop\"}"
+              }
+            ],
+            "thinking": "",
+            "usage": {
+              "promptTokens": 1482,
+              "completionTokens": 50,
+              "cachedTokens": 1390
+            }
+          },
+          {
+            "type": "tool",
+            "name": "blueprint_compile",
+            "args": {
+              "blueprint_path": "/Game/XiaoManModelUE_1791800202/BP_ModelLoop"
+            },
+            "ok": true,
+            "ms": 26,
+            "result": "{\"ok\":true,\"status\":\"UpToDate\",\"saved\":true,\"path\":\"/Game/XiaoManModelUE_1791800202/BP_ModelLoop.BP_ModelLoop\",\"diagnostics\":[],\"__rpc\":{\"code\":200}}"
+          },
+          {
+            "type": "model",
+            "ms": 3133,
+            "answer": "已按顺序完成：\n\n1. 创建 Actor 蓝图 `/Game/XiaoManModelUE_1791800202/BP_ModelLoop`（父类 Actor，含 DefaultSceneRoot 组件）。\n2. 添加 float 变量 `XiaoSpeed`，默认值 12.5。\n3. 编译并保存。\n\n编译结果：状态 UpToDate，无错误、无警告，已保存。",
+            "thinking": "The user asked to compile and save. blueprint_compile returned saved:true. Done.\n",
+            "usage": {
+              "promptTokens": 1602,
+              "completionTokens": 115,
+              "cachedTokens": 0
+            }
+          }
+        ],
+        "answer": "已按顺序完成：\n\n1. 创建 Actor 蓝图 `/Game/XiaoManModelUE_1791800202/BP_ModelLoop`（父类 Actor，含 DefaultSceneRoot 组件）。\n2. 添加 float 变量 `XiaoSpeed`，默认值 12.5。\n3. 编译并保存。\n\n编译结果：状态 UpToDate，无错误、无警告，已保存。",
+        "error": null,
+        "liveThinking": ""
+      }
+    }
+  ],
+  "checks": [
+    "actual model, Basic.5 backend and UE plugin connected on isolated ports",
+    "model requested creation, movement and readback through actual tool calls",
+    "independent UE readback confirms exact final actor position",
+    "final model answer reflects actual coordinates",
+    "isolated level saved after model operations",
+    "model created Actor Blueprint, added float variable and compiled/saved actual asset",
+    "independent UE describe and spawned-instance property readback confirm XiaoSpeed default 12.5; model-triggered compile is UpToDate without diagnostics"
+  ],
+  "sourceCommit": "d26d5858a73e7ebf53d58d3bd695ca2539f0b125",
+  "runtimeSha256": "71fb706fed7ea1b65e49da7e4a9af5053c92ec0949e8728b3d7d72265a079c88",
+  "backendAgentSha256": "6825936ce41572225e19d31b3fc6c8dd5a815f1be2a1336db7d425d7ebfd40f5",
+  "sourceHadLocalFixes": true,
+  "gpuBefore": "NVIDIA GeForce RTX 5080, 16303, 50",
+  "modelSha256": "511046e8b813aea45ce314bfa9d56325bf83e0c197640c90bde7e65a4262d184",
+  "modelFullFileHashVerifiedThisRun": true,
+  "modelArguments": [
+    "--host",
+    "127.0.0.1",
+    "--port",
+    "18395",
+    "--model-id",
+    "xiaoman",
+    "--max-context",
+    "2048",
+    "--kv-dtype",
+    "nvfp4",
+    "--spec",
+    "mtp",
+    "--draft-tokens",
+    "2",
+    "--prefill-chunk",
+    "256",
+    "--host-state-slots",
+    "1",
+    "--host-kv-mib",
+    "256",
+    "--no-cuda-graph",
+    "--chat-template",
+    "..\\..\\chat_template.jinja"
+  ],
+  "models": {
+    "data": [
+      {
+        "created": 1791800215,
+        "id": "xiaoman",
+        "max_model_len": 2048,
+        "object": "model",
+        "owned_by": "ninfer"
+      }
+    ],
+    "object": "list"
+  },
+  "gpuLoaded": "NVIDIA GeForce RTX 5080, 16303, 14742",
+  "independentActorReadback": {
+    "name": "XiaoManLoopCube",
+    "path": "/Game/XiaoManModelUE_1791800202/Map_ModelLoop.Map_ModelLoop:PersistentLevel.XiaoManLoopCube",
+    "class": "StaticMeshActor",
+    "folder_path": "None",
+    "transform": {
+      "location": {
+        "x": 411,
+        "y": 522,
+        "z": 633
+      },
+      "rotation": {
+        "pitch": 0,
+        "yaw": 0,
+        "roll": 0
+      },
+      "scale": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+      }
+    }
+  },
+  "independentBlueprintReadback": {
+    "ok": true,
+    "name": "BP_ModelLoop",
+    "path": "/Game/XiaoManModelUE_1791800202/BP_ModelLoop.BP_ModelLoop",
+    "parent_class": "Actor",
+    "parent_class_path": "/Script/Engine.Actor",
+    "generated_class": "/Game/XiaoManModelUE_1791800202/BP_ModelLoop.BP_ModelLoop_C",
+    "components": [
+      {
+        "name": "DefaultSceneRoot",
+        "class": "SceneComponent",
+        "class_path": "/Script/Engine.SceneComponent",
+        "source": "added",
+        "editable": true,
+        "attach_to": "",
+        "depth": 0,
+        "attach_parent_is_native": false
+      }
+    ],
+    "variables": [
+      {
+        "name": "XiaoSpeed",
+        "type": "real",
+        "is_array": false,
+        "editable": false
+      }
+    ],
+    "graph_count": 2,
+    "graph_names": [
+      "EventGraph",
+      "UserConstructionScript"
+    ],
+    "graphs": [
+      {
+        "name": "EventGraph",
+        "type": "event",
+        "title": "EventGraph"
+      },
+      {
+        "name": "UserConstructionScript",
+        "type": "function",
+        "title": "UserConstructionScript"
+      }
+    ],
+    "event_graphs": [
+      {
+        "name": "EventGraph",
+        "type": "event",
+        "title": "EventGraph"
+      }
+    ],
+    "function_graphs": [
+      {
+        "name": "UserConstructionScript",
+        "type": "function",
+        "title": "UserConstructionScript"
+      }
+    ],
+    "macro_graphs": [],
+    "delegate_graphs": [],
+    "intermediate_graphs": [],
+    "has_event_graph": true,
+    "preferred_graph": "EventGraph",
+    "compile_status": "UpToDate",
+    "__rpc": {
+      "code": 200
+    }
+  },
+  "independentBlueprintDefaultReadback": {
+    "world": "editor",
+    "targets": [
+      {
+        "kind": "actor",
+        "name": "XiaoManBPReadback",
+        "class": "/Game/XiaoManModelUE_1791800202/BP_ModelLoop.BP_ModelLoop_C",
+        "properties": {
+          "XiaoSpeed": 12.5
+        },
+        "components": [
+          {
+            "name": "DefaultSceneRoot",
+            "class": "SceneComponent"
+          },
+          {
+            "name": "BillboardComponent_0",
+            "class": "BillboardComponent",
+            "attach_parent": "DefaultSceneRoot",
+            "render": {
+              "visible": false,
+              "hidden_in_game": true,
+              "render_custom_depth": false,
+              "custom_depth_stencil": 0,
+              "collision_profile": "NoCollision",
+              "materials": []
+            }
+          }
+        ]
+      }
+    ],
+    "__rpc": {
+      "code": 200
+    }
+  },
+  "gpuAfterTask": "NVIDIA GeForce RTX 5080, 16303, 14744",
+  "ownChildProcessesStopped": true,
+  "elapsedSeconds": 38.81,
+  "gpuAfterStop": "NVIDIA GeForce RTX 5080, 16303, 54",
+  "desktopRelease": "v0.3.0-basic.6",
+  "matchedCurrentAgentSourceHash": true
+}

@@ -1,0 +1,24 @@
+{
+  "url": "https://github.com/chauko0423/xiaomanbox/releases/tag/v0.3.0-basic.5",
+  "assets": [
+    {
+      "name": "XiaoManBox-0.3.0-basic.5-Setup.exe",
+      "bytes": 85129762,
+      "sha256": "146eaed1849c395d4ced85f6645e5c019e2b8d7c04e32034d69f0212fcda770a",
+      "url": "https://github.com/chauko0423/xiaomanbox/releases/download/v0.3.0-basic.5/XiaoManBox-0.3.0-basic.5-Setup.exe"
+    },
+    {
+      "name": "XiaoMan-AI-Deployment.zip",
+      "bytes": 3277621,
+      "sha256": "6579a86ad8b3834d91a7c6d9715b58330d88a97ea3a33a989f1e456d1bc75a25",
+      "url": "https://github.com/chauko0423/xiaomanbox/releases/download/v0.3.0-basic.5/XiaoMan-AI-Deployment.zip"
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "bytes": 195,
+      "sha256": "e781ad8473885fdb7d0342caca417abb8b72734c4dc206eb283e970a16e2733c",
+      "url": "https://github.com/chauko0423/xiaomanbox/releases/download/v0.3.0-basic.5/SHA256SUMS.txt"
+    }
+  ],
+  "remoteSha256Verified": true
+}

@@ -16,16 +16,16 @@
     },
     {
       "name": "MODEL_CARD.md",
-      "size": 4746,
+      "size": 4766,
       "state": "uploaded",
-      "digest": "sha256:c22465f02d873f399f0335a2ca8d6ad059aa595b10e5e15b2dfc3535b8da0e1d",
+      "digest": "sha256:422049cfc6a172105f42af57da583dfbb166b1bea7387c4fbedeec643cb67abb",
       "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/MODEL_CARD.md"
     },
     {
       "name": "release-manifest.json",
-      "size": 44449,
+      "size": 44456,
       "state": "uploaded",
-      "digest": "sha256:229136a92f52a5dc28884755dbc744f9ac057175572bd7c90c0763afc7765909",
+      "digest": "sha256:f7494f6ed92d68819026cda6f566c3157d871bb4259c04e59b098da9957be20d",
       "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/release-manifest.json"
     },
     {

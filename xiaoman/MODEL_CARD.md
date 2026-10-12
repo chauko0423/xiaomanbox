@@ -34,4 +34,4 @@
 文本候选44片，视觉候选57片。已上传并验证的4片为1 GiB，其余新增片最多256 MiB；完整模型 SHA256 与原文件一致。只上传量化文件及说明；Ada候选暂无匹配硬件复验，首版保留在本地。实际公开地址以 release-manifest.json 为准；公开分片的精确下载 URL、字节数与校验值在 release-manifest.json。主线文本推理包已独立公开：https://github.com/chauko0423/xiaomanbox/releases/tag/ninfer-blackwell-text-v1 。可通过部署工具下载文本引擎与许可说明，再配置和启动本地服务。视觉引擎也已独立公开：https://github.com/chauko0423/xiaomanbox/releases/tag/ninfer-blackwell-vision-v1 。采用固定FFmpeg9.0/zlib1.3.1源码构建的精简LGPL共享库，完整对应源码和许可证随Release提供；RTX5080/2048上下文下通过文本生成、PNG/JPEG颜色识别及短H264视频输入冒烟，新视觉引擎显存读数约15179MiB。Ada候选仍待匹配硬件实测；文本引擎不用于图像或视频输入。
 
 
-Basic.5 工作台提供按轮工具限制与上下文估算检查。默认2048并不适合完整UE工具清单；扩大窗口需单独确认资源。小满自主操作UE的完整回环尚待显卡空闲后实测，不能用单独的原生UE流程和文件工具测试替代。
+Basic.5 工作台提供按轮工具限制与上下文估算检查。默认2048并不适合完整UE工具清单；扩大窗口需单独确认资源。Basic.6 已通过真实小满模型的 Actor 与基础蓝图回环；详见 ../小满UE模型实测说明.md，其他工作流仍待单独验证。

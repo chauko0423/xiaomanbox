@@ -40,7 +40,7 @@ const DEFAULTS = {
   toolTimeoutMs: 180_000,
   modelTimeoutMs: 120_000,
   temperature: 0.3,
-  thinkingBudget: 800, // >=0 透传引擎 thinking_budget；-1 = 无上限（不传参，引擎自己决定思考量，如 4090 服务端默认 max）
+  thinkingBudget: 800, // >0 透传 thinking_budget；0 用 reasoning_effort=none 关闭思考；-1 = 无上限（不传参，引擎自己决定思考量，如 4090 服务端默认 max）
   reasoningEffort: 'low', // 思考档（2026-10-08 修「思考泄漏」）：NInfer 引擎默认开思考，长答案会写进 reasoning_content 而 content 空。
   //   显式传 reasoning_effort 控制：'none'=不思考只出正文（最稳）、'low'=轻思考正文为主（默认，平衡）、
   //   'medium'/'high'=更深思考（长创作任务更容易泄漏）。引擎不认识该字段时忽略，无害。
@@ -82,6 +82,7 @@ export function setConfigPatch(patch) {
     }
     if (typeof patch[k] === 'number' && !Number.isFinite(patch[k])) return { ok: false, code: 400, error: `${k} 必须是有限数值` };
     if (['contextWindow', 'maxInputTokens', 'maxOutputTokens'].includes(k) && (!Number.isSafeInteger(patch[k]) || patch[k] < (k === 'contextWindow' ? 1024 : 0))) return { ok: false, code: 400, error: `${k} 超出 token 参数范围` };
+    if (k === 'thinkingBudget' && (!Number.isSafeInteger(patch[k]) || patch[k] < -1)) return { ok: false, code: 400, error: 'thinkingBudget 应为 -1、0 或正整数' };
     cur[k] = patch[k];
   }
   try {
@@ -674,12 +675,14 @@ function modelChatOnce(messages, tools, cfg) {
       temperature: cfg.temperature,
     };
     // thinkingBudget = -1 → Default 档：不传 thinking_budget，让引擎自己决定思考量
-    if (typeof cfg.thinkingBudget === 'number' && cfg.thinkingBudget >= 0) {
+    if (Number.isSafeInteger(cfg.thinkingBudget) && cfg.thinkingBudget > 0) {
       body.thinking_budget = cfg.thinkingBudget;
     }
     // 思考档（2026-10-08 修「思考泄漏」）：显式传引擎认识的 reasoning_effort，
     //   让思考内容稳定写进 content 而不是只进 reasoning_content（否则长答案 content 空）。
-    if (typeof cfg.reasoningEffort === 'string' && cfg.reasoningEffort) {
+    if (cfg.thinkingBudget === 0) {
+      body.reasoning_effort = 'none';
+    } else if (typeof cfg.reasoningEffort === 'string' && cfg.reasoningEffort) {
       body.reasoning_effort = cfg.reasoningEffort;
     }
     body.max_tokens = budget.output;
