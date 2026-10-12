@@ -1,0 +1,21 @@
+{
+  "models": [
+    {
+      "id": "xiaoman-v6-sd",
+      "bytes": 14765577728,
+      "sha256": "511046e8b813aea45ce314bfa9d56325bf83e0c197640c90bde7e65a4262d184",
+      "parts": 14,
+      "fullMergedFileVerified": true,
+      "seconds": 46
+    },
+    {
+      "id": "xiaoman-v6-sd-vis",
+      "bytes": 15061396224,
+      "sha256": "397d87d7c4aaab211bf581610e7ce1acb4537c8eaf5e1d35dca22a37fbb67d73",
+      "parts": 15,
+      "fullMergedFileVerified": true,
+      "seconds": 31
+    }
+  ],
+  "testQuantizedCopiesRemoved": true
+}
