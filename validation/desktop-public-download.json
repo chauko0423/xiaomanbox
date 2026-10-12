@@ -8,14 +8,14 @@
     },
     {
       "name": "XiaoMan-AI-Deployment.zip",
-      "bytes": 3182836,
-      "sha256": "7e3dd8568d0d0eb91b4298824c61a7ff8f402aedc0a3c78d205267d2ea2ce175",
+      "bytes": 3182089,
+      "sha256": "563cc86030482bd3933d234002eb08e4c5e4112f047f9267b57ff182b6284eb9",
       "anonymousFullDownloadVerified": true
     },
     {
       "name": "SHA256SUMS.txt",
       "bytes": 195,
-      "sha256": "01f0ea4c868545609529766282b67735c4c59bddfd05201ef7caf18cb7efd397",
+      "sha256": "432d3dcbdaae6cd8ee9321b02841cfc7887c099f4dff88a003c8252afa3586a6",
       "anonymousFullDownloadVerified": true
     }
   ]
