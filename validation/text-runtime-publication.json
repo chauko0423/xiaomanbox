@@ -1,0 +1,40 @@
+{
+  "url": "https://github.com/chauko0423/xiaomanbox/releases/tag/ninfer-blackwell-text-v1",
+  "releaseId": 410161119,
+  "assets": [
+    {
+      "name": "ninfer-serve-blackwell-text.exe",
+      "bytes": 179068416,
+      "sha256": "71fb706fed7ea1b65e49da7e4a9af5053c92ec0949e8728b3d7d72265a079c88",
+      "url": "https://github.com/chauko0423/xiaomanbox/releases/download/ninfer-blackwell-text-v1/ninfer-serve-blackwell-text.exe"
+    },
+    {
+      "name": "XiaoMan-NInfer-Blackwell-Text-Source.zip",
+      "bytes": 3368339,
+      "sha256": "c0906cabfd5ef9a7860f436d7804552d5b4aece6a7d7f22ef24d8518ef2ed56e",
+      "url": "https://github.com/chauko0423/xiaomanbox/releases/download/ninfer-blackwell-text-v1/XiaoMan-NInfer-Blackwell-Text-Source.zip"
+    },
+    {
+      "name": "NInfer-Text-Runtime-Licenses.txt",
+      "bytes": 107710,
+      "sha256": "9833b6671cddf8d9bb73b276c1d85a2c4a20f5c9b19b99cb027e1d580cfaa782",
+      "url": "https://github.com/chauko0423/xiaomanbox/releases/download/ninfer-blackwell-text-v1/NInfer-Text-Runtime-Licenses.txt"
+    },
+    {
+      "name": "TEXT-RUNTIME-README.md",
+      "bytes": 2298,
+      "sha256": "a73b02e18a26120db2dc7de8a892ebb2186498f52e54a4f8e27dc17289eddf10",
+      "url": "https://github.com/chauko0423/xiaomanbox/releases/download/ninfer-blackwell-text-v1/TEXT-RUNTIME-README.md"
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "bytes": 397,
+      "sha256": "d8e2e824f25f0d0cbfd09c38e3af008b9eb87c4940406c191575b93e3545c035",
+      "url": "https://github.com/chauko0423/xiaomanbox/releases/download/ninfer-blackwell-text-v1/SHA256SUMS.txt"
+    }
+  ],
+  "allRemoteSha256Verified": true,
+  "textModelAndToolLoopPassed": true,
+  "visionSupported": false,
+  "ffmpegBundled": false
+}

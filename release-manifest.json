@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "releaseStatus": "source_and_selected_quantized_assets_published_runtime_pending",
+  "releaseStatus": "source_selected_quantized_and_text_runtime_published_vision_runtime_pending",
   "platform": "Windows x64",
   "assets": [
     {
@@ -278,7 +278,13 @@
           "sha256": "f0a68418b4a5901e77474a9de8c441c787bf2796304bd2c2f8cb756e2f6f1adc",
           "url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd.ninfer.part014.part004"
         }
-      ]
+      ],
+      "runtimeId": "ninfer-blackwell-text-windows",
+      "deploymentProfile": {
+        "context": 2048,
+        "hostStateSlots": 1,
+        "hostKvMiB": 256
+      }
     },
     {
       "id": "xiaoman-v6-sd-vis",
@@ -633,7 +639,8 @@
           "sha256": "ac6d544d04b86de58fc0262a34b6996588afeae905c4ab0858a7f3c8d54f28b7",
           "url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd-vis.ninfer.part015"
         }
-      ]
+      ],
+      "runtimeId": "ninfer-blackwell-windows"
     },
     {
       "id": "xiaoman-v6-fixed",
@@ -737,6 +744,28 @@
       "sha256": "be0b55e0653d09e90277b403cb49fe4b03f945b05eb928e304e15b05a31618aa",
       "url": null,
       "type": "chat-template"
+    },
+    {
+      "id": "ninfer-blackwell-text-windows",
+      "path": "assets/runtime/blackwell-text/ninfer-serve.exe",
+      "type": "runtime",
+      "family": "blackwell",
+      "vision": false,
+      "dependencies": [
+        "ninfer-text-runtime-licenses"
+      ],
+      "signature": "unsigned",
+      "bytes": 179068416,
+      "sha256": "71fb706fed7ea1b65e49da7e4a9af5053c92ec0949e8728b3d7d72265a079c88",
+      "url": "https://github.com/chauko0423/xiaomanbox/releases/download/ninfer-blackwell-text-v1/ninfer-serve-blackwell-text.exe"
+    },
+    {
+      "id": "ninfer-text-runtime-licenses",
+      "path": "assets/runtime/blackwell-text/THIRD-PARTY-LICENSES.txt",
+      "type": "runtime-license",
+      "bytes": 107710,
+      "sha256": "9833b6671cddf8d9bb73b276c1d85a2c4a20f5c9b19b99cb027e1d580cfaa782",
+      "url": "https://github.com/chauko0423/xiaomanbox/releases/download/ninfer-blackwell-text-v1/NInfer-Text-Runtime-Licenses.txt"
     },
     {
       "id": "xiaomanbox-basic-installer",

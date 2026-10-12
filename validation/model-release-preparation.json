@@ -21,12 +21,13 @@
   ],
   "totalParts": 101,
   "weightUploadComplete": true,
-  "runtimePublicDownloadAvailable": false,
+  "runtimePublicDownloadAvailable": true,
   "textGenerationPassed": true,
   "realToolLoopPassed": true,
   "singleImageColorSmokePassed": true,
   "scope": "RTX5080, 2048 context, host states 1, host KV 256MiB; not model benchmark or all-hardware validation",
   "reusedUploadedLargeParts": 4,
   "reslicedForNetworkReliability": true,
-  "release": "https://github.com/chauko0423/xiaomanbox/releases/tag/xiaoman-v6-quantized"
+  "release": "https://github.com/chauko0423/xiaomanbox/releases/tag/xiaoman-v6-quantized",
+  "runtimePublicDownloadScope": "Blackwell text-only; vision and Ada runtimes pending"
 }

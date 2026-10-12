@@ -8,6 +8,10 @@
 | React、Excalidraw、Hocuspocus、Yjs、Dagre | npm 对应包，锁文件记录版本/完整性 | 可找到的包许可存 third-party-licenses；静态 Excalidraw 资源保留 vendor LICENSE.txt；Virgil/Cascadia/Assistant 的 OFL 与 Excalidraw/Hocuspocus 的 MIT 文本已从上游补齐，来源和校验见 third-party-licenses/sources.json |
 | Vue、Electron 与构建工具 | npm 对应包 | 源码由锁文件安装；Electron 二进制保留自带 LICENSE/LICENSES.chromium.html；打包依赖材料需最终整理 |
 | 小满基座 | 本地训练记录指向 Qwen/Qwen3.8-27B | 官方模型卡标注 Apache-2.0；具体 revision 与来源材料待核实，模型卡有明确 pending，不附完整权重 |
-| NInfer 与 FFmpeg DLL | Neroued/ninfer 与 BtbN/FFmpeg-Builds | NInfer 本地干净源码 revision 为 bace20dc70249eed6402b66d4852c6c3f9612905；FFmpeg 候选为 N-126856-ged27b2c498-20260925，启用 GPL 与 version3。7份DLL均与原包哈希一致，配置记录见 validation/runtime-provenance.json，候选 GPL 文本见 third-party-licenses/FFmpeg-candidate-GPLv3.txt。完整对应来源和依赖材料仍待补齐；二进制不在源码 ZIP |
+| NInfer 与 FFmpeg DLL | Neroued/ninfer 与 BtbN/FFmpeg-Builds | 既有Windows视觉候选实际来自带本地修改的fork源码，localBaseCommit为6e8d41e685a16a58b94b199ac6b25fd02b67a241；之前记录的干净上游仓库不构成二进制来源证明，修正见validation/runtime-provenance-correction.json；FFmpeg 候选为 N-126856-ged27b2c498-20260925，启用 GPL 与 version3。7份DLL均与原包哈希一致，配置记录见 validation/runtime-provenance.json，候选 GPL 文本见 third-party-licenses/FFmpeg-candidate-GPLv3.txt。完整对应来源和依赖材料仍待补齐；二进制不在源码 ZIP |
 
 没有包含外部 NodeUE 节点模板数据、桌宠角色 PSD、SenseVoice 语音模型、训练数据与教师输出样本。18 个 UE 技能保留原引用，描述与插件源码应继续进行最终人工来源审阅。可选联网搜索、外部 API/MCP/DSH 不表示本项目附送这些服务、商业模型或第三方插件代码。
+
+## 独立文本推理包
+
+[Blackwell文本推理包](https://github.com/chauko0423/xiaomanbox/releases/tag/ninfer-blackwell-text-v1)附带完整构建源码快照、逐文件摘要、Windows构建脚本和许可证。以本地fork快照构建，关闭FFmpeg解码，静态链接CUDA与MSVC运行库。NInfer/llama-jinja/cpp-httplib/nlohmann-json/spdlog/utf8proc保留各自许可，NVTX采用Apache-2.0带LLVM例外；NVIDIA CUDA部分保持NVIDIA条款，不由根目录Apache许可重新授权。许可汇总见third-party-licenses/ninfer-runtime/。

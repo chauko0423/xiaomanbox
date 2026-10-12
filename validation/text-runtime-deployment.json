@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "homeScope": "isolated validation directory",
+  "managedEngineStopped": true,
+  "scope": "configuration only; GPU occupied; binary real generation and tool loop recorded separately",
+  "configurationOutput": "校验通过：xiaoman-v6-sd\n校验通过：ninfer-blackwell-text-windows\n安装并校验：ninfer-text-runtime-licenses\n校验通过：chat-template\n本地模型已配置。运行 node deploy.mjs model-start，再运行 verify --model。\n",
+  "publishedProfileSelected": true
+}

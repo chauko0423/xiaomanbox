@@ -1,0 +1,8 @@
+{
+  "existingBinarySha256": "5aee4add582ea724d8aa2324e84287aa0a78894e55767d608ea9a2435ed8f292",
+  "matchesExistingBuildBinary": true,
+  "actualBuildSourceLocalCommit": "6e8d41e685a16a58b94b199ac6b25fd02b67a241",
+  "sourceWorkingTreeClean": false,
+  "previousCleanUpstreamRecordIsNotBinaryProvenance": true,
+  "newTextRuntimeHasSeparateFrozenSourceManifest": true
+}

@@ -47,21 +47,26 @@ async function configureProvider(endpoint,model){
 }
 async function configureModel(){
   const a=asset(option('id','xiaoman-v6-sd'));const gpu=gpus()[0];if(!gpu||gpu.computeCapability!=='12.0'||gpu.vramMiB<16000||a.family!=='blackwell')throw new Error('此自动配置只支持已标记的 Blackwell 16GB+；其他显卡请按说明验证匹配引擎或使用 API。');
-  const model=await acquire(a.id),runtime=await acquire('ninfer-blackwell-windows');
-  for(const dependency of manifest().assets.filter(item=>item.type==='runtime-dll'))await acquire(dependency.id);
+  const runtimeAsset=asset(a.runtimeId||(a.vision?'ninfer-blackwell-windows':'ninfer-blackwell-text-windows'));
+  if(!runtimeAsset.url&&!fs.existsSync(path.join(ROOT,runtimeAsset.path)))throw new Error('匹配的推理引擎尚未提供下载，请先准备匹配引擎，或配置自己的 API。');
+  const profile=a.deploymentProfile||{context:2048,hostStateSlots:a.vision?8:1,hostKvMiB:a.vision?4096:256};
+  const ctx=Number(option('context',String(profile.context)));if(!Number.isInteger(ctx)||ctx<1024||ctx>32768)throw new Error('context 应为 1024–32768；超过默认值需自行验收显存');
+  const hostSlots=Number(option('host-state-slots',String(profile.hostStateSlots))),hostKv=Number(option('host-kv-mib',String(profile.hostKvMiB)));
+  if(!Number.isInteger(hostSlots)||hostSlots<1||hostSlots>8||!Number.isInteger(hostKv)||hostKv<0)throw new Error('host-state-slots 应为1–8，host-kv-mib 应为非负整数。');
+  const model=await acquire(a.id),runtime=await acquire(runtimeAsset.id);
+  for(const id of runtimeAsset.dependencies||manifest().assets.filter(item=>item.type==='runtime-dll').map(item=>item.id))await acquire(id);
   await acquire('chat-template');
-  const ctx=Number(option('context',a.vision?'2048':'8192'));if(!Number.isInteger(ctx)||ctx<1024||ctx>32768)throw new Error('context 应为 1024–32768；超过默认值需自行验收显存');
   const engineDir=path.dirname(runtime);
-  const argv=[path.relative(engineDir,model),'--host','127.0.0.1','--port','8390','--model-id','xiaoman','--max-context',String(ctx),'--kv-dtype','nvfp4','--spec','mtp','--draft-tokens','2','--prefill-chunk','256','--host-state-slots','8','--host-kv-mib','4096','--no-cuda-graph','--chat-template',path.relative(engineDir,path.join(ROOT,'assets/chat_template.jinja'))];
+  const argv=[path.relative(engineDir,model),'--host','127.0.0.1','--port','8390','--model-id','xiaoman','--max-context',String(ctx),'--kv-dtype','nvfp4','--spec','mtp','--draft-tokens','2','--prefill-chunk','256','--host-state-slots',String(hostSlots),'--host-kv-mib',String(hostKv),'--no-cuda-graph','--chat-template',path.relative(engineDir,path.join(ROOT,'assets/chat_template.jinja'))];
   if(a.vision)argv.push('--vision');await write(path.join(HOME,'engine.json'),{executable:runtime,args:argv,baseUrl:'http://127.0.0.1:8390',asset:a.id});
   const prior=read(path.join(HOME,'agent.json'));await write(path.join(HOME,'agent.json'),{...prior,modelUrl:'http://127.0.0.1:8390/v1/chat/completions',model:'xiaoman',contextWindow:ctx});
   await configureProvider('http://127.0.0.1:8390/v1/chat/completions','xiaoman');
   console.log('本地模型已配置。运行 node deploy.mjs model-start，再运行 verify --model。');
 }
 async function verify(){const checks=[];async function check(name,url,expected){try{const r=await fetch(url,{signal:AbortSignal.timeout(3000)}),data=await r.json();if(!r.ok||(expected&&!expected(data)))throw new Error('unexpected_response');checks.push({name,ok:true});}catch(e){checks.push({name,ok:false,error:e.message});}}
-  await check('local-board',`http://127.0.0.1:${option('board-port','8880')}/health`,d=>d.app==='xiaoman-local-board');
+  if(!args.includes('--model')||args.includes('--desktop'))await check('local-board',`http://127.0.0.1:${option('board-port','8880')}/health`,d=>d.app==='xiaoman-local-board');
   if(args.includes('--desktop'))await check('desktop-backend',`http://127.0.0.1:${option('backend-port','8871')}/api/v1/health`,d=>d.contract==='v1');
-  if(args.includes('--model'))await check('model','http://127.0.0.1:8390/v1/models',d=>Array.isArray(d.data));
+  if(args.includes('--model'))await check('model',`http://127.0.0.1:${option('model-port','8390')}/v1/models`,d=>Array.isArray(d.data));
   await write(path.join(HOME,'verification.json'),{at:new Date().toISOString(),checks,scope:'health_only; 绘图同步、只读负控和真实工具调用见验收说明'});console.log(JSON.stringify(checks,null,2));if(checks.some(c=>!c.ok))process.exitCode=1;
 }
 try{

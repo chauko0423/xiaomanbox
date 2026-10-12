@@ -21,7 +21,7 @@
 
 ## 部署要求与限制
 
-`.ninfer` 是对应 NInfer 运行时制品，并非可直接由 llama.cpp/Ollama/Transformers 读取的通用 GGUF 或 safetensors。使用匹配的 ninfer-serve 引擎、DLL 和 chat template。当前配置器只为 compute capability12.0、16GB+ 的 Blackwell GPU生成主线尝试配置，默认为8192上下文。RTX5080环境探测成功，但在显卡空闲时进行了隔离实测：2048上下文、host state 1、host KV 256 MiB；文本版显存约14710 MiB，视觉版约15054 MiB。文本生成与工具调用回环、视觉单图颜色冒烟通过，详见 validation/real-model-*.json；测试引擎均已停止。
+`.ninfer` 是对应 NInfer 运行时制品，并非可直接由 llama.cpp/Ollama/Transformers 读取的通用 GGUF 或 safetensors。使用匹配的 ninfer-serve 引擎、DLL 和 chat template。当前配置器只为 compute capability12.0、16GB+ 的 Blackwell GPU生成主线尝试配置，主线文本默认采用已复验的2048上下文、host state 1、host KV 256MiB；扩大上下文与并发需另行验证。RTX5080环境探测成功，但在显卡空闲时进行了隔离实测：2048上下文、host state 1、host KV 256 MiB；文本版显存约14710 MiB，视觉版约15054 MiB。文本生成与工具调用回环、视觉单图颜色冒烟通过，详见 validation/real-model-*.json；测试引擎均已停止。
 
 文本、视觉、MTP、上下文扩大和并发都影响显存/内存。Ada两个文件名只表示内部候选；不承诺所有RTX40系列可用，也不使用Blackwell引擎替代匹配版本。
 
@@ -31,4 +31,4 @@
 
 ## GitHub 分片发布
 
-文本候选44片，视觉候选57片。已上传并验证的4片为1 GiB，其余新增片最多256 MiB；完整模型 SHA256 与原文件一致。只上传量化文件及说明；Ada候选暂无匹配硬件复验，首版保留在本地。实际公开地址以 release-manifest.json 为准；公开分片的精确下载 URL、字节数与校验值在 release-manifest.json。运行时公开分发仍在整理，因此分片准备完成不等于完整本地推理部署已具备公开下载条件。
+文本候选44片，视觉候选57片。已上传并验证的4片为1 GiB，其余新增片最多256 MiB；完整模型 SHA256 与原文件一致。只上传量化文件及说明；Ada候选暂无匹配硬件复验，首版保留在本地。实际公开地址以 release-manifest.json 为准；公开分片的精确下载 URL、字节数与校验值在 release-manifest.json。主线文本推理包已独立公开：https://github.com/chauko0423/xiaomanbox/releases/tag/ninfer-blackwell-text-v1 。可通过部署工具下载文本引擎与许可说明，再配置和启动本地服务。视觉运行时与Ada候选仍待补齐公开分发材料，不把文本引擎用于图像或视频输入。

@@ -1,0 +1,51 @@
+{
+  "scope": "text-only NInfer runtime; FFmpeg not linked or bundled",
+  "licenses": [
+    {
+      "path": "third-party-licenses/ninfer-runtime/cpp-httplib-MIT.txt",
+      "bytes": 1074,
+      "sha256": "f8c53951438545b8ed61176d9071bd1039e81502f9ec9590b85ccd5c71a08473"
+    },
+    {
+      "path": "third-party-licenses/ninfer-runtime/CUDA-EULA.txt",
+      "bytes": 69791,
+      "sha256": "7771f1ef8e9300ba175cf58e9dcc1df55d9dd82d3fc960c4c6db0c66354e418c"
+    },
+    {
+      "path": "third-party-licenses/ninfer-runtime/llama-jinja-MIT.txt",
+      "bytes": 1078,
+      "sha256": "94f29bbed6a22c35b992c5c6ebf0e7c92f13b836b90f36f461c9cf2f0f1d010d"
+    },
+    {
+      "path": "third-party-licenses/ninfer-runtime/llama-jinja-Unicode.txt",
+      "bytes": 1995,
+      "sha256": "e7a93b009565cfce55919a381437ac4db883e9da2126fa28b91d12732bc53d96"
+    },
+    {
+      "path": "third-party-licenses/ninfer-runtime/NInfer-Apache-2.0.txt",
+      "bytes": 11357,
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "path": "third-party-licenses/ninfer-runtime/nlohmann-json-MIT.txt",
+      "bytes": 1076,
+      "sha256": "46a65cffd1ea955132d95a8dd921640714a8d6b537d2e4e482d31145ae95b603"
+    },
+    {
+      "path": "third-party-licenses/ninfer-runtime/NVTX-Apache-LLVM.txt",
+      "bytes": 12483,
+      "sha256": "abdfd8a6738b27cd1504e091f77b682dbae928339f040b8a6f59a548245991a0"
+    },
+    {
+      "path": "third-party-licenses/ninfer-runtime/spdlog-MIT.txt",
+      "bytes": 1323,
+      "sha256": "d678c20826e1392578508e1c78649a1e3c31bda05ef4388d967dbd654461b140"
+    },
+    {
+      "path": "third-party-licenses/ninfer-runtime/utf8proc-license.md",
+      "bytes": 5125,
+      "sha256": "3b510150d34f248a221bb88e1d811238d6c6c18b51231822c42974c39bb07256"
+    }
+  ],
+  "nvtxSource": "https://nvidia.github.io/NVTX/LICENSE.txt"
+}

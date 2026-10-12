@@ -9,14 +9,14 @@
     },
     {
       "name": "XiaoMan-AI-Deployment.zip",
-      "bytes": 3182089,
-      "sha256": "563cc86030482bd3933d234002eb08e4c5e4112f047f9267b57ff182b6284eb9",
+      "bytes": 3224510,
+      "sha256": "b5f5b8a447c37b68468dc798e8f0a9d4e9b943a64ca20547a8ffae12bef194a0",
       "url": "https://github.com/chauko0423/xiaomanbox/releases/download/v0.3.0-basic.1/XiaoMan-AI-Deployment.zip"
     },
     {
       "name": "SHA256SUMS.txt",
       "bytes": 195,
-      "sha256": "432d3dcbdaae6cd8ee9321b02841cfc7887c099f4dff88a003c8252afa3586a6",
+      "sha256": "aae7274435748e40f8348de850b849f54c249c52dbd822f4f81842e68f8d5149",
       "url": "https://github.com/chauko0423/xiaomanbox/releases/download/v0.3.0-basic.1/SHA256SUMS.txt"
     }
   ],

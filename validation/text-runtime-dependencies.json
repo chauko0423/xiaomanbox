@@ -1,0 +1,12 @@
+{
+  "runtimeSha256": "71fb706fed7ea1b65e49da7e4a9af5053c92ec0949e8728b3d7d72265a079c88",
+  "directImports": [
+    "KERNEL32.dll",
+    "WS2_32.dll"
+  ],
+  "noFFmpegOrToolkitRuntimeDll": true,
+  "minimalPathHelpPassed": true,
+  "minimalPath": "Windows System32 and Windows only",
+  "NvidiaDriverStillRequired": true,
+  "scope": "PE direct imports and executable help under a minimal PATH; GPU driver loaded dynamically during real inference"
+}

@@ -16,16 +16,16 @@
     },
     {
       "name": "MODEL_CARD.md",
-      "size": 3814,
+      "size": 4111,
       "state": "uploaded",
-      "digest": "sha256:565f10c02f16d919cf4c482b46cb0e1a56d27975b71a57d89f571cade2b969a6",
+      "digest": "sha256:2c8fef8f7a2aa3d9e6e9a9aefbf2eac0c78e8cbb70e47ce370372beaf461762d",
       "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/MODEL_CARD.md"
     },
     {
       "name": "release-manifest.json",
-      "size": 39302,
+      "size": 41261,
       "state": "uploaded",
-      "digest": "sha256:92cfbbdb21740fa0a738f87f287bab3743c9dc5a326d0e2a072a6fd0f8a7e98c",
+      "digest": "sha256:348212ad1256ee20012ebb453c90dff0dc8cc87740e97b260b51d98fc49e2050",
       "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/release-manifest.json"
     },
     {
@@ -742,5 +742,6 @@
       "digest": "sha256:f0a68418b4a5901e77474a9de8c441c787bf2796304bd2c2f8cb756e2f6f1adc",
       "browser_download_url": "https://github.com/chauko0423/xiaomanbox/releases/download/xiaoman-v6-quantized/xiaoman-v6-sd.ninfer.part014.part004"
     }
-  ]
+  ],
+  "metadataUpdatedForTextRuntime": true
 }
