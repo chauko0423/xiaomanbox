@@ -1,0 +1,7 @@
+# 引擎及模型准备
+
+engine_source_manifest.json将1609文件私有清单绑定到新文本引擎；公开engine_source含1430个未改字节构建源码文件，省去179个无关语料/媒体/模型卡并逐项列出。它是精确字节构建源码子集，不是完整私有快照再分发。保留原Apache2及第三方许可。
+
+构建设置Release、Ninja、sm120a、NINFER_ENABLE_VISION=OFF、NINFER_BUILD_APPS=ON、BUILD_TESTING=OFF、NINFER_BUILD_BENCHMARKS=OFF、NINFER_BUILD_LINK_SMOKE=OFF，记录MSVC14.44.35207及CUDA编译器13.3.33。engine_build内原配置/构建请求已去机器路径；用新构建目录与读者自己的工具链路径，不承诺独立工具链得到相同二进制哈希。旧引擎精确构建来源仍未证实。
+
+model_preparation保留CPU桥接和共同量化配方，需重新绑定路径并自备检查点。U8打包权重命名桥接不改载荷；FP8缩放广播到BF16存在舍入，不是位级无损。模型38前端从实际tokenizer.json导出added_tokens_decoder，明确无BOS，并把pad元数据由im_end归一化为endoftext。EOS不变，冻结聊天模板在单请求无填充路径不使用pad_token；这一修订未改变771个模型38张量载荷。两个正式产物之间771个张量载荷全部不同，属于同一已有结构；完整产物比较不是仅量化因果实验。
