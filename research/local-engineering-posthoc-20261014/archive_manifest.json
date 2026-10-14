@@ -1,0 +1,67 @@
+{
+  "archive_name": "Public_posthoc_semantic_and_historical_supplement_20261014.zip",
+  "archive_sha256": "a07332573643696bd4d2e5eb0eaf6ed0e8d2a6167f22d98ff5e30ca9700eb609",
+  "archive_bytes": 194906,
+  "parts": [
+    {
+      "path": "parts/supplement.zip.part000",
+      "sha256": "6acf9ed32a2452a4f21f4f2de647e2f5d1875bff362485465656161bbe6e02b8",
+      "bytes": 16384
+    },
+    {
+      "path": "parts/supplement.zip.part001",
+      "sha256": "d579a95189bd4715328ee39c3bab487e581997d4f187b314968e876fa7fae85f",
+      "bytes": 16384
+    },
+    {
+      "path": "parts/supplement.zip.part002",
+      "sha256": "3330ac3991a72e16c5fea5153245f5b06c3dd67a1734c53961cb57a5de2f5ed6",
+      "bytes": 16384
+    },
+    {
+      "path": "parts/supplement.zip.part003",
+      "sha256": "6d912dd05d113aa55bf0005925603d88298fc2f82d6b730a209706ec9754cb53",
+      "bytes": 16384
+    },
+    {
+      "path": "parts/supplement.zip.part004",
+      "sha256": "c47e092d1adebd0a4af23c3843e77b34edc996b5f19d07e34704bbf243b2b663",
+      "bytes": 16384
+    },
+    {
+      "path": "parts/supplement.zip.part005",
+      "sha256": "b92b2a1bd24d0889099399f77585af1165385ccbfcef3751db145e4f26cca518",
+      "bytes": 16384
+    },
+    {
+      "path": "parts/supplement.zip.part006",
+      "sha256": "e10f7b42a4cf5e8da0994c7d62de5ddae035848e33973593c90b5c5acd66294a",
+      "bytes": 16384
+    },
+    {
+      "path": "parts/supplement.zip.part007",
+      "sha256": "58581783bc2f4a788c9937d15369325270e9823e11f50e93c3d8e2d0312cb247",
+      "bytes": 16384
+    },
+    {
+      "path": "parts/supplement.zip.part008",
+      "sha256": "1116734364f05d0bfc62c792bf8c0f81dfca841a5cf7176979d824e430625d21",
+      "bytes": 16384
+    },
+    {
+      "path": "parts/supplement.zip.part009",
+      "sha256": "eac05eb0de37805def00a1d95e0070808e3207b2dbd3772558e8944e66b05731",
+      "bytes": 16384
+    },
+    {
+      "path": "parts/supplement.zip.part010",
+      "sha256": "db903f5c9986c2de8da4831db3fede1810bd3fb62d9824b3af321b939d4619a4",
+      "bytes": 16384
+    },
+    {
+      "path": "parts/supplement.zip.part011",
+      "sha256": "20ca860a9d184d3158691d99f02bf8fd0c0655e66470e4f02f05a6ea54b6653c",
+      "bytes": 14682
+    }
+  ]
+}
